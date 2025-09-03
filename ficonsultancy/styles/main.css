@@ -1,0 +1,1096 @@
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------- Navbar and Hero Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.box{
+    margin: 0%;
+    padding: 0%;
+    /* height: 750px; */
+    background-image: url("../images/pexels-thecoachspace-2977565.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity: ; */
+}
+
+.navdiv
+{
+    height: 100px;
+    background-color: rgb(6, 6, 46);
+    opacity: 1;
+    display: flex;
+}
+
+.navInnerdivs
+{
+    /* border: 2px solid white; */
+    width: 25%;
+    height: 100px;   
+    color: white; 
+    text-align: center;
+}
+
+#navresponsiveIcons{
+    display: none;
+}
+
+.navh1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerlogo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+#companyNameHeading{
+    margin: 0;
+    font-size: 35px;
+    padding: 5px 10px;
+}
+
+#navlinksdiv{
+    width: 50%;
+}
+
+#lists{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 43px;
+    font-size: 25px;
+    list-style: none;
+}
+
+.listsnav{
+    text-decoration: none;
+    color: white;
+}
+
+
+.heroDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    background-color: rgba(32, 16, 47, 0.9);
+}
+
+@keyframes abc {
+    0% {
+        transform: translateY(-270px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero{
+    height: auto;
+    width: fit-content;
+    /* opacity: .5; */
+    margin: 0%;
+    color: white;
+    text-align: center;
+    animation: abc 1s ease-out;
+}
+
+.heroh1{
+    font-size: 65px;
+}
+
+.herop1{
+    font-size: 25px;
+    margin-top: 17px;
+}
+
+.herop2{
+    font-size: 21px;
+    margin-top:55px;
+}
+ 
+.b1, .b2,.b3{
+    font-size: 17px;
+    border-radius: 41px;
+    margin-top: 15px;
+    width: 15%;
+    padding: 17px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.b1{
+    background-color:rgb(195, 50, 50);
+    margin-right: 15px;
+}
+
+
+.b2{
+    background-color: white;
+    color: black;
+}
+
+.b1:hover, .b2:hover{
+    background-color: red;
+}
+
+.b2:hover{
+    color: white;
+}
+
+#MakeAppointment{
+    margin-top: 33px;
+    font-size: 17px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+}
+
+#MakeAppointment:hover{
+    background-color: rgb(202, 49, 49);
+}
+
+#home:hover, #contact:hover, #services:hover, #industries:hover{
+    border-bottom: 2px solid white;
+}
+
+.b3{
+    background-color: rgb(60, 194, 60);
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    font-size: 20px;
+    width: 17%;
+    right: 12px;
+    z-index: 1;
+    
+}
+
+.b3:hover{
+    background-color: rgb(12, 233, 12);
+}
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------- About Us Section -------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+
+
+.aboutdiv{
+    padding: 15px;
+    background-color: rgb(10, 0, 10);
+    /* height: 645px; */
+    height: 100vh;
+    padding: 0px;    
+}
+
+#aboutheading{
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: x-large;
+}
+
+.informationdiv{
+   /* border: 2px solid white; */
+   width: 205vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.imgdiv{
+    /* border: 2px solid white; */
+    width: 45%;
+    height: 60vh;
+    background-image: url(../images/laptop\ typing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pradiv{
+    width: 45%;
+    /* border: 2px solid white; */
+    margin: 2%;
+    height: 70vh;
+    line-height: 35px;
+}
+
+.aboutpra{
+    color: white;
+    font-size: 20px;
+}
+
+#readmore{
+    color: white;
+    background-color: rgb(240, 55, 55);
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 7px;
+    border: none;
+    padding: 11px;
+}
+
+#readmore:hover{
+    background-color: red;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------ Services Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+
+#heading2{
+     text-align: center;
+    font-size: 55px;
+}
+
+.imagesdivs{
+    display: grid;
+    grid-template-columns: 430px 430px 430px;
+    gap: 25px;
+    padding: 10px;
+}
+
+.imgservicesdiv{
+    width: 420px;
+    height: 644px;
+    cursor: pointer;
+}
+
+#imageid1{
+    background-image: url(../images/financialReporting.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#imageid2{
+    background-image: url(../images/pexels-cottonbro-4107100.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#imageid3{
+    background-image: url(../images/pexels-shkrabaanthony-5816299.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#imageid4{
+    background-image: url(../images/pexels-n-voitkevich-6863336.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#imageid5{
+    background-image: url(../images/pexels-leeloothefirst-8970297.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#imageid6{
+    background-image: url(../images/pexels-kindelmedia-7688333.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+#id1pra, #id2pra, #id3pra, #id4pra, #id5pra, #id6pra{
+    font-size: 20px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}
+
+#imagebuton1, #imagebuton2, #imagebuton3, #imagebuton4, #imagebuton5, #imagebuton6{
+    position: absolute;
+    right: 0;
+    border: none;
+    font-size: 25px;
+    background-color: rgb(224, 1, 1);
+    padding: 7px;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#imagebuton1:hover, #imagebuton2:hover, #imagebuton3:hover, #imagebuton4:hover, #imagebuton5:hover, #imagebuton6:hover{
+    background-color: rgb(255, 10, 10);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Our Values Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.ourvalues{
+    padding: 0%;
+    background-color: rgb(21, 4, 21);
+    height: 1415px;   
+}
+
+#heading3{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    top: 15px;
+}
+
+#valuepra{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+     position: relative;
+    top: 7px;
+}
+
+.valueimagediv{
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+    column-gap: 25px;
+    row-gap: 277px;
+    padding: 14px;
+    
+}
+
+.aboutvalueimage{
+    width: 410px;
+    height: 345px;
+    cursor: pointer;
+    color: white;
+}
+
+#valueimage1{
+    background-image: url(../images/Intergretity-Website.png);
+     background-size: cover;
+}
+
+#valueimage2{
+    background-image: url(../images/Excellence-Website.png);
+     background-size: cover;
+}
+
+#valueimage3{
+    background-image: url(../images/together.png);
+     background-size: cover;
+}
+
+#valueimage4{
+    background-image: url(../images/Focused-Website.png);
+     background-size: cover;
+}
+
+#valueimage5{
+    background-image: url(../images/Well\ being-website.png);
+     background-size: cover;
+}
+
+#valueimage6{
+    background-image: url(../images/rethink-website.png);
+     background-size: cover;
+}
+
+.valuepra1{
+    position: relative;
+    top: 333px;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.valuepra2{
+    position: relative;
+    top: 333px;
+    font-size: 21px;
+    margin-top: 15px;
+}
+
+.valuepra3{
+     position: relative;
+    top: 333px;
+    font-size: 21px;
+    margin-top: 15px;
+    font-size: 33px;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Industries Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.industriesdiv{
+    padding: 5px;
+    background-color: rgb(87, 86, 86);
+    height: 1110px;  
+}
+
+#heading4{
+    color: white;
+    text-align: center;
+    font-size: 55px;
+
+}
+
+#industrypra1{
+    color: white;
+    text-align: center;
+    font-size: 27px;
+}
+
+#industrypra2{
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bolder;
+    font-style: italic;
+    margin-left: 55px;
+    margin-right: 55px;
+}
+
+.industryimagediv{
+     display: grid;
+    grid-template-columns: 430px 430px 430px;
+    gap: 30px;
+    /* row-gap: 277px; */
+    padding: 1px;
+}
+
+.aboutindustryimage{
+    border: 2px solid white;
+    width: 390px;
+    height: 355px;
+    cursor: pointer;
+    border-radius: 17px;
+    background-color: white;
+    transition: padding .5s ease;
+    /* display: flex; */
+}
+
+.industryheadDiv{
+    display: flex;
+}
+
+#image1industry, #image2industry,  #image3industry,  #image4industry,  #image5industry,  #image6industry{
+    width: 111px;
+    height: 111px;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heading5{
+    font-size: 27px;
+    margin-left: 15px;
+    height: 95px;
+    font-weight: lighter;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.industrypra{
+    font-size: 22px;
+    color: black;
+    text-align: justify;
+    margin: 5%;
+}
+
+.industrybutton{
+    font-size: 20px;
+    color: white;
+    background-color: rgb(245, 68, 68);
+    border: none;
+    padding: 7px;
+    margin: 5%;
+}
+
+.industrybutton:hover{
+    background-color: red;
+}
+
+.hoverdivs{
+    padding: 1%;
+}
+
+.hoverdivs:hover{
+    padding-right: 0%;
+    transition: all .5s ease-in-out;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Footer Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.footer {
+    width: 100%;
+    background-color: rgb(2, 2, 43);
+    padding: 40px 20px;
+}
+
+.footerdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.footerinnerdiv{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* border: 2px solid white; */
+}
+
+.footerlogoandheadingdiv{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.f1logodiv {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../images/logoFI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footerlogoheading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.iconsdiv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+}
+
+#heading7 {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.listfooter {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.listfooterinnerdiv{
+    margin: 5px 0;
+    font-weight: lighter; 
+    font-size: 18px;
+}
+
+#footercontactdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.contactpra{
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.footercopyright {
+    text-align: center;
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.saminamediv{
+    text-align: center;
+    position: relative;
+    bottom: 35px;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(116, 186, 248);
+}
+
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ###################### Responsiveness ############################# */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+
+
+@media (max-width: 600px){
+
+
+    .navdiv{
+        position: relative;
+    }
+
+    #navresponsiveIcons{
+        display: block;
+        width: 25px;
+        margin: 2%;
+    }
+
+    #closeMenu{
+        display: none;
+    }
+
+    #navfirstdiv{
+        height: 55px;
+        position: absolute;
+        bottom: 15%;  
+        width: 100%;
+        margin: 1%;
+        /* border: 2px solid white; */
+        display: flex;
+        justify-content: start;
+        align-items: start;
+    }
+
+    #headerlogo{
+        width: 37px;
+        height: 37px;
+    }
+
+    #companyNameHeading{
+        font-size: 20px;
+    }
+
+    #navlinksdiv{
+        display: none;
+    }
+
+    #appointmentBtnDiv{
+        text-align: right;
+        position: absolute;
+        width: 55%;
+        right: 10%;
+    }
+
+    #MakeAppointment{
+        font-size: small;
+        padding: 7.5px;
+        position: relative;
+        bottom: 22px;
+        left: 20px;
+    }
+
+    .heroDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 570px;
+        background-color: rgba(32, 16, 47, 0.9);
+}
+
+
+    .heroh1{
+        font-size: 30px;
+        position: relative;
+        left: 29px;
+        width: 87%;
+        text-align: center;
+       /* border: 2px solid white; */
+       margin-bottom: 50px;
+       
+       
+    }
+
+    .herop1{
+        font-size: 20px;
+        width: 80%;
+        margin-left: 3%;
+        position: relative;
+        bottom: 15px;
+        left: 36px;
+    }
+
+    .herop2{
+        font-size: 17px;
+        width: 80%;
+        margin-left: 41px;
+        position: relative;
+        bottom: 35px;
+    }
+
+    .b1, .b2, .b3{
+    font-size: 17px;
+    border-radius: 41px;
+    padding: 13px;
+    color: black;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    color: white;
+}
+
+.b2{
+    color: black;
+}
+
+.b3{
+    width: 100%;
+}
+
+.buttonsdiv{
+    text-align: center;
+    margin-left: 120px;
+}
+.aboutdiv{
+    height: 110vh;
+}
+ 
+#aboutheading{
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+}
+
+.informationdiv{
+    display: block;
+}
+
+.imgdiv{
+    height: 270px;
+    width: 330px;
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.pradiv{
+    font-size: 5px;
+    line-height: 22px;
+    position: relative;
+    right: 20px;
+}
+
+.aboutpra{
+    width: 55%;
+    margin-left: 0.7%;
+}
+
+
+#heading2{
+     text-align: center;
+    font-size: 45px;
+    position: relative;
+    left: 7px;
+}
+
+.imagesdivs{
+    display: grid;
+    grid-template-columns: 50px;
+    gap: 25px;
+    padding: 7px;
+}
+
+.imgservicesdiv{
+    width: 350px;
+    margin-left: 1%;
+    height: 644px;
+    cursor: pointer;
+}
+
+#id1pra, #id2pra, #id3pra, #id4pra, #id5pra, #id6pra{
+    font-size: 19px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+}
+
+.ourvalues{
+    padding: 0%;
+    background-color: rgb(21, 4, 21);
+    height: 3700px;   
+}
+
+#heading3{
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    position: relative;
+    left: 10px;
+}
+
+#valuepra{
+    font-size: 19px;
+    width: 60%;
+    margin-left: 84px;
+    color: white;
+     
+}
+
+.valueimagediv{
+    display: grid;
+    grid-template-columns: 50px;
+    column-gap: 25px;
+    row-gap: 277px;
+    padding: 7px;
+    
+}
+
+.aboutvalueimage{
+    width: 345px;
+    height: 300px;
+    cursor: pointer;
+    color: white;
+}
+
+.valuepra1{
+    position: relative;
+    top: 320px;
+    left: 7px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.valuepra2{
+    position: relative;
+    top: 333px;
+    left: 10px;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.valuepra3{
+    position: relative;
+    top: 333px;
+    left: 10px;
+    font-size: 19px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+
+.industriesdiv{
+    padding: 5px;
+    background-color: rgb(87, 86, 86);
+    height: 2700px;  
+}
+
+#heading4{
+    color: white;
+    font-size: 60px;
+
+}
+
+#industrypra1{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+    margin-left: 30px;
+
+}
+
+#industrypra2{
+    color: white;
+    /* text-align: center; */
+    font-size: 18px;
+    position: relative;
+    right: 45px;
+    width: 90%;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.industryimagediv{
+     display: grid;
+    grid-template-columns: 50px;
+    gap: 30px;
+    /* row-gap: 277px; */
+    padding: 1px;
+}
+
+.aboutindustryimage{
+    border: 2px solid white;
+    width: 365px;
+    height: 355px;
+    cursor: pointer;
+    border-radius: 17px;
+    background-color: white;
+    transition: padding .5s ease;
+
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(2, 2, 43);
+    padding: 40px 20px;
+}
+
+.footerdiv {
+    margin: 0 auto;
+    /* width: 100%; */
+    gap: 40px;
+    color: white;
+}
+
+.footerinnerdiv{
+    gap: 15px;
+}
+
+.footerlogoandheadingdiv{
+    gap: 10px;
+    /* border: 2px solid white; */
+    position: relative;
+    left: 45px;
+}
+
+.footerlogoheading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.iconsdiv {
+   /* border: 2px solid white; */
+   position: relative;
+   left: 50px;
+    gap: 20px;
+    font-size: 22px;
+}
+
+#heading7 {
+    font-size: 33px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    right: 15px;
+    bottom: 10px;
+}
+
+.listfooter {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    right: 11px;
+}
+
+.footercopyright{
+    position: relative;
+    top: 130px;
+    right: 20px;
+}
+
+.saminamediv{
+    position: relative;
+    top: 100px;
+    right: 10px;
+}
+
+#footercontactdiv {
+    position: relative;
+    bottom: 200px;
+    left: 60px;
+    font-size: 10px;
+
+}
+
+.contactpra{
+    font-size: 17px;
+    font-weight: lighter;
+    line-height: 5px;
+}
+
+.footercopyright {
+    text-align: center;
+    font-size: 17px;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.saminamediv{
+    text-align: center;
+    position: relative;
+    bottom: 35px;
+    font-weight: bold;
+    font-size: larger;
+    color: rgb(116, 186, 248);
+}
+
+
+
+}
+
+
+
+

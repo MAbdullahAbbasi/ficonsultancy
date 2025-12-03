@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/services.css?v=1.2">
+    <title>Services</title>
+</head>
+<body> 
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Navbar Section --------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
+
+    <nav class="responsiveNavdiv" id="responsiveNavbardiv">
+
+            <div class="navRespInnerdivs" id="navlinksrespdiv">
+                
+                <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+                
+                <!-- list of links  -->
+                <ul id="resplists">
+
+                    <li class="listitemsResp">
+                        <a href="/index.html" class="listsrespnav" id="home">Home</a>
+                    </li>
+                     
+                    <li class="listitemsResp">
+                        <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
+                    </li>
+
+                    <li class="listitemsResp">
+                        <a href="pages/industries.html" class="listsrespnav" id="industries">Industries</a>
+                    </li>
+
+                    <li class="listitemsResp">
+                        <a href="pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
+
+    <nav class="navdiv">
+
+            <!-- hamburger icon  -->
+            <div class="navInnerdivs" id="navresponsiveIcons">
+                <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
+            </div>
+
+            <!-- logo and name  -->
+            <div class="navInnerdivs" id="navfirstdiv">
+                <h1 class="navh1">
+                    <img src="../images/logoFI.jpg" alt="logo" id="headerlogo">
+                    <span id="companyNameHeading">
+                        FI Consultancy
+                    </span>
+                </h1>
+            </div>
+
+            <!-- list of links  -->
+            <div class="navInnerdivs" id="navlinksdiv">
+
+                <ul id="lists">
+
+                    <li>
+                        <a href="../index.html" class="listsnav" id="home">Home</a>
+                    </li>
+                     
+                    <li class="itemService">
+                        <a href="services.html" class="listsnav" id="services">Services</a>
+                        <div class="servicesNavDiv"></div>
+                    </li>
+
+                    <li>
+                        <a href="industries.html" class="listsnav" id="industries">Industries</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="listsnav" id="contact">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="" class="listsnav" id="careers">Careers</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- appointment button  -->
+            <div class="navInnerdivs" id="appointmentBtnDiv">
+                <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+            </div>
+
+    </nav>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ WhatsApp Section ------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="whatsappDiv">
+
+        <div class="whatsAppContactPersonDiv" id="whatsAppContactPerson">
+
+            <!-- cross div -->
+                <div class="whatsAppCrossDiv">
+                            <span class="whatsAppCrossBtn" onclick="whatsAppCrossBtnhandle()">&#10005;</span>
+                </div>    
+                    
+                    
+            <!-- first div -->
+                <div class="nameandlogo" onclick="openWhatsAppContact1()">
+                    <div id="logo" class="userProfile"></div>
+
+                    <div class="texts">
+                        <div class="fields">Faseh Iqbal</div>
+                        <div class="fields" id="online">I am online</div>
+
+                    </div>
+                </div>
+
+                <!-- second div -->
+                <div class="nameandlogo" onclick="openWhatsAppContact2()">
+
+                    <div id="logo" class="userProfile"></div>
+
+                    <div class="texts">
+                        <div class="fields" >Immad Khan</div>
+                        <div class="fields" id="online">I am online</div>
+
+                    </div>
+
+                </div>
+
+                        
+        </div>
+                
+        <button class="b3" onclick="handleWhatsappOpener()"><i class="fab fa-whatsapp" id="icon"></i> How can I help you
+        </button>
+
+    </div>
+    
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Hero Section ----------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="servicesimageouterdiv">
+
+        <div class="servicesimageinnerdiv">
+                
+        </div>
+
+        <div class="servicesoverlaydiv">
+
+            <div class="servicesOverlayContent">
+
+                <h1 class="servicesheading">
+                    Services
+                </h1>
+                
+                <h1 id="servicesoverlaySlogan">
+                    FI. Consultancy combines multi-disciplinary approach with deep, practical industry knowledge to help clients meet challenges and respond to opportunities.
+
+                </h1>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- --------------------- Services Cards Section ---------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    
+    <div id="allServicesCardsDiv">
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="financialreportingheading">Financial Reporting</h1>
+            
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+
+            <a href="" class="servicesCardButton">Explore ></a>
+        </div>
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="auditheading">Audit</h1>
+            
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+
+            <a href="" class="servicesCardButton">Explore ></a>
+
+        </div>
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="taxheading">Tax</h1>
+            
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+
+            <a href="" class="servicesCardButton">Explore ></a>
+
+        </div>
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="advisoryheading">Advisory</h1>            
+
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicingelit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iurevero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatumperspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Loremipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+                
+            <a href="" class="servicesCardButton">Explore ></a>
+
+        </div>
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="bookkeepingheading">Book-Keeping</h1>
+
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+
+            <a href="" class="servicesCardButton">Explore ></a>
+
+        </div>
+
+        <div class="servicesCard">
+            <h1 class="allCardsHeadings" id="integratedsolutionheading">Integrated Solution</h1>
+
+            <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
+
+            <a href="" class="servicesCardButton">Explore ></a>
+
+        </div>
+
+    </div>
+
+    
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ----------------- Scrap Services Card Section --------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="scrapCards">
+            
+        <!-- ------------------------------------------------------------------- -->
+        <!-- ----------------- Financial Reporting Section --------------------- -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="financialreportingdiv">
+
+            <div class="eachServiceImage" id="financialreportingimagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="financialreportingheadingdiv">
+                
+                <h1 class="allCardsHeadings" id="financialreportingheading">Financial Reporting</h1>
+                
+                <p class="servicesCardPara" id="preparationpra1">Preparation of Financial Statements – </p>
+                <p class="servicesCardPara" id="preparationpra2">Accurate and compliant financial statements, including balance sheets, income statements, and cash flow reports.</p>
+
+                <p class="servicesCardPara" id="accuratepra1">Financial Analysis & Performance Reporting –</p>
+                <p class="servicesCardPara" id="accuratepra2">Detailed assessments of financial data to provide insights for business growth and profitability.</p>
+
+                <p class="servicesCardPara" id="regulatorypra1">Regulatory & Compliance Reporting –</p>
+                <p class="servicesCardPara" id="regulatorypra2">Ensuring adherence to local and international financial regulations, tax laws, and industry-specific requirements.</p>
+
+                <p class="servicesCardPara" id="budgetpra1">Budgeting & Forecasting –</p>
+                <p class="servicesCardPara" id="budgetpra2"> Strategic financial planning to support growth, cost control, and future projections.</p>
+
+                <p class="servicesCardPara" id="consolidationpra1">Consolidation & Group Reporting – </p>
+                <p class="servicesCardPara" id="consolidationpra2">Streamlining financial data from multiple entities for accurate consolidated reports.</p>
+
+                <p class="servicesCardPara" id="managementpra1">Management Reporting & Dashboards – </p>
+                <p class="servicesCardPara" id="managementpra2">Custom reporting tools and dashboards for real-time financial monitoring and decision-making.</p>
+
+                <div class="readmorebuttondiv">
+                    <a href="financialreporting.html" class="readmorebutton">Explore ></a>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- ------------------------------------------------------------------- -->
+        <!-- ---------------------- Audit Section ------------------------------ -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="Auditdiv">
+
+            <div class="eachServiceImage" id="auditimagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="auditheadingdiv">
+                <h1 class="allCardsHeadings" id="auditheading">
+                    Audit
+                </h1>
+
+                    <p class="servicesCardPara"  id="financialstatementpra1">Financial Statement Audits – </p>
+                    <p class="servicesCardPara" id="financialstatementpra2">Independent evaluations of financial records to ensure accuracy and compliance.</p>
+
+                    <p class="servicesCardPara" id="internalauditpra1">Internal Audits & Risk Assessments –</p>
+                    <p class="servicesCardPara" id="internalauditpra2">Identification of operational risks and enhancement of internal controls.</p>
+
+                    <p class="servicesCardPara" id="regulatorycompliancepra1">Regulatory Compliance Audits – </p>
+                    <p class="servicesCardPara" id="regulatorycompliancepra2">Assurance of adherence to local and international financial regulations.</p>
+
+                    <p class="servicesCardPara" id="frauddetectionpra1">Fraud Detection & Prevention – </p>
+                    <p class="servicesCardPara" id="frauddetectionpra2"> Evaluation of financial records to identify irregularities and prevent fraud.</p>
+
+                    <p class="servicesCardPara" id="forensicauditpra1">Forensic Audits –</p>
+                    <p class="servicesCardPara" id="forensiauditpra2">Investigation of financial discrepancies and irregular transactions.</p>
+
+                    <p class="servicesCardPara" id="performancepra1">Performance & Operational Audits –</p>
+                    <p class="servicesCardPara" id="performancepra2"> Assessment of business processes to enhance efficiency and profitability.</p>
+
+                <div class="readmorediv">
+                    <a href="audit.html" class="readmorebutton">Explore ></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- ------------------------------------------------------------------- -->
+        <!-- --------------------------- Tax Section --------------------------- -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="taxdiv">
+
+            <div class="eachServiceImage" id="taximagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="taxheadingdiv">
+                <h1 class="allCardsHeadings" id="taxheading">
+                            Tax
+                </h1>
+
+                <div class="allParagraphsContent">
+                    
+                    <p class="servicesCardPara" id="corporatetaxpra1">Corporate Tax Advisory –</p>
+                    <p class="servicesCardPara" id="corporatetaxpra2"> Guidance on tax regulations, filing requirements, and strategic tax planning.</p>
+
+                    <p class="servicesCardPara" id="internationaltaxpra1">International Tax & Compliance – </p>
+                    <p class="servicesCardPara" id="internationaltaxpra2"> Expertise in managing global tax implications and cross-border transactions.</p>
+
+                    <p class="servicesCardPara" id="indirecttaxpra1">Indirect Taxes (VAT, GST, Sales Tax) – </p>
+                    <p class="servicesCardPara" id="indirecttaxpra2"> Compliance support for indirect taxation across multiple jurisdictions.</p>
+
+                    <p class="servicesCardPara" id="taxreturnpra1">Tax Return Preparation & Filing –</p>
+                    <p class="servicesCardPara" id="taxreturnpra2">Accurate and timely tax filings for corporate entities and individuals.</p>
+
+                    <p class="servicesCardPara" id="transfertaxpra1">Transfer Pricing Advisory –</p>
+                    <p class="servicesCardPara" id="transfertaxpra2">Ensuring compliance with transfer pricing regulations to manage intercompany transactions.</p>
+
+                    <p class="servicesCardPara" id="taxauditpra1">Tax Audit Support & Risk Management – </p>
+                    <p class="servicesCardPara" id="taxauditpra2">Assistance in tax audits, regulatory inquiries, and dispute resolution.</p>
+
+            <div class="readmorediv">
+                <a href="tax.html" class="readmorebutton">Explore ></a>
+            </div>
+
+                </div>
+
+            
+
+            </div>
+
+        </div>
+        
+        <!-- ------------------------------------------------------------------- -->
+        <!-- -------------------- Advisory Section ----------------------------- -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="advisorydiv">
+
+            <div class="eachServiceImage" id="advisoryimagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="advisoryheadingdiv">
+                <h1 class="allCardsHeadings" id="advisoryheading">
+                    Advisory
+                </h1>            
+
+                    <p class="servicesCardPara" id="financialrestructuringpra1">Financial Restructuring & Turnaround Strategy – </p>
+                    <p class="servicesCardPara" id="financialrestructuringpra2">Guidance on corporate restructuring, debt management, and recovery strategies for businesses facing financial challenges.</p>
+
+                    <p class="servicesCardPara" id="financialreportingadvisorypra1">Financial Reporting Compliance & Standards –</p>
+                    <p class="servicesCardPara" id="financialreportingadvisorypra2"> Guidance on IFRS, GAAP, and other regulatory reporting frameworks to ensure accuracy and compliance.</p>
+
+                    <p class="servicesCardPara" id="internalcontrolspra1">Internal Controls & Risk Management – </p>
+                    <p class="servicesCardPara" id="internalcontrolspra2`"> Assessment and enhancement of financial controls to mitigate reporting risks and prevent errors. </p>
+
+                    <p class="servicesCardPara" id="financialanalysispra1">Financial Analysis & Performance Evaluation –</p>
+                    <p class="servicesCardPara" id="financialanalysispra2"> Detailed assessments of financial data to drive growth and profitability.</p>
+
+                    <p class="servicesCardPara" id="investmenttadvisorypra1">Investment Advisory & Market Analysis –</p>
+                    <p class="servicesCardPara" id="investmentadvisorypra2"> Insights into market trends, investment opportunities, and financial decision-making.</p>
+
+                <div class="readmorediv">
+                    <a href="advisory.html" class="readmorebutton">Explore ></a>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- ------------------------------------------------------------------- -->
+        <!-- ----------------- Book Keeping Section ---------------------------- -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="bookkeepingdiv">
+
+            <div class="eachServiceImage" id="bookkeepingimagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="bookkeepingheadingdiv">
+                <h1 class="allCardsHeadings" id="bookkeepingheading">
+                    Book-Keeping
+                </h1>
+
+                    <p class="servicesCardPara" id="accuratebookpra1">Accurate Financial Record Keeping  –</p>
+                    <p class="servicesCardPara" id="accuratebookpra2">Maintain well-organized financial records using industry-leading software for seamless tracking and compliance.</p>
+
+                    <p class="servicesCardPara" id="preparationbookpra1">Preparation of Financial Statements –</p>
+                    <p class="servicesCardPara" id="preparationbookpra2">Generate detailed balance sheets, income statements, and cash flow reports with precision.</p>
+
+                    <p class="servicesCardPara" id="accountbookpra1">Account Payable & Receivable Management – </p>
+                    <p class="servicesCardPara" id="accountbookpra2">Track invoices, payments, and outstanding balances efficiently with automated tools.</p>
+
+                    <p class="servicesCardPara" id="bankbookpra1">Bank Reconciliation –</p>
+                    <p class="servicesCardPara" id="bankbookpra2"> Match financial records with bank statements to ensure accuracy and prevent discrepancies.</p>
+
+                    <p class="servicesCardPara" id="financialanalysisbookpra1">Financial Analysis & Reporting –</p>
+                    <p class="servicesCardPara" id="financialanalysisbookpra2"> Gain insights into profitability, cash flow trends, and financial performance using data-driven reports.</p>
+
+                    <p class="servicesCardPara" id="payrollbookpra1">Payroll Processing & Expense Management – </p>
+                    <p class="servicesCardPara" id="payrollbookpra2"> Manage employee salaries, benefits, and business expenses through integrated systems.</p>
+
+                <div>
+                    <a href="bookkeeping.html" class="readmorebutton">Explore ></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!-- ------------------------------------------------------------------- -->
+        <!-- ----------------- Integrated Solution Section --------------------- -->
+        <!-- ------------------------------------------------------------------- -->
+
+        <div class="imageAndCardDiv" id="integratedsolutiondiv">
+
+            <div class="eachServiceImage" id="integratedsolutionimagediv">
+
+            </div>
+
+            <div class="eachServiceCard" id="integratedsolutionheadingdiv">
+                
+                <h1 class="allCardsHeadings" id="integratedsolutionheading">
+                    Integrated Solution
+                </h1>
+
+                    <p class="servicesCardPara" id="financialintegratedpra1">Financial Reporting & Compliance –</p>
+                    <p class="servicesCardPara" id="financialintegratedpra2">Providing accurate, timely, and transparent financial reports that align with global accounting standards, ensuring regulatory compliance.</p>
+
+                    <p class="servicesCardPara" id="auditoryintegratedpra1">Auditing & Assurance –</p>
+                    <p class="servicesCardPara" id="auditoryintegratedpra2">Conducting thorough financial audits to identify risks, strengthen internal controls, and enhance operational efficiency.</p>
+
+                    <p class="servicesCardPara" id="taxintegratedpra1">Tax Strategy & Compliance –</p>
+                    <p class="servicesCardPara" id="taxintegratedpra2">Offering expert tax planning, compliance management, and cross-border taxation solutions for businesses operating internationally.</p>
+
+                    <p class="servicesCardPara" id="riskintegratedpra1">Risk Management & Governance –</p>
+                    <p class="servicesCardPara" id="riskintegratedpra2">Assessing financial and operational risks, implementing robust governance frameworks, and ensuring long-term stability.</p>
+
+                    <p class="servicesCardPara" id="bussinessintegratedpra1">Business Advisory & Strategic Consulting – </p>
+                    <p class="servicesCardPara" id="bussinessintegratedpra2">Providing tailored financial guidance to support growth, mergers, acquisitions, and market expansion.</p>
+
+                    <p class="servicesCardPara" id="bookintegratedpra1">Bookkeeping & Financial Management – </p>
+                    <p class="servicesCardPara" id="bookintegratedpra2">Streamlining financial processes with cloud-based bookkeeping solutions for accurate record-keeping and efficient management.</p>
+
+                    <p class="servicesCardPara" id="regulatoryintegratedpra1">Regulatory & Legal Compliance Services – </p>
+                    <p class="servicesCardPara" id="regulatoryintegratedpra2">Helping businesses meet industry-specific regulations, financial reporting requirements, and legal obligations</p>
+
+                <div>
+                    <a href="integratedSolutions.html" class="readmorebutton">Explore ></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ----------------- Expert Guidance Section ------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="expertguidancediv">
+
+        <div class="expertheadingdiv">
+            
+            <div>
+
+            <h1 class="expertheading">
+                Expert Guidance for Financial Reporting Software
+            </h1>
+
+            </div>
+
+            <div class="expertpradiv">
+            <p id="expertpra">
+                Simplify financial management with intelligent reporting tools.We help businesses leverage advanced reporting software to maintain precise financial records, optimize tax calculations, and ensure seamless compliance. With our specialized financial services, clients can streamline their accounting processes.
+            </p>
+        </div>
+        
+        </div>
+
+        <div class="expertimagediv">
+
+            <div class="expertimageupperdiv">
+
+                <div><a href="" class="expertimg" id="expertimg1"></a></div>
+                <div><a href="" class="expertimg" id="expertimg2"></a></div>
+                <div><a href="" class="expertimg" id="expertimg3"></a></div>
+                <div><a href="" class="expertimg" id="expertimg4"></a></div>
+                <div><a href="" class="expertimg" id="expertimg5"></a></div>
+                <div><a href="" class="expertimg" id="expertimg6"></a></div>
+                <div><a href="" class="expertimg" id="expertimg7"></a></div>
+                <div><a href="" class="expertimg" id="expertimg8"></a></div>
+                
+
+            </div>
+
+        </div>
+
+        
+    </div>
+    
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ----------------------- Help Section ------------------------------ -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="helpdiv">
+
+        <div class="helpinnerdiv">
+
+            <div class="helpheadingdiv">
+                <h1 id="helpheading">
+                    We Can Help You
+                </h1>
+                
+            <div class="helppradiv">
+                <p id="helppra">Our professionals in Audit, Taxation and Advisory can help you with your organisation’s business requirement.</p>
+                <div class="reachoutdiv">
+                <button id="reachoutbutton">Reach out to us</button>
+            </div>
+
+            </div>
+
+    
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Footer Section --------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+ 
+    <footer class="footer">
+
+        <div class="footerdiv">
+
+            <div class="footerinnerdiv">
+                    
+                    <div class="footerlogoandheadingdiv">
+                        <div class="f1logodiv"></div>
+                        <h2 class="footerlogoheading">FI Consultancy</h2>
+                    </div>
+                    
+                    <div class="iconsdiv">
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+
+            </div>
+
+            <div class="footerinnerdiv">
+                <h3 id="heading7">Company</h3>
+                <ul class="listfooter">
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
+                </ul>
+
+                <div>
+
+                <p class="footercopyright">
+                    Copyright © 2025 . F1 Consultancy . All rights reserved. 
+                </p>
+
+                </div>
+
+            
+            </div>
+
+            <div class="footerinnerdiv" id="footercontactdiv">
+                <p id="footerpra2" class="contactpra"> <i class="fa-solid fa-envelope"></i> info@ficonsultancy.net</p>
+                <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-314-1503257</p>
+                <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-322-0846330</p>
+            </div>
+
+        </div>
+
+    </footer>
+    
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------- Javascript Linked ----------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+
+    <script src="../scripts/main.js"></script>
+    
+</body>
+</html>

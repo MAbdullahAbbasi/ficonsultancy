@@ -72,22 +72,53 @@
     background-color: rgb(202, 49, 49);
 }
 
-.financialheadingdiv{   
+.bookkeepingimageinnerdiv{
+    width: 204.2vh;
+    height: 50vh;
+    background-image: url(../images/bookkeeping.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bookkeepingimageouterdiv{
+    position: relative;
+}
+
+.bookkeepingheading{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    margin-top: 8%;
+}
+
+.bookkeepingoverlaydiv{
+     width: 204.2vh;
+    height: 50vh;
+    background-color: rgba(20, 1, 37, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.bookkeepingheadingdiv{
     text-align: center;
     font-size: 35px;
 }
 
-.financialmainpradivs{
-    /* border: 2px solid black; */
+.bookkeepingprasdiv{
     font-size: 20px;
     margin: 40px 0px;
     margin-left: 2%;
 }
 
-#financialfirstpra, #financialthirdpra, #financialfifthpra, #financialsevenpra, #financialninepra, #financialelevenpra, #financialthirteenpra{
-    /* border: 2px solid black;s */
+.bookkeepingpraspan1{
     font-weight: bolder;
 }
+
+
 
 
 .footerdiv{
@@ -175,4 +206,7 @@
     top: 240px;
     font-size: 25px;
 }
+
+
+
 

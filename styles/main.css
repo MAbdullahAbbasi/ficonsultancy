@@ -1,0 +1,1609 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------- Navbar and Hero Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.box{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    position: relative;
+    /* z-index: 1; */
+    /* opacity: .1; */
+}
+
+#heroBannerImageDiv{
+    /* height: 750px; */
+    /* background-image: url("../images/pexels-thecoachspace-2977565.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* opacity: ; */
+    /* width: 100%; */
+    /* height: 100vh; */
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* background-color: red; */
+    /* z-index: -1; */
+
+    
+}
+
+#heroBannerImage{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: slideInOut 5s linear infinite;
+    overflow-x: hidden;
+}
+
+@keyframes slideInOut {
+
+    0% {
+        transform: translateX(-300px);
+        opacity: 0;
+      }
+       20% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      70% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      80% {
+        transform: translateX(100vw);
+        opacity: 0.5;
+      }
+      90% {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(100vw);
+        opacity: 0;
+      }
+
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Navbar --------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.responsiveNavdiv{
+    transform: translateX(-110%);
+    background-color: rgb(0, 51, 141, .5);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    top: auto;
+    width: 80%;
+    z-index: 1112;
+}
+
+.closeIcon{
+    color: white;
+    font-size: 35px;
+    padding: 5%;
+}
+
+#navresponsiveIcons{
+    display: none;
+}
+
+#resplists{
+    font-size: 25px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.listitemsResp{
+    margin: 5%;
+    text-align: center;
+    border-bottom: 2px solid white;
+    background-color: rgb(0, 51, 141);
+}
+
+/* ------------------------------------------------------------------------- */
+
+.navdiv
+{
+    background-color: white;
+    color: rgb(0, 51, 141);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    /* border-bottom: 2px solid black; */
+    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
+    height: fit-content;
+}
+
+.navInnerdivs
+{
+    width: 25%;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+
+.navh1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin: 2%;
+}
+
+#headerlogo{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: none;
+}
+
+#companyNameHeading{
+    font-size: 25px;
+    padding: 5px;
+}
+
+#navlinksdiv{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
+
+}
+
+#lists{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 20px;
+    list-style: none;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.listsnav, .listsrespnav{
+    text-decoration: none;
+    color: rgb(0, 51, 141);
+}
+
+.listsnav:hover{
+    text-decoration: underline;
+    /* border-bottom: 2px solid rgb(0, 51, 141); */
+}
+
+/* --------------------------- Services Dropdown -------------------------------- */
+
+#servicesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#servicesNavItem:hover{
+    /* border: 2px solid white; */
+    /* position: relative; */
+    border-bottom: none;
+}
+
+#servicesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.serviceslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#servicesDropDownDiv .serviceslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#servicesNavItem:hover #servicesDropDownDiv {
+      transform: translateY(0px);
+      opacity: 1;
+      /* visibility: visible; */
+      /* pointer-events: auto; */
+      display: block;
+}
+
+/* --------------------------- Industries Dropdown -------------------------------- */
+
+#industriesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#industriesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.industrieslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#industriesDropDownDiv .industrieslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#industriesNavItem:hover #industriesDropDownDiv {
+      transform: translateY(0px);
+      /* opacity: 1; */
+      display: block;
+}
+
+#appointmentBtnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#MakeAppointment{
+    font-size: 15px;
+    text-align: center;
+    background-color: rgb(0, 51, 141);
+    color: white;
+    cursor: pointer;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+}
+
+#MakeAppointment:hover{
+    background-color: rgb(1, 30, 79);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------------- Hero Section ------------------------------ */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.heroDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: rgba(0, 51, 141, 0.5); */
+    background-image: url('../images/consutancyBannerImages/image1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes abc {
+    0% {
+        transform: translateY(-270px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero{
+    height: auto;
+    width: fit-content;
+    /* opacity: .5; */
+    margin: 0%;
+    color: white;
+    text-align: center;
+    animation: abc 1s ease-out;
+    /* background-color: rgba(0, 51, 141, 0.5); */
+
+}
+
+.heroh1{
+    font-size: 50px;
+}
+
+.herop1{
+    font-size: 25px;
+    /* margin-top: 17px; */
+}
+
+.herop2{
+    font-size: 20px;
+    /* margin-top:55px; */
+}
+ 
+.b1, .b2,.b3{
+    font-size: 15px;
+    border-radius: 41px;
+    /* margin-top: 15px; */
+    width: 15%;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.b1{
+    background-color:rgb(195, 50, 50);
+    margin-right: 15px;
+}
+
+.b2{
+    background-color: white;
+    color: black;
+}
+
+.b1:hover, .b2:hover{
+    background-color: red;
+}
+
+.b2:hover{
+    color: white;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------------- Whatsapp Section -------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.whatsappDiv{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 11;
+    
+    /* border: 2px solid white; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: right;
+}
+
+.whatsAppContactPersonDiv{
+    box-shadow: 0px 2px 2px 5px  rgb(208, 205, 205, .5);
+    background-color: rgb(0, 51, 141);
+    border: 2px solid rgb(255, 255, 255);
+
+    margin: 5%;
+    width: 275px;
+}
+
+.whatsAppCrossDiv{
+    color: white;
+    text-align: right;
+    margin: 5%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.whatsAppCrossBtn{
+    cursor: pointer;
+}
+
+.userProfile{
+    background-image: url('../images/userProfileIcon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#logo{
+    /* background-color: blue; */
+    border-radius: 100%;
+    height: 90px;
+    /* width: 150px; */
+    border: 2px solid black;
+    
+    display: none;
+} 
+
+.texts{
+    /* margin: 5%; */
+    /* justify-content: space-evenly; */
+    /* font-size: 20px; */
+    /* width: fit-content; */
+}
+
+.nameandlogo{
+    border: 2px solid rgb(195, 192, 192);
+    /* border: 2px solid red; */
+    background-color: rgb(0, 51, 141);
+    color: white;
+    display: flex;
+    margin: 2%;
+    padding: 2%;
+    cursor: pointer;
+
+    /* width: 100%; */
+    /* border-radius: 5px; */
+    /* border: 2px solid white; */
+}
+
+.nameandlogo:hover{
+    background-color: rgb(1, 41, 109);
+}
+
+.fields{
+    margin: 5%;
+    font-weight: bold;
+    width: 100%;
+    /* border: 2px solid white; */
+
+}
+
+#online{
+    background-color: rgb(52, 155, 52);
+    border-radius: 5px;
+    width: fit-content;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.b3{
+    background-color: rgb(60, 194, 60);
+    padding: 10px;
+    width: fit-content;
+    font-size: 20px;
+    width: 300px;
+
+}
+
+.b3:hover{
+    background-color: rgb(12, 233, 12);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------ About Us Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.aboutdiv{
+    padding: 15px;
+    background-color: rgb(0, 51, 141);
+}
+
+#aboutheading{
+     color: white;
+     text-align: center;
+     font-size: x-large;
+}
+
+.informationdiv{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.imgdiv{
+    width: 45%;
+    height: 60vh;
+    background-image: url(../images/laptop\ typing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pradiv{
+    width: 45%;
+    /* border: 2px solid white; */
+    margin: 2%;
+    /* height: 70vh; */
+    line-height: 45px;
+}
+
+.aboutpra{
+    color: white;
+    font-size: 20px;
+}
+
+#readmore{
+    color: white;
+    /* background-color: rgb(240, 55, 55); */
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    /* border-radius: 7px; */
+    /* border: none; */
+    /* padding: 11px; */
+}
+
+#readmore:hover{
+    border-bottom: 2px solid white;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------ Services Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+#heading2{
+    text-align: center;
+    font-size: 55px;
+}
+
+.imagesdivs{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 45% 45%;
+    gap: 15px;
+}
+
+.imgservicesdiv{
+    height: 355px;
+    cursor: pointer;
+}
+
+#imageid1:hover #overlay1{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid2:hover #overlay2{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid3:hover #overlay3{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid4:hover #overlay4{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid5:hover #overlay5{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid6:hover #overlay6{
+    height: 100%;
+    transition: all .4s;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#imageid1{
+    background-image: url(../images/financialReporting.jpg);
+}
+
+#imageid2{
+    background-image: url(../images/pexels-cottonbro-4107100.jpg);
+}
+
+#imageid3{
+    background-image: url(../images/pexels-shkrabaanthony-5816299.jpg);
+}
+
+#imageid4{
+    background-image: url(../images/pexels-n-voitkevich-6863336.jpg);
+}
+
+#imageid5{
+    background-image: url(../images/pexels-leeloothefirst-8970297.jpg);
+}
+
+#imageid6{
+    background-image: url(../images/pexels-kindelmedia-7688333.jpg);
+}
+
+.servicesCard{
+    display: flex;
+    position: relative;
+    height: 65vh;
+}
+
+#imageid1, #imageid2, #imageid3, #imageid4, #imageid5, #imageid6{
+    background-size: cover;
+    width: 65%;
+    height: 100%;
+}
+
+.servicesParaDiv{
+    font-size: 17.5px;
+    padding: 5%;
+    background-color: rgb(0, 51, 141);
+    color: white;
+    position: absolute;
+    height: 275px;
+    width: 45%;
+    bottom: 30px;
+    right: 0;
+
+    /* position: relative; */
+    overflow: hidden;
+    transition: color 0.5s ease;
+    z-index: 1;
+    /* color: rgb(1, 1, 98); */
+    /* background-color: white; */
+    /* height: 275px; */
+    /* padding: 5%; */
+    cursor: pointer;
+}
+
+.servicesParaDiv::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transform: translateY(100%);
+      transition: transform 0.6s ease;
+      color: navy;
+      z-index: 0;
+}
+
+.servicesParaDiv:hover::before {
+      transform: translateY(0);
+}
+
+.servicesParaDiv h3,
+.servicesParaDiv p,
+.servicesParaDiv a {
+    position: relative;
+    z-index: 2;
+}
+
+.servicesParaDiv:hover {
+    color: rgb(0, 51, 141); /* Same navy as background */
+}
+
+.servicesParaDiv:hover #imagebuton1, .servicesParaDiv:hover #imagebuton2, 
+.servicesParaDiv:hover #imagebuton3, .servicesParaDiv:hover #imagebuton4, 
+.servicesParaDiv:hover #imagebuton5, .servicesParaDiv:hover #imagebuton6{
+    color: rgb(0, 51, 141);;
+}
+
+#imagebuton1, #imagebuton2, #imagebuton3, #imagebuton4, #imagebuton5, #imagebuton6{
+    /* position: absolute; */
+    /* right: 0; */
+    text-decoration: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    /* background-color: rgb(224, 1, 1); */
+    padding: 7px;
+    /* margin-top: 15px; */
+    /* margin-right: 15px; */
+    /* color: white; */
+    cursor: pointer;
+    
+}
+
+#imagebuton1:hover, #imagebuton2:hover, #imagebuton3:hover, #imagebuton4:hover, #imagebuton5:hover, #imagebuton6:hover{
+    /* background-color: rgb(255, 10, 10); */
+    color: rgb(218, 218, 218);
+    border-bottom: 2px solid gray;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Our Values Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.ourvalues{
+    background-color: rgb(0, 51, 141);
+    padding: 2%;
+}
+
+#heading3{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+#valuepra{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.valueimagediv{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 15px;
+    /* justify-content: space-evenly; */
+}
+
+.aboutvalueimage{
+    /* height: 655px; */
+    cursor: pointer;
+    color: white;
+    /* margin: 2%; */
+    /* display: flex; */
+    /* align-items: end; */
+    /* background-size: cover; */
+}
+
+.valuepra1, .valuepra2{
+    font-size: 21px;
+    color: #082a6a;
+}
+
+.valuepra1{
+    font-style: italic;
+}
+
+.valuepra3{
+    font-size: 33px;
+    color: #082a6a;
+
+}
+
+.pradivs {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease;
+    z-index: 1;
+    color: rgb(1, 1, 98);
+    background-color: white;
+    height: 275px;
+    padding: 5%;
+    cursor: pointer;
+}
+
+.pradivs::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #082a6a;
+      transform: translateY(100%);
+      transition: transform 0.6s ease;
+      /* color: white; */
+      z-index: 0;
+}
+
+.pradivs:hover::before {
+      transform: translateY(0);
+}
+
+.valuepra1, .valuepra2, .valuepra3 {
+      position: relative;
+      z-index: 1;
+      transition: color 0.6s ease;
+}
+
+.pradivs:hover .valuepra1 {
+    color: white;
+}
+
+.pradivs:hover .valuepra2 {
+    color: white;
+}
+
+.pradivs:hover .valuepra3 {
+    color: white;
+}
+
+/* .pradivs{
+    background-color: rgb(2, 43, 113);
+    /* height: 45%; */
+    /* padding: 2%;
+    border-radius: 5%;
+
+}
+
+.pradivs:hover{
+    background-color: white;
+    color: rgb(1, 1, 98);
+    transition: 1s;
+} */ 
+/* 
+#valueimage1{
+    background-image: url(../images/Intergretity-Website.png);
+}
+
+#valueimage2{
+    background-image: url(../images/Excellence-Website.png);
+}
+
+#valueimage3{
+    background-image: url(../images/together.png);
+}
+
+#valueimage4{
+    background-image: url(../images/Focused-Website.png);
+}
+
+#valueimage5{
+    background-image: url(../images/Well\ being-website.png);
+}
+
+#valueimage6{
+    background-image: url(../images/rethink-website.png);
+} */
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Industries Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.industriesdiv{
+    padding: 2%;
+    background-color: white;
+    /* color: white; */
+}
+
+#heading4{
+    text-align: center;
+    font-size: 55px;
+}
+
+#industrypra1{
+    text-align: center;
+    font-size: 27px;
+}
+
+#industrypra2{
+    text-align: center;
+    font-size: 21px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.industryimagediv{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.aboutindustryimage{
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s ease;
+    z-index: 1;
+    cursor: pointer;
+    /* border-radius: 5px; */
+    background-color: rgb(0, 51, 141);
+    color: white;
+    padding: 5%;
+    height: 275px;
+    /* border: 2px solid rgb(0, 51, 141); */
+}
+
+.aboutindustryimage::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(255, 255, 255);
+      transform: translateY(100%);
+      transition: transform 0.6s ease;
+      /* color: navy; */
+      z-index: 0;
+}
+
+.aboutindustryimage:hover::before {
+      transform: translateY(0);
+}
+
+.aboutindustryimage:hover {
+    color: navy; /* or any contrasting color */
+    /* z-index: 1; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+
+}
+
+.aboutindustryimage .industryheadDiv,
+.aboutindustryimage .industrypra,
+.aboutindustryimage .industrybutton {
+    position: relative;
+    z-index: 2;
+}
+
+
+.industryheadDiv{
+    display: flex;
+}
+
+#image1industry, #image2industry,  #image3industry,  #image4industry,  #image5industry,  #image6industry{
+    width: 111px;
+    height: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading5{
+    font-size: 27px;
+    margin: 15px;
+    font-weight: lighter;
+    /* color: black; */
+}
+
+.industrypra{
+    font-size: 22px;
+    /* color: black; */
+}
+
+.industrybutton{
+    font-size: 20px;
+    /* color: rgb(0, 51, 141, .5); */
+    background-color: none;
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.industrybutton:hover{
+    /* background-color: red; */
+    color: rgb(213, 213, 213);
+    border-bottom: 1px solid rgb(213, 213, 213);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Footer Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.footer {
+    background-color: rgb(0, 51, 141);
+    padding: 40px;
+}
+
+.footerdiv {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
+    color: white;
+    /* border: 2px solid white; */
+}
+
+.footerinnerdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerlogoandheadingdiv{
+    display: flex;
+    gap: 10px;
+    /* border: 2px solid white; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.f1logodiv {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../images/logoFI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footerlogoheading {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+}
+
+.iconsdiv {
+    display: flex;
+    /* justify-content: ; */
+    font-size: 22px;
+}
+
+.iconsdiv i{
+    margin: 5%;
+    cursor: pointer;
+}
+
+.iconsdiv i:hover{
+    color: rgb(241, 241, 241 , .75);
+    transform: translateY(-15%);
+    transition: all .5s;
+}
+
+#heading7 {
+    font-size: 33px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.listfooter {
+    list-style: none;
+    text-align: center;
+    /* width: fit-content; */
+    /* border: 2px solid white; */
+    padding: 0%;
+
+}
+
+.listfooterinnerdiv{
+    margin: 10px;
+    font-weight: lighter; 
+    font-size: 17.5px;
+    /* margin: 0%; */
+}
+
+.footerLinksPages{
+    /* text-decoration: none; */
+    color: white;
+}
+
+.footerLinksPages:hover{
+    color: rgb(232, 232, 232, .75);
+}
+
+#footercontactdiv {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    justify-content: right;
+    align-items: end;
+    /* border: 2px solid white; */
+
+}
+
+.contactpra{
+    font-size: 17.5px;
+    margin: 2%;
+    color: white;
+    width: 55%;
+}
+
+.footercopyright {
+    text-align: center;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ###################### Responsiveness ############################# */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+
+
+@media (max-width: 600px){
+
+/* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ---------------------- Nav And Hero Section ----------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+
+    #navresponsiveIcons{
+        display: block;
+        height: fit-content;
+        width: 10%;
+        font-size: 33px;
+        text-align: end;
+    }
+
+    #navfirstdiv{
+        width: 50%;
+        height: fit-content;
+    }
+
+    #appointmentBtnDiv{
+        width: 40%;
+        height: fit-content;
+
+    }
+
+    #headerlogo{
+        width: 37px;
+        height: 37px;
+    }
+
+    #companyNameHeading{
+        font-size: large;
+    }
+
+    #navlinksdiv{
+        display: none;
+    }
+
+    #MakeAppointment{
+        font-size: small;
+    }
+
+    .heroDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgba(32, 16, 47, 0.9);     */
+    }
+
+    .heroh1{
+        font-size: 30px;
+        position: relative;
+        left: 29px;
+        width: 87%;
+        text-align: center;
+       /* border: 2px solid white; */
+       margin-bottom: 50px;
+    }
+
+    .herop1{
+        font-size: 20px;
+        width: 80%;
+        margin-left: 3%;
+        position: relative;
+        bottom: 15px;
+        left: 36px;
+    }
+
+    .herop2{
+        font-size: 17px;
+        width: 80%;
+        margin-left: 41px;
+        position: relative;
+        bottom: 35px;
+    }
+
+    .b1, .b2{
+        font-size: 15px;
+        border-radius: 40px;
+        padding: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-top: 5%;
+        color: white;
+    }
+
+    .b2{
+        color: black;
+    }
+
+    .buttonsdiv{
+        text-align: center;
+        margin-left: 120px;
+    }
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* --------------------------- WhatsApp Section ---------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+    .whatsappDiv{
+        /* right: 25px; */
+    }
+
+    .whatsAppContactPersonDiv{
+        border-radius: 5px;
+    }
+
+    .whatsAppCrossDiv{
+        margin: 5%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .nameandlogo{
+        display: flex;
+        margin: 5%;
+        padding: 5%;
+    }
+
+    #logo{
+        border-radius: 100%;
+        height: 50px;
+        width: 95px;
+    }
+
+    .texts{
+        margin: 5%;
+        justify-content: space-evenly;
+        font-size: 10px;
+    }
+
+    #online{
+        width: max-content;
+        padding: 5px;
+    }
+
+    .fields{
+        margin: 5%;
+    }
+
+    .b3{
+        background-color: rgb(60, 194, 60);
+        padding: 5px;
+        font-size: 10px;
+        width: 175px;
+
+    }
+
+    #icon{
+        padding: 2%;
+    }
+
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* --------------------------- About Section ------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+
+    #aboutheading{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .informationdiv{
+        display: block;
+        padding: 1%;
+    }
+
+    .imgdiv{
+        height: 270px;
+        width: 100%;
+    }
+
+    .pradiv{
+        width: 100%;
+        line-height: 22px;
+    }
+    
+    .aboutpra{
+        font-size: medium;
+        text-align: justify;
+    }
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------ Services Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+    #heading2{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .imagesdivs{
+        display: block;
+    }
+
+    .imgservicesdiv{
+        margin: 5%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .servicesCard{
+        /* display: flex; */
+        /* position: relative; */
+        height: 45vh;
+    }
+
+    #imageid1, #imageid2, #imageid3, #imageid4, #imageid5, #imageid6{
+        height: 70%;
+    }
+
+    #id1pra, #id2pra, #id3pra, #id4pra, #id5pra, #id6pra{
+        background-color: rgb(0, 51, 141);
+        /* color: navy; */
+        height: fit-content;
+        width: 55%;
+        /* border: 2px solid black; */
+        /* display: none; */
+    }
+
+    #id1pra, #id2pra, #id3pra, #id4pra, #id5pra, #id6pra{
+        font-size: 15px;
+        font-size: 11px;
+
+        /* background-color: white; */
+        /* padding: 5%; */
+    }
+    
+    .imgservicesdiv{
+        /* height: 33px; */
+    }
+
+    #imagebuton1, #imagebuton2, #imagebuton3, #imagebuton4, #imagebuton5, #imagebuton6{
+        font-size: 11px;
+        /* background-color: rgb(224, 1, 1); */
+        /* margin: 15px; */
+        /* border-bottom: 1px solid white; */
+    }
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Our Values Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+    #heading3{
+        font-size: 25px;
+    }
+
+    #valuepra{
+        font-size: 15px;
+        margin: 5%;
+    }
+
+    .valueimagediv{
+        display: block;
+    }
+
+    .aboutvalueimage{
+        margin: 5%;
+        /* height: fit-content; */
+    }
+
+    .pradivs{
+        height: fit-content;        
+    }
+
+    .valuepra1{
+        font-size: 12.5px;
+        font-style: italic;
+
+    }
+
+    .valuepra2, .valuepra3{
+        font-size: 17.5px;
+        margin-bottom: 0%;
+    }
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Industries Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+
+    .industriesdiv{
+        padding: 0%;
+    }
+
+    #heading4{
+        font-size: 25px;
+    }
+
+    .industryimagediv{
+        padding: 0%;
+    }
+
+    #industrypra1{
+        font-size: 15px;
+        margin: 5%;
+    }
+
+    #industrypra2{
+        display: none;
+    }
+
+    .industryimagediv{
+        display: block;
+    }
+
+    .aboutindustryimage{
+        border-radius: 5px;
+        margin-bottom: 2.5%;
+        border-radius: 0px;
+        /* box-shadow: 0 0 15px rgb(156, 156, 156); */
+        height: fit-content;
+        width: 90%;
+    }
+
+    #image1industry, #image2industry,  #image3industry,  #image4industry,  #image5industry,  #image6industry{
+        width: 55px;
+        height: 55px;
+    }
+
+    .heading5{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .industrypra{
+        font-size: 15px;
+    }
+
+    .industrybutton{
+        font-size: 15px;
+    }
+
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Footer Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+    .footerdiv {
+        display: block;
+    }
+
+    .footerlogoheading {
+        font-size: 25px;
+    }
+
+    .iconsdiv {
+        font-size: 12.5px;
+        justify-content: center;
+        margin: 5%;
+    }
+
+    #heading7 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .listfooterinnerdiv{
+        font-size: 15px;
+        /* border-bottom: 1px solid white; */
+        /* width: fit-content; */
+    }
+
+    #footercontactdiv {
+        font-size: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contactpra{
+        font-size: 12.5px;
+        font-weight: lighter;
+        line-height: 5px;
+    }
+
+    .footercopyright {
+        text-align: center;
+        font-size: 15px;
+        font-weight: lighter;
+        display: none;
+    }
+
+}

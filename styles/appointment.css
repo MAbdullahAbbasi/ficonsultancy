@@ -2,18 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.box{
-    margin: 0%;
-    padding: 0%;
-    /* height: 750px; */
-    background-image: url("../images/pexels-thecoachspace-2977565.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* opacity: ; */
-}
-
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -26,21 +14,19 @@ body{
 
 .responsiveNavdiv{
     transform: translateX(-110%);
-    background-color: rgb(0, 51, 141, .5);
+    /* background-color: rgb(0, 51, 141, .5); */
+    background-color: white;
     backdrop-filter: blur(50px);
     position: fixed;
     top: auto;
-    width: 80%;
+    width: 50%;
     z-index: 1112;
-}
-
-.navRespInnerdivs{
-    
+    border-radius: 5px;
 }
 
 .closeIcon{
-    color: white;
-    font-size: 35px;
+    color: rgb(0, 51, 141);
+    font-size: 25px;
     padding: 5%;
 }
 
@@ -48,53 +34,55 @@ body{
     display: none;
 }
 
-#navlinksrespdiv{
-}
-
 #resplists{
-    font-size: 25px;
+    font-size: 15px;
     list-style: none;
     line-height: 50px;
 }
 
 .listitemsResp{
     margin: 5%;
-    text-align: center;
-    border-bottom: 2px solid white;
-    background-color: rgb(0, 51, 141);
+    /* text-align: center; */
+    /* border-bottom: 2px solid white; */
+    /* background-color: rgb(0, 51, 141); */
 }
 
 /* ------------------------------------------------------------------------- */
 
 .navdiv
 {
-    background-color: rgb(0, 51, 141);
+    background-color: white;
+    color: rgb(0, 51, 141);
     display: flex;
     position: sticky;
     top: 0;
     z-index: 2;
-    /* border-bottom: 2px solid rgb(3, 21, 54); */
-    box-shadow: 0 5px 5px rgba(1, 16, 43, 0.75);
-
+    /* border-bottom: 2px solid black; */
+    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
+    height: fit-content;
 }
 
 .navInnerdivs
 {
     width: 25%;
-    color: white; 
     text-align: center;
+    padding: 0%;
+    margin: 0%;
 }
 
 .navh1{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0%;
+    margin: 2%;
 }
 
 #headerlogo{
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    /* display: none; */
 }
 
 #companyNameHeading{
@@ -106,30 +94,143 @@ body{
     width: 50%;
     display: flex;
     align-items: center;
-    /* border: 2px solid white; */
+    padding: 0%;
+    margin: 0%;
+
 }
 
 #lists{
     display: flex;
     justify-content: space-evenly;
-    /* border: 2px solid white; */
     align-items: center;
     font-size: 20px;
     list-style: none;
     width: 100%;
+    padding: 0%;
+    margin: 0%;
 }
 
 .listsnav, .listsrespnav{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 51, 141);
 }
 
 .listsnav:hover{
-    border-bottom: 2px solid rgb(255, 255, 255);
+    text-decoration: underline;
+    /* border-bottom: 2px solid rgb(0, 51, 141); */
+}
+
+/* --------------------------- Services Dropdown -------------------------------- */
+
+#servicesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#servicesNavItem:hover{
+    /* border: 2px solid white; */
+    /* position: relative; */
+    border-bottom: none;
+}
+
+#servicesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.serviceslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#servicesDropDownDiv .serviceslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#servicesNavItem:hover #servicesDropDownDiv {
+      transform: translateY(0px);
+      opacity: 1;
+      /* visibility: visible; */
+      /* pointer-events: auto; */
+      display: block;
+}
+
+/* --------------------------- Industries Dropdown -------------------------------- */
+
+#industriesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#industriesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.industrieslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#industriesDropDownDiv .industrieslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#industriesNavItem:hover #industriesDropDownDiv {
+      transform: translateY(0px);
+      /* opacity: 1; */
+      display: block;
 }
 
 #appointmentBtnDiv{
-    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +239,7 @@ body{
 #MakeAppointment{
     font-size: 15px;
     text-align: center;
-    background-color: red;
+    background-color: rgb(0, 51, 141);
     color: white;
     cursor: pointer;
     padding: 11px;
@@ -147,9 +248,8 @@ body{
 }
 
 #MakeAppointment:hover{
-    background-color: rgb(202, 49, 49);
+    background-color: rgb(1, 30, 79);
 }
-
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -166,12 +266,6 @@ body{
     position: absolute;
     transform: translateX(340%);
     display: none;
-}
-
-i{
-    border: 2px solid white;
-    padding: 2%;
-    border-radius: 25px;
 }
 
 .appointmentBookAlertDiv{
@@ -196,22 +290,23 @@ i{
 
 .outerdiv{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     height: auto;
-    background-color: rgba(45, 6, 82, 0.9);
+    /* background-color: rgb(0, 51, 141); */
+    background-color: white;
+    color: rgb(0, 51, 141);
 }
 
 .appointmentouter{
     border-radius: 5px;
     box-shadow: 5px 5px 20px 10px rgba(216, 216, 216, 0.5);
-    border: 1px solid white;
+    border: 1px solid rgb(0, 51, 141);
     padding: 2%;
-    margin: 10%;
-    color: white;
+    margin: 2%;
+    width: 40%;
+    /* color: white; */
 }
-
-
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -222,15 +317,31 @@ i{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
+
 .heading{
     text-align: center;
-    padding: 5px;
-    font-size: 55px;
+    /* padding: 2.5px; */
+    font-size: 35px;
+}
+
+.formfieldsDiv{
+    padding: 2%;
+    display: flex;
+}
+
+.labelDiv{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.inputDiv{
+    width: 100%;
 }
 
 .inputstyling{
-    background-color: rgba(45, 6, 82, 0.9);
-    border: 1px solid rgb(222, 217, 217, .5);
+    /* background-color: rgba(45, 6, 82, 0.9); */
+    border: 2px solid rgb(222, 217, 217, .5);
 
 }
 
@@ -239,16 +350,12 @@ i{
     border-radius: 2px;
     cursor: pointer;
     font-size: 20px;
-    color: white;
+    /* color: white; */
     padding: 2%;
 }
 
 .labelstyling{
     background-color: none;
-}
-
-.formfieldsDiv{
-    padding: 2%;
 }
 
 .appointmentbtn{
@@ -288,7 +395,6 @@ i{
 }
 
 
-
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -299,15 +405,17 @@ i{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 
-.footer {
-    background-color: rgb(2, 2, 43);
+.footer{
+    background-color: rgb(0, 51, 141);
     padding: 40px;
 }
 
 .footerdiv {
-    display: flex;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
     justify-content: space-between;
     color: white;
+    /* border: 2px solid white; */
 }
 
 .footerinnerdiv{
@@ -318,8 +426,9 @@ i{
 .footerlogoandheadingdiv{
     display: flex;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
+    /* border: 2px solid white; */
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 .f1logodiv {
@@ -334,40 +443,79 @@ i{
 .footerlogoheading {
     font-size: 30px;
     font-weight: bold;
+    margin: 0%;
+    display: flex;
+    align-items: center;
 }
 
 .iconsdiv {
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: ; */
     font-size: 22px;
+}
+
+.iconsdiv i{
+    margin: 5%;
+    cursor: pointer;
+}
+
+.iconsdiv i:hover{
+    color: rgb(241, 241, 241 , .75);
+    transform: translateY(-15%);
+    transition: all .1s;
 }
 
 #heading7 {
     font-size: 33px;
     text-align: center;
     font-weight: bold;
+    margin: 0%;
 }
 
 .listfooter {
     list-style: none;
-    padding: 0;
     text-align: center;
+    /* width: fit-content; */
+    /* border: 2px solid white; */
+    padding: 0%;
+
 }
 
 .listfooterinnerdiv{
     margin: 10px;
     font-weight: lighter; 
-    font-size: 22px;
+    font-size: 17.5px;
+    /* margin: 0%; */
+}
+
+.footerLinksPages{
+    /* text-decoration: none; */
+    color: white;
+}
+
+.footerLinksPages:hover{
+    color: rgb(232, 232, 232, .75);
 }
 
 #footercontactdiv {
     display: flex;
     flex-direction: column;
+    /* border: 2px solid white; */
+    justify-content: right;
+    align-items: end;
+    /* border: 2px solid white; */
+
+}
+
+#footerpra2{
+    cursor: pointer;
 }
 
 .contactpra{
-    font-size: 22px;
+    font-size: 17.5px;
     margin: 2%;
+    color: white;
+    width: 55%;
 }
 
 .footercopyright {
@@ -452,6 +600,23 @@ i{
     
     .outerdiv{
         justify-content: center;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* height: auto; */
+        /* background-color: rgb(0, 51, 141); */
+        /* background-color: white; */
+        /* color: rgb(0, 51, 141); */
+    }
+
+    .appointmentouter{
+        /* border-radius: 5px; */
+        /* box-shadow: 5px 5px 20px 10px rgba(216, 216, 216, 0.5); */
+        /* border: 1px solid rgb(0, 51, 141); */
+        padding: 2%;
+        margin: 2%;
+        width: 75%;
+        /* color: white; */
     }
 
     .heading{
@@ -459,8 +624,28 @@ i{
         font-size: 20px;
     }
 
+    .formfieldsDiv{
+        padding: 2%;
+        display: flex;
+    }
+
+    .labelDiv{
+        width: 25%;
+        display: block;
+        align-items: center;
+    }
+
+    .inputDiv{
+        width: 100%;
+    }
+
+    .inputstyling{
+        /* background-color: rgba(45, 6, 82, 0.9); */
+        border: 2px solid rgb(222, 217, 217, .5);
+    }
+
     .inputstyling, .labelstyling{
-        width: 75%;
+        /* width: 75%; */
         font-size: 15px;
         padding: 2%;
     }
@@ -482,8 +667,7 @@ i{
         display: none;
     }
 
-
-/* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -502,27 +686,30 @@ i{
     }
 
     .iconsdiv {
-        font-size: 15px;
+        font-size: 12.5px;
+        justify-content: center;
         margin: 5%;
     }
 
     #heading7 {
         font-size: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .listfooterinnerdiv{
         font-size: 15px;
-        border-bottom: 1px solid white;
-        width: fit-content;
+        /* border-bottom: 1px solid white; */
+        /* width: fit-content; */
     }
 
     #footercontactdiv {
         font-size: 10px;
+        align-items: center;
+        text-align: center;
     }
 
     .contactpra{
-        font-size: 15px;
+        font-size: 12.5px;
         font-weight: lighter;
         line-height: 5px;
     }
@@ -531,6 +718,6 @@ i{
         text-align: center;
         font-size: 15px;
         font-weight: lighter;
+        display: none;
     }
-
 }

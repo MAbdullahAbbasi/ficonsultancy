@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/services.css?v=1.2">
+    <link rel="stylesheet" href="../styles/main.css?v=1.6">
+    <link rel="stylesheet" href="../styles/services.css?v=1.3">
+    <link rel="icon" href="../images/logoFI.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Services</title>
 </head>
 <body> 
 
     <!-- ------------------------------------------------------------------- -->
-    <!-- ------------------------ Navbar Section --------------------------- -->
+    <!-- ------------------------ Nav Section ------------------------------ -->
     <!-- ------------------------------------------------------------------- -->
 
     <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
 
     <nav class="responsiveNavdiv" id="responsiveNavbardiv">
-
+            
             <div class="navRespInnerdivs" id="navlinksrespdiv">
                 
                 <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
@@ -26,19 +29,32 @@
                     <li class="listitemsResp">
                         <a href="/index.html" class="listsrespnav" id="home">Home</a>
                     </li>
+
+                    <li class="listitemsResp">
+                        <a href="" class="listsrespnav" id="services">About</a>
+                    </li>
                      
                     <li class="listitemsResp">
                         <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
                     </li>
 
                     <li class="listitemsResp">
-                        <a href="pages/industries.html" class="listsrespnav" id="industries">Industries</a>
+                        <a href="/pages/industries.html" class="listsrespnav" id="industries">Industries</a>
                     </li>
 
                     <li class="listitemsResp">
-                        <a href="pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                        <a href="/pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                    </li>
+
+                    <li class="listitemsResp">
+                        <a href="#" class="listsrespnav" id="contact">Careers</a>
+                    </li>
+
+                    <li class="listitemsResp">
+                        <a href="/pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
                     </li>
                 </ul>
+
             </div>
     </nav>
 
@@ -54,7 +70,9 @@
             <!-- logo and name  -->
             <div class="navInnerdivs" id="navfirstdiv">
                 <h1 class="navh1">
-                    <img src="../images/logoFI.jpg" alt="logo" id="headerlogo">
+                    
+                    <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
+
                     <span id="companyNameHeading">
                         FI Consultancy
                     </span>
@@ -70,17 +88,74 @@
                         <a href="../index.html" class="listsnav" id="home">Home</a>
                     </li>
                      
-                    <li class="itemService">
-                        <a href="services.html" class="listsnav" id="services">Services</a>
-                        <div class="servicesNavDiv"></div>
+                    <li class="listsnav" id="servicesNavItem">
+                        <a href="../pages/services.html" class="listsnav" id="services">Services</a>
+                         
+                        <div id="servicesDropDownDiv">
+
+                            <span>
+                                <a href="../pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial Reporting</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/services/integratedsolutions.html" class="serviceslistsnav" id="">Integrated Solutions</a>
+                            </span>
+
+                        </div>
+                    </li>
+
+                    <li class="listsnav" id="industriesNavItem">
+                        
+                        <a href="../pages/industries.html" class="listsnav">Industries</a>
+                        
+                        <div id="industriesDropDownDiv">
+
+                            <span>
+                                <a href="../pages/industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit Organization</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/industries/ICT.html" class="industrieslistsnav" id="">Information, Communication and Telecommunication</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online Marketplaces</a>
+                            </span>
+
+                            <span>
+                                <a href="../pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer Goods (FMCG)</a>
+                            </span>
+
+                        </div>
+
                     </li>
 
                     <li>
-                        <a href="industries.html" class="listsnav" id="industries">Industries</a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html" class="listsnav" id="contact">Contact</a>
+                        <a href="../pages/contact.html" class="listsnav" id="contact">Contact</a>
                     </li>
 
                     <li>
@@ -88,6 +163,7 @@
                     </li>
 
                 </ul>
+                
             </div>
 
             <!-- appointment button  -->
@@ -181,7 +257,7 @@
             
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/financialreporting.html" class="servicesCardButton">Explore ></a>
         </div>
 
         <div class="servicesCard">
@@ -189,7 +265,7 @@
             
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/audit.html" class="servicesCardButton">Explore ></a>
 
         </div>
 
@@ -198,7 +274,7 @@
             
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/tax.html" class="servicesCardButton">Explore ></a>
 
         </div>
 
@@ -207,7 +283,7 @@
 
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicingelit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iurevero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatumperspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Loremipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
                 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/advisory.html" class="servicesCardButton">Explore ></a>
 
         </div>
 
@@ -216,7 +292,7 @@
 
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/bookkeeping.html" class="servicesCardButton">Explore ></a>
 
         </div>
 
@@ -225,7 +301,7 @@
 
             <p class="servicesCardParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae ea eius omnis alias cumque earum iusto porro inventore hic iure vero, aliquam reiciendis nesciunt sapiente quo illo dolorum architecto ullam, voluptatum perspiciatis rem deleniti dicta facilis. Sint veniam at aperiam ut illum debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit quaerat.</p>
 
-            <a href="" class="servicesCardButton">Explore ></a>
+            <a href="/pages/services/integratedsolutions.html" class="servicesCardButton">Explore ></a>
 
         </div>
 
@@ -552,7 +628,7 @@
             <div class="helppradiv">
                 <p id="helppra">Our professionals in Audit, Taxation and Advisory can help you with your organisation’s business requirement.</p>
                 <div class="reachoutdiv">
-                <button id="reachoutbutton">Reach out to us</button>
+                <a href="../pages/contact.html" id="reachoutbutton">Reach out to us</a>
             </div>
 
             </div>
@@ -567,7 +643,7 @@
     <!-- ------------------------------------------------------------------- -->
     <!-- ------------------------ Footer Section --------------------------- -->
     <!-- ------------------------------------------------------------------- -->
- 
+
     <footer class="footer">
 
         <div class="footerdiv">
@@ -609,7 +685,7 @@
             </div>
 
             <div class="footerinnerdiv" id="footercontactdiv">
-                <p id="footerpra2" class="contactpra"> <i class="fa-solid fa-envelope"></i> info@ficonsultancy.net</p>
+                <p id="footerpra2" class="contactpra" onclick="handleEmailClick()"> <i class="fa-solid fa-envelope"></i> info@ficonsultancy.net</p>
                 <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-314-1503257</p>
                 <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-322-0846330</p>
             </div>
@@ -623,7 +699,7 @@
     <!-- ------------------------------------------------------------------- -->
 
 
-    <script src="../scripts/main.js"></script>
+    <script src="../scripts/main.js?v=1.3"></script>
     
 </body>
 </html>

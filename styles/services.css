@@ -14,17 +14,19 @@ body{
 
 .responsiveNavdiv{
     transform: translateX(-110%);
-    background-color: rgb(6, 6, 46, .5);
+    /* background-color: rgb(0, 51, 141, .5); */
+    background-color: white;
     backdrop-filter: blur(50px);
     position: fixed;
     top: auto;
-    width: 80%;
+    width: 50%;
     z-index: 1112;
+    border-radius: 5px;
 }
 
 .closeIcon{
-    color: white;
-    font-size: 35px;
+    color: rgb(0, 51, 141);
+    font-size: 25px;
     padding: 5%;
 }
 
@@ -33,46 +35,54 @@ body{
 }
 
 #resplists{
-    font-size: 25px;
+    font-size: 15px;
     list-style: none;
     line-height: 50px;
 }
 
 .listitemsResp{
     margin: 5%;
-    text-align: center;
-    border-bottom: 2px solid white;
-    background-color: rgb(6, 6, 46);
+    /* text-align: center; */
+    /* border-bottom: 2px solid white; */
+    /* background-color: rgb(0, 51, 141); */
 }
 
 /* ------------------------------------------------------------------------- */
 
-
-.navdiv{
-    background-color: rgb(0, 51, 141);
-    position: sticky;
+.navdiv
+{
+    background-color: white;
+    color: rgb(0, 51, 141);
     display: flex;
+    position: sticky;
     top: 0;
     z-index: 2;
-    box-shadow: 0 5px 5px rgba(1, 16, 43, 0.75);
+    /* border-bottom: 2px solid black; */
+    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
+    height: fit-content;
 }
 
-#headerlogo{
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-}
-
-.navInnerdivs{
+.navInnerdivs
+{
     width: 25%;
-    color: white; 
     text-align: center;
+    padding: 0%;
+    margin: 0%;
 }
 
 .navh1{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0%;
+    margin: 2%;
+}
+
+#headerlogo{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    /* display: none; */
 }
 
 #companyNameHeading{
@@ -84,30 +94,143 @@ body{
     width: 50%;
     display: flex;
     align-items: center;
-    /* border: 2px solid white; */
+    padding: 0%;
+    margin: 0%;
+
 }
 
 #lists{
     display: flex;
     justify-content: space-evenly;
-    /* border: 2px solid white; */
     align-items: center;
     font-size: 20px;
     list-style: none;
     width: 100%;
+    padding: 0%;
+    margin: 0%;
 }
 
 .listsnav, .listsrespnav{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 51, 141);
 }
 
 .listsnav:hover{
-    border-bottom: 2px solid rgb(255, 255, 255);
+    text-decoration: underline;
+    /* border-bottom: 2px solid rgb(0, 51, 141); */
+}
+
+/* --------------------------- Services Dropdown -------------------------------- */
+
+#servicesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#servicesNavItem:hover{
+    /* border: 2px solid white; */
+    /* position: relative; */
+    border-bottom: none;
+}
+
+#servicesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.serviceslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#servicesDropDownDiv .serviceslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#servicesNavItem:hover #servicesDropDownDiv {
+      transform: translateY(0px);
+      opacity: 1;
+      /* visibility: visible; */
+      /* pointer-events: auto; */
+      display: block;
+}
+
+/* --------------------------- Industries Dropdown -------------------------------- */
+
+#industriesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#industriesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.industrieslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#industriesDropDownDiv .industrieslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#industriesNavItem:hover #industriesDropDownDiv {
+      transform: translateY(0px);
+      /* opacity: 1; */
+      display: block;
 }
 
 #appointmentBtnDiv{
-    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +239,7 @@ body{
 #MakeAppointment{
     font-size: 15px;
     text-align: center;
-    background-color: red;
+    background-color: rgb(0, 51, 141);
     color: white;
     cursor: pointer;
     padding: 11px;
@@ -125,8 +248,9 @@ body{
 }
 
 #MakeAppointment:hover{
-    background-color: rgb(202, 49, 49);
+    background-color: rgb(1, 30, 79);
 }
+
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -773,6 +897,11 @@ body{
     padding: 2%;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
+}
+
+#reachoutbutton:focus{
+    text-decoration: none;
 }
 
 #reachoutbutton:hover{
@@ -846,7 +975,7 @@ body{
 .iconsdiv i:hover{
     color: rgb(241, 241, 241 , .75);
     transform: translateY(-15%);
-    transition: all .5s;
+    transition: all .1s;
 }
 
 #heading7 {
@@ -891,6 +1020,10 @@ body{
 
 }
 
+#footerpra2{
+    cursor: pointer;
+}
+
 .contactpra{
     font-size: 17.5px;
     margin: 2%;
@@ -907,15 +1040,15 @@ body{
 @media (max-width: 600px){
 
     
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* --------------------------- Nav Section --------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ---------------------- Nav And Hero Section ----------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
 
     #navresponsiveIcons{
         display: block;
@@ -926,11 +1059,12 @@ body{
     }
 
     #navfirstdiv{
-        width: 50%;
+        width: 100%;
         height: fit-content;
     }
 
     #appointmentBtnDiv{
+        display: none;
         width: 40%;
         height: fit-content;
 
@@ -952,6 +1086,62 @@ body{
     #MakeAppointment{
         font-size: small;
     }
+
+    .heroDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgba(32, 16, 47, 0.9);     */
+    }
+
+    .heroh1{
+        font-size: 30px;
+        position: relative;
+        left: 29px;
+        width: 87%;
+        text-align: center;
+       /* border: 2px solid white; */
+       margin-bottom: 50px;
+    }
+
+    .herop1{
+        font-size: 20px;
+        width: 80%;
+        margin-left: 3%;
+        position: relative;
+        bottom: 15px;
+        left: 36px;
+    }
+
+    .herop2{
+        font-size: 17px;
+        width: 80%;
+        margin-left: 41px;
+        position: relative;
+        bottom: 35px;
+    }
+
+    .b1, .b2{
+        font-size: 15px;
+        border-radius: 40px;
+        padding: 7.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-top: 5%;
+        color: white;
+    }
+
+    .b2{
+        color: black;
+    }
+
+    .buttonsdiv{
+        text-align: center;
+        margin-left: 120px;
+    }
+
         
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */

@@ -1,6 +1,8 @@
 body{
+    margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -11,24 +13,24 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
+/* NAVBAR AND FOOTER STYLES MOVED TO main.css FOR CONSISTENCY */
 
+/*
 .responsiveNavdiv{
     transform: translateX(-110%);
-    background-color: rgb(0, 51, 141, .5);
+    /* background-color: rgb(0, 51, 141, .5); */
+    background-color: white;
     backdrop-filter: blur(50px);
     position: fixed;
     top: auto;
-    width: 80%;
+    width: 50%;
     z-index: 1112;
-}
-
-.navRespInnerdivs{
-    
+    border-radius: 5px;
 }
 
 .closeIcon{
-    color: white;
-    font-size: 35px;
+    color: rgb(0, 51, 141);
+    font-size: 25px;
     padding: 5%;
 }
 
@@ -36,53 +38,55 @@ body{
     display: none;
 }
 
-#navlinksrespdiv{
-}
-
 #resplists{
-    font-size: 25px;
+    font-size: 15px;
     list-style: none;
     line-height: 50px;
 }
 
 .listitemsResp{
     margin: 5%;
-    text-align: center;
-    border-bottom: 2px solid white;
-    background-color: rgb(0, 51, 141);
+    /* text-align: center; */
+    /* border-bottom: 2px solid white; */
+    /* background-color: rgb(0, 51, 141); */
 }
 
 /* ------------------------------------------------------------------------- */
 
 .navdiv
 {
-    background-color: rgb(0, 51, 141);
+    background-color: white;
+    color: rgb(0, 51, 141);
     display: flex;
     position: sticky;
     top: 0;
     z-index: 2;
-    /* border-bottom: 2px solid rgb(3, 21, 54); */
-    box-shadow: 0 5px 5px rgba(1, 16, 43, 0.75);
-
+    /* border-bottom: 2px solid black; */
+    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
+    height: fit-content;
 }
 
 .navInnerdivs
 {
     width: 25%;
-    color: white; 
     text-align: center;
+    padding: 0%;
+    margin: 0%;
 }
 
 .navh1{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0%;
+    margin: 2%;
 }
 
 #headerlogo{
     border-radius: 50%;
     width: 35px;
     height: 35px;
+    /* display: none; */
 }
 
 #companyNameHeading{
@@ -94,30 +98,143 @@ body{
     width: 50%;
     display: flex;
     align-items: center;
-    /* border: 2px solid white; */
+    padding: 0%;
+    margin: 0%;
+
 }
 
 #lists{
     display: flex;
     justify-content: space-evenly;
-    /* border: 2px solid white; */
     align-items: center;
     font-size: 20px;
     list-style: none;
     width: 100%;
+    padding: 0%;
+    margin: 0%;
 }
 
 .listsnav, .listsrespnav{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 51, 141);
 }
 
 .listsnav:hover{
-    border-bottom: 2px solid rgb(255, 255, 255);
+    text-decoration: underline;
+    /* border-bottom: 2px solid rgb(0, 51, 141); */
+}
+
+/* --------------------------- Services Dropdown -------------------------------- */
+
+#servicesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#servicesNavItem:hover{
+    /* border: 2px solid white; */
+    /* position: relative; */
+    border-bottom: none;
+}
+
+#servicesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.serviceslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#servicesDropDownDiv .serviceslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#servicesNavItem:hover #servicesDropDownDiv {
+      transform: translateY(0px);
+      opacity: 1;
+      /* visibility: visible; */
+      /* pointer-events: auto; */
+      display: block;
+}
+
+/* --------------------------- Industries Dropdown -------------------------------- */
+
+#industriesNavItem{
+    /* border: 2px solid white; */
+    position: relative;
+}
+
+#industriesDropDownDiv{
+    position: absolute;
+
+    top: 200%;
+    width: 200px;
+    left: -50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0);
+    /* box-shadow: ; */
+    /* border: 1px solid rgb(1, 1, 98); */
+
+    background-color: rgb(255, 255, 255, 1);
+
+    border-radius: 4px;
+    transform: translateY(20px);
+    /* opacity: 0; */
+
+    display: none;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+}
+
+.industrieslistsnav{
+      color: rgb(0, 51, 141);
+      display: block;
+      padding: 5%;
+      text-decoration: none;
+      /* margin-left: 0%; */
+      font-size: large;
+}
+
+#industriesDropDownDiv .industrieslistsnav:hover {
+      background-color: rgb(8, 37, 88);
+      color: white;
+
+}
+
+/* Show dropdown on hover */
+#industriesNavItem:hover #industriesDropDownDiv {
+      transform: translateY(0px);
+      /* opacity: 1; */
+      display: block;
 }
 
 #appointmentBtnDiv{
-    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +243,7 @@ body{
 #MakeAppointment{
     font-size: 15px;
     text-align: center;
-    background-color: red;
+    background-color: rgb(0, 51, 141);
     color: white;
     cursor: pointer;
     padding: 11px;
@@ -135,9 +252,9 @@ body{
 }
 
 #MakeAppointment:hover{
-    background-color: rgb(202, 49, 49);
+    background-color: rgb(1, 30, 79);
 }
-
+*/
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -351,33 +468,36 @@ body{
     background-color: rgb(38, 38, 179);
 }
 
+/* -------------------------- Footer Section ------------------------- */
+/* FOOTER STYLES MOVED TO main.css FOR CONSISTENCY */
+
+/*
 .footer {
-    width: 100%;
-    background-color: rgb(2, 2, 43);
+    width: 100vw;
+    background-color: rgb(0, 51, 141);
+    display: flex;
+    justify-content: center;
     padding: 40px 20px;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 .footerdiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
     width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
     gap: 40px;
-    flex-wrap: wrap;
-    color: white;
 }
 
-.footerinnerdiv{
+.footerinnerdiv {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* border: 2px solid white; */
 }
 
-.footerlogoandheadingdiv{
+.footerlogoandheadingdiv {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -391,49 +511,77 @@ body{
     background-image: url(../images/logoFI.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
 .footerlogoheading {
     font-size: 30px;
     font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .iconsdiv {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10%;
     font-size: 22px;
+}
+
+.iconsdiv i {
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.iconsdiv i:hover {
+    color: rgba(241, 241, 241, 0.75);
+    transform: translateY(-15%);
 }
 
 #heading7 {
     font-size: 33px;
     text-align: center;
-    margin-bottom: 10px;
     font-weight: bold;
+    margin: 0 0 10px 0;
 }
 
 .listfooter {
     list-style: none;
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 0;
     text-align: center;
 }
 
-.listfooterinnerdiv{
-    margin: 5px 0;
-    font-weight: lighter; 
-    font-size: 18px;
+.listfooterinnerdiv {
+    margin: 10px 0;
+    font-weight: lighter;
+    font-size: 17.5px;
+}
+
+.footerLinksPages {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerLinksPages:hover {
+    color: rgba(232, 232, 232, 0.75);
 }
 
 #footercontactdiv {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    align-items: flex-end;
+    gap: 10px;
 }
 
-.contactpra{
-    font-size: 17px;
-    font-weight: lighter;
+.contactpra {
+    font-size: 17.5px;
+    color: white;
+    width: 55%;
+    margin: 2% 0;
+    cursor: pointer;
 }
 
 .footercopyright {
@@ -442,8 +590,9 @@ body{
     font-weight: lighter;
     margin-top: 20px;
 }
+*/
 
-.saminamediv{
+.saminamediv {
     text-align: center;
     position: relative;
     bottom: 35px;
@@ -451,95 +600,6 @@ body{
     font-size: larger;
     color: rgb(116, 186, 248);
 }
-
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* -------------------------- Footer Section ------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-.footer {
-    background-color: rgb(2, 2, 43);
-    padding: 40px;
-}
-
-.footerdiv {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.footerinnerdiv{
-    display: flex;
-    flex-direction: column;
-}
-
-.footerlogoandheadingdiv{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.f1logodiv {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-image: url(../images/logoFI.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.footerlogoheading {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.iconsdiv {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 22px;
-}
-
-#heading7 {
-    font-size: 33px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.listfooter {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-.listfooterinnerdiv{
-    margin: 10px;
-    font-weight: lighter; 
-    font-size: 22px;
-}
-
-#footercontactdiv {
-    display: flex;
-    flex-direction: column;
-}
-
-.contactpra{
-    font-size: 22px;
-    margin: 2%;
-}
-
-.footercopyright {
-    text-align: center;
-    font-size: 17px;
-    font-weight: lighter;
-}
-
 
 @media (max-width: 600px){
    
@@ -751,16 +811,18 @@ body{
 }
 
 
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* -------------------------- Footer Section ------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
-    /* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Footer Section ------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
 
+    /* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY */
+    /*
     .footerdiv {
         display: block;
     }
@@ -770,27 +832,30 @@ body{
     }
 
     .iconsdiv {
-        font-size: 15px;
+        font-size: 12.5px;
+        justify-content: center;
         margin: 5%;
     }
 
     #heading7 {
         font-size: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .listfooterinnerdiv{
         font-size: 15px;
-        border-bottom: 1px solid white;
-        width: fit-content;
+        /* border-bottom: 1px solid white; */
+        /* width: fit-content; */
     }
 
     #footercontactdiv {
         font-size: 10px;
+        align-items: center;
+        text-align: center;
     }
 
     .contactpra{
-        font-size: 15px;
+        font-size: 12.5px;
         font-weight: lighter;
         line-height: 5px;
     }
@@ -799,7 +864,9 @@ body{
         text-align: center;
         font-size: 15px;
         font-weight: lighter;
+        display: none;
     }
+    */
 
 
 

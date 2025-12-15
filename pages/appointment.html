@@ -1,105 +1,178 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Appointment Booking</title>
-        <link rel="stylesheet" href="../styles/appointment.css?v=1.1">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/main.css?v=1.6">
+        <link rel="stylesheet" href="../styles/appointment.css">
+        <link rel="icon" href="../images/logoFI.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <title>Appointment Booking</title>
     </head>
     
     <body>
 
-        <div class="box">
-        
-            <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Nav Section ------------------------------ -->
+    <!-- ------------------------------------------------------------------- -->
+
+        <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
 
             <nav class="responsiveNavdiv" id="responsiveNavbardiv">
-
-                
-                <div class="navRespInnerdivs" id="navlinksrespdiv">
                     
-                    <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
-                    
-                    <!-- list of links  -->
-                    <ul id="resplists">
-
-                        <li class="listitemsResp">
-                            <a href="#" class="listsrespnav" id="home">Home</a>
-                        </li>
+                    <div class="navRespInnerdivs" id="navlinksrespdiv">
                         
-                        <li class="listitemsResp">
-                            <a href="pages/services.html" class="listsrespnav" id="services">Services</a>
-                        </li>
+                        <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+                        
+                        <!-- list of links  -->
+                        <ul id="resplists">
 
-                        <li class="listitemsResp">
-                            <a href="pages/industries.html" class="listsrespnav" id="industries">Industries</a>
-                        </li>
+                            <li class="listitemsResp">
+                                <a href="/index.html" class="listsrespnav" id="home">Home</a>
+                            </li>
 
-                        <li class="listitemsResp">
-                            <a href="pages/contact.html" class="listsrespnav" id="contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                            <li class="listitemsResp">
+                                <a href="" class="listsrespnav" id="services">About</a>
+                            </li>
+                            
+                            <li class="listitemsResp">
+                                <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
+                            </li>
+
+                            <li class="listitemsResp">
+                                <a href="/pages/industries.html" class="listsrespnav" id="industries">Industries</a>
+                            </li>
+
+                            <li class="listitemsResp">
+                                <a href="/pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                            </li>
+
+                            <li class="listitemsResp">
+                                <a href="#" class="listsrespnav" id="contact">Careers</a>
+                            </li>
+
+                            <li class="listitemsResp">
+                                <a href="/pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
+                            </li>
+                        </ul>
+
+                    </div>
             </nav>
 
-            <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
+        <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
 
-            <nav class="navdiv">
+        <nav class="navdiv">
 
-            <!-- hamburger icon  -->
-            <div class="navInnerdivs" id="navresponsiveIcons">
-                <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
-            </div>
+                <!-- hamburger icon  -->
+                <div class="navInnerdivs" id="navresponsiveIcons">
+                    <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
+                </div>
 
-            <!-- logo and name  -->
-            <div class="navInnerdivs" id="navfirstdiv">
-                <h1 class="navh1">
-                    <img src="../images/logoFI.jpg" alt="logo" id="headerlogo">
-                    <span id="companyNameHeading">
-                        FI Consultancy
-                    </span>
-                </h1>
-            </div>
+                <!-- logo and name  -->
+                <div class="navInnerdivs" id="navfirstdiv">
+                    <h1 class="navh1">
+                        
+                        <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
 
-            <!-- list of links  -->
-            <div class="navInnerdivs" id="navlinksdiv">
+                        <span id="companyNameHeading">
+                            FI Consultancy
+                        </span>
+                    </h1>
+                </div>
 
-                <ul id="lists">
+                <!-- list of links  -->
+                <div class="navInnerdivs" id="navlinksdiv">
 
-                    <li>
-                        <a href="../index.html" class="listsnav" id="home">Home</a>
-                    </li>
-                     
-                    <li class="itemService">
-                        <a href="services.html" class="listsnav" id="services">Services</a>
-                        <div class="servicesNavDiv"></div>
-                    </li>
+                    <ul id="lists">
 
-                    <li>
-                        <a href="industries.html" class="listsnav" id="industries">Industries</a>
-                    </li>
+                        <li>
+                            <a href="../index.html" class="listsnav" id="home">Home</a>
+                        </li>
+                        
+                        <li class="listsnav" id="servicesNavItem">
+                            <a href="../pages/services.html" class="listsnav" id="services">Services</a>
+                            
+                            <div id="servicesDropDownDiv">
 
-                    <li>
-                        <a href="contact.html" class="listsnav" id="contact">Contact</a>
-                    </li>
+                                <span>
+                                    <a href="../pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial Reporting</a>
+                                </span>
 
-                    <li>
-                        <a href="" class="listsnav" id="careers">Careers</a>
-                    </li>
+                                <span>
+                                    <a href="../pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                                </span>
 
-                </ul>
-            </div>
+                                <span>
+                                    <a href="../pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                                </span>
 
-            <!-- appointment button  -->
-            <div class="navInnerdivs" id="appointmentBtnDiv">
-                <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
-            </div>
+                                <span>
+                                    <a href="../pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                                </span>
 
-    </nav>
-        
-        </div>
+                                <span>
+                                    <a href="../pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                                </span>
 
+                                <span>
+                                    <a href="../pages/services/integratedsolutions.html" class="serviceslistsnav" id="">Integrated Solutions</a>
+                                </span>
 
+                            </div>
+                        </li>
+
+                        <li class="listsnav" id="industriesNavItem">
+                            
+                            <a href="../pages/industries.html" class="listsnav">Industries</a>
+                            
+                            <div id="industriesDropDownDiv">
+
+                                <span>
+                                    <a href="../pages/industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
+                                </span>
+
+                                <span>
+                                    <a href="../pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit Organization</a>
+                                </span>
+
+                                <span>
+                                    <a href="../pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                                </span>
+
+                                <span>
+                                    <a href="../pages/industries/ICT.html" class="industrieslistsnav" id="">Information, Communication and Telecommunication</a>
+                                </span>
+
+                                <span>
+                                    <a href="../pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online Marketplaces</a>
+                                </span>
+
+                                <span>
+                                    <a href="../pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer Goods (FMCG)</a>
+                                </span>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <a href="../pages/contact.html" class="listsnav" id="contact">Contact</a>
+                        </li>
+
+                        <li>
+                            <a href="" class="listsnav" id="careers">Careers</a>
+                        </li>
+
+                    </ul>
+                    
+                </div>
+
+                <!-- appointment button  -->
+                <div class="navInnerdivs" id="appointmentBtnDiv">
+                    <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+                </div>
+
+        </nav>
 
         <!-- ---------------------- Alert Box --------------------------- -->
 
@@ -109,47 +182,70 @@
                 Appointment Booked Successfully
             </div>
         
-        </div>
-        
-
+        </div>        
 
         <!-- -------------------- Appointment Box ----------------------- -->
         
         <div  class="outerdiv">
 
             <div class="appointmentouter">
+                
                 <h1 class="heading">Book Your Appointment</h1>
                 
                 <div  class="inputsdiv">
 
-                    <form action="" onsubmit="handleAppointmentSubmit()">
+                    <form action="" id="appointmentFormDiv" onsubmit="handleAppointmentSubmit()">
 
                         <div class="formfieldsDiv">
+                            <div class="labelDiv">
                             <label for="" class="labelstyling">Name: </label>
-                            <input type="text" class="inputstyling" required>
+                            </div>
+
+                            <div class="inputDiv">
+                                <input type="text" class="inputstyling" required>
+                            </div>
                         </div>
                           
 
                         <div class="formfieldsDiv">
+                            <div class="labelDiv">
                             <label for="" class="labelstyling">Email:</label>
-                            <input type="email" name="email" id="" required class="inputstyling" placeholder="example@domain.com">
+                            </div>
+
+                            <div class="inputDiv">
+                                <input type="email" name="email" id="" required class="inputstyling" placeholder="example@domain.com">
+                            </div>
                         </div>
                         
                         <div class="formfieldsDiv">
+                            <div class="labelDiv">
                             <label for="" class="labelstyling">Date:</label>
-                            <input type="date" name="date" id="" class="inputstyling" required>
+                            </div>
+
+                            <div class="inputDiv">
+                                <input type="date" name="date" id="" class="inputstyling" required>
+                            </div>
                         </div>
                                 
                             
                         <div class="formfieldsDiv">
+                            <div class="labelDiv">
                             <label for="" class="labelstyling">Time:</label>
-                            <input type="time" name="" id="" class="inputstyling" required>
+                            </div>
+
+                            <div class="inputDiv">
+                                <input type="time" name="" id="" class="inputstyling" required>
+                            </div>
                         </div>
 
                         <div class="formfieldsDiv">
+                            <div class="labelDiv">
                             <label for="" class="labelstyling">Message:</label>
-                            <br>
-                            <textarea type="time" name="" id="" class="inputstyling"></textarea>
+                            </div>
+
+                            <div class="inputDiv">
+                                <textarea type="time" name="" id="" class="inputstyling"></textarea>
+                            </div>
                         </div>
                         
                         <div class="formfieldsDiv">
@@ -169,60 +265,61 @@
 
         </div>
 
+        <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Footer Section --------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
 
-        <!-- ------------------------ Footer Section --------------------------- -->
- 
+    <footer class="footer">
 
-        <footer class="footer">
+        <div class="footerdiv">
 
-            <div class="footerdiv">
-
-                <div class="footerinnerdiv">
-                        
-                        <div class="footerlogoandheadingdiv">
-                            <div class="f1logodiv"></div>
-                            <h2 class="footerlogoheading">FI Consultancy</h2>
-                        </div>
-                        
-                        <div class="iconsdiv">
-                            <i class="fa-brands fa-youtube"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-linkedin"></i>
-                        </div>
-
-                </div>
-
-                <div class="footerinnerdiv f1headingdiv">
-                    <h3 id="heading7">Company</h3>
-                    <ul class="listfooter">
-                        <li class="listfooterinnerdiv">About Us</li>
-                        <li class="listfooterinnerdiv">Our Services</li>
-                        <li class="listfooterinnerdiv">Contact Us</li>
-                        <li class="listfooterinnerdiv">Meet Our Team</li>
-                    </ul>
-
-                    <div>
-
-                    <p class="footercopyright">
-                        Copyright © 2025 . F1 Consultancy . All rights reserved. 
-                    </p>
-
+            <div class="footerinnerdiv">
+                    
+                    <div class="footerlogoandheadingdiv">
+                        <div class="f1logodiv"></div>
+                        <h2 class="footerlogoheading">FI Consultancy</h2>
+                    </div>
+                    
+                    <div class="iconsdiv">
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                     </div>
 
-                
-                </div>
-
-                <div class="footerinnerdiv" id="footercontactdiv">
-                    <p id="footerpra1" class="contactpra">+92-314-1503257</p>
-                    <p id="footerpra1" class="contactpra">+92-322-0846330</p>
-                    <p id="footerpra2" class="contactpra">info@ficonsultancy.net</p>
-                    <!-- <p id="footerpra3" class="contactpra">888 Griffiths Way, Mainland ML 12345</p> -->
-                </div>
-
             </div>
-        </footer>
 
+            <div class="footerinnerdiv">
+                <h3 id="heading7">Company</h3>
+                <ul class="listfooter">
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
+                </ul>
+
+                <div>
+
+                <p class="footercopyright">
+                    Copyright © 2025 . F1 Consultancy . All rights reserved. 
+                </p>
+
+                </div>
+
+            
+            </div>
+
+            <div class="footerinnerdiv" id="footercontactdiv">
+                <p id="footerpra2" class="contactpra" onclick="handleEmailClick()"> <i class="fa-solid fa-envelope"></i> info@ficonsultancy.net</p>
+                <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-314-1503257</p>
+                <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-322-0846330</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+        <script src="../scripts/main.js"></script>
         <script src="../scripts/appointment.js"></script>
   
     </body>

@@ -31,7 +31,7 @@
                     </li>
 
                     <li class="listitemsResp">
-                        <a href="" class="listsrespnav" id="services">About</a>
+                        <a href="../about.html" class="listsrespnav" id="about">About</a>
                     </li>
                      
                     <li class="listitemsResp">
@@ -47,11 +47,11 @@
                     </li>
 
                     <li class="listitemsResp">
-                        <a href="#" class="listsrespnav" id="contact">Careers</a>
+                        <a href="../careers.html" class="listsrespnav" id="careers">Careers</a>
                     </li>
 
                     <li class="listitemsResp">
-                        <a href="pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
+                        <a href="../appointment.html" class="listsrespnav" id="contact">Appointment</a>
                     </li>
                 </ul>
 
@@ -155,11 +155,21 @@
                     </li>
 
                     <li>
-                        <a href="" class="listsnav" id="careers">Careers</a>
+                        <a href="../careers.html" class="listsnav" id="careers">Careers</a>
                     </li>
 
                 </ul>
                 
+            </div>
+
+            <!-- search bar  -->
+            <div class="navInnerdivs" id="searchBarDiv">
+                <div class="searchBarContainer">
+                    <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                    <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- appointment button  -->
@@ -226,6 +236,12 @@
                     </div>
 
                 </div>
+                
+                <!-- Make Appointment Button - Visible on large screens only -->
+                <button class="appointmentFloatingBtn" id="appointmentFloatingButton" onclick="handleAppointmentBtn()">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Make Appointment</span>
+                </button>
                 
                 <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i class="fab fa-whatsapp" id="icon"></i> How can I help you
                 </button>
@@ -326,7 +342,7 @@
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="../about.html">About Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>

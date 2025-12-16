@@ -28,31 +28,27 @@
                         <ul id="resplists">
 
                             <li class="listitemsResp">
-                                <a href="/index.html" class="listsrespnav" id="home">Home</a>
+                                <a href="../index.html" class="listsrespnav" id="home">Home</a>
                             </li>
 
                             <li class="listitemsResp">
-                                <a href="" class="listsrespnav" id="services">About</a>
+                                <a href="about.html" class="listsrespnav" id="about">About</a>
                             </li>
                             
                             <li class="listitemsResp">
-                                <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
+                                <a href="services.html" class="listsrespnav" id="services">Services</a>
                             </li>
 
                             <li class="listitemsResp">
-                                <a href="/pages/industries.html" class="listsrespnav" id="industries">Industries</a>
+                                <a href="industries.html" class="listsrespnav" id="industries">Industries</a>
                             </li>
 
                             <li class="listitemsResp">
-                                <a href="/pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                                <a href="contact.html" class="listsrespnav" id="contact">Contact</a>
                             </li>
 
                             <li class="listitemsResp">
-                                <a href="#" class="listsrespnav" id="contact">Careers</a>
-                            </li>
-
-                            <li class="listitemsResp">
-                                <a href="/pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
+                                <a href="careers.html" class="listsrespnav" id="careers">Careers</a>
                             </li>
                         </ul>
 
@@ -72,7 +68,7 @@
                 <div class="navInnerdivs" id="navfirstdiv">
                     <h1 class="navh1">
                         
-                        <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
+                        <img src="../images/logoFI.jpg" alt="FI Consultancy Logo" id="headerlogo">
 
                         <span id="companyNameHeading">
                             FI Consultancy
@@ -160,16 +156,21 @@
                         </li>
 
                         <li>
-                            <a href="" class="listsnav" id="careers">Careers</a>
+                            <a href="careers.html" class="listsnav" id="careers">Careers</a>
                         </li>
 
                     </ul>
                     
                 </div>
 
-                <!-- appointment button  -->
-                <div class="navInnerdivs" id="appointmentBtnDiv">
-                    <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+                <!-- search bar  -->
+                <div class="navInnerdivs" id="searchBarDiv">
+                    <div class="searchBarContainer">
+                        <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                        <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
 
         </nav>
@@ -192,64 +193,62 @@
                 
                 <h1 class="heading">Book Your Appointment</h1>
                 
-                <div  class="inputsdiv">
+                <div class="inputsdiv">
 
                     <form action="" id="appointmentFormDiv" onsubmit="handleAppointmentSubmit()">
 
                         <div class="formfieldsDiv">
-                            <div class="labelDiv">
-                            <label for="" class="labelstyling">Name: </label>
-                            </div>
-
-                            <div class="inputDiv">
-                                <input type="text" class="inputstyling" required>
-                            </div>
-                        </div>
-                          
-
-                        <div class="formfieldsDiv">
-                            <div class="labelDiv">
-                            <label for="" class="labelstyling">Email:</label>
-                            </div>
-
-                            <div class="inputDiv">
-                                <input type="email" name="email" id="" required class="inputstyling" placeholder="example@domain.com">
-                            </div>
-                        </div>
-                        
-                        <div class="formfieldsDiv">
-                            <div class="labelDiv">
-                            <label for="" class="labelstyling">Date:</label>
-                            </div>
-
-                            <div class="inputDiv">
-                                <input type="date" name="date" id="" class="inputstyling" required>
-                            </div>
-                        </div>
-                                
-                            
-                        <div class="formfieldsDiv">
-                            <div class="labelDiv">
-                            <label for="" class="labelstyling">Time:</label>
-                            </div>
-
-                            <div class="inputDiv">
-                                <input type="time" name="" id="" class="inputstyling" required>
+                            <div class="inputWrapper">
+                                <label for="appointmentName" class="labelstyling">
+                                    <i class="fas fa-user"></i> Full Name
+                                </label>
+                                <input type="text" id="appointmentName" name="name" class="inputstyling" placeholder="Enter your full name" required>
                             </div>
                         </div>
 
                         <div class="formfieldsDiv">
-                            <div class="labelDiv">
-                            <label for="" class="labelstyling">Message:</label>
+                            <div class="inputWrapper">
+                                <label for="appointmentEmail" class="labelstyling">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                </label>
+                                <input type="email" id="appointmentEmail" name="email" class="inputstyling" placeholder="example@domain.com" required>
+                            </div>
+                        </div>
+
+                        <div class="formRow">
+                            <div class="formfieldsDiv">
+                                <div class="inputWrapper">
+                                    <label for="appointmentDate" class="labelstyling">
+                                        <i class="fas fa-calendar-alt"></i> Date
+                                    </label>
+                                    <input type="date" id="appointmentDate" name="date" class="inputstyling" required>
+                                </div>
                             </div>
 
-                            <div class="inputDiv">
-                                <textarea type="time" name="" id="" class="inputstyling"></textarea>
+                            <div class="formfieldsDiv">
+                                <div class="inputWrapper">
+                                    <label for="appointmentTime" class="labelstyling">
+                                        <i class="fas fa-clock"></i> Time
+                                    </label>
+                                    <input type="time" id="appointmentTime" name="time" class="inputstyling" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="formfieldsDiv">
+                            <div class="inputWrapper">
+                                <label for="appointmentMessage" class="labelstyling">
+                                    <i class="fas fa-comment-alt"></i> Message (Optional)
+                                </label>
+                                <textarea id="appointmentMessage" name="message" class="inputstyling textareaStyle" rows="5" placeholder="Tell us about your appointment needs..."></textarea>
                             </div>
                         </div>
                         
-                        <div class="formfieldsDiv">
-                                <input type="submit" value="Book Appointment" class="appointmentbtn" id="appointbtn">
+                        <div class="formfieldsDiv submitWrapper">
+                            <button type="submit" class="appointmentbtn" id="appointbtn">
+                                <span>Book Appointment</span>
+                                <i class="fas fa-calendar-check"></i>
+                            </button>
                         </div>
                     
                     </form>
@@ -292,7 +291,7 @@
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="about.html">About Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
@@ -318,6 +317,51 @@
         </div>
 
     </footer>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ WhatsApp Section ------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="whatsappDiv">
+
+        <div class="whatsAppContactPersonDiv" id="whatsAppContactPerson">
+
+            <!-- cross div -->
+            <div class="whatsAppCrossDiv">
+                <span class="whatsAppCrossBtn" onclick="whatsAppCrossBtnhandle()">&#10005;</span>
+            </div>
+
+            <!-- first div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact1()">
+                <div class="userProfile">FI</div>
+
+                <div class="texts">
+                    <div class="fields">Faseh Iqbal</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+            </div>
+
+            <!-- second div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact2()">
+
+                <div class="userProfile">IK</div>
+
+                <div class="texts">
+                    <div class="fields">Immad Khan</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
+                class="fab fa-whatsapp" id="icon"></i> How can I help you
+        </button>
+
+    </div>
 
         <script src="../scripts/main.js"></script>
         <script src="../scripts/appointment.js"></script>

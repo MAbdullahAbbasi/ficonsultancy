@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css?v=1.6">
+    <link rel="stylesheet" href="../styles/main.css?v=1.7">
     <link rel="stylesheet" href="../styles/industries.css?v=1.2">
     <link rel="icon" href="../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,187 +12,220 @@
 <body>
 
 
-<!-- ------------------------------------------------------------------- -->
-<!-- ------------------------ Nav Section ------------------------------ -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Nav Section ------------------------------ -->
+    <!-- ------------------------------------------------------------------- -->
 
     <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
 
     <nav class="responsiveNavdiv" id="responsiveNavbardiv">
-            
-            <div class="navRespInnerdivs" id="navlinksrespdiv">
-                
-                <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
-                
-                <!-- list of links  -->
-                <ul id="resplists">
 
-                    <li class="listitemsResp">
-                        <a href="/index.html" class="listsrespnav" id="home">Home</a>
-                    </li>
+        <div class="navRespInnerdivs" id="navlinksrespdiv">
 
-                    <li class="listitemsResp">
-                        <a href="" class="listsrespnav" id="services">About</a>
-                    </li>
+            <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+
+            <!-- list of links  -->
+            <ul id="resplists">
+
+                <li class="listitemsResp">
+                    <a href="../index.html" class="listsrespnav" id="home">Home</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="about.html" class="listsrespnav" id="about">About</a>
+                </li>
                      
-                    <li class="listitemsResp">
-                        <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="services.html" class="listsrespnav" id="services">Services</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/industries.html" class="listsrespnav" id="industries">Industries</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="industries.html" class="listsrespnav" id="industries">Industries</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/contact.html" class="listsrespnav" id="contact">Contact</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="contact.html" class="listsrespnav" id="contact">Contact</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="#" class="listsrespnav" id="contact">Careers</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="careers.html" class="listsrespnav" id="careers">Careers</a>
+                </li>
+            </ul>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
-                    </li>
-                </ul>
-
+            <!-- Appointment Button for Mobile Menu -->
+            <div class="mobileAppointmentBtn">
+                <button id="MakeAppointmentMobile" onclick="handleAppointmentBtn()">Make Appointment</button>
             </div>
+
+        </div>
     </nav>
 
     <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
 
     <nav class="navdiv">
 
-            <!-- hamburger icon  -->
-            <div class="navInnerdivs" id="navresponsiveIcons">
-                <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
+        <!-- hamburger icon  -->
+        <div class="navInnerdivs" id="navresponsiveIcons">
+            <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div>
+        </div>
+
+        <!-- logo and name  -->
+        <div class="navInnerdivs" id="navfirstdiv">
+            <h1 class="navh1">
+
+                <img src="../images/logoFI.jpg" alt="FI Consultancy Logo" id="headerlogo">
+
+                <span id="companyNameHeading">
+                    FI Consultancy
+                </span>
+            </h1>
+        </div>
+
+        <!-- list of links  -->
+        <div class="navInnerdivs" id="navlinksdiv">
+
+            <ul id="lists">
+
+                <li>
+                    <a href="../index.html" class="listsnav" id="home">Home</a>
+                </li>
+
+                <li class="listsnav" id="servicesNavItem">
+                    <a href="services.html" class="listsnav" id="services">Services</a>
+
+                    <div id="servicesDropDownDiv">
+
+                        <span>
+                            <a href="services/financialreporting.html" class="serviceslistsnav" id="">Financial
+                                Reporting</a>
+                        </span>
+
+                        <span>
+                            <a href="services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                        </span>
+
+                        <span>
+                            <a href="services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                        </span>
+
+                        <span>
+                            <a href="services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                        </span>
+
+                        <span>
+                            <a href="services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                        </span>
+
+                        <span>
+                            <a href="services/integratedSolutions.html" class="serviceslistsnav" id="">Integrated
+                                Solutions</a>
+                        </span>
+
+                    </div>
+                </li>
+
+                <li class="listsnav" id="industriesNavItem">
+
+                    <a href="industries.html" class="listsnav">Industries</a>
+
+                    <div id="industriesDropDownDiv">
+
+                        <span>
+                            <a href="industries/building&construction.html" class="industrieslistsnav"
+                                id="">Building & Construction</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit
+                                Organization</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/ICT.html" class="industrieslistsnav" id="">Information,
+                                Communication and Telecommunication</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online
+                                Marketplaces</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer
+                                Goods (FMCG)</a>
+                        </span>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="contact.html" class="listsnav" id="contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="careers.html" class="listsnav" id="careers">Careers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- search bar  -->
+        <div class="navInnerdivs" id="searchBarDiv">
+            <div class="searchBarContainer">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
+        </div>
 
-            <!-- logo and name  -->
-            <div class="navInnerdivs" id="navfirstdiv">
-                <h1 class="navh1">
-                    
-                    <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
-
-                    <span id="companyNameHeading">
-                        FI Consultancy
-                    </span>
-                </h1>
-            </div>
-
-            <!-- list of links  -->
-            <div class="navInnerdivs" id="navlinksdiv">
-
-                <ul id="lists">
-
-                    <li>
-                        <a href="../index.html" class="listsnav" id="home">Home</a>
-                    </li>
-                     
-                    <li class="listsnav" id="servicesNavItem">
-                        <a href="../pages/services.html" class="listsnav" id="services">Services</a>
-                         
-                        <div id="servicesDropDownDiv">
-
-                            <span>
-                                <a href="../pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial Reporting</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/integratedsolutions.html" class="serviceslistsnav" id="">Integrated Solutions</a>
-                            </span>
-
-                        </div>
-                    </li>
-
-                    <li class="listsnav" id="industriesNavItem">
-                        
-                        <a href="../pages/industries.html" class="listsnav">Industries</a>
-                        
-                        <div id="industriesDropDownDiv">
-
-                            <span>
-                                <a href="../pages/industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit Organization</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/ICT.html" class="industrieslistsnav" id="">Information, Communication and Telecommunication</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online Marketplaces</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer Goods (FMCG)</a>
-                            </span>
-
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <a href="../pages/contact.html" class="listsnav" id="contact">Contact</a>
-                    </li>
-
-                    <li>
-                        <a href="" class="listsnav" id="careers">Careers</a>
-                    </li>
-
-                </ul>
-                
-            </div>
-
-            <!-- appointment button  -->
-            <div class="navInnerdivs" id="appointmentBtnDiv">
-                <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
-            </div>
+        <!-- appointment button  -->
+        <div class="navInnerdivs" id="appointmentBtnDiv">
+            <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+        </div>
 
     </nav>
     
         
-<!-- ------------------------------------------------------------------- -->
-<!-- ------------------------ Hero Section ----------------------------- -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Hero Section ----------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
 
-    <div id="industriesHero" class="industriesHeroDiv">
+    <div class="servicesimageouterdiv">
 
-        <div class="industriesHeroTextDiv">
+        <div class="servicesimageinnerdiv" id="servicesCarouselContainer">
+            <!-- Carousel Slides -->
+            <div class="services-carousel-slide active" style="background-image: url('../images/laptop typing.jpg');"></div>
+            <div class="services-carousel-slide" style="background-image: url('../images/pexels-cottonbro-4107100.jpg');"></div>
+            <div class="services-carousel-slide" style="background-image: url('../images/pexels-shkrabaanthony-5816299.jpg');"></div>
+            <div class="services-carousel-slide" style="background-image: url('../images/pexels-n-voitkevich-6863336.jpg');"></div>
+            <div class="services-carousel-slide" style="background-image: url('../images/financialReporting.jpg');"></div>
+            <div class="services-carousel-slide" style="background-image: url('../images/pexels-leeloothefirst-8970297.jpg');"></div>
 
-            <div class="industriesHeroContent" id="industriesHeroHeading">
-                Industries
-            </div>
-
-            <div class="industriesHeroContent" id="industriesHeroParagraph">
-                FI Consultancy can provide an informed perspective on issues faced by the global business community.
-            </div>
-        
+            <!-- Gradient Overlay -->
+            <div class="services-overlay"></div>
         </div>
 
+        <div class="servicesoverlaydiv">
+
+            <div class="servicesOverlayContent">
+
+                <h1 class="servicesheading">
+                    Industries
+                </h1>
+                
+                <h1 id="servicesoverlaySlogan">
+                    FI Consultancy can provide an informed perspective on issues faced by the global business community.
+                </h1>
+            </div>
+            
+        </div>
     </div>
 
 
@@ -310,7 +343,7 @@
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="about.html">About Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
@@ -336,6 +369,57 @@
         </div>
 
     </footer>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ WhatsApp Section ------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="whatsappDiv">
+
+        <div class="whatsAppContactPersonDiv" id="whatsAppContactPerson">
+
+            <!-- cross div -->
+            <div class="whatsAppCrossDiv">
+                <span class="whatsAppCrossBtn" onclick="whatsAppCrossBtnhandle()">&#10005;</span>
+            </div>
+
+            <!-- first div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact1()">
+                <div class="userProfile">FI</div>
+
+                <div class="texts">
+                    <div class="fields">Faseh Iqbal</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+            </div>
+
+            <!-- second div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact2()">
+
+                <div class="userProfile">IK</div>
+
+                <div class="texts">
+                    <div class="fields">Immad Khan</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Make Appointment Button - Visible on large screens only -->
+        <button class="appointmentFloatingBtn" id="appointmentFloatingButton" onclick="handleAppointmentBtn()">
+            <i class="fas fa-calendar-check"></i>
+            <span>Make Appointment</span>
+        </button>
+
+        <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
+                class="fab fa-whatsapp" id="icon"></i> How can I help you
+        </button>
+
+    </div>
 
     <script src="../scripts/main.js?v=1.3"></script>
     <script src="../scripts/industries.js"></script>

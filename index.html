@@ -31,15 +31,15 @@
             <ul id="resplists">
 
                 <li class="listitemsResp">
-                    <a href="/index.html" class="listsrespnav" id="home">Home</a>
+                    <a href="index.html" class="listsrespnav" id="home">Home</a>
                 </li>
 
                 <li class="listitemsResp">
-                    <a href="" class="listsrespnav" id="services">About</a>
+                    <a href="pages/about.html" class="listsrespnav" id="about">About</a>
                 </li>
-
+                     
                 <li class="listitemsResp">
-                    <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
+                    <a href="pages/services.html" class="listsrespnav" id="services">Services</a>
                 </li>
 
                 <li class="listitemsResp">
@@ -51,13 +51,14 @@
                 </li>
 
                 <li class="listitemsResp">
-                    <a href="#" class="listsrespnav" id="contact">Careers</a>
-                </li>
-
-                <li class="listitemsResp">
-                    <a href="pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
+                    <a href="pages/careers.html" class="listsrespnav" id="careers">Careers</a>
                 </li>
             </ul>
+
+            <!-- Appointment Button for Mobile Menu -->
+            <div class="mobileAppointmentBtn">
+                <button id="MakeAppointmentMobile" onclick="handleAppointmentBtn()">Make Appointment</button>
+            </div>
 
         </div>
     </nav>
@@ -89,7 +90,7 @@
             <ul id="lists">
 
                 <li>
-                    <a href="#" class="listsnav" id="home">Home</a>
+                    <a href="index.html" class="listsnav" id="home">Home</a>
                 </li>
 
                 <li class="listsnav" id="servicesNavItem">
@@ -98,28 +99,28 @@
                     <div id="servicesDropDownDiv">
 
                         <span>
-                            <a href="/pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial
+                            <a href="pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial
                                 Reporting</a>
                         </span>
 
                         <span>
-                            <a href="/pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                            <a href="pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
                         </span>
 
                         <span>
-                            <a href="/pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                            <a href="pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
                         </span>
 
                         <span>
-                            <a href="/pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                            <a href="pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
                         </span>
 
                         <span>
-                            <a href="/pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                            <a href="pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
                         </span>
 
                         <span>
-                            <a href="/pages/services/integratedsolutions.html" class="serviceslistsnav" id="">Integrated
+                            <a href="pages/services/integratedSolutions.html" class="serviceslistsnav" id="">Integrated
                                 Solutions</a>
                         </span>
 
@@ -133,31 +134,31 @@
                     <div id="industriesDropDownDiv">
 
                         <span>
-                            <a href="/pages/industries/building&construction.html" class="industrieslistsnav"
+                            <a href="pages/industries/building&construction.html" class="industrieslistsnav"
                                 id="">Building & Construction</a>
                         </span>
 
                         <span>
-                            <a href="/pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit
+                            <a href="pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit
                                 Organization</a>
                         </span>
 
                         <span>
-                            <a href="/pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                            <a href="pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
                         </span>
 
                         <span>
-                            <a href="/pages/industries/ICT.html" class="industrieslistsnav" id="">Information,
+                            <a href="pages/industries/ICT.html" class="industrieslistsnav" id="">Information,
                                 Communication and Telecommunication</a>
                         </span>
 
                         <span>
-                            <a href="/pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online
+                            <a href="pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online
                                 Marketplaces</a>
                         </span>
 
                         <span>
-                            <a href="/pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer
+                            <a href="pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer
                                 Goods (FMCG)</a>
                         </span>
 
@@ -170,11 +171,21 @@
                 </li>
 
                 <li>
-                    <a href="" class="listsnav" id="careers">Careers</a>
+                    <a href="pages/careers.html" class="listsnav" id="careers">Careers</a>
                 </li>
 
             </ul>
 
+        </div>
+
+        <!-- search bar  -->
+        <div class="navInnerdivs" id="searchBarDiv">
+            <div class="searchBarContainer">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
 
         <!-- appointment button  -->
@@ -303,6 +314,12 @@
 
                 </div>
 
+                <!-- Make Appointment Button - Visible on large screens only -->
+                <button class="appointmentFloatingBtn" id="appointmentFloatingButton" onclick="handleAppointmentBtn()">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Make Appointment</span>
+                </button>
+
                 <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
                         class="fab fa-whatsapp" id="icon"></i> How can I help you
                 </button>
@@ -336,7 +353,7 @@
                     we help businesses meet regulatory requirements and enhance transparency. Our services are tailored
                     to strengthen financial health and build stakeholder confidence. Partner with us for reliable and
                     value-driven financial expertise.</p>
-                <a href="/pages/about.html" id="readmore">Explore &nbsp;></a>
+                <a href="pages/about.html" id="readmore">Explore &nbsp;></a>
 
             </div>
 
@@ -844,7 +861,7 @@
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="pages/about.html">About Us</a>
                     </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our
                             Services</a> </li>

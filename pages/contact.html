@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css?v=1.6">
+    <link rel="stylesheet" href="../styles/main.css?v=1.7">
     <link rel="stylesheet" href="../styles/conatct.css">
     <link rel="icon" href="../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,243 +13,241 @@
 
 <body>
 
-<!-- ------------------------------------------------------------------- -->
-<!-- ------------------------ Nav Section ------------------------------ -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Nav Section ------------------------------ -->
+    <!-- ------------------------------------------------------------------- -->
 
     <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
 
     <nav class="responsiveNavdiv" id="responsiveNavbardiv">
-            
-            <div class="navRespInnerdivs" id="navlinksrespdiv">
-                
-                <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
-                
-                <!-- list of links  -->
-                <ul id="resplists">
 
-                    <li class="listitemsResp">
-                        <a href="/index.html" class="listsrespnav" id="home">Home</a>
-                    </li>
+        <div class="navRespInnerdivs" id="navlinksrespdiv">
 
-                    <li class="listitemsResp">
-                        <a href="" class="listsrespnav" id="services">About</a>
-                    </li>
+            <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+
+            <!-- list of links  -->
+            <ul id="resplists">
+
+                <li class="listitemsResp">
+                    <a href="../index.html" class="listsrespnav" id="home">Home</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="about.html" class="listsrespnav" id="about">About</a>
+                </li>
                      
-                    <li class="listitemsResp">
-                        <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="services.html" class="listsrespnav" id="services">Services</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/industries.html" class="listsrespnav" id="industries">Industries</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="industries.html" class="listsrespnav" id="industries">Industries</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/contact.html" class="listsrespnav" id="contact">Contact</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="contact.html" class="listsrespnav" id="contact">Contact</a>
+                </li>
 
-                    <li class="listitemsResp">
-                        <a href="#" class="listsrespnav" id="contact">Careers</a>
-                    </li>
+                <li class="listitemsResp">
+                    <a href="careers.html" class="listsrespnav" id="careers">Careers</a>
+                </li>
+            </ul>
 
-                    <li class="listitemsResp">
-                        <a href="/pages/appointment.html" class="listsrespnav" id="contact">Appointment</a>
-                    </li>
-                </ul>
-
+            <!-- Appointment Button for Mobile Menu -->
+            <div class="mobileAppointmentBtn">
+                <button id="MakeAppointmentMobile" onclick="handleAppointmentBtn()">Make Appointment</button>
             </div>
+
+        </div>
     </nav>
 
     <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
 
     <nav class="navdiv">
 
-            <!-- hamburger icon  -->
-            <div class="navInnerdivs" id="navresponsiveIcons">
-                <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
+        <!-- hamburger icon  -->
+        <div class="navInnerdivs" id="navresponsiveIcons">
+            <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div>
+        </div>
+
+        <!-- logo and name  -->
+        <div class="navInnerdivs" id="navfirstdiv">
+            <h1 class="navh1">
+
+                <img src="../images/logoFI.jpg" alt="FI Consultancy Logo" id="headerlogo">
+
+                <span id="companyNameHeading">
+                    FI Consultancy
+                </span>
+            </h1>
+        </div>
+
+        <!-- list of links  -->
+        <div class="navInnerdivs" id="navlinksdiv">
+
+            <ul id="lists">
+
+                <li>
+                    <a href="../index.html" class="listsnav" id="home">Home</a>
+                </li>
+
+                <li class="listsnav" id="servicesNavItem">
+                    <a href="services.html" class="listsnav" id="services">Services</a>
+
+                    <div id="servicesDropDownDiv">
+
+                        <span>
+                            <a href="services/financialreporting.html" class="serviceslistsnav" id="">Financial
+                                Reporting</a>
+                        </span>
+
+                        <span>
+                            <a href="services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                        </span>
+
+                        <span>
+                            <a href="services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                        </span>
+
+                        <span>
+                            <a href="services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                        </span>
+
+                        <span>
+                            <a href="services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                        </span>
+
+                        <span>
+                            <a href="services/integratedSolutions.html" class="serviceslistsnav" id="">Integrated
+                                Solutions</a>
+                        </span>
+
+                    </div>
+                </li>
+
+                <li class="listsnav" id="industriesNavItem">
+
+                    <a href="industries.html" class="listsnav">Industries</a>
+
+                    <div id="industriesDropDownDiv">
+
+                        <span>
+                            <a href="industries/building&construction.html" class="industrieslistsnav"
+                                id="">Building & Construction</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit
+                                Organization</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/ICT.html" class="industrieslistsnav" id="">Information,
+                                Communication and Telecommunication</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online
+                                Marketplaces</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer
+                                Goods (FMCG)</a>
+                        </span>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="contact.html" class="listsnav" id="contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="careers.html" class="listsnav" id="careers">Careers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- search bar  -->
+        <div class="navInnerdivs" id="searchBarDiv">
+            <div class="searchBarContainer">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
+        </div>
 
-            <!-- logo and name  -->
-            <div class="navInnerdivs" id="navfirstdiv">
-                <h1 class="navh1">
-                    
-                    <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
-
-                    <span id="companyNameHeading">
-                        FI Consultancy
-                    </span>
-                </h1>
-            </div>
-
-            <!-- list of links  -->
-            <div class="navInnerdivs" id="navlinksdiv">
-
-                <ul id="lists">
-
-                    <li>
-                        <a href="../index.html" class="listsnav" id="home">Home</a>
-                    </li>
-                     
-                    <li class="listsnav" id="servicesNavItem">
-                        <a href="../pages/services.html" class="listsnav" id="services">Services</a>
-                         
-                        <div id="servicesDropDownDiv">
-
-                            <span>
-                                <a href="../pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial Reporting</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/services/integratedsolutions.html" class="serviceslistsnav" id="">Integrated Solutions</a>
-                            </span>
-
-                        </div>
-                    </li>
-
-                    <li class="listsnav" id="industriesNavItem">
-                        
-                        <a href="../pages/industries.html" class="listsnav">Industries</a>
-                        
-                        <div id="industriesDropDownDiv">
-
-                            <span>
-                                <a href="../pages/industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit Organization</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/ICT.html" class="industrieslistsnav" id="">Information, Communication and Telecommunication</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online Marketplaces</a>
-                            </span>
-
-                            <span>
-                                <a href="../pages/industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer Goods (FMCG)</a>
-                            </span>
-
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <a href="../pages/contact.html" class="listsnav" id="contact">Contact</a>
-                    </li>
-
-                    <li>
-                        <a href="" class="listsnav" id="careers">Careers</a>
-                    </li>
-
-                </ul>
-                
-            </div>
-
-            <!-- appointment button  -->
-            <div class="navInnerdivs" id="appointmentBtnDiv">
-                <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
-            </div>
+        <!-- appointment button  -->
+        <div class="navInnerdivs" id="appointmentBtnDiv">
+            <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+        </div>
 
     </nav>
     
-<!-- ------------------------------------------------------------------- -->
-<!-- ---------------------- Contact Form Section ----------------------- -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ---------------------- Contact Form Section ----------------------- -->
+    <!-- ------------------------------------------------------------------- -->
 
     <div class="contactstartdiv">
 
         <div class="contactouterdiv">
 
-        <div class="headingdiv">
-
-        <h1 id="contactheading">
-            Connect with us-we are here to help.
-        </h1>
-
-        </div>
-
-        <div class="contactinnerdiv">
-
-            <div>
-
-            <p id="namepra">
-                Name*
-            </p>
-
-            </div>
-
-            <div class="contactinputs">
-
-                <form action="">
-
-                <input type="text" placeholder="First" id="firstnameinput">
-                <input type="text" placeholder="Last" id="lastnameinput">
-
-                
-            </div>
-
-            <div>
-                <p id="emailpra">
-                    Email*
+            <div class="headingdiv">
+                <h1 id="contactheading">
+                    Connect with us - we are here to help.
+                </h1>
+                <p id="contactSubheading">
+                    Fill out the form below and we'll get back to you as soon as possible.
                 </p>
             </div>
 
-            <div class="contactinputs">
+            <div class="contactinnerdiv">
+                <form action="" id="contactForm">
+                    
+                    <div class="formRow">
+                        <div class="formGroup">
+                            <label for="firstnameinput" id="namepra">First Name*</label>
+                            <input type="text" placeholder="Enter your first name" id="firstnameinput" required>
+                        </div>
 
-                <input type="email" name="" id="emailinput">
+                        <div class="formGroup">
+                            <label for="lastnameinput" id="lastnamepra">Last Name*</label>
+                            <input type="text" placeholder="Enter your last name" id="lastnameinput" required>
+                        </div>
+                    </div>
 
+                    <div class="formGroup">
+                        <label for="emailinput" id="emailpra">Email Address*</label>
+                        <input type="email" placeholder="Enter your email address" id="emailinput" required>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="commentinput" id="commentormessagepra">Message*</label>
+                        <textarea id="commentinput" placeholder="Tell us how we can help you..." rows="6" required></textarea>
+                    </div>
+
+                    <div class="submitdiv">
+                        <button type="submit" id="submitbutton">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+
+                </form>
             </div>
 
-            <div>
-                <p id="commentormessagepra">
-                    Comment or Message*
-                </p>
-            </div>
-
-            <div class="contactinputs">
-
-                <input type="text" id="commentinput">
-
-            </div>
-
-            <div class="submitdiv">
-                <input type="submit" value="Submit" id="submitbutton">
-            </div>
-
-
-            </form>
-
-        
-            
         </div>
 
-        </div>
-
-        
-
+    </div>
 
     </div>
 
@@ -280,7 +278,7 @@
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/about.html">About Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="about.html">About Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
@@ -306,6 +304,57 @@
         </div>
 
     </footer>
+
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ WhatsApp Section ------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="whatsappDiv">
+
+        <div class="whatsAppContactPersonDiv" id="whatsAppContactPerson">
+
+            <!-- cross div -->
+            <div class="whatsAppCrossDiv">
+                <span class="whatsAppCrossBtn" onclick="whatsAppCrossBtnhandle()">&#10005;</span>
+            </div>
+
+            <!-- first div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact1()">
+                <div class="userProfile">FI</div>
+
+                <div class="texts">
+                    <div class="fields">Faseh Iqbal</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+            </div>
+
+            <!-- second div -->
+            <div class="nameandlogo" onclick="openWhatsAppContact2()">
+
+                <div class="userProfile">IK</div>
+
+                <div class="texts">
+                    <div class="fields">Immad Khan</div>
+                    <div class="fields" id="online">Online</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Make Appointment Button - Visible on large screens only -->
+        <button class="appointmentFloatingBtn" id="appointmentFloatingButton" onclick="handleAppointmentBtn()">
+            <i class="fas fa-calendar-check"></i>
+            <span>Make Appointment</span>
+        </button>
+
+        <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
+                class="fab fa-whatsapp" id="icon"></i> How can I help you
+        </button>
+
+    </div>
 
 <!-- ------------------------------------------------------------------- -->
 <!-- ------------------------ JavaScript Linked ------------------------ -->

@@ -11,114 +11,10 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-
-.responsiveNavdiv{
-    transform: translateX(-110%);
-    /* background-color: rgb(0, 51, 141, .5); */
-    background-color: white;
-    backdrop-filter: blur(50px);
-    position: fixed;
-    top: auto;
-    width: 50%;
-    z-index: 1112;
-    border-radius: 5px;
-}
-
-.closeIcon{
-    color: rgb(0, 51, 141);
-    font-size: 25px;
-    padding: 5%;
-}
-
-#navresponsiveIcons{
-    display: none;
-}
-
-#resplists{
-    font-size: 15px;
-    list-style: none;
-    line-height: 50px;
-}
-
-.listitemsResp{
-    margin: 5%;
-    /* text-align: center; */
-    /* border-bottom: 2px solid white; */
-    /* background-color: rgb(0, 51, 141); */
-}
-
-/* ------------------------------------------------------------------------- */
-
-.navdiv
-{
-    background-color: white;
-    color: rgb(0, 51, 141);
-    display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    /* border-bottom: 2px solid black; */
-    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
-    height: fit-content;
-}
-
-.navInnerdivs
-{
-    width: 25%;
-    text-align: center;
-    padding: 0%;
-    margin: 0%;
-}
-
-.navh1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    margin: 2%;
-}
-
-#headerlogo{
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    /* display: none; */
-}
-
-#companyNameHeading{
-    font-size: 25px;
-    padding: 5px;
-}
-
-#navlinksdiv{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding: 0%;
-    margin: 0%;
-
-}
-
-#lists{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 20px;
-    list-style: none;
-    width: 100%;
-    padding: 0%;
-    margin: 0%;
-}
-
-.listsnav, .listsrespnav{
-    text-decoration: none;
-    color: rgb(0, 51, 141);
-}
-
-.listsnav:hover{
-    text-decoration: underline;
-    /* border-bottom: 2px solid rgb(0, 51, 141); */
-}
+/* 
+   Navbar styles are now handled by main.css for consistency across all pages.
+   All navbar styling has been moved to main.css to ensure uniform appearance.
+*/
 
 /* --------------------------- Services Dropdown -------------------------------- */
 
@@ -180,76 +76,10 @@ body{
 }
 
 /* --------------------------- Industries Dropdown -------------------------------- */
-
-#industriesNavItem{
-    /* border: 2px solid white; */
-    position: relative;
-}
-
-#industriesDropDownDiv{
-    position: absolute;
-
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
-}
-
-.industrieslistsnav{
-      color: rgb(0, 51, 141);
-      display: block;
-      padding: 5%;
-      text-decoration: none;
-      /* margin-left: 0%; */
-      font-size: large;
-}
-
-#industriesDropDownDiv .industrieslistsnav:hover {
-      background-color: rgb(8, 37, 88);
-      color: white;
-
-}
-
-/* Show dropdown on hover */
-#industriesNavItem:hover #industriesDropDownDiv {
-      transform: translateY(0px);
-      /* opacity: 1; */
-      display: block;
-}
-
-#appointmentBtnDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#MakeAppointment{
-    font-size: 15px;
-    text-align: center;
-    background-color: rgb(0, 51, 141);
-    color: white;
-    cursor: pointer;
-    padding: 11px;
-    border: none;
-    border-radius: 5px;
-}
-
-#MakeAppointment:hover{
-    background-color: rgb(1, 30, 79);
-}
+/* 
+   All navbar styles including dropdowns and appointment button 
+   are now handled by main.css for consistency across all pages.
+*/
 
 
 /* ------------------------------------------------------------------- */
@@ -264,24 +94,65 @@ body{
 
 .servicesimageouterdiv{
     position: relative;
+    overflow: hidden;
 }
 
 .servicesimageinnerdiv{
     height: 50vh;
-    background-image: url(../images/servicesBackgroundCover.jpg);
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Services Carousel Slides */
+.services-carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.services-carousel-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.services-carousel-slide.prev {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.services-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.5) 0%, rgba(0, 31, 84, 0.6) 100%);
+    z-index: 2;
 }
 
 .servicesoverlaydiv{
     width: 100%;
     height: 50vh;
-    background-color: rgba(0, 51, 141, 0.5);
+    min-height: 400px;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
+    z-index: 3;
+    background: transparent;
 }
 
 .servicesOverlayContent{
@@ -296,12 +167,67 @@ body{
 .servicesheading{
     color: white;
     font-size: 55px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #servicesoverlaySlogan{
     width: 75vw;
+    max-width: 900px;
     font-size: 25px;
     text-align: center;
+    line-height: 1.6;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive styles for services carousel */
+@media (max-width: 1024px) {
+    .servicesimageinnerdiv, .servicesoverlaydiv {
+        height: 45vh;
+        min-height: 350px;
+    }
+
+    .servicesheading {
+        font-size: 42px;
+    }
+
+    #servicesoverlaySlogan {
+        font-size: 20px;
+        width: 85vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesimageinnerdiv, .servicesoverlaydiv {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .servicesheading {
+        font-size: 32px;
+    }
+
+    #servicesoverlaySlogan {
+        font-size: 16px;
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesimageinnerdiv, .servicesoverlaydiv {
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .servicesheading {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #servicesoverlaySlogan {
+        font-size: 14px;
+        width: 95vw;
+    }
 }
 
 /* ------------------------------------------------------------------- */
@@ -313,101 +239,10 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-
-.b3{
-    font-size: 17px;
-    border-radius: 41px;
-    margin-top: 15px;
-    width: 15%;
-    padding: 17px;
-    cursor: pointer;
-    color: white;
-    border: none;
-    background-color: rgb(60, 194, 60);
-    padding: 10px;
-    position: fixed;
-    bottom: 10px;
-    font-size: 20px;
-    width: 17%;
-    right: 12px;
-    z-index: 1;
-    
-}
-
-.b3:hover{
-    background-color: rgb(12, 233, 12);
-}
-
-.whatsappDiv{
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    z-index: 111;
-}
-
-.whatsAppContactPersonDiv{
-    display: none;
-    box-shadow: 0px 2px 2px 5px  rgb(208, 205, 205, .5);
-    margin: 2%;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 5px;
-    background-color: rgb(89, 8, 133);
-    /* width: 300px; */
-}
-
-.whatsAppCrossDiv{
-    color: white;
-    text-align: right;
-    margin: 5%;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-.whatsAppCrossBtn{
-    cursor: pointer;
-}
-
-.nameandlogo{
-    /* border: 2px solid black; */
-    background-color: rgb(51, 1, 78);
-    color: white;
-    display: flex;
-    margin: 5%;
-    padding: 5%;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.nameandlogo:hover{
-    background-color: rgb(35, 1, 53);
-}
-
-#online{
-    background-color: rgb(52, 155, 52);
-    border-radius: 5px;
-    width: 100px;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.fields{
-    margin: 5%;
-}
-
-.userProfile{
-    background-image: url('../images/userProfileIcon.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#logo{
-    /* background-color: blue; */
-    border-radius: 100%;
-    height: 90px;
-    width: 175px;
-    border: 2px solid black;
-}
+/* 
+   WhatsApp styles are now handled by main.css for consistency across all pages.
+   All WhatsApp styling has been moved to main.css to ensure uniform appearance.
+*/
 
 .texts{
     margin: 5%;
@@ -427,10 +262,8 @@ body{
 
 #allServicesCardsDiv{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    /* justify-content: space-evenly; */
-    /* row-gap: 55px; */
-    column-gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     background-color: rgb(247, 247, 247);
     padding: 5%;
 }
@@ -438,8 +271,12 @@ body{
 .servicesCard{
     background-color: white;
     border: 1px solid rgb(226, 226, 226);
-    margin: 2%;
     padding: 5%;
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .allCardsHeadings{
@@ -448,16 +285,24 @@ body{
     border-left: 2px solid rgb(0, 51, 141);
     padding-left: 2%;
     color: rgb(0, 51, 141);
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .servicesCardParagraph{
     line-height: 175%;
+    flex-grow: 1;
+    margin: 20px 0;
 }
 
 .servicesCardButton{
     color: rgb(0, 51, 141);
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    margin: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .servicesCardButton:hover{
@@ -650,6 +495,51 @@ body{
     position: relative;   
     height: fit-content;
     padding: 2%;
+    gap: 2%;
+}
+
+@media (max-width: 1024px) {
+    .imageAndCardDiv {
+        flex-direction: column;
+        padding: 3%;
+    }
+
+    .eachServiceImage {
+        width: 100%;
+        height: 300px;
+        margin: 0 0 20px 0;
+    }
+
+    .eachServiceCard {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .imageAndCardDiv {
+        padding: 2%;
+    }
+
+    .eachServiceImage {
+        height: 250px;
+    }
+
+    .eachServiceCard {
+        padding: 3%;
+    }
+}
+
+@media (max-width: 600px) {
+    .imageAndCardDiv {
+        padding: 2%;
+    }
+
+    .eachServiceImage {
+        height: 200px;
+    }
 }
 
 /* ------------------------------------------------------------------- */
@@ -1037,6 +927,35 @@ body{
     font-weight: lighter;
 }
 
+/* Responsive styles for services cards */
+@media (max-width: 1024px) {
+    #allServicesCardsDiv {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    #allServicesCardsDiv {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 3%;
+    }
+
+    .servicesCard {
+        padding: 4%;
+    }
+
+    .allCardsHeadings {
+        font-size: 22px;
+    }
+
+    .servicesCardParagraph {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 600px){
 
     
@@ -1049,43 +968,10 @@ body{
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
-
-    #navresponsiveIcons{
-        display: block;
-        height: fit-content;
-        width: 10%;
-        font-size: 33px;
-        text-align: end;
-    }
-
-    #navfirstdiv{
-        width: 100%;
-        height: fit-content;
-    }
-
-    #appointmentBtnDiv{
-        display: none;
-        width: 40%;
-        height: fit-content;
-
-    }
-
-    #headerlogo{
-        width: 37px;
-        height: 37px;
-    }
-
-    #companyNameHeading{
-        font-size: large;
-    }
-
-    #navlinksdiv{
-        display: none;
-    }
-
-    #MakeAppointment{
-        font-size: small;
-    }
+    /* 
+       Navbar responsive styles are now handled by main.css for consistency.
+       All navbar styling has been moved to main.css.
+    */
 
     .heroDiv{
         display: flex;
@@ -1166,7 +1052,18 @@ body{
     }
 
     .servicesimageinnerdiv, .servicesoverlaydiv{
-        height: 25vh;
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .servicesheading {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    #servicesoverlaySlogan {
+        font-size: 14px;
+        width: 95vw;
     }
 
     .servicesheading{
@@ -1187,55 +1084,10 @@ body{
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
-
-    .whatsAppContactPersonDiv{
-        border-radius: 5px;
-    }
-
-    .whatsAppCrossDiv{
-        margin: 5%;
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    .nameandlogo{
-        display: flex;
-        margin: 5%;
-        padding: 5%;
-    }
-
-    #logo{
-        border-radius: 100%;
-        height: 50px;
-        width: 95px;
-    }
-
-    .texts{
-        margin: 5%;
-        justify-content: space-evenly;
-        font-size: 10px;
-    }
-
-    #online{
-        width: max-content;
-        padding: 5px;
-    }
-
-    .fields{
-        margin: 5%;
-    }
-
-    .b3{
-        background-color: rgb(60, 194, 60);
-        padding: 5px;
-        font-size: 10px;
-        width: 175px;
-
-    }
-
-    #icon{
-        padding: 2%;
-    }
+    /* 
+       WhatsApp responsive styles are now handled by main.css for consistency.
+       All WhatsApp styling has been moved to main.css.
+    */
 
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
@@ -1248,7 +1100,13 @@ body{
     /* ------------------------------------------------------------------- */
 
     #allServicesCardsDiv{
-        display: block;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 3%;
+    }
+
+    .servicesCard {
+        margin: 0;
     }
 
     .servicesCardParagraph{

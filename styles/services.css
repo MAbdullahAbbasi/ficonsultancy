@@ -17,63 +17,11 @@ body{
 */
 
 /* --------------------------- Services Dropdown -------------------------------- */
-
-#servicesNavItem{
-    /* border: 2px solid white; */
-    position: relative;
-}
-
-#servicesNavItem:hover{
-    /* border: 2px solid white; */
-    /* position: relative; */
-    border-bottom: none;
-}
-
-#servicesDropDownDiv{
-    position: absolute;
-
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
-}
-
-.serviceslistsnav{
-      color: rgb(0, 51, 141);
-      display: block;
-      padding: 5%;
-      text-decoration: none;
-      /* margin-left: 0%; */
-      font-size: large;
-}
-
-#servicesDropDownDiv .serviceslistsnav:hover {
-      background-color: rgb(8, 37, 88);
-      color: white;
-
-}
-
-/* Show dropdown on hover */
-#servicesNavItem:hover #servicesDropDownDiv {
-      transform: translateY(0px);
-      opacity: 1;
-      /* visibility: visible; */
-      /* pointer-events: auto; */
-      display: block;
-}
+/* 
+   All navbar styles including dropdowns are now handled by main.css 
+   for consistency across all pages. These styles have been removed to 
+   prevent conflicts with main.css.
+*/
 
 /* --------------------------- Industries Dropdown -------------------------------- */
 /* 
@@ -270,43 +218,115 @@ body{
 
 .servicesCard{
     background-color: white;
-    border: 1px solid rgb(226, 226, 226);
-    padding: 5%;
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    border-radius: 16px;
+    padding: 35px;
     height: 100%;
     min-height: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.servicesCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    border-radius: 16px 16px 0 0;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.servicesCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 51, 141, 0.15);
+}
+
+.servicesCard:hover::before {
+    transform: scaleX(1);
 }
 
 .allCardsHeadings{
-    font-size: 25px;
-    font-weight: lighter;
-    border-left: 2px solid rgb(0, 51, 141);
-    padding-left: 2%;
+    font-size: 26px;
+    font-weight: 600;
     color: rgb(0, 51, 141);
-    margin: 0;
+    margin: 0 0 20px 0;
+    display: block;
+    position: relative;
+    padding-left: 15px;
+    transition: color 0.3s ease;
+    width: 100%;
     flex-shrink: 0;
 }
 
+.allCardsHeadings::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 30px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.servicesCard:hover .allCardsHeadings::before {
+    height: 40px;
+}
+
 .servicesCardParagraph{
-    line-height: 175%;
+    line-height: 1.8;
+    margin: 0 0 25px 0;
+    display: block;
+    color: #555;
+    font-size: 15px;
+    width: 100%;
     flex-grow: 1;
-    margin: 20px 0;
 }
 
 .servicesCardButton{
     color: rgb(0, 51, 141);
     text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin: 0;
+    margin-top: auto;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    width: fit-content;
     flex-shrink: 0;
-    align-self: flex-start;
+}
+
+.servicesCardButton::after {
+    content: '→';
+    transition: transform 0.3s ease;
+    display: inline-block;
 }
 
 .servicesCardButton:hover{
-    text-decoration: underline;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    color: white;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3);
+}
+
+.servicesCardButton:hover::after {
+    transform: translateX(4px);
 }
 
 /* ------------------------------------------------------------------- */

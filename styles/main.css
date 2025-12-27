@@ -175,12 +175,11 @@ body {
     position: sticky;
     top: 0;
     z-index: 22;
-    /* border-bottom: 2px solid black; */
-    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
     height: fit-content;
     align-items: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 51, 141, 0.1);
 }
 
 .navInnerdivs {
@@ -223,144 +222,187 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     list-style: none;
     width: 100%;
     padding: 0%;
     margin: 0%;
+    gap: 8px;
+}
+
+#lists li {
+    position: relative;
 }
 
 .listsnav,
 .listsrespnav {
     text-decoration: none;
     color: rgb(0, 51, 141);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .listsnav:hover {
-    text-decoration: underline;
-    /* border-bottom: 2px solid rgb(0, 51, 141); */
+    color: rgb(8, 37, 88);
+    background-color: rgba(0, 51, 141, 0.05);
+    text-decoration: none;
 }
 
 /* --------------------------- Services Dropdown -------------------------------- */
 
 #servicesNavItem {
-    /* border: 2px solid white; */
     position: relative;
 }
 
-#servicesNavItem:hover {
-    /* border: 2px solid white; */
-    /* position: relative; */
-    border-bottom: none;
+#servicesNavItem:hover .listsnav {
+    color: rgb(8, 37, 88);
+    background-color: rgba(0, 51, 141, 0.05);
 }
 
 #servicesDropDownDiv {
     position: absolute;
+    top: 100%;
+    padding-top: 12px; /* Bridge gap to maintain hover */
+    width: 220px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 0;
+}
 
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
+/* Invisible bridge area to maintain hover */
+#servicesDropDownDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
 }
 
 @media (max-width: 1024px) {
     #servicesDropDownDiv {
-        width: 180px;
-        left: -40px;
+        width: 200px;
+        left: 50%;
     }
 
     #industriesDropDownDiv {
-        width: 180px;
-        left: -40px;
+        width: 200px;
+        left: 50%;
     }
 }
 
 .serviceslistsnav {
     color: rgb(0, 51, 141);
     display: block;
-    padding: 5%;
+    padding: 12px 18px;
     text-decoration: none;
-    /* margin-left: 0%; */
-    font-size: large;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 51, 141, 0.05);
+}
+
+.serviceslistsnav:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.serviceslistsnav:first-child {
+    border-radius: 8px 8px 0 0;
 }
 
 #servicesDropDownDiv .serviceslistsnav:hover {
-    background-color: rgb(8, 37, 88);
+    background-color: rgb(0, 51, 141);
     color: white;
-
+    padding-left: 24px;
 }
 
 /* Show dropdown on hover */
 #servicesNavItem:hover #servicesDropDownDiv {
-    transform: translateY(0px);
+    transform: translateX(-50%) translateY(0px);
     opacity: 1;
-    /* visibility: visible; */
-    /* pointer-events: auto; */
-    display: block;
+    visibility: visible;
 }
 
 /* --------------------------- Industries Dropdown -------------------------------- */
 
 #industriesNavItem {
-    /* border: 2px solid white; */
     position: relative;
+}
+
+#industriesNavItem:hover .listsnav {
+    color: rgb(8, 37, 88);
+    background-color: rgba(0, 51, 141, 0.05);
 }
 
 #industriesDropDownDiv {
     position: absolute;
+    top: 100%;
+    padding-top: 12px; /* Bridge gap to maintain hover */
+    width: 220px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 0;
+}
 
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
+/* Invisible bridge area to maintain hover */
+#industriesDropDownDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
 }
 
 .industrieslistsnav {
     color: rgb(0, 51, 141);
     display: block;
-    padding: 5%;
+    padding: 12px 18px;
     text-decoration: none;
-    /* margin-left: 0%; */
-    font-size: large;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid rgba(0, 51, 141, 0.05);
+}
+
+.industrieslistsnav:last-child {
+    border-bottom: none;
+    border-radius: 0 0 8px 8px;
+}
+
+.industrieslistsnav:first-child {
+    border-radius: 8px 8px 0 0;
 }
 
 #industriesDropDownDiv .industrieslistsnav:hover {
-    background-color: rgb(8, 37, 88);
+    background-color: rgb(0, 51, 141);
     color: white;
-
+    padding-left: 24px;
 }
 
 /* Show dropdown on hover */
 #industriesNavItem:hover #industriesDropDownDiv {
-    transform: translateY(0px);
-    /* opacity: 1; */
-    display: block;
+    transform: translateX(-50%) translateY(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Search Bar Styles */

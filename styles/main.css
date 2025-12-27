@@ -293,8 +293,8 @@ body.menuOpen {
 .listsrespnav {
     display: flex;
     align-items: center;
-    padding: 22px 25px;
-    min-height: 44px;
+    padding: 14px 20px;
+    min-height: auto;
     color: rgb(0, 51, 141);
     text-decoration: none !important;
     font-weight: 500;
@@ -303,6 +303,7 @@ body.menuOpen {
     position: relative;
     border-left: 3px solid transparent;
     -webkit-tap-highlight-color: transparent;
+    line-height: 1.4;
 }
 
 .listsrespnav::before {
@@ -321,7 +322,8 @@ body.menuOpen {
 .listsrespnav:active {
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
     color: rgb(8, 37, 88);
-    padding-left: 30px;
+    padding-left: 25px;
+    padding-right: 20px;
     transform: translateX(5px);
     text-decoration: none !important;
 }
@@ -1542,7 +1544,7 @@ body.menuOpen {
 
     #resplists {
         font-size: 15px;
-        line-height: 45px;
+        line-height: 1.4;
     }
 
     .listitemsResp {
@@ -3542,15 +3544,17 @@ body.menuOpen {
     }
 
     .listsrespnav {
-        padding: 20px 20px;
-        min-height: 44px;
+        padding: 12px 20px;
+        min-height: auto;
         font-size: 15px;
         text-decoration: none !important;
+        line-height: 1.4;
     }
 
     .listsrespnav:hover,
     .listsrespnav:active {
         padding-left: 25px;
+        padding-right: 20px;
         text-decoration: none !important;
     }
 

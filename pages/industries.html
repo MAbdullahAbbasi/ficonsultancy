@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css?v=2.7">
-    <link rel="stylesheet" href="../styles/industries.css?v=1.6">
+    <link rel="stylesheet" href="../styles/main.css?v=2.8">
+    <link rel="stylesheet" href="../styles/industries.css?v=1.7">
     <link rel="icon" href="../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Industries</title>
@@ -42,8 +42,30 @@
                     <a href="about.html" class="listsrespnav" id="about">About</a>
                 </li>
                      
-                <li class="listitemsResp">
-                    <a href="services.html" class="listsrespnav" id="services">Services</a>
+                <li class="listitemsResp" id="servicesRespNavItem">
+                    <a href="services.html" class="listsrespnav" id="services" onclick="toggleServicesDropdown(event)">
+                        Services <i class="fas fa-chevron-down" id="servicesDropdownArrow"></i>
+                    </a>
+                        <ul id="servicesRespDropDownDiv" class="servicesRespDropdown">
+                            <li>
+                                <a href="services/financialreporting.html" class="serviceslistsrespnav"><i class="fas fa-chart-line"></i> Financial Reporting</a>
+                            </li>
+                            <li>
+                                <a href="services/tax.html" class="serviceslistsrespnav"><i class="fas fa-file-invoice-dollar"></i> Tax</a>
+                            </li>
+                            <li>
+                                <a href="services/audit.html" class="serviceslistsrespnav"><i class="fas fa-clipboard-check"></i> Audit</a>
+                            </li>
+                            <li>
+                                <a href="services/bookkeeping.html" class="serviceslistsrespnav"><i class="fas fa-book"></i> Book Keeping</a>
+                            </li>
+                            <li>
+                                <a href="services/advisory.html" class="serviceslistsrespnav"><i class="fas fa-handshake"></i> Advisory</a>
+                            </li>
+                            <li>
+                                <a href="services/integratedSolutions.html" class="serviceslistsrespnav"><i class="fas fa-puzzle-piece"></i> Integrated Solutions</a>
+                            </li>
+                        </ul>
                 </li>
 
                 <li class="listitemsResp">

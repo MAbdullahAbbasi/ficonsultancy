@@ -273,6 +273,30 @@ function handleSwipe() {
     }
 }
 
+// Toggle Services dropdown in responsive menu
+function toggleServicesDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    const dropdown = document.getElementById('servicesRespDropDownDiv');
+    const arrow = document.getElementById('servicesDropdownArrow');
+    
+    if (dropdown && arrow) {
+        const isOpen = dropdown.classList.contains('active');
+        
+        if (isOpen) {
+            dropdown.classList.remove('active');
+            arrow.classList.remove('rotated');
+        } else {
+            dropdown.classList.add('active');
+            arrow.classList.add('rotated');
+        }
+    }
+}
+
+// Make function globally accessible
+window.toggleServicesDropdown = toggleServicesDropdown;
+
 // Close mobile menu when a link is clicked
 document.addEventListener('DOMContentLoaded', function() {
     // Ensure elements are found
@@ -287,8 +311,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const mobileLinks = document.querySelectorAll('.listsrespnav');
     mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Don't close menu if clicking on Services link (it toggles dropdown)
+            if (link.id === 'services' && link.closest('#servicesRespNavItem')) {
+                return; // Let toggleServicesDropdown handle it
+            }
+            // Close the menu when other links are clicked
+            closeMobileMenu();
+        });
+    });
+    
+    // Close dropdown when clicking on service submenu links
+    const serviceSubLinks = document.querySelectorAll('.serviceslistsrespnav');
+    serviceSubLinks.forEach(link => {
         link.addEventListener('click', function() {
-            // Close the menu when a link is clicked
             closeMobileMenu();
         });
     });

@@ -1549,6 +1549,81 @@ body.menuOpen {
         margin: 4%;
     }
 
+    /* Mobile Services Dropdown */
+    #servicesRespNavItem {
+        position: relative;
+    }
+
+    #servicesRespNavItem .listsrespnav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #servicesRespNavItem .listsrespnav i {
+        font-size: 12px;
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    #servicesRespNavItem .listsrespnav i.rotated {
+        transform: rotate(180deg);
+    }
+
+    #servicesRespDropDownDiv {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        margin-top: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    #servicesRespDropDownDiv.active {
+        max-height: 500px;
+        opacity: 1;
+        margin-top: 8px;
+        padding-left: 20px;
+    }
+
+    #servicesRespDropDownDiv li {
+        margin: 6px 0;
+    }
+
+    #servicesRespDropDownDiv .serviceslistsrespnav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 16px;
+        margin-left: 20px;
+        color: rgb(0, 51, 141);
+        background-color: transparent;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #servicesRespDropDownDiv .serviceslistsrespnav i {
+        font-size: 14px;
+        width: 16px;
+        text-align: center;
+        transition: transform 0.2s ease;
+    }
+
+    #servicesRespDropDownDiv .serviceslistsrespnav:hover {
+        background-color: rgba(0, 51, 141, 0.1);
+        color: rgb(0, 51, 141);
+        transform: translateX(4px);
+    }
+
+    #servicesRespDropDownDiv .serviceslistsrespnav:hover i {
+        transform: scale(1.1);
+    }
+
     #heroBannerImageDiv {
         height: 70vh;
     }

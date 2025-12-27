@@ -297,6 +297,29 @@ function toggleServicesDropdown(event) {
 // Make function globally accessible
 window.toggleServicesDropdown = toggleServicesDropdown;
 
+function toggleIndustriesDropdown(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    
+    const dropdown = document.getElementById('industriesRespDropDownDiv');
+    const arrow = document.getElementById('industriesDropdownArrow');
+    
+    if (dropdown && arrow) {
+        const isOpen = dropdown.classList.contains('active');
+        
+        if (isOpen) {
+            dropdown.classList.remove('active');
+            arrow.classList.remove('rotated');
+        } else {
+            dropdown.classList.add('active');
+            arrow.classList.add('rotated');
+        }
+    }
+}
+
+// Make function globally accessible
+window.toggleIndustriesDropdown = toggleIndustriesDropdown;
+
 // Close mobile menu when a link is clicked
 document.addEventListener('DOMContentLoaded', function() {
     // Ensure elements are found
@@ -316,6 +339,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link.id === 'services' && link.closest('#servicesRespNavItem')) {
                 return; // Let toggleServicesDropdown handle it
             }
+            // Don't close menu if clicking on Industries link (it toggles dropdown)
+            if (link.id === 'industries' && link.closest('#industriesRespNavItem')) {
+                return; // Let toggleIndustriesDropdown handle it
+            }
             // Close the menu when other links are clicked
             closeMobileMenu();
         });
@@ -324,6 +351,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close dropdown when clicking on service submenu links
     const serviceSubLinks = document.querySelectorAll('.serviceslistsrespnav');
     serviceSubLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    });
+    
+    // Close dropdown when clicking on industry submenu links
+    const industrySubLinks = document.querySelectorAll('.industrieslistsrespnav');
+    industrySubLinks.forEach(link => {
         link.addEventListener('click', function() {
             closeMobileMenu();
         });

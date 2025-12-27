@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/main.css?v=1.6">
-    <link rel="stylesheet" href="../../styles/services/bookkeeping.css">
+    <link rel="stylesheet" href="../../styles/main.css?v=2.7">
+    <link rel="stylesheet" href="../../styles/services/bookkeeping.css?v=2.0">
     <link rel="icon" href="../../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Book Keeping</title>
@@ -18,164 +18,186 @@
     <!-- ---------------------- Mobile Responsive Nav ---------------------- -->
 
     <nav class="responsiveNavdiv" id="responsiveNavbardiv">
-            
-            <div class="navRespInnerdivs" id="navlinksrespdiv">
-                
-                <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
-                
-                <!-- list of links  -->
-                <ul id="resplists">
 
-                    <li class="listitemsResp">
-                        <a href="/index.html" class="listsrespnav" id="home">Home</a>
-                    </li>
+        <div class="navRespInnerdivs" id="navlinksrespdiv">
 
-                    <li class="listitemsResp">
-                        <a href="../about.html" class="listsrespnav" id="about">About</a>
-                    </li>
-                     
-                    <li class="listitemsResp">
-                        <a href="/pages/services.html" class="listsrespnav" id="services">Services</a>
-                    </li>
-
-                    <li class="listitemsResp">
-                        <a href="pages/industries.html" class="listsrespnav" id="industries">Industries</a>
-                    </li>
-
-                    <li class="listitemsResp">
-                        <a href="pages/contact.html" class="listsrespnav" id="contact">Contact</a>
-                    </li>
-
-                    <li class="listitemsResp">
-                        <a href="../careers.html" class="listsrespnav" id="careers">Careers</a>
-                    </li>
-
-                    <li class="listitemsResp">
-                        <a href="../appointment.html" class="listsrespnav" id="contact">Appointment</a>
-                    </li>
-                </ul>
-
+            <!-- Mobile Search Bar -->
+            <div class="mobileSearchBarContainer">
+                <div class="searchBarContainer">
+                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." aria-label="Search">
+                    <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
             </div>
+
+            <!-- list of links  -->
+            <ul id="resplists">
+
+                <li class="listitemsResp">
+                    <a href="../../index.html" class="listsrespnav" id="home">Home</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="../about.html" class="listsrespnav" id="about">About</a>
+                </li>
+                     
+                <li class="listitemsResp">
+                    <a href="../services.html" class="listsrespnav" id="services">Services</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="../industries.html" class="listsrespnav" id="industries">Industries</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="../contact.html" class="listsrespnav" id="contact">Contact</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="../careers.html" class="listsrespnav" id="careers">Careers</a>
+                </li>
+            </ul>
+
+            <!-- Appointment Button for Mobile Menu -->
+            <div class="mobileAppointmentBtn">
+                <button id="MakeAppointmentMobile" onclick="handleAppointmentBtn()">Make Appointment</button>
+            </div>
+
+        </div>
     </nav>
 
     <!-- ---------------------- Desktop Responsive Nav ---------------------- -->
 
     <nav class="navdiv">
 
-            <!-- hamburger icon  -->
-            <div class="navInnerdivs" id="navresponsiveIcons">
-                <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div> 
+        <!-- hamburger icon  -->
+        <div class="navInnerdivs" id="navresponsiveIcons">
+            <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div>
+            <div class="menu-icon menu-close-icon" id="closeMenu" onclick="handleRespNav()" style="display: none;">&#10005;</div>
+        </div>
+
+        <!-- logo and name  -->
+        <div class="navInnerdivs" id="navfirstdiv">
+            <h1 class="navh1">
+
+                <img src="../../images/logoFI.jpg" alt="FI Consultancy Logo" id="headerlogo">
+
+                <span id="companyNameHeading">
+                    FI Consultancy
+                </span>
+            </h1>
+        </div>
+
+        <!-- list of links  -->
+        <div class="navInnerdivs" id="navlinksdiv">
+
+            <ul id="lists">
+
+                <li>
+                    <a href="../../index.html" class="listsnav" id="home">Home</a>
+                </li>
+
+                <li>
+                    <a href="../about.html" class="listsnav" id="about">About</a>
+                </li>
+
+                <li class="listsnav" id="servicesNavItem">
+                    <a href="../services.html" class="listsnav" id="services">Services</a>
+
+                    <div id="servicesDropDownDiv">
+
+                        <span>
+                            <a href="financialreporting.html" class="serviceslistsnav" id="">Financial
+                                Reporting</a>
+                        </span>
+
+                        <span>
+                            <a href="tax.html" class="serviceslistsnav" id="">Tax</a>
+                        </span>
+
+                        <span>
+                            <a href="audit.html" class="serviceslistsnav" id="">Audit</a>
+                        </span>
+
+                        <span>
+                            <a href="bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                        </span>
+
+                        <span>
+                            <a href="advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                        </span>
+
+                        <span>
+                            <a href="integratedSolutions.html" class="serviceslistsnav" id="">Integrated
+                                Solutions</a>
+                        </span>
+
+                    </div>
+                </li>
+
+                <li class="listsnav" id="industriesNavItem">
+
+                    <a href="../industries.html" class="listsnav">Industries</a>
+
+                    <div id="industriesDropDownDiv">
+
+                        <span>
+                            <a href="../industries/financialServices.html" class="industrieslistsnav"
+                                id="">Financial Services</a>
+                        </span>
+
+                        <span>
+                            <a href="../industries/consumerRetail.html" class="industrieslistsnav" id="">Consumer & Retail</a>
+                        </span>
+
+                        <span>
+                            <a href="../industries/ICT.html" class="industrieslistsnav" id="">Information,
+                                Communication and Telecommunication</a>
+                        </span>
+
+                        <span>
+                            <a href="../industries/healthcare.html" class="industrieslistsnav" id="">Infrastructure, Government and HealthCare</a>
+                        </span>
+
+                        <span>
+                            <a href="../industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
+                        </span>
+
+                        <span>
+                            <a href="../industries/transportation.html" class="industrieslistsnav" id="">Transportation</a>
+                        </span>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a href="../contact.html" class="listsnav" id="contact">Contact</a>
+                </li>
+
+                <li>
+                    <a href="../careers.html" class="listsnav" id="careers">Careers</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- search bar  -->
+        <div class="navInnerdivs" id="searchBarDiv">
+            <div class="searchBarContainer">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
+        </div>
 
-            <!-- logo and name  -->
-            <div class="navInnerdivs" id="navfirstdiv">
-                <h1 class="navh1">
-                    <img src="/images/logoFI.jpg" alt="logo" id="headerlogo">
-                    <span id="companyNameHeading">
-                        FI Consultancy
-                    </span>
-                </h1>
-            </div>
-
-            <!-- list of links  -->
-            <div class="navInnerdivs" id="navlinksdiv">
-
-                <ul id="lists">
-
-                    <li>
-                        <a href="#" class="listsnav" id="home">Home</a>
-                    </li>
-                     
-                    <li class="listsnav" id="servicesNavItem">
-                        <a href="pages/services.html" class="listsnav" id="services">Services</a>
-                         
-                        <div id="servicesDropDownDiv">
-
-                            <span>
-                                <a href="/pages/financialreporting.html" class="serviceslistsnav" id="">Financial Reporting</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/tax.html" class="serviceslistsnav" id="">Tax</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages//audit.html" class="serviceslistsnav" id="">Audit</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/advisory.html" class="serviceslistsnav" id="">Advisory</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/integratedsolutions.html" class="serviceslistsnav" id="">Integrated Solutions</a>
-                            </span>
-
-                        </div>
-                    </li>
-
-                    <li class="listsnav" id="industriesNavItem">
-                        <a href="pages/industries.html" class="listsnav">Industries</a>
-                        
-                        <div id="industriesDropDownDiv">
-
-                            <span>
-                                <a href="/pages/financialreporting.html" class="industrieslistsnav" id="">Building & Construction</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/tax.html" class="industrieslistsnav" id="">Non-Profit Organization</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/audit.html" class="industrieslistsnav" id="">Health Care</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/bookkeeping.html" class="industrieslistsnav" id="">Information, Communication and Telecommunication</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/advisory.html" class="industrieslistsnav" id="">Online Marketplaces</a>
-                            </span>
-
-                            <span>
-                                <a href="/pages/integratedsolutions.html" class="industrieslistsnav" id="">Fast-Moving Consumer Goods (FMCG)</a>
-                            </span>
-
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="pages/contact.html" class="listsnav" id="contact">Contact</a>
-                    </li>
-
-                    <li>
-                        <a href="../careers.html" class="listsnav" id="careers">Careers</a>
-                    </li>
-
-                </ul>
-                
-            </div>
-
-            <!-- search bar  -->
-            <div class="navInnerdivs" id="searchBarDiv">
-                <div class="searchBarContainer">
-                    <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
-                    <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- appointment button  -->
-            <div class="navInnerdivs" id="appointmentBtnDiv">
-                <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
-            </div>
+        <!-- appointment button  -->
+        <div class="navInnerdivs" id="appointmentBtnDiv">
+            <button id="MakeAppointment" onclick="handleAppointmentBtn()">Make Appointment</button>
+        </div>
 
     </nav>
   
@@ -243,7 +265,7 @@
                     <span>Make Appointment</span>
                 </button>
                 
-                <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i class="fab fa-whatsapp" id="icon"></i> How can I help you
+                <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i class="fab fa-whatsapp" id="icon"></i> <span class="whatsapp-text">How can we help you?</span>
                 </button>
 
         </div>
@@ -263,18 +285,18 @@
 
             <!-- content  -->
             <div id="financialReportingContentPara">
-                Financial statement audits give assurance over information used by investors and the capital markets. We are committed to delivering an independent audit that inspires confidence in your financial reporting. How we deliver that audit is important - our values – acting with integrity, using professional skepticism, objectivity, independence, and ethics – supports our culture of high challenge and high support which underpins the delivery of a high-quality audit.
+                <p>Financial statement audits give assurance over information used by investors and the capital markets. We are committed to delivering an independent audit that inspires confidence in your financial reporting. How we deliver that audit is important - our values – acting with integrity, using professional skepticism, objectivity, independence, and ethics – supports our culture of high challenge and high support which underpins the delivery of a high-quality audit.</p>
 
-                The audit and assurance landscape are changing. Regulatory requirements, coupled with increased stakeholder demands for greater transparency, are putting more pressure on organizations. As a result, audit and assurance are high on the agenda for many boards.
+                <p>The audit and assurance landscape are changing. Regulatory requirements, coupled with increased stakeholder demands for greater transparency, are putting more pressure on organizations. As a result, audit and assurance are high on the agenda for many boards.</p>
 
-                While organisations have the responsibility to prepare financial information in line with the appropriate rules and regulations, we believe that auditors perform the valuable role of giving users the assurance they need over financial information. At KPMG, we believe we have a responsibility to continue our work in building trust in corporate reporting, which goes far beyond regulatory demands for greater disclosure and aims to increase transparency and rebuild confidence.
+                <p>While organisations have the responsibility to prepare financial information in line with the appropriate rules and regulations, we believe that auditors perform the valuable role of giving users the assurance they need over financial information. At FI Consultancy, we believe we have a responsibility to continue our work in building trust in corporate reporting, which goes far beyond regulatory demands for greater disclosure and aims to increase transparency and rebuild confidence.</p>
             </div>
 
         </div>
 
         <div id="OurAreasSectionDiv" class="contentDiv">
 
-            <div class="ourAreasContent" id="ourAreasContentHeading">Our areas</div>
+            <div id="ourAreasContentHeading">Our areas</div>
 
             <div class="ourAreasContent ourAreasContentLinksDiv" id="">
                 <div class="ourAreasContentLinks">IFRS</div>
@@ -304,7 +326,7 @@
             </div>
 
             <div id="proposalParagraph" class="proposalRequestContents">
-                Use the RFP submission from to provide details of the services you require,that you would like FI Consultancy assistance with.
+                Use the RFP submission form to provide details of the services you require that you would like FI Consultancy assistance with.
             </div>
 
             <div id="proposalReachOutButtonDiv" class="proposalRequestContents">
@@ -374,7 +396,7 @@
 <!-- ------------------------ JavaScript Linked ------------------------ -->
 <!-- ------------------------------------------------------------------- -->
 
-    <script src="../../scripts/main.js?v=1.3"></script>
+    <script src="../../scripts/main.js?v=1.4"></script>
     
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"499e684b7b1043878977050a0a606794","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"499e684b7b1043878977050a0a606794","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>

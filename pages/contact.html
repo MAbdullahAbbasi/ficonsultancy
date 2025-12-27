@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css?v=1.9">
+    <link rel="stylesheet" href="../styles/main.css?v=2.7">
     <link rel="stylesheet" href="../styles/conatct.css">
     <link rel="icon" href="../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Contact Us</title>
 </head>
 
-<body>
+    <body>
 
     <!-- ------------------------------------------------------------------- -->
     <!-- ------------------------ Nav Section ------------------------------ -->
@@ -23,7 +23,15 @@
 
         <div class="navRespInnerdivs" id="navlinksrespdiv">
 
-            <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+            <!-- Mobile Search Bar -->
+            <div class="mobileSearchBarContainer">
+                <div class="searchBarContainer">
+                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." aria-label="Search">
+                    <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
 
             <!-- list of links  -->
             <ul id="resplists">
@@ -68,6 +76,7 @@
         <!-- hamburger icon  -->
         <div class="navInnerdivs" id="navresponsiveIcons">
             <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div>
+            <div class="menu-icon menu-close-icon" id="closeMenu" onclick="handleRespNav()" style="display: none;">&#10005;</div>
         </div>
 
         <!-- logo and name  -->
@@ -89,6 +98,10 @@
 
                 <li>
                     <a href="../index.html" class="listsnav" id="home">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="listsnav" id="about">About</a>
                 </li>
 
                 <li class="listsnav" id="servicesNavItem">
@@ -216,23 +229,23 @@
                     <div class="formRow">
                         <div class="formGroup">
                             <label for="firstnameinput" id="namepra">First Name*</label>
-                            <input type="text" placeholder="Enter your first name" id="firstnameinput" required>
+                            <input type="text" name="first_name" placeholder="Enter your first name" id="firstnameinput" required>
                         </div>
 
                         <div class="formGroup">
                             <label for="lastnameinput" id="lastnamepra">Last Name*</label>
-                            <input type="text" placeholder="Enter your last name" id="lastnameinput" required>
+                            <input type="text" name="last_name" placeholder="Enter your last name" id="lastnameinput" required>
                         </div>
                     </div>
 
                     <div class="formGroup">
                         <label for="emailinput" id="emailpra">Email Address*</label>
-                        <input type="email" placeholder="Enter your email address" id="emailinput" required>
+                        <input type="email" name="user_email" placeholder="Enter your email address" id="emailinput" required>
                     </div>
 
                     <div class="formGroup">
                         <label for="commentinput" id="commentormessagepra">Message*</label>
-                        <textarea id="commentinput" placeholder="Tell us how we can help you..." rows="6" required></textarea>
+                        <textarea name="message" id="commentinput" placeholder="Tell us how we can help you..." rows="6" required></textarea>
                     </div>
 
                     <div class="submitdiv">
@@ -251,9 +264,9 @@
 
     </div>
 
-<!-- ------------------------------------------------------------------- -->
-<!-- ------------------------ Footer Section --------------------------- -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Footer Section --------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
 
     <footer class="footer">
 
@@ -351,7 +364,7 @@
         </button>
 
         <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
-                class="fab fa-whatsapp" id="icon"></i> How can I help you
+                class="fab fa-whatsapp" id="icon"></i> <span class="whatsapp-text">How can we help you?</span>
         </button>
 
     </div>
@@ -360,9 +373,9 @@
 <!-- ------------------------ JavaScript Linked ------------------------ -->
 <!-- ------------------------------------------------------------------- -->
 
-    <script src="../scripts/main.js?v=1.2"></script>
-    <script src="../scripts/contact.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="../scripts/main.js?v=1.4"></script>
+    <script src="../scripts/contact.js"></script>
 
     
 </body>

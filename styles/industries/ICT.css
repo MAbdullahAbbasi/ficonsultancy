@@ -1,253 +1,8 @@
+/* NAVBAR AND FOOTER STYLES MOVED TO main.css FOR CONSISTENCY */
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* -------------------------- Navbar --------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-.responsiveNavdiv{
-    transform: translateX(-110%);
-    background-color: rgb(0, 51, 141, .5);
-    backdrop-filter: blur(50px);
-    position: fixed;
-    top: auto;
-    width: 80%;
-    z-index: 1112;
-}
-
-.closeIcon{
-    color: white;
-    font-size: 35px;
-    padding: 5%;
-}
-
-#navresponsiveIcons{
-    display: none;
-}
-
-#resplists{
-    font-size: 25px;
-    list-style: none;
-    line-height: 50px;
-}
-
-.listitemsResp{
-    margin: 5%;
-    text-align: center;
-    border-bottom: 2px solid white;
-    background-color: rgb(0, 51, 141);
-}
-
-/* ------------------------------------------------------------------------- */
-
-.navdiv
-{
-    background-color: white;
-    color: rgb(0, 51, 141);
-    display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    /* border-bottom: 2px solid black; */
-    /* box-shadow: 0 2px 2px 2px 5px rgba(1, 16, 43, 0.75); */
-    height: fit-content;
-}
-
-.navInnerdivs
-{
-    width: 25%;
-    text-align: center;
-    padding: 0%;
-    margin: 0%;
-}
-
-.navh1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    margin: 2%;
-}
-
-#headerlogo{
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    /* display: none; */
-}
-
-#companyNameHeading{
-    font-size: 25px;
-    padding: 5px;
-}
-
-#navlinksdiv{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    padding: 0%;
-    margin: 0%;
-
-}
-
-#lists{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 20px;
-    list-style: none;
-    width: 100%;
-    padding: 0%;
-    margin: 0%;
-}
-
-.listsnav, .listsrespnav{
-    text-decoration: none;
-    color: rgb(0, 51, 141);
-}
-
-.listsnav:hover{
-    text-decoration: underline;
-    /* border-bottom: 2px solid rgb(0, 51, 141); */
-}
-
-/* --------------------------- Services Dropdown -------------------------------- */
-
-#servicesNavItem{
-    /* border: 2px solid white; */
-    position: relative;
-}
-
-#servicesNavItem:hover{
-    /* border: 2px solid white; */
-    /* position: relative; */
-    border-bottom: none;
-}
-
-#servicesDropDownDiv{
-    position: absolute;
-
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
-}
-
-.serviceslistsnav{
-      color: rgb(0, 51, 141);
-      display: block;
-      padding: 5%;
-      text-decoration: none;
-      /* margin-left: 0%; */
-      font-size: large;
-}
-
-#servicesDropDownDiv .serviceslistsnav:hover {
-      background-color: rgb(8, 37, 88);
-      color: white;
-
-}
-
-/* Show dropdown on hover */
-#servicesNavItem:hover #servicesDropDownDiv {
-      transform: translateY(0px);
-      opacity: 1;
-      /* visibility: visible; */
-      /* pointer-events: auto; */
-      display: block;
-}
-
-/* --------------------------- Industries Dropdown -------------------------------- */
-
-#industriesNavItem{
-    /* border: 2px solid white; */
-    position: relative;
-}
-
-#industriesDropDownDiv{
-    position: absolute;
-
-    top: 200%;
-    width: 200px;
-    left: -50px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0);
-    /* box-shadow: ; */
-    /* border: 1px solid rgb(1, 1, 98); */
-
-    background-color: rgb(255, 255, 255, 1);
-
-    border-radius: 4px;
-    transform: translateY(20px);
-    /* opacity: 0; */
-
-    display: none;
-
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    z-index: 2;
-}
-
-.industrieslistsnav{
-      color: rgb(0, 51, 141);
-      display: block;
-      padding: 5%;
-      text-decoration: none;
-      /* margin-left: 0%; */
-      font-size: large;
-}
-
-#industriesDropDownDiv .industrieslistsnav:hover {
-      background-color: rgb(8, 37, 88);
-      color: white;
-
-}
-
-/* Show dropdown on hover */
-#industriesNavItem:hover #industriesDropDownDiv {
-      transform: translateY(0px);
-      /* opacity: 1; */
-      display: block;
-}
-
-#appointmentBtnDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#MakeAppointment{
-    font-size: 15px;
-    text-align: center;
-    background-color: rgb(0, 51, 141);
-    color: white;
-    cursor: pointer;
-    padding: 11px;
-    border: none;
-    border-radius: 5px;
-}
-
-#MakeAppointment:hover{
-    background-color: rgb(1, 30, 79);
+    font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
 }
 
 /* ------------------------------------------------------------------- */
@@ -262,210 +17,100 @@ body{
 
 #ICTHeroDiv {
     position: relative;
+    overflow: hidden;
 }
 
 #ICTHeroImageDiv {
     background-image: url('../../images/financialReportingBanner.webp');
-    height: 45vh;
+    height: 50vh;
+    min-height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 0;
+    position: relative;
+}
+
+#ICTHeroImageDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.85) 0%, rgba(8, 37, 88, 0.75) 100%);
+    z-index: 1;
 }
 
 #ICTHeroContentDiv {
-    height: 45vh;
+    height: 50vh;
+    min-height: 400px;
     background: linear-gradient(
         to right,
-        /* rgba(0, 0, 0, 0.75) 0%, */
-        /* rgba(0, 0, 0, 0.75) 10%, */
-        rgba(0, 0, 0, 0.75) 20%,
-        rgba(38, 38, 38, 0.75) 45%,
-        rgba(113, 113, 113, 0.5) 65%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(0, 51, 141, 0.9) 0%,
+        rgba(0, 51, 141, 0.7) 40%,
+        rgba(0, 51, 141, 0.4) 70%,
+        rgba(0, 51, 141, 0) 100%
     );
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     color: white;
-}
-
-#ICTHeroHeadingParaContentDiv{
-    width: 55%;
-    /* border: 2px solid red; */
-    height: 100%;
-    /* text-align: center; */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
+#ICTHeroHeadingParaContentDiv{
+    width: 60%;
+    max-width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 5%;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #ICTHeroHeading{
-    font-size: 35px;
+    font-size: clamp(32px, 5vw, 48px);
     text-align: left;
-    width: 75%;
-    font-weight: bolder;
-    /* border: 2px solid red; */
-    margin: 1%;
-    /* margin: 1% 1% 1% 15%; */
+    width: 100%;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
 #ICTHeroPara{
-    font-size: 20px;
-    width: 75%;
-    margin: 1%;
-
-    /* margin: 1% 1% 1% 15%; */
-}
-
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ----------------------- Whatsapp Section -------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-.whatsappDiv{
-
-    
-    position: fixed;
-    bottom: 10px;
-    right: 20px;
-    z-index: 11;
-    
-    /* border: 2px solid white; */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: right;
-}
-
-.whatsappDiv:hover .whatsAppContactPersonDiv{
-    transform: translateY(0px);
-    transition: all 1s ease;
-    /* display: block; */
-    opacity: 1;
-}
-
-.whatsAppContactPersonDiv{
-    box-shadow: 0px 2px 2px 5px  rgb(208, 205, 205, .5);
-    background-color: rgb(0, 51, 141);
-    border: 2px solid rgb(255, 255, 255);
-
-    transform: translateY(150px);
-
-    opacity: 0;
-    
-    margin: 5%;
-    width: 275px;
-    
-    /* display: none; */
-
-    /* border-radius: 5px; */
-    /* height: fit-content; */
-}
-
-.whatsAppCrossDiv{
-    color: white;
-    text-align: right;
-    margin: 5%;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-.whatsAppCrossBtn{
-    cursor: pointer;
-}
-
-.userProfile{
-    background-image: url('../images/userProfileIcon.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: none;
-}
-
-#logo{
-    /* background-color: blue; */
-    border-radius: 100%;
-    height: 90px;
-    /* width: 150px; */
-    border: 2px solid black;
-    
-    display: none;
-} 
-
-.texts{
-    /* margin: 5%; */
-    /* justify-content: space-evenly; */
-    /* font-size: 20px; */
-    /* width: fit-content; */
-}
-
-.nameandlogo{
-    border: 2px solid rgb(195, 192, 192);
-    /* border: 2px solid red; */
-    background-color: rgb(0, 51, 141);
-    color: white;
-    display: flex;
-    margin: 2%;
-    padding: 2%;
-    cursor: pointer;
-
-    /* width: 100%; */
-    /* border-radius: 5px; */
-    /* border: 2px solid white; */
-}
-
-.nameandlogo:hover{
-    background-color: rgb(1, 41, 109);
-}
-
-.fields{
-    margin: 5%;
-    font-weight: bold;
+    font-size: clamp(16px, 2vw, 20px);
     width: 100%;
-    /* border: 2px solid white; */
-
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.95;
+    font-weight: 400;
 }
-
-#online{
-    background-color: rgb(52, 155, 52);
-    border-radius: 5px;
-    width: fit-content;
-    color: white;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.b3{
-    background-color: rgb(60, 194, 60);
-    padding: 10px;
-    width: fit-content;
-    font-size: 20px;
-    width: 300px;
-
-}
-
-.b3:hover{
-    background-color: rgb(12, 233, 12);
-}
-
-
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-/* ------------- Business & Construction Content Section ------------- */
+/* --------------------- ICT Content Section ------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -474,71 +119,160 @@ body{
 
 #ICTAndOurAreasSectionContentDiv{
     display: flex;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 5%;
+    align-items: flex-start;
 }
 
 .contentDiv{
-    margin-left: 3%;
-    margin-right: 3%;
-    margin-top: 5%;
+    margin: 0;
 }
 
 #ICTSectionContentDiv{
-    width: 55%;
+    width: 60%;
+    flex: 1;
+    background: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#ICTSectionContentDiv:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 #ICTContentHeading{
-    font-size: 25px;
+    font-size: clamp(28px, 3vw, 36px);
     color: rgb(0, 51, 141);
-    margin: 1%;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#ICTContentHeading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, rgb(0, 51, 141), rgba(0, 51, 141, 0.3));
+    border-radius: 2px;
 }
 
 #ICTContentPara{
-    margin: 1%;
-    font-size: large;
-    line-height: 30px;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    font-weight: 400;
+}
+
+#ICTContentPara p {
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
+#ICTContentPara p:last-child {
+    margin-bottom: 0;
 }
 
 #OurAreasSectionDiv{
-    border-left: 15px solid rgb(0, 51, 141);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    width: 45%;
-    height: max-content;
+    width: 40%;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
+    border-left: 5px solid rgb(0, 51, 141);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
 }
 
 #ourAreasContentHeading{
-    font-size: 35px;
-    font-weight: bolder;
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 700;
     color: rgb(0, 51, 141);
+    margin: 0 0 30px 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#ourAreasContentHeading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: rgb(0, 51, 141);
+    border-radius: 2px;
 }
 
 .ourAreasContent{
-    /* height: 25%; */
-    padding-bottom: 4%;
-    margin: 4%;
-    border-bottom: 2px solid gainsboro;
+    padding: 20px 0;
+    margin: 0;
+    border-bottom: 1px solid rgba(0, 51, 141, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ourAreasContent:last-child {
+    border-bottom: none;
+}
+
+.ourAreasContent:hover {
+    padding-left: 10px;
+    background: rgba(0, 51, 141, 0.03);
+    border-radius: 8px;
+    margin: 0 -10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .ourAreasContentLinksDiv{
     display: flex;
     cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
 .ourAreasContentLinksDiv:hover{
-    border-bottom: 2px solid rgb(0, 51, 141);
+    color: rgb(0, 51, 141);
+}
+
+.ourAreasContentLinksDiv:hover .ourAreasContentLinksArrow {
+    transform: translateX(5px);
     color: rgb(0, 51, 141);
 }
 
 .ourAreasContentLinks{
-    width: 50%;
-    /* font-weight: bolder; */
-    font-size: larger;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.ourAreasContentLinksDiv:hover .ourAreasContentLinks {
+    color: rgb(0, 51, 141);
+    font-weight: 600;
 }
 
 .ourAreasContentLinksArrow{
-    text-align: right;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 51, 141, 0.5);
+    transition: all 0.3s ease;
 }
-
-
 
 
 /* ------------------------------------------------------------------- */
@@ -553,167 +287,107 @@ body{
 
 #proposalRequestDiv{
     color: white;
-    padding: 10%;
-    background-image: url('../../images/industries/blueColorBackground.jpg');
+    padding: 100px 5%;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.95) 0%, rgba(8, 37, 88, 0.95) 100%),
+                url('../../images/industries/blueColorBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+#proposalRequestDiv::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.9) 0%, rgba(8, 37, 88, 0.85) 100%);
+    z-index: 1;
 }
 
 #proposalRequestContent{
-    width: 55%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .proposalRequestContents{
-    margin: 2%;
+    margin: 0;
 }
 
 #proposalHeading{
-    font-size: 35px;
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 #proposalParagraph{
-    font-size: larger;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.8;
+    margin: 0 0 35px 0;
+    opacity: 0.95;
+    font-weight: 400;
 }
 
 .proposalReachOutButton{
     color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
 }
 
 .proposalReachOutButton:hover{
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
 }
+
+.proposalReachOutButton::after {
+    content: '→';
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.proposalReachOutButton:hover::after {
+    transform: translateX(5px);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ----------------------- Whatsapp Section -------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* WHATSAPP STYLES MOVED TO main.css FOR CONSISTENCY */
 
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-/* -------------------------- Footer Section ------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-.footer {
-    background-color: rgb(0, 51, 141);
-    padding: 40px;
-}
-
-.footerdiv {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    justify-content: space-between;
-    color: white;
-    /* border: 2px solid white; */
-}
-
-.footerinnerdiv{
-    display: flex;
-    flex-direction: column;
-}
-
-.footerlogoandheadingdiv{
-    display: flex;
-    gap: 10px;
-    /* border: 2px solid white; */
-    /* align-items: center; */
-    /* justify-content: center; */
-}
-
-.f1logodiv {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-image: url(../../images/logoFI.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.footerlogoheading {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0%;
-    display: flex;
-    align-items: center;
-}
-
-.iconsdiv {
-    display: flex;
-    /* justify-content: ; */
-    font-size: 22px;
-}
-
-.iconsdiv i{
-    margin: 5%;
-    cursor: pointer;
-}
-
-.iconsdiv i:hover{
-    color: rgb(241, 241, 241 , .75);
-    transform: translateY(-15%);
-    transition: all .5s;
-}
-
-#heading7 {
-    font-size: 33px;
-    text-align: center;
-    font-weight: bold;
-    margin: 0%;
-}
-
-.listfooter {
-    list-style: none;
-    text-align: center;
-    /* width: fit-content; */
-    /* border: 2px solid white; */
-    padding: 0%;
-
-}
-
-.listfooterinnerdiv{
-    margin: 10px;
-    font-weight: lighter; 
-    font-size: 17.5px;
-    /* margin: 0%; */
-}
-
-.footerLinksPages{
-    /* text-decoration: none; */
-    color: white;
-}
-
-.footerLinksPages:hover{
-    color: rgb(232, 232, 232, .75);
-}
-
-#footercontactdiv {
-    display: flex;
-    flex-direction: column;
-    /* border: 2px solid white; */
-    justify-content: right;
-    align-items: end;
-    /* border: 2px solid white; */
-
-}
-
-.contactpra{
-    font-size: 17.5px;
-    margin: 2%;
-    color: white;
-    width: 55%;
-}
-
-.footercopyright {
-    text-align: center;
-    font-size: 17px;
-    font-weight: lighter;
-}
-
-/* ################################################################### */
-/* ################################################################### */
-/* ################################################################### */
-/* ################################################################### */
-/* ################################################################### */
 /* ###################### Responsiveness ############################# */
 /* ################################################################### */
 /* ################################################################### */
@@ -721,6 +395,24 @@ body{
 /* ################################################################### */
 /* ################################################################### */
 
+
+@media (max-width: 1024px) {
+    #ICTAndOurAreasSectionContentDiv {
+        flex-direction: column;
+        gap: 30px;
+        margin: 60px auto;
+    }
+
+    #ICTSectionContentDiv {
+        width: 100%;
+    }
+
+    #OurAreasSectionDiv {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}
 
 @media (max-width: 600px){
 
@@ -733,48 +425,12 @@ body{
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
     /* ------------------------------------------------------------------- */
-
-    #navresponsiveIcons{
-        display: block;
-        height: fit-content;
-        width: 10%;
-        font-size: 33px;
-        text-align: end;
-    }
-
-    #navfirstdiv{
-        width: 50%;
-        height: fit-content;
-    }
-
-    #appointmentBtnDiv{
-        width: 40%;
-        height: fit-content;
-
-    }
-
-    #headerlogo{
-        width: 37px;
-        height: 37px;
-    }
-
-    #companyNameHeading{
-        font-size: large;
-    }
-
-    #navlinksdiv{
-        display: none;
-    }
-
-    #MakeAppointment{
-        font-size: small;
-    }
+    /* NAVBAR RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY */
 
     .heroDiv{
         display: flex;
         justify-content: center;
         align-items: center;
-        /* background-color: rgba(32, 16, 47, 0.9);     */
     }
 
     .heroh1{
@@ -783,8 +439,7 @@ body{
         left: 29px;
         width: 87%;
         text-align: center;
-       /* border: 2px solid white; */
-       margin-bottom: 50px;
+        margin-bottom: 50px;
     }
 
     .herop1{
@@ -834,59 +489,7 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-
-    .whatsappDiv{
-        /* right: 25px; */
-    }
-
-    .whatsAppContactPersonDiv{
-        border-radius: 5px;
-    }
-
-    .whatsAppCrossDiv{
-        margin: 5%;
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    .nameandlogo{
-        display: flex;
-        margin: 5%;
-        padding: 5%;
-    }
-
-    #logo{
-        border-radius: 100%;
-        height: 50px;
-        width: 95px;
-    }
-
-    .texts{
-        margin: 5%;
-        justify-content: space-evenly;
-        font-size: 10px;
-    }
-
-    #online{
-        width: max-content;
-        padding: 5px;
-    }
-
-    .fields{
-        margin: 5%;
-    }
-
-    .b3{
-        background-color: rgb(60, 194, 60);
-        padding: 5px;
-        font-size: 10px;
-        width: 175px;
-
-    }
-
-    #icon{
-        padding: 2%;
-    }
+    /* WHATSAPP RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY */
 
 
 /* ------------------------------------------------------------------- */
@@ -899,7 +502,14 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 
+#ICTHeroImageDiv {
+    height: 40vh;
+    min-height: 300px;
+}
+
 #ICTHeroContentDiv {
+    height: 40vh;
+    min-height: 300px;
     width: 100%;
     z-index: 1;
     color: white;
@@ -908,25 +518,30 @@ body{
 #ICTHeroHeadingParaContentDiv{
     width: 100%;
     height: 100%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
 }
 
 #ICTHeroHeading{
-    font-size: 20px;
+    font-size: clamp(24px, 6vw, 32px);
     text-align: center;
     width: 100%;
-    font-weight: bold;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 #ICTHeroPara{
-    font-size: 15px;
-    text-align: center;        
+    font-size: clamp(14px, 3vw, 18px);
+    text-align: center;
+    width: 100%;
 }
 
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
-/* --------------- Financial Reporting Content Section --------------- */
+/* --------------------- ICT Content Section ------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -935,43 +550,59 @@ body{
 
 #ICTAndOurAreasSectionContentDiv{
     display: block;
+    margin: 40px auto;
+    padding: 0 4%;
+    gap: 30px;
 }
 
 #ICTSectionContentDiv{
     width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
 }
 
 #ICTContentHeading{
-    font-size: 20px;
+    font-size: clamp(22px, 5vw, 28px);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
 }
 
 #ICTContentPara{
-    margin: 1%;
-    font-size: small;
-    line-height: 20px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+#ICTContentPara p {
+    margin-bottom: 15px;
 }
 
 #OurAreasSectionDiv{
-    width: 75%;
+    width: 100%;
+    padding: 30px 20px;
+    position: relative;
+    top: 0;
 }
 
 #ourAreasContentHeading{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
 }
 
 .ourAreasContent{
-    border-bottom: 1px solid gainsboro;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(0, 51, 141, 0.1);
 }
 
 .ourAreasContentLinks{
-    width: 50%;
-    /* font-weight: bolder; */
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .ourAreasContentLinksArrow{
     text-align: right;
+    font-size: 18px;
 }
 
 
@@ -985,86 +616,41 @@ body{
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 
+#proposalRequestDiv{
+    padding: 60px 4%;
+    background-attachment: scroll;
+}
+
 #proposalRequestContent{
     width: 100%;
 }
 
 #proposalHeading{
-    font-size: 20px;
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 20px;
 }
 
 #proposalParagraph{
-    font-size: small;
-    line-height: 20px;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
 .proposalReachOutButton{
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    text-decoration: underline;
+    font-size: 16px;
+    padding: 12px 28px;
+    width: 100%;
+    justify-content: center;
 }
 
 .proposalReachOutButton:hover{
-    text-decoration: underline;
+    transform: translateY(-2px);
 }
 
+.proposalReachOutButton:hover::after {
+    transform: translateX(5px);
+}
 
-
-
-
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* -------------------------- Footer Section ------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- */
-
-    .footerdiv {
-        display: block;
-    }
-
-    .footerlogoheading {
-        font-size: 25px;
-    }
-
-    .iconsdiv {
-        font-size: 12.5px;
-        justify-content: center;
-        margin: 5%;
-    }
-
-    #heading7 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .listfooterinnerdiv{
-        font-size: 15px;
-        /* border-bottom: 1px solid white; */
-        /* width: fit-content; */
-    }
-
-    #footercontactdiv {
-        font-size: 10px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .contactpra{
-        font-size: 12.5px;
-        font-weight: lighter;
-        line-height: 5px;
-    }
-
-    .footercopyright {
-        text-align: center;
-        font-size: 15px;
-        font-weight: lighter;
-        display: none;
-    }
+    /* Footer responsive styles moved to main.css */
 
 }

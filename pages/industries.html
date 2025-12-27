@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css?v=1.9">
-    <link rel="stylesheet" href="../styles/industries.css?v=1.5">
+    <link rel="stylesheet" href="../styles/main.css?v=2.7">
+    <link rel="stylesheet" href="../styles/industries.css?v=1.6">
     <link rel="icon" href="../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Industries</title>
 </head>
 <body>
-
 
     <!-- ------------------------------------------------------------------- -->
     <!-- ------------------------ Nav Section ------------------------------ -->
@@ -22,7 +21,15 @@
 
         <div class="navRespInnerdivs" id="navlinksrespdiv">
 
-            <div class="closeIcon" id="closeMenu" onclick="handleCrossClick()">&#10005;</div>
+            <!-- Mobile Search Bar -->
+            <div class="mobileSearchBarContainer">
+                <div class="searchBarContainer">
+                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." aria-label="Search">
+                    <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
 
             <!-- list of links  -->
             <ul id="resplists">
@@ -67,6 +74,7 @@
         <!-- hamburger icon  -->
         <div class="navInnerdivs" id="navresponsiveIcons">
             <div class="menu-icon" id="openMenu" onclick="handleRespNav()">&#9776;</div>
+            <div class="menu-icon menu-close-icon" id="closeMenu" onclick="handleRespNav()" style="display: none;">&#10005;</div>
         </div>
 
         <!-- logo and name  -->
@@ -88,6 +96,10 @@
 
                 <li>
                     <a href="../index.html" class="listsnav" id="home">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html" class="listsnav" id="about">About</a>
                 </li>
 
                 <li class="listsnav" id="servicesNavItem">
@@ -131,17 +143,12 @@
                     <div id="industriesDropDownDiv">
 
                         <span>
-                            <a href="industries/building&construction.html" class="industrieslistsnav"
-                                id="">Building & Construction</a>
+                            <a href="industries/financialServices.html" class="industrieslistsnav"
+                                id="">Financial Services</a>
                         </span>
 
                         <span>
-                            <a href="industries/nonProfit.html" class="industrieslistsnav" id="">Non-Profit
-                                Organization</a>
-                        </span>
-
-                        <span>
-                            <a href="industries/healthcare.html" class="industrieslistsnav" id="">Health Care</a>
+                            <a href="industries/consumerRetail.html" class="industrieslistsnav" id="">Consumer & Retail</a>
                         </span>
 
                         <span>
@@ -150,13 +157,15 @@
                         </span>
 
                         <span>
-                            <a href="industries/onlineMarketplace.html" class="industrieslistsnav" id="">Online
-                                Marketplaces</a>
+                            <a href="industries/healthcare.html" class="industrieslistsnav" id="">Infrastructure, Government and HealthCare</a>
                         </span>
 
                         <span>
-                            <a href="industries/FMCG.html" class="industrieslistsnav" id="">Fast-Moving Consumer
-                                Goods (FMCG)</a>
+                            <a href="industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
+                        </span>
+
+                        <span>
+                            <a href="industries/transportation.html" class="industrieslistsnav" id="">Transportation</a>
                         </span>
 
                     </div>
@@ -317,8 +326,8 @@
 
 
 <!-- ------------------------------------------------------------------- -->
-<!-- ------------------------ Footer Section --------------------------- -->
-<!-- ------------------------------------------------------------------- -->
+    <!-- ------------------------ Footer Section --------------------------- -->
+    <!-- ------------------------------------------------------------------- -->
 
     <footer class="footer">
 
@@ -416,12 +425,12 @@
         </button>
 
         <button class="b3" id="whatsappTriggerButton" onclick="handleWhatsappOpener()"><i
-                class="fab fa-whatsapp" id="icon"></i> How can I help you
+                class="fab fa-whatsapp" id="icon"></i> <span class="whatsapp-text">How can we help you?</span>
         </button>
 
     </div>
 
-    <script src="../scripts/main.js?v=1.3"></script>
+    <script src="../scripts/main.js?v=1.4"></script>
     <script src="../scripts/industries.js"></script>
     
 </body>

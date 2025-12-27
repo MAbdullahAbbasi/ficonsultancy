@@ -1,5 +1,44 @@
-let responsiveNavbardiv = document.getElementById("responsiveNavbardiv");
-let whatsAppContactPerson = document.getElementById("whatsAppContactPerson");
+let responsiveNavbardiv = null;
+let whatsAppContactPerson = null;
+let menuBackdrop = null;
+
+// Function to get responsive navbar element
+function getResponsiveNavbar() {
+    if (!responsiveNavbardiv) {
+        responsiveNavbardiv = document.getElementById("responsiveNavbardiv");
+    }
+    return responsiveNavbardiv;
+}
+
+// Function to get WhatsApp contact person element
+function getWhatsAppContactPerson() {
+    if (!whatsAppContactPerson) {
+        whatsAppContactPerson = document.getElementById("whatsAppContactPerson");
+    }
+    return whatsAppContactPerson;
+}
+
+// Initialize backdrop overlay
+function initMenuBackdrop() {
+    if (!menuBackdrop) {
+        menuBackdrop = document.createElement('div');
+        menuBackdrop.className = 'menuBackdrop';
+        menuBackdrop.id = 'menuBackdrop';
+        document.body.appendChild(menuBackdrop);
+        
+        // Close menu when backdrop is clicked
+        menuBackdrop.addEventListener('click', function() {
+            closeMobileMenu();
+        });
+    }
+}
+
+// Swipe-to-close gesture variables
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+const minSwipeDistance = 50; // Minimum distance for swipe
 
 // ============================================
 // Hero Carousel Functionality
@@ -116,25 +155,152 @@ function initializeServicesCarousel() {
 // Navigation Functions
 // ============================================
 
-function handleRespNav() {
+function openMobileMenu() {
+    const responsiveNavbardiv = getResponsiveNavbar();
+    if (!responsiveNavbardiv) return;
+    
+    initMenuBackdrop();
+    
+    // Save current scroll position before locking
+    const scrollY = window.scrollY;
+    document.body.style.top = `-${scrollY}px`;
+    
     responsiveNavbardiv.style.transform = "translateX(0%)";
     responsiveNavbardiv.style.transition = "all .3s ease-in-out";
+    responsiveNavbardiv.classList.add('active');
+    
+    // Show backdrop
+    if (menuBackdrop) {
+        menuBackdrop.classList.add('active');
+    }
+    
+    // Lock body scroll
+    document.body.classList.add('menuOpen');
+    
+    // Hide hamburger, show cross
+    const hamburgerIcon = document.getElementById('openMenu');
+    const closeIcon = document.getElementById('closeMenu');
+    
+    if (hamburgerIcon) {
+        hamburgerIcon.style.display = 'none';
+    }
+    if (closeIcon) {
+        closeIcon.style.display = 'flex';
+    }
 }
 
-function handleCrossClick() {
+function closeMobileMenu() {
+    const responsiveNavbardiv = getResponsiveNavbar();
+    if (!responsiveNavbardiv) return;
+    
     responsiveNavbardiv.style.transform = "translateX(-110%)";
     responsiveNavbardiv.style.transition = "all .3s ease-in-out";
+    responsiveNavbardiv.classList.remove('active');
+    
+    // Hide backdrop
+    if (menuBackdrop) {
+        menuBackdrop.classList.remove('active');
+    }
+    
+    // Unlock body scroll and restore scroll position
+    const scrollY = document.body.style.top;
+    document.body.classList.remove('menuOpen');
+    document.body.style.top = '';
+    if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
+    
+    // Show hamburger, hide cross
+    const hamburgerIcon = document.getElementById('openMenu');
+    const closeIcon = document.getElementById('closeMenu');
+    if (hamburgerIcon) {
+        hamburgerIcon.style.display = 'flex';
+    }
+    if (closeIcon) {
+        closeIcon.style.display = 'none';
+    }
+}
+
+function handleRespNav() {
+    // Toggle menu: if open, close it; if closed, open it
+    const responsiveNavbardiv = getResponsiveNavbar();
+    if (!responsiveNavbardiv) {
+        console.error('Responsive navbar element not found!');
+        return;
+    }
+    if (responsiveNavbardiv.classList.contains('active')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
+    }
+}
+
+// Make function globally accessible
+window.handleRespNav = handleRespNav;
+
+function handleCrossClick() {
+    closeMobileMenu();
+}
+
+// Swipe-to-close gesture handler
+function setupSwipeToClose() {
+    const responsiveNavbardiv = getResponsiveNavbar();
+    if (!responsiveNavbardiv) return;
+    
+    responsiveNavbardiv.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    responsiveNavbardiv.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        handleSwipe();
+    }, { passive: true });
+}
+
+function handleSwipe() {
+    const deltaX = touchStartX - touchEndX;
+    const deltaY = touchStartY - touchEndY;
+    
+    // Check if horizontal swipe is greater than vertical (more horizontal than vertical)
+    // and if swipe distance is sufficient
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+        // Swipe left (close menu) - user started on the right and swiped left
+        if (deltaX > 0) {
+            closeMobileMenu();
+        }
+    }
 }
 
 // Close mobile menu when a link is clicked
 document.addEventListener('DOMContentLoaded', function() {
+    // Ensure elements are found
+    responsiveNavbardiv = getResponsiveNavbar();
+    whatsAppContactPerson = getWhatsAppContactPerson();
+    
+    // Initialize backdrop
+    initMenuBackdrop();
+    
+    // Setup swipe-to-close
+    setupSwipeToClose();
+    
     const mobileLinks = document.querySelectorAll('.listsrespnav');
     mobileLinks.forEach(link => {
         link.addEventListener('click', function() {
             // Close the menu when a link is clicked
-            handleCrossClick();
+            closeMobileMenu();
         });
     });
+    
+    // Close menu when appointment button is clicked
+    const appointmentBtn = document.getElementById('MakeAppointmentMobile');
+    if (appointmentBtn) {
+        appointmentBtn.addEventListener('click', function() {
+            // Menu will close after navigation, but we can close it immediately for better UX
+            setTimeout(closeMobileMenu, 100);
+        });
+    }
 });
 
 function handleAppointmentBtn() {
@@ -178,11 +344,17 @@ function handleAppointmentBtn() {
 }
 
 function handleWhatsappOpener() {
-    whatsAppContactPerson.style.display = "block";
+    const whatsAppContactPerson = getWhatsAppContactPerson();
+    if (whatsAppContactPerson) {
+        whatsAppContactPerson.style.display = "block";
+    }
 }
 
 function whatsAppCrossBtnhandle() {
-    whatsAppContactPerson.style.display = "none";
+    const whatsAppContactPerson = getWhatsAppContactPerson();
+    if (whatsAppContactPerson) {
+        whatsAppContactPerson.style.display = "none";
+    }
 }
 
 function openWhatsAppContact1() {
@@ -266,14 +438,75 @@ function handleSearch() {
     }
 }
 
-// Allow Enter key to trigger search
+// Mobile search handler
+function handleMobileSearch() {
+    const searchInput = document.getElementById('mobileSearchBarInput');
+    const searchTerm = searchInput ? searchInput.value.trim() : '';
+
+    if (searchTerm === '') {
+        return; // Don't search if input is empty
+    }
+
+    // Use the same search logic as desktop
+    const searchableText = document.body.innerText.toLowerCase();
+    const searchTermLower = searchTerm.toLowerCase();
+
+    if (searchableText.includes(searchTermLower)) {
+        // Find and scroll to first occurrence
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+
+        let node;
+        while (node = walker.nextNode()) {
+            if (node.textContent.toLowerCase().includes(searchTermLower)) {
+                // Close menu first
+                closeMobileMenu();
+                // Then scroll to result
+                setTimeout(() => {
+                    node.parentElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    // Highlight the text (optional)
+                    const range = document.createRange();
+                    const selection = window.getSelection();
+                    range.selectNodeContents(node.parentElement);
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                }, 300);
+                break;
+            }
+        }
+    } else {
+        // Close menu and show alert
+        closeMobileMenu();
+        setTimeout(() => {
+            alert(`No results found for "${searchTerm}"`);
+        }, 300);
+    }
+}
+
+// Allow Enter key to trigger search (both desktop and mobile)
 document.addEventListener('DOMContentLoaded', function() {
+    // Desktop search
     const searchInput = document.getElementById('searchBarInput');
     if (searchInput) {
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
                 handleSearch();
+            }
+        });
+    }
+    
+    // Mobile search
+    const mobileSearchInput = document.getElementById('mobileSearchBarInput');
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handleMobileSearch();
             }
         });
     }

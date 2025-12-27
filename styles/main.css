@@ -44,6 +44,51 @@ body {
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 
+/* Menu Backdrop Overlay */
+.menuBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1111;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none; /* Prevent any touch interactions on backdrop */
+}
+
+/* Backdrop should also start below navbar on mobile */
+@media (max-width: 768px) {
+    .menuBackdrop {
+        top: 60px; /* Start below navbar bar */
+        height: calc(100vh - 60px); /* Fill remaining viewport below navbar */
+    }
+}
+
+.menuBackdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Body scroll lock when menu is open */
+body.menuOpen {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    touch-action: none; /* Prevent touch scrolling on mobile */
+}
+
+/* Prevent scrolling on iOS Safari */
+body.menuOpen {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+}
+
 .responsiveNavdiv {
     transform: translateX(-110%);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
@@ -60,6 +105,7 @@ body {
     box-shadow: 4px 0 30px rgba(0, 0, 0, 0.15);
     overflow-y: auto;
     border-right: 1px solid rgba(0, 51, 141, 0.1);
+    touch-action: pan-y pan-x; /* Allow both vertical scrolling and horizontal swipe */
 }
 
 .responsiveNavdiv.active {
@@ -68,8 +114,10 @@ body {
 
 .closeIcon {
     color: rgb(0, 51, 141);
-    font-size: 28px;
-    padding: 20px;
+    font-size: 32px;
+    padding: 22px 24px;
+    min-height: 44px;
+    min-width: 44px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -78,11 +126,14 @@ body {
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
     border-bottom: 1px solid rgba(0, 51, 141, 0.1);
     font-weight: 300;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.closeIcon:hover {
+.closeIcon:hover,
+.closeIcon:active {
     color: rgb(8, 37, 88);
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.1) 0%, rgba(8, 37, 88, 0.1) 100%);
+    transform: scale(1.05);
 }
 
 .menu-icon {
@@ -96,12 +147,57 @@ body {
     align-items: center;
     justify-content: center;
     background: rgba(0, 51, 141, 0.05);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .menu-icon:hover {
     transform: scale(1.1);
     background: rgba(0, 51, 141, 0.1);
     color: rgb(8, 37, 88);
+}
+
+/* Cross icon styling - initially hidden, shown via JavaScript */
+.menu-close-icon {
+    font-size: 28px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+/* Container for hamburger/cross icons */
+#navresponsiveIcons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Simple hamburger icon on small screens */
+@media (max-width: 768px) {
+    .menu-icon {
+        background: none;
+        border-radius: 0;
+        padding: 8px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .menu-icon:hover {
+        background: none;
+        transform: translateY(-50%);
+    }
+
+    .menu-close-icon {
+        font-size: 28px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
 }
 
 #navresponsiveIcons {
@@ -126,17 +222,87 @@ body {
     border-bottom: none;
 }
 
+/* Mobile Menu Search Bar */
+.mobileSearchBarContainer {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 51, 141, 0.1);
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.02) 0%, rgba(8, 37, 88, 0.02) 100%);
+}
+
+.mobileSearchBarContainer .searchBarContainer {
+    max-width: 100%;
+    padding: 6px 8px 6px 12px;
+    border: 2px solid rgba(0, 51, 141, 0.2);
+    border-radius: 25px;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+}
+
+.mobileSearchBarContainer .searchBarInput {
+    font-size: 14px;
+    padding: 8px 4px 8px 10px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(0, 51, 141);
+    font-family: 'Poppins', sans-serif;
+    min-width: 0; /* Allow input to shrink */
+}
+
+.mobileSearchBarContainer .searchBarInput::placeholder {
+    color: rgba(0, 51, 141, 0.5);
+}
+
+.mobileSearchBarContainer .searchBarButton {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.mobileSearchBarContainer .searchBarButton:hover {
+    background: linear-gradient(135deg, rgb(8, 37, 88) 0%, rgb(0, 51, 141) 100%);
+    transform: scale(1.05);
+}
+
+.mobileSearchBarContainer .searchBarButton:active {
+    transform: scale(0.95);
+}
+
+.mobileSearchBarContainer .searchBarButton i {
+    font-size: 14px;
+    color: white;
+}
+
 .listsrespnav {
     display: flex;
     align-items: center;
-    padding: 18px 25px;
+    padding: 22px 25px;
+    min-height: 44px;
     color: rgb(0, 51, 141);
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     position: relative;
     border-left: 3px solid transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .listsrespnav::before {
@@ -151,11 +317,13 @@ body {
     transition: transform 0.3s ease;
 }
 
-.listsrespnav:hover {
+.listsrespnav:hover,
+.listsrespnav:active {
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
     color: rgb(8, 37, 88);
     padding-left: 30px;
     transform: translateX(5px);
+    text-decoration: none !important;
 }
 
 .listsrespnav:hover::before {
@@ -234,9 +402,17 @@ body {
     position: relative;
 }
 
+/* Ensure all navbar links have no text decoration */
+#lists a,
+#lists li a,
+.navdiv a,
+#navlinksdiv a {
+    text-decoration: none !important;
+}
+
 .listsnav,
 .listsrespnav {
-    text-decoration: none;
+    text-decoration: none !important;
     color: rgb(0, 51, 141);
     font-weight: 500;
     padding: 8px 12px;
@@ -245,10 +421,32 @@ body {
     display: inline-block;
 }
 
-.listsnav:hover {
+.listsnav:hover,
+.listsnav:active,
+.listsnav:focus,
+.listsnav:visited {
+    text-decoration: none !important;
     color: rgb(8, 37, 88);
     background-color: rgba(0, 51, 141, 0.05);
-    text-decoration: none;
+}
+
+/* Ensure all navbar links have no text decoration on all states */
+#lists a:hover,
+#lists a:active,
+#lists a:focus,
+#lists a:visited,
+.navdiv a:hover,
+.navdiv a:active,
+.navdiv a:focus,
+.navdiv a:visited {
+    text-decoration: none !important;
+}
+
+.listsrespnav:hover,
+.listsrespnav:active,
+.listsrespnav:focus,
+.listsrespnav:visited {
+    text-decoration: none !important;
 }
 
 /* --------------------------- Services Dropdown -------------------------------- */
@@ -260,12 +458,12 @@ body {
 #servicesNavItem:hover .listsnav {
     color: rgb(8, 37, 88);
     background-color: rgba(0, 51, 141, 0.05);
+    text-decoration: none !important;
 }
 
 #servicesDropDownDiv {
     position: absolute;
     top: 100%;
-    padding-top: 12px; /* Bridge gap to maintain hover */
     width: 220px;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
@@ -273,21 +471,26 @@ body {
     visibility: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     background-color: rgb(255, 255, 255);
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px; /* Remove top border radius to connect with navbar */
     border: 1px solid rgba(0, 51, 141, 0.1);
+    border-top: none; /* Remove top border to eliminate visual gap */
     transition: all 0.3s ease;
     z-index: 1000;
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    margin-top: 0; /* No margin to start flush */
 }
 
-/* Invisible bridge area to maintain hover */
+/* Invisible bridge area to maintain hover - extends upward above dropdown */
 #servicesDropDownDiv::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 0;
     right: 0;
     height: 12px;
+    background: transparent;
+    pointer-events: none;
 }
 
 @media (max-width: 1024px) {
@@ -306,10 +509,17 @@ body {
     color: rgb(0, 51, 141);
     display: block;
     padding: 12px 18px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 15px;
     transition: all 0.2s ease;
     border-bottom: 1px solid rgba(0, 51, 141, 0.05);
+}
+
+.serviceslistsnav:hover,
+.serviceslistsnav:active,
+.serviceslistsnav:focus,
+.serviceslistsnav:visited {
+    text-decoration: none !important;
 }
 
 .serviceslistsnav:last-child {
@@ -318,7 +528,7 @@ body {
 }
 
 .serviceslistsnav:first-child {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0; /* Remove top border radius since dropdown connects to navbar */
 }
 
 #servicesDropDownDiv .serviceslistsnav:hover {
@@ -329,7 +539,7 @@ body {
 
 /* Show dropdown on hover */
 #servicesNavItem:hover #servicesDropDownDiv {
-    transform: translateX(-50%) translateY(0px);
+    transform: translateX(-50%) translateY(-1px); /* Pull up 1px to eliminate gap with navbar border */
     opacity: 1;
     visibility: visible;
 }
@@ -343,12 +553,12 @@ body {
 #industriesNavItem:hover .listsnav {
     color: rgb(8, 37, 88);
     background-color: rgba(0, 51, 141, 0.05);
+    text-decoration: none !important;
 }
 
 #industriesDropDownDiv {
     position: absolute;
     top: 100%;
-    padding-top: 12px; /* Bridge gap to maintain hover */
     width: 220px;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
@@ -356,31 +566,43 @@ body {
     visibility: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     background-color: rgb(255, 255, 255);
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px; /* Remove top border radius to connect with navbar */
     border: 1px solid rgba(0, 51, 141, 0.1);
+    border-top: none; /* Remove top border to eliminate visual gap */
     transition: all 0.3s ease;
     z-index: 1000;
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    margin-top: 0; /* No margin to start flush */
 }
 
-/* Invisible bridge area to maintain hover */
+/* Invisible bridge area to maintain hover - extends upward above dropdown */
 #industriesDropDownDiv::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -12px;
     left: 0;
     right: 0;
     height: 12px;
+    background: transparent;
+    pointer-events: none;
 }
 
 .industrieslistsnav {
     color: rgb(0, 51, 141);
     display: block;
     padding: 12px 18px;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 15px;
     transition: all 0.2s ease;
     border-bottom: 1px solid rgba(0, 51, 141, 0.05);
+}
+
+.industrieslistsnav:hover,
+.industrieslistsnav:active,
+.industrieslistsnav:focus,
+.industrieslistsnav:visited {
+    text-decoration: none !important;
 }
 
 .industrieslistsnav:last-child {
@@ -389,7 +611,7 @@ body {
 }
 
 .industrieslistsnav:first-child {
-    border-radius: 8px 8px 0 0;
+    border-radius: 0; /* Remove top border radius since dropdown connects to navbar */
 }
 
 #industriesDropDownDiv .industrieslistsnav:hover {
@@ -400,7 +622,7 @@ body {
 
 /* Show dropdown on hover */
 #industriesNavItem:hover #industriesDropDownDiv {
-    transform: translateX(-50%) translateY(0px);
+    transform: translateX(-50%) translateY(-1px); /* Pull up 1px to eliminate gap with navbar border */
     opacity: 1;
     visibility: visible;
 }
@@ -509,12 +731,14 @@ body {
     color: white;
     cursor: pointer;
     border: none;
-    padding: 14px 20px;
+    padding: 16px 20px;
+    min-height: 44px;
     border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 10px rgba(0, 51, 141, 0.3);
+    -webkit-tap-highlight-color: transparent;
 }
 
 #MakeAppointmentMobile:hover {
@@ -715,12 +939,12 @@ body {
     }
 
     #headerlogo {
-        width: 28px;
-        height: 28px;
+        width: 40px;
+        height: 40px;
     }
 
     #companyNameHeading {
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 
@@ -928,8 +1152,7 @@ body {
 
 /* Legacy button classes for backward compatibility */
 .b1,
-.b2,
-.b3 {
+.b2 {
     font-size: 15px;
     border-radius: 41px;
     padding: 15px;
@@ -957,9 +1180,66 @@ body {
     color: white;
 }
 
+/* Note: .b3 is now used exclusively for WhatsApp button - see WhatsApp Section below */
+
+/* Show contact info on large screens */
+@media (min-width: 1025px) {
+    #navContactInfoDiv {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .navdiv {
+        justify-content: space-between;
+    }
+    
+    #navfirstdiv {
+        flex: 0 0 auto;
+    }
+    
+    #navlinksdiv {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    #searchBarDiv {
+        flex: 0 0 auto;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     /* Tablet Styles */
+    /* Ensure all navbar links have no text decoration on tablets */
+    #lists a,
+    #lists li a,
+    .navdiv a,
+    #navlinksdiv a,
+    .listsnav,
+    .listsrespnav {
+        text-decoration: none !important;
+    }
+
+    #lists a:hover,
+    #lists a:active,
+    #lists a:focus,
+    #lists a:visited,
+    .navdiv a:hover,
+    .navdiv a:active,
+    .navdiv a:focus,
+    .navdiv a:visited,
+    .listsnav:hover,
+    .listsnav:active,
+    .listsnav:focus,
+    .listsnav:visited,
+    .listsrespnav:hover,
+    .listsrespnav:active,
+    .listsrespnav:focus,
+    .listsrespnav:visited {
+        text-decoration: none !important;
+    }
+
     .navInnerdivs {
         width: auto;
         padding: 0 10px;
@@ -1102,20 +1382,107 @@ body {
 
 
     /* Footer - Tablet */
+    .footer {
+        padding: 50px 30px 25px;
+    }
+
     .footerdiv {
         grid-template-columns: 50% 50%;
-        gap: 30px;
+        gap: 35px;
+    }
+
+    .footerlogoheading {
+        font-size: 28px;
+    }
+
+    .f1logodiv {
+        width: 55px;
+        height: 55px;
+        border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .iconsdiv {
+        gap: 12px;
+        font-size: 22px;
+    }
+
+    .iconsdiv i {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    #heading7 {
+        font-size: 24px;
+    }
+
+    .listfooter {
+        text-align: center;
     }
 
     #footercontactdiv {
+        position: relative;
+        left: auto;
+        transform: none;
         grid-column: 1 / -1;
-        align-items: center;
-        text-align: center;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    .contactpra {
+        font-size: 16px;
+        justify-content: flex-start;
+    }
+
+    .contactpra i {
+        font-size: 18px;
+        width: 22px;
+    }
+
+    .footercopyright {
+        font-size: 13px;
+        margin-top: 35px;
+        padding-top: 25px;
     }
 }
 
 @media (max-width: 768px) {
     /* Mobile Tablet Styles */
+    /* Ensure all navbar links have no text decoration on mobile tablets */
+    #lists a,
+    #lists li a,
+    .navdiv a,
+    #navlinksdiv a,
+    .listsnav,
+    .listsrespnav {
+        text-decoration: none !important;
+    }
+
+    #lists a:hover,
+    #lists a:active,
+    #lists a:focus,
+    #lists a:visited,
+    .navdiv a:hover,
+    .navdiv a:active,
+    .navdiv a:focus,
+    .navdiv a:visited,
+    .listsnav:hover,
+    .listsnav:active,
+    .listsnav:focus,
+    .listsnav:visited,
+    .listsrespnav:hover,
+    .listsrespnav:active,
+    .listsrespnav:focus,
+    .listsrespnav:visited {
+        text-decoration: none !important;
+    }
+
     .navdiv {
         flex-wrap: wrap;
         padding: 10px 0;
@@ -1133,7 +1500,9 @@ body {
     }
 
     #navresponsiveIcons {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         width: 15%;
         order: 1;
         font-size: 28px;
@@ -1154,20 +1523,20 @@ body {
     }
 
     #headerlogo {
-        width: 30px;
-        height: 30px;
+        width: 42px;
+        height: 42px;
     }
 
     #companyNameHeading {
-        font-size: 18px;
+        font-size: 22px;
         padding: 3px;
     }
 
     .responsiveNavdiv {
         width: 70%;
         max-width: 300px;
-        height: 100vh;
-        top: 0;
+        height: calc(100vh - 60px); /* Fill remaining viewport below navbar */
+        top: 60px; /* Start below navbar bar */
         left: 0;
     }
 
@@ -1485,17 +1854,18 @@ body {
 
     /* Footer - Mobile */
     .footer {
-        padding: 30px 20px;
+        padding: 40px 20px 20px;
     }
 
     .footerdiv {
         grid-template-columns: 100%;
         gap: 30px;
+        text-align: center;
     }
 
     .footerinnerdiv {
         align-items: center;
-        text-align: center;
+        gap: 15px;
     }
 
     .footerlogoandheadingdiv {
@@ -1503,37 +1873,84 @@ body {
     }
 
     .footerlogoheading {
-        font-size: 24px;
+        font-size: 26px;
+    }
+
+    .f1logodiv {
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
     }
 
     .iconsdiv {
         justify-content: center;
-        margin-top: 15px;
+        font-size: 20px;
+        gap: 12px;
+        margin-top: 0;
+    }
+
+    .iconsdiv i {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 18px;
+        flex-shrink: 0;
     }
 
     #heading7 {
         font-size: 22px;
+        text-align: center;
         margin-bottom: 15px;
     }
 
-    .listfooter {
-        margin-bottom: 20px;
+    #heading7::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    #footercontactdiv {
-        align-items: center;
+    .listfooter {
         text-align: center;
     }
 
-    .contactpra {
-        width: 100%;
+    .listfooterinnerdiv {
         font-size: 15px;
-        margin: 10px 0;
+        margin: 8px 0;
+    }
+
+    #footercontactdiv {
+        position: relative;
+        left: auto;
+        transform: none;
+        align-items: flex-end;
+        gap: 12px;
+        max-width: fit-content;
+        min-width: 300px;
+        margin: 0;
+        margin-left: auto;
+    }
+
+    .contactpra {
+        font-size: 15px;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .contactpra i {
+        font-size: 18px;
+        width: 22px;
     }
 
     .footercopyright {
-        font-size: 14px;
-        margin-top: 20px;
+        font-size: 13px;
+        margin-top: 30px;
+        padding-top: 20px;
     }
 
     /* WhatsApp - Mobile */
@@ -1549,9 +1966,16 @@ body {
 
     .b3 {
         font-size: 14px;
-        padding: 14px 20px;
-        min-width: 160px;
-        font-size: 14px;
+        padding: 16px;
+        min-width: auto;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        justify-content: center;
+    }
+    
+    .b3 .whatsapp-text {
+        display: none;
     }
 }
 
@@ -1811,10 +2235,13 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: 'Poppins', sans-serif;
     min-width: 200px;
+    width: fit-content;
+    max-width: 100%;
     justify-content: center;
     position: relative;
     overflow: hidden;
     animation: floatButton 3s ease-in-out infinite;
+    white-space: nowrap;
 }
 
 @keyframes floatButton {
@@ -1858,10 +2285,16 @@ body {
 .b3 i {
     font-size: 20px;
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .b3:hover i {
     transform: scale(1.1) rotate(5deg);
+}
+
+.b3 .whatsapp-text {
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* ------------------------------------------------------------------- */
@@ -2626,122 +3059,232 @@ body {
 /* ------------------------------------------------------------------- */
 
 .footer {
-    background-color: rgb(0, 51, 141);
-    padding: 40px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 50%, #4CAF50 100%);
 }
 
 .footerdiv {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     color: white;
-    /* border: 2px solid white; */
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+    position: relative;
+    align-items: start;
 }
 
 .footerinnerdiv {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
 .footerlogoandheadingdiv {
     display: flex;
-    gap: 10px;
-    /* border: 2px solid white; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    gap: 15px;
+    align-items: center;
 }
 
 .f1logodiv {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-image: url(../images/logoFI.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.f1logodiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .footerlogoheading {
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0%;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
     display: flex;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .iconsdiv {
     display: flex;
-    /* justify-content: ; */
-    font-size: 22px;
+    gap: 15px;
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 .iconsdiv i {
-    margin: 5%;
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
 }
 
 .iconsdiv i:hover {
-    color: rgb(241, 241, 241, .75);
-    transform: translateY(-15%);
-    transition: all .1s;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 #heading7 {
-    font-size: 33px;
+    font-size: 28px;
     text-align: center;
-    font-weight: bold;
-    margin: 0%;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#heading7::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%);
+    border-radius: 2px;
 }
 
 .listfooter {
     list-style: none;
     text-align: center;
-    /* width: fit-content; */
-    /* border: 2px solid white; */
-    padding: 0%;
-
+    padding: 0;
+    margin: 0;
 }
 
 .listfooterinnerdiv {
-    margin: 10px;
-    font-weight: lighter;
-    font-size: 17.5px;
-    /* margin: 0%; */
+    margin: 12px 0;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.listfooterinnerdiv:hover {
+    transform: translateY(-2px);
 }
 
 .footerLinksPages {
-    /* text-decoration: none; */
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    position: relative;
+    padding: 2px 0;
+}
+
+.footerLinksPages::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%);
+    transition: width 0.3s ease;
 }
 
 .footerLinksPages:hover {
-    color: rgb(232, 232, 232, .75);
+    color: white;
+}
+
+.footerLinksPages:hover::after {
+    width: 100%;
 }
 
 #footercontactdiv {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid white; */
-    justify-content: right;
-    align-items: end;
-    /* border: 2px solid white; */
-
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
 }
 
 #footerpra2 {
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#footerpra2:hover {
+    transform: translateX(-3px);
+    color: white;
 }
 
 .contactpra {
-    font-size: 17.5px;
-    margin: 2%;
+    font-size: 17px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    transition: all 0.2s ease;
+    font-weight: 400;
+    width: max-content;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.contactpra:hover {
     color: white;
-    width: 55%;
+    transform: translateX(-3px);
+}
+
+.contactpra i {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .footercopyright {
     text-align: center;
-    font-size: 17px;
-    font-weight: lighter;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    grid-column: 1 / -1;
 }
 
 /* ################################################################### */
@@ -2770,7 +3313,9 @@ body {
     /* ------------------------------------------------------------------- */
 
     #navresponsiveIcons {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         height: fit-content;
         width: 15%;
         font-size: 28px;
@@ -2780,8 +3325,17 @@ body {
 
     .menu-icon {
         font-size: 26px;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 8px;
+        border-radius: 0;
+        background: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-icon:hover {
+        background: none;
+        transform: translateY(-50%);
     }
 
     #navfirstdiv {
@@ -2797,12 +3351,12 @@ body {
     }
 
     #headerlogo {
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
     }
 
     #companyNameHeading {
-        font-size: 16px;
+        font-size: 20px;
         padding: 3px;
     }
 
@@ -2815,14 +3369,17 @@ body {
     }
 
     .responsiveNavdiv {
-        width: 80%;
+        width: 85%;
         max-width: 280px;
         border-radius: 0 15px 15px 0;
+        top: 60px; /* Start below navbar bar */
+        height: calc(100vh - 60px); /* Fill remaining viewport below navbar */
     }
 
     .closeIcon {
-        padding: 15px 20px;
-        font-size: 24px;
+        padding: 20px 22px;
+        font-size: 28px;
+        min-height: 44px;
     }
 
     #resplists {
@@ -2835,12 +3392,55 @@ body {
     }
 
     .listsrespnav {
-        padding: 16px 20px;
+        padding: 20px 20px;
+        min-height: 44px;
         font-size: 15px;
+        text-decoration: none !important;
     }
 
-    .listsrespnav:hover {
+    .listsrespnav:hover,
+    .listsrespnav:active {
         padding-left: 25px;
+        text-decoration: none !important;
+    }
+
+    /* Ensure all navbar links have no text decoration on small screens */
+    #lists a,
+    #lists li a,
+    .navdiv a,
+    #navlinksdiv a,
+    .listsnav,
+    .listsrespnav,
+    #resplists a,
+    .responsiveNavdiv a {
+        text-decoration: none !important;
+    }
+
+    #lists a:hover,
+    #lists a:active,
+    #lists a:focus,
+    #lists a:visited,
+    .navdiv a:hover,
+    .navdiv a:active,
+    .navdiv a:focus,
+    .navdiv a:visited,
+    .listsnav:hover,
+    .listsnav:active,
+    .listsnav:focus,
+    .listsnav:visited,
+    .listsrespnav:hover,
+    .listsrespnav:active,
+    .listsrespnav:focus,
+    .listsrespnav:visited,
+    #resplists a:hover,
+    #resplists a:active,
+    #resplists a:focus,
+    #resplists a:visited,
+    .responsiveNavdiv a:hover,
+    .responsiveNavdiv a:active,
+    .responsiveNavdiv a:focus,
+    .responsiveNavdiv a:visited {
+        text-decoration: none !important;
     }
 
     .heroDiv {
@@ -2992,9 +3592,17 @@ body {
     }
 
     .b3 {
-        padding: 12px 18px;
-        min-width: 150px;
+        padding: 14px;
+        min-width: auto;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        justify-content: center;
         font-size: 13px;
+    }
+    
+    .b3 .whatsapp-text {
+        display: none;
     }
 
     .b3 i {
@@ -3304,6 +3912,19 @@ body {
         justify-content: center;
         margin: 5%;
     }
+    
+    .iconsdiv i {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
 
     #heading7 {
         font-size: 20px;
@@ -3317,15 +3938,24 @@ body {
     }
 
     #footercontactdiv {
+        position: relative;
+        left: auto;
+        transform: none;
         font-size: 10px;
         align-items: center;
-        text-align: center;
+        /* max-width: fit-content; */
+        /* min-width: 300px; */
+        margin: 0;
+        /* margin-left: auto; */
     }
 
     .contactpra {
         font-size: 12.5px;
         font-weight: lighter;
         line-height: 5px;
+        justify-content: center;
+        width: auto;
+        white-space: nowrap;
     }
 
     .footercopyright {

@@ -1,0 +1,555 @@
+/* ------------------------------------------------------------------- */
+/* ------------------------ Careers Page Styles --------------------- */
+/* ------------------------------------------------------------------- */
+
+/* Hero Section */
+.careersHeroSection {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.9) 0%, rgba(8, 37, 88, 0.9) 100%),
+                url('../images/laptop typing.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.careersHeroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.85) 0%, rgba(8, 37, 88, 0.85) 100%);
+    z-index: 1;
+}
+
+.careersHeroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.careersHeroTitle {
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.careersHeroSubtitle {
+    font-size: clamp(20px, 3vw, 28px);
+    margin-bottom: 15px;
+    opacity: 0.95;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.careersHeroDescription {
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Careers Content Section */
+.careersContentSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* Why Work With Us */
+.careersWhyWorkWithUs {
+    margin-bottom: 80px;
+}
+
+.careersWhyWorkWithUs h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whyWorkGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.whyWorkCard {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whyWorkCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 51, 141, 0.15);
+}
+
+.whyWorkCard i {
+    font-size: 48px;
+    color: rgb(0, 51, 141);
+    margin-bottom: 20px;
+}
+
+.whyWorkCard h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.whyWorkCard p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Open Positions */
+.careersOpenPositions {
+    margin-bottom: 80px;
+}
+
+.careersOpenPositions h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.positionsSubtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* No Positions Message */
+.noPositionsMessage {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.noPositionsIcon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.1) 0%, rgba(8, 37, 88, 0.1) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.noPositionsIcon i {
+    font-size: 48px;
+    color: rgb(0, 51, 141);
+}
+
+.noPositionsMessage h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.noPositionsMessage p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.checkBackMessage {
+    font-size: 15px !important;
+    color: #888 !important;
+    font-style: italic;
+    margin-bottom: 30px !important;
+}
+
+.checkBackButton {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkBackButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 51, 141, 0.3);
+}
+
+.checkBackButton i {
+    font-size: 16px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.positionsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.positionCard {
+    background: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.positionCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 51, 141, 0.15);
+}
+
+.positionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 51, 141, 0.1);
+}
+
+.positionHeader h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    font-family: 'Poppins', sans-serif;
+}
+
+.positionType {
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+
+.positionDetails {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.positionDetails p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+.positionDetails i {
+    color: rgb(0, 51, 141);
+    font-size: 16px;
+}
+
+.positionDescription {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.applyButton {
+    width: 100%;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.applyButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 51, 141, 0.3);
+}
+
+/* Application Process */
+.careersApplicationProcess {
+    margin-bottom: 80px;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
+    border-radius: 20px;
+}
+
+.careersApplicationProcess h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.processSteps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.processStep {
+    text-align: center;
+}
+
+.stepNumber {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.processStep h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    margin-bottom: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.processStep p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+}
+
+/* General Application */
+.careersGeneralApplication {
+    padding: 60px 40px;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.generalApplicationContent h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.generalApplicationContent p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.generalApplyButton {
+    padding: 15px 40px;
+    background: white;
+    color: rgb(0, 51, 141);
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.generalApplyButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .whyWorkGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .positionsList {
+        grid-template-columns: 1fr;
+    }
+
+    .processSteps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .careersHeroSection {
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+
+    .careersContentSection {
+        padding: 50px 15px;
+    }
+
+    .whyWorkGrid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .positionCard {
+        padding: 25px;
+    }
+
+    .positionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .noPositionsMessage {
+        padding: 40px 25px;
+    }
+
+    .noPositionsIcon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .noPositionsIcon i {
+        font-size: 36px;
+    }
+
+    .noPositionsMessage h3 {
+        font-size: 24px;
+    }
+
+    .processSteps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .careersApplicationProcess {
+        padding: 40px 25px;
+    }
+
+    .careersGeneralApplication {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .careersHeroTitle {
+        font-size: 28px;
+    }
+
+    .careersHeroSubtitle {
+        font-size: 18px;
+    }
+
+    .careersHeroDescription {
+        font-size: 14px;
+    }
+
+    .careersWhyWorkWithUs h2,
+    .careersOpenPositions h2,
+    .careersApplicationProcess h2,
+    .generalApplicationContent h2 {
+        font-size: 24px;
+    }
+
+    .whyWorkCard,
+    .positionCard {
+        padding: 20px;
+    }
+
+    .positionDetails {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .noPositionsMessage {
+        padding: 30px 20px;
+    }
+
+    .noPositionsIcon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .noPositionsIcon i {
+        font-size: 32px;
+    }
+
+    .noPositionsMessage h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .noPositionsMessage p {
+        font-size: 14px;
+    }
+
+    .checkBackButton {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+}
+

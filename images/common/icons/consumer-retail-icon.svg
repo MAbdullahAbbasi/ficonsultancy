@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+  <!-- Storefront -->
+  <g id="storefront">
+    <!-- Building base -->
+    <rect x="20" y="50" width="40" height="25" fill="#00338d" opacity="0.8"/>
+    <!-- Building top -->
+    <polygon points="20,50 40,35 60,35 60,50" fill="#00338d" opacity="0.8"/>
+    <!-- Door -->
+    <rect x="35" y="60" width="10" height="15" fill="white" opacity="0.9"/>
+    <!-- Windows -->
+    <rect x="25" y="55" width="6" height="6" fill="white" opacity="0.9"/>
+    <rect x="49" y="55" width="6" height="6" fill="white" opacity="0.9"/>
+    <!-- Awning stripes -->
+    <rect x="20" y="50" width="40" height="3" fill="white" opacity="0.9"/>
+    <rect x="20" y="43" width="40" height="3" fill="white" opacity="0.9"/>
+    <rect x="20" y="36" width="40" height="3" fill="white" opacity="0.9"/>
+  </g>
+  
+  <!-- Shopping Bag with Cart -->
+  <g id="shopping">
+    <!-- Shopping bag -->
+    <path d="M 65 40 L 65 65 L 75 65 L 75 40 Z" fill="white" opacity="0.95"/>
+    <path d="M 65 40 L 70 35 L 75 40" stroke="white" stroke-width="2" fill="none" opacity="0.95"/>
+    <!-- Shopping cart icon inside bag -->
+    <circle cx="70" cy="50" r="4" fill="#00338d" opacity="0.6"/>
+    <rect x="68" y="54" width="4" height="6" fill="#00338d" opacity="0.6"/>
+  </g>
+</svg>
+

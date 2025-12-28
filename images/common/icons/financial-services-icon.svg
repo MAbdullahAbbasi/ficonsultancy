@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+  <!-- Background circle (optional, can be removed) -->
+  <defs>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Bar Chart -->
+  <g id="barchart">
+    <!-- Chart bars -->
+    <rect x="15" y="50" width="8" height="20" fill="white" opacity="0.95"/>
+    <rect x="26" y="45" width="8" height="25" fill="white" opacity="0.95"/>
+    <rect x="37" y="40" width="8" height="30" fill="white" opacity="0.95"/>
+    <rect x="48" y="35" width="8" height="35" fill="white" opacity="0.95"/>
+    
+    <!-- Line graph overlay -->
+    <polyline points="19,50 30,45 41,40 52,35" 
+              fill="none" 
+              stroke="white" 
+              stroke-width="2" 
+              opacity="0.9"/>
+    <circle cx="52" cy="35" r="3" fill="white" opacity="0.95"/>
+    
+    <!-- Axes -->
+    <line x1="12" y1="70" x2="60" y2="70" stroke="white" stroke-width="1.5" opacity="0.8"/>
+    <line x1="12" y1="30" x2="12" y2="70" stroke="white" stroke-width="1.5" opacity="0.8"/>
+    <polygon points="60,70 65,68 60,66" fill="white" opacity="0.8"/>
+    <polygon points="12,30 10,35 14,35" fill="white" opacity="0.8"/>
+  </g>
+  
+  <!-- Magnifying Glass -->
+  <g id="magnifier">
+    <!-- Glass circle -->
+    <circle cx="75" cy="45" r="18" 
+            fill="url(#glassGradient)" 
+            stroke="white" 
+            stroke-width="2.5" 
+            opacity="0.95"/>
+    
+    <!-- Glass handle -->
+    <line x1="88" y1="58" x2="98" y2="68" 
+          stroke="white" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          opacity="0.95"/>
+    
+    <!-- Dollar sign inside glass -->
+    <text x="75" y="50" 
+          font-family="Arial, sans-serif" 
+          font-size="20" 
+          font-weight="bold" 
+          fill="white" 
+          text-anchor="middle" 
+          alignment-baseline="middle"
+          opacity="0.95">$</text>
+  </g>
+</svg>
+

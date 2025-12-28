@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+  <!-- Laptop -->
+  <g id="laptop">
+    <!-- Laptop screen -->
+    <rect x="15" y="30" width="30" height="20" fill="white" opacity="0.95" rx="2"/>
+    <rect x="17" y="32" width="26" height="16" fill="#00338d" opacity="0.3"/>
+    <!-- Laptop base -->
+    <rect x="12" y="50" width="36" height="4" fill="white" opacity="0.95" rx="1"/>
+    <!-- Network dots on screen -->
+    <circle cx="22" cy="38" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="28" cy="38" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="34" cy="38" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="22" cy="43" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="28" cy="43" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="34" cy="43" r="1.5" fill="white" opacity="0.9"/>
+    <!-- Connection lines -->
+    <line x1="22" y1="38" x2="28" y2="38" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="28" y1="38" x2="34" y2="38" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="22" y1="43" x2="28" y2="43" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="28" y1="43" x2="34" y2="43" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="28" y1="38" x2="28" y2="43" stroke="white" stroke-width="0.5" opacity="0.7"/>
+  </g>
+  
+  <!-- Smartphone -->
+  <g id="smartphone">
+    <!-- Phone body -->
+    <rect x="60" y="35" width="18" height="30" fill="white" opacity="0.95" rx="2"/>
+    <rect x="62" y="37" width="14" height="24" fill="#00338d" opacity="0.3"/>
+    <!-- Network dots on phone screen -->
+    <circle cx="67" cy="45" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="73" cy="45" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="67" cy="52" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="73" cy="52" r="1.5" fill="white" opacity="0.9"/>
+    <circle cx="70" cy="48" r="1.5" fill="white" opacity="0.9"/>
+    <!-- Connection lines -->
+    <line x1="67" y1="45" x2="73" y2="45" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="67" y1="52" x2="73" y2="52" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="67" y1="45" x2="70" y2="48" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="73" y1="45" x2="70" y2="48" stroke="white" stroke-width="0.5" opacity="0.7"/>
+    <line x1="70" y1="48" x2="70" y2="52" stroke="white" stroke-width="0.5" opacity="0.7"/>
+  </g>
+</svg>
+

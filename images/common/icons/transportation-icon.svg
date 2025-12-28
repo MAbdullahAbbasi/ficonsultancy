@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="70" height="70">
+  <!-- Delivery Truck -->
+  <g id="truck">
+    <!-- Truck body -->
+    <rect x="20" y="45" width="35" height="20" fill="white" opacity="0.95" rx="2"/>
+    <!-- Truck cabin -->
+    <rect x="15" y="50" width="12" height="15" fill="white" opacity="0.95" rx="2"/>
+    <!-- Truck window -->
+    <rect x="17" y="52" width="8" height="8" fill="#00338d" opacity="0.3"/>
+    <!-- Wheels -->
+    <circle cx="25" cy="68" r="5" fill="#00338d" opacity="0.8"/>
+    <circle cx="45" cy="68" r="5" fill="#00338d" opacity="0.8"/>
+    <!-- Wheel centers -->
+    <circle cx="25" cy="68" r="2.5" fill="white" opacity="0.9"/>
+    <circle cx="45" cy="68" r="2.5" fill="white" opacity="0.9"/>
+  </g>
+  
+  <!-- Location Pin -->
+  <g id="locationPin">
+    <path d="M 70 30 L 70 50 L 75 55 L 80 50 L 80 30 Z" fill="white" opacity="0.95"/>
+    <circle cx="75" cy="35" r="8" fill="#00338d" opacity="0.6"/>
+    <circle cx="75" cy="35" r="4" fill="white" opacity="0.95"/>
+  </g>
+</svg>
+

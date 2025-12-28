@@ -1975,7 +1975,7 @@ body.menuOpen {
         max-width: 100%;
         height: auto;
         min-height: 250px;
-        padding: 20px;
+        padding: 25px 20px;
         margin: 0;
     }
 
@@ -1985,23 +1985,24 @@ body.menuOpen {
     #image4industry,
     #image5industry,
     #image6industry {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     .heading5 {
-        font-size: 22px;
-        margin: 10px;
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.3;
     }
 
     .industrypra {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.6;
         margin-bottom: 15px;
     }
 
     .industrybutton {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     /* Footer - Mobile */
@@ -2489,7 +2490,7 @@ body.menuOpen {
     width: 45%;
     height: 60vh;
     min-height: 400px;
-    background-image: url(../images/laptop\ typing.jpg);
+    background-image: url(../images/home/AboutUsLandingPage.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -3092,9 +3093,10 @@ body.menuOpen {
 .industryimagediv {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
     max-width: 1400px;
     margin: 0 auto;
+    align-items: stretch;
 }
 
 @media (max-width: 1024px) {
@@ -3112,15 +3114,20 @@ body.menuOpen {
 .aboutindustryimage {
     position: relative;
     overflow: hidden;
-    transition: color 0.5s ease;
+    transition: all 0.4s ease;
     z-index: 1;
     cursor: pointer;
-    /* border-radius: 5px; */
+    border-radius: 12px;
     background-color: rgb(0, 51, 141);
     color: white;
-    padding: 5%;
-    height: 275px;
-    /* border: 2px solid rgb(0, 51, 141); */
+    padding: 30px 25px;
+    min-height: 280px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .aboutindustryimage::before {
@@ -3132,8 +3139,7 @@ body.menuOpen {
     height: 100%;
     background-color: rgb(255, 255, 255);
     transform: translateY(100%);
-    transition: transform 0.6s ease;
-    /* color: navy; */
+    transition: transform 0.5s ease;
     z-index: 0;
 }
 
@@ -3142,11 +3148,9 @@ body.menuOpen {
 }
 
 .aboutindustryimage:hover {
-    color: navy;
-    /* or any contrasting color */
-    /* z-index: 1; */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-
+    color: rgb(0, 51, 141);
+    box-shadow: 0 8px 30px rgba(0, 51, 141, 0.2);
+    transform: translateY(-5px);
 }
 
 .aboutindustryimage .industryheadDiv,
@@ -3158,6 +3162,9 @@ body.menuOpen {
 
 .industryheadDiv {
     display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 #image1industry,
@@ -3166,38 +3173,49 @@ body.menuOpen {
 #image4industry,
 #image5industry,
 #image6industry {
-    width: 111px;
-    height: 111px;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .heading5 {
-    font-size: 27px;
-    margin: 15px;
-    font-weight: lighter;
-    /* color: black; */
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.3;
+    flex: 1;
 }
 
 .industrypra {
-    font-size: 22px;
-    /* color: black; */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+    opacity: 0.95;
 }
 
 .industrybutton {
-    font-size: 20px;
-    /* color: rgb(0, 51, 141, .5); */
-    background-color: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
     border: none;
-    padding: 7px;
+    padding: 0;
     cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .industrybutton:hover {
-    /* background-color: red; */
-    color: rgb(213, 213, 213);
-    border-bottom: 1px solid rgb(213, 213, 213);
+    transform: translateX(5px);
+    opacity: 0.9;
 }
 
 /* ------------------------------------------------------------------- */
@@ -4010,13 +4028,12 @@ body.menuOpen {
     }
 
     .aboutindustryimage {
-        border-radius: 5px;
+        border-radius: 12px;
         margin-bottom: 0;
-        border-radius: 8px;
-        /* box-shadow: 0 0 15px rgb(156, 156, 156); */
         height: fit-content;
         width: 100%;
         max-width: 100%;
+        padding: 25px 20px;
     }
 
     #image1industry,
@@ -4030,16 +4047,18 @@ body.menuOpen {
     }
 
     .heading5 {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
     }
 
     .industrypra {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
     .industrybutton {
-        font-size: 15px;
+        font-size: 14px;
     }
 
 

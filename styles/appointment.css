@@ -54,12 +54,15 @@ body{
 
 .outerdiv{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: auto;
-    /* background-color: rgb(0, 51, 141); */
+    align-items: flex-start;
+    min-height: calc(100vh - 80px);
     background-color: white;
     color: rgb(0, 51, 141);
+    gap: 40px;
+    padding: 60px 20px;
+    margin-top: 20px;
 }
 
 .appointmentouter{
@@ -67,8 +70,9 @@ body{
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(0, 51, 141, 0.1);
     padding: 40px;
-    margin: 2%;
-    width: 40%;
+    margin: 0;
+    width: 45%;
+    max-width: 600px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     backdrop-filter: blur(10px);
 }
@@ -221,10 +225,37 @@ body{
 /* ------------------------------------------------------------------- */
 
 .imageCalender{
-    color: white;
-    font-style: italic;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    width: 45%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-top: 0;
+}
+
+.imageCalender img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.imageCalender .slogan {
+    color: rgb(0, 51, 141);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    line-height: 1.5;
+    max-width: 100%;
+    width: 100%;
+    word-spacing: 1px;
+    hyphens: auto;
 }
 
 
@@ -246,9 +277,22 @@ body{
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
+    .outerdiv {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
     .appointmentouter {
-        width: 50%;
+        width: 100%;
+        max-width: 600px;
         padding: 35px;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 600px;
     }
 
     .formRow {
@@ -261,9 +305,23 @@ body{
 }
 
 @media (max-width: 768px) {
+    .outerdiv {
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 15px;
+        min-height: auto;
+        margin-top: 20px;
+    }
+
     .appointmentouter {
-        width: 70%;
+        width: 100%;
+        max-width: 100%;
         padding: 30px;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 100%;
     }
 
     .formRow {
@@ -296,30 +354,23 @@ body{
     /* ------------------------------------------------------------------- */
     
     .outerdiv{
-        justify-content: center;
-        /* display: flex; */
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* height: auto; */
-        /* background-color: rgb(0, 51, 141); */
-        /* background-color: white; */
-        /* color: rgb(0, 51, 141); */
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 15px;
+        min-height: auto;
+        margin-top: 20px;
     }
 
     .appointmentouter{
-        /* border-radius: 5px; */
-        /* box-shadow: 5px 5px 20px 10px rgba(216, 216, 216, 0.5); */
-        /* border: 1px solid rgb(0, 51, 141); */
-        padding: 2%;
-        margin: 2%;
-        width: 75%;
-        /* color: white; */
-    }
-
-    .appointmentouter{
+        width: 100%;
         padding: 25px;
-        width: 90%;
-        margin: 20px auto;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 100%;
     }
 
     .heading{
@@ -370,9 +421,6 @@ body{
     }
 
 
-    .imageCalender{
-        display: none;
-    }
 
     /* -------------------------- Footer Section ------------------------- */
     /* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */

@@ -392,6 +392,20 @@
     background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
     border-radius: 20px;
     color: white;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 51, 141, 0.2), inset 0 0 0 2px rgba(76, 175, 80, 0.15);
+}
+
+.aboutWhyChooseUs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, #4CAF50 50%, transparent 100%);
+    opacity: 0.5;
+    border-radius: 0 20px 20px 0;
 }
 
 .aboutWhyChooseUs h2 {
@@ -414,12 +428,34 @@
     padding: 35px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(76, 175, 80, 0.1);
+}
+
+.whyChooseCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, #4CAF50 50%, transparent 100%);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
 }
 
 .whyChooseCard:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 51, 141, 0.3), 0 0 30px rgba(76, 175, 80, 0.2), inset 0 0 0 1px rgba(76, 175, 80, 0.3);
+}
+
+.whyChooseCard:hover::after {
+    opacity: 0.8;
+    width: 4px;
+    background: linear-gradient(180deg, #4CAF50 0%, #00E5FF 50%, #4CAF50 100%);
 }
 
 .whyChooseNumber {
@@ -428,6 +464,31 @@
     opacity: 0.3;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.whyChooseNumber::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4CAF50, #00E5FF);
+    transition: width 0.3s ease;
+    opacity: 0;
+}
+
+.whyChooseCard:hover .whyChooseNumber::after {
+    width: 100%;
+    opacity: 1;
+}
+
+.whyChooseCard:hover .whyChooseNumber {
+    opacity: 0.5;
+    text-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
 }
 
 .whyChooseCard h3 {
@@ -435,6 +496,28 @@
     font-weight: 700;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
+    position: relative;
+    padding-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.whyChooseCard h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, #4CAF50 70%, rgba(255, 255, 255, 0.3) 100%);
+    border-radius: 2px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.whyChooseCard:hover h3::before {
+    opacity: 1;
+    width: 5px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, #4CAF50 70%, rgba(255, 255, 255, 0.5) 100%);
 }
 
 .whyChooseCard p {
@@ -442,6 +525,24 @@
     line-height: 1.7;
     opacity: 0.95;
     font-family: 'Inter', sans-serif;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.whyChooseCard p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(76, 175, 80, 0.3) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.whyChooseCard:hover p::before {
+    opacity: 1;
 }
 
 /* Responsive Design */

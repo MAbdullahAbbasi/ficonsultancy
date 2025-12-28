@@ -257,6 +257,16 @@ body{
     margin: 0 0 20px 0;
     color: rgb(0, 51, 141);
     line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.industriesCardHeading .fa{
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 40px;
+    flex-shrink: 0;
 }
 
 .industriesContents{
@@ -780,6 +790,10 @@ body{
         font-size: 20px;
     }
 
+    .industriesCardHeading .fa {
+        font-size: 28px;
+    }
+
     .industriesCardContent {
         font-size: 15px;
     }
@@ -805,6 +819,10 @@ body{
         font-size: 19px;
     }
 
+    .industriesCardHeading .fa {
+        font-size: 26px;
+    }
+
     .industriesCardContent {
         font-size: 14px;
     }
@@ -825,6 +843,11 @@ body{
     .industriesCardHeading {
         font-size: 16px;
         padding-left: 2%;
+        gap: 10px;
+    }
+
+    .industriesCardHeading .fa {
+        font-size: 22px;
     }
 
     .industriesCardContent {

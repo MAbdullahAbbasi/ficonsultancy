@@ -581,4 +581,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Match appointment button width with WhatsApp button on large screens
+    function matchButtonWidths() {
+        if (window.innerWidth > 768) {
+            const whatsappButton = document.getElementById('whatsappTriggerButton');
+            const appointmentButton = document.getElementById('appointmentFloatingButton');
+            
+            if (whatsappButton && appointmentButton) {
+                // Get WhatsApp button's natural width
+                const whatsappWidth = whatsappButton.offsetWidth;
+                // Apply same width to appointment button
+                appointmentButton.style.width = whatsappWidth + 'px';
+            }
+        }
+    }
+    
+    // Match widths on load and resize
+    matchButtonWidths();
+    window.addEventListener('resize', matchButtonWidths);
 });

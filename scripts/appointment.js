@@ -36,10 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
+        // ✅ reCAPTCHA validation (inside submit handler)
+        const captchaResponse = grecaptcha.getResponse();
+        if (!captchaResponse) {
+            showNotification("Please verify that you are not a robot.", "error");
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+            return; // ✅ now legal because it's inside the function
+        }
+
         // ✅ SEND EMAIL
         emailjs.send(
             "service_nf7gomv",       // Service ID
-            "template_vnsddkc",      // ✅ Updated Template ID
+            "template_vnsddkc",      // Template ID
             {
                 name: name,
                 email: email,
@@ -53,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showNotification("Appointment booked successfully!", "success");
 
             form.reset();
+            grecaptcha.reset(); // reset reCAPTCHA after submission
 
             btn.innerHTML = `<span>Booked</span> <i class="fas fa-check"></i>`;
             btn.style.backgroundColor = "#4CAF50";

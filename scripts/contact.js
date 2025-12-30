@@ -31,20 +31,26 @@ const SITE_KEY = "6Lf8dzssAAAAAAGge1I5Hum8ytNE9jOCeQhTePas"; // reCAPTCHA site k
 // Helper Functions for Form Field Management
 // ================================
 function disableFormFields(form) {
-    const inputs = form.querySelectorAll('input, textarea, select');
+    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+    console.log('Found', inputs.length, 'inputs to disable');
     inputs.forEach(input => {
         input.disabled = true;
         input.style.opacity = '0.6';
         input.style.cursor = 'not-allowed';
+        input.style.backgroundColor = '#f5f5f5'; // Add visual feedback
+        console.log('Disabled:', input.name || input.id);
     });
 }
 
 function enableFormFields(form) {
-    const inputs = form.querySelectorAll('input, textarea, select');
+    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+    console.log('Found', inputs.length, 'inputs to enable');
     inputs.forEach(input => {
         input.disabled = false;
         input.style.opacity = '';
         input.style.cursor = '';
+        input.style.backgroundColor = ''; // Reset background
+        console.log('Enabled:', input.name || input.id);
     });
 }
 
@@ -53,6 +59,7 @@ function enableFormFields(form) {
 // ================================
 document.addEventListener("DOMContentLoaded", function () {
     const contactForm = document.getElementById("contactForm");
+    console.log('Contact form found:', !!contactForm);
     if (!contactForm) return;
 
     contactForm.addEventListener("submit", function (e) {
@@ -63,7 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Disable button and form fields, show loading
         submitButton.disabled = true;
+        console.log('About to disable form fields');
         disableFormFields(contactForm);
+        console.log('Form fields disabled');
         submitButton.innerHTML = `<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
         // Get form values
@@ -100,6 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
             time: new Date().toLocaleString()
         };
 
+        // Temporarily simulate form submission for testing
+        setTimeout(() => {
+            // Success notification
+            submitButton.innerHTML = `<span>Message Sent!</span> <i class="fas fa-check"></i>`;
+            submitButton.style.backgroundColor = "#4CAF50";
+            showNotification("Message sent successfully! We will get back to you soon.", "success");
+
+            contactForm.reset();
+            grecaptcha.reset(); // reset reCAPTCHA after submission
+
+            setTimeout(() => {
+                submitButton.disabled = false;
+                console.log('About to enable form fields');
+                enableFormFields(contactForm);
+                console.log('Form fields enabled');
+                submitButton.innerHTML = originalText;
+                submitButton.style.backgroundColor = "";
+            }, 3000);
+        }, 2000); // Simulate 2 second delay
+
+        /*
         // Send main email to you
         emailjs.send(SERVICE_ID, TEMPLATE_ID_MAIN, templateParams)
             .then(() => {
@@ -137,6 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 enableFormFields(contactForm);
                 submitButton.innerHTML = originalText;
             });
+        */
     });
 });
 

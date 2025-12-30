@@ -1,3 +1,24 @@
+// ================================
+// Helper Functions for Form Field Management
+// ================================
+function disableFormFields(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.disabled = true;
+        input.style.opacity = '0.6';
+        input.style.cursor = 'not-allowed';
+    });
+}
+
+function enableFormFields(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.disabled = false;
+        input.style.opacity = '';
+        input.style.cursor = '';
+    });
+}
+
 (function () {
     if (typeof emailjs !== "undefined") {
         emailjs.init("ho2gKdtfUB9Oq8Lu1"); // your PUBLIC KEY
@@ -19,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const originalText = btn.innerHTML;
 
         btn.disabled = true;
+        disableFormFields(form);
         btn.innerHTML = `<span>Booking...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
         // Get values
@@ -32,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!name || !email || !date || !time) {
             showNotification("Please fill all required fields.", "error");
             btn.disabled = false;
+            enableFormFields(form);
             btn.innerHTML = originalText;
             return;
         }
@@ -41,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!captchaResponse) {
             showNotification("Please verify that you are not a robot.", "error");
             btn.disabled = false;
+            enableFormFields(form);
             btn.innerHTML = originalText;
             return; // ✅ now legal because it's inside the function
         }
@@ -69,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(() => {
                 btn.disabled = false;
+                enableFormFields(form);
                 btn.innerHTML = originalText;
                 btn.style.backgroundColor = "";
             }, 3000);
@@ -79,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showNotification("Failed to book appointment. Please try again.", "error");
 
             btn.disabled = false;
+            enableFormFields(form);
             btn.innerHTML = originalText;
         });
     });

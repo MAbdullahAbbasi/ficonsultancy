@@ -28,6 +28,27 @@ const SITE_KEY = "6Lf8dzssAAAAAAGge1I5Hum8ytNE9jOCeQhTePas"; // reCAPTCHA site k
 })();
 
 // ================================
+// Helper Functions for Form Field Management
+// ================================
+function disableFormFields(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.disabled = true;
+        input.style.opacity = '0.6';
+        input.style.cursor = 'not-allowed';
+    });
+}
+
+function enableFormFields(form) {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+        input.disabled = false;
+        input.style.opacity = '';
+        input.style.cursor = '';
+    });
+}
+
+// ================================
 // Contact Form Submission
 // ================================
 document.addEventListener("DOMContentLoaded", function () {
@@ -40,8 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const submitButton = document.getElementById("submitbutton");
         const originalText = submitButton.innerHTML;
 
-        // Disable button and show loading
+        // Disable button and form fields, show loading
         submitButton.disabled = true;
+        disableFormFields(contactForm);
         submitButton.innerHTML = `<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
         // Get form values
@@ -54,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!firstName || !email || !message) {
             showNotification("Please fill all required fields.", "error");
             submitButton.disabled = false;
+            enableFormFields(contactForm);
             submitButton.innerHTML = originalText;
             return;
         }
@@ -63,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!captchaResponse) {
             showNotification("Please verify that you are not a robot.", "error");
             submitButton.disabled = false;
+            enableFormFields(contactForm);
             submitButton.innerHTML = originalText;
             return;
         }
@@ -94,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 setTimeout(() => {
                     submitButton.disabled = false;
+                    enableFormFields(contactForm);
                     submitButton.innerHTML = originalText;
                     submitButton.style.backgroundColor = "";
                 }, 3000);
@@ -109,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 showNotification(errorMessage, "error");
                 submitButton.disabled = false;
+                enableFormFields(contactForm);
                 submitButton.innerHTML = originalText;
             });
     });

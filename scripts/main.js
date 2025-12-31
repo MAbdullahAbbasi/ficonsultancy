@@ -62,12 +62,22 @@ function showSlide(index) {
     // Add prev class to previous slide (for slide-out animation)
     if (slides[previousSlideIndex]) {
         slides[previousSlideIndex].classList.add('prev');
+        // Clear inline styles from previous slide to allow CSS transitions
+        slides[previousSlideIndex].style.opacity = '';
+        slides[previousSlideIndex].style.transform = '';
+        slides[previousSlideIndex].style.zIndex = '';
+        slides[previousSlideIndex].style.transition = '';
     }
 
     // Add active class to current slide and dot
     if (slides[index]) {
         slides[index].classList.add('active');
         dots[index].classList.add('active');
+        // Clear inline styles from current slide to allow CSS transitions
+        slides[index].style.opacity = '';
+        slides[index].style.transform = '';
+        slides[index].style.zIndex = '';
+        slides[index].style.transition = '';
     }
 
     // Update previous index
@@ -94,19 +104,85 @@ function startCarousel() {
     carouselInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
 
+// Immediately make first slide visible (before DOMContentLoaded for faster display)
+(function() {
+    // Handle main page carousel
+    const firstSlide = document.querySelector('.carousel-slide.immediate-visible');
+    if (firstSlide) {
+        firstSlide.style.opacity = '1';
+        firstSlide.style.transform = 'translateX(0)';
+        firstSlide.style.zIndex = '2';
+        firstSlide.style.transition = 'none';
+    }
+
+    // Handle services page carousels (about, services, industries pages)
+    const firstServicesSlide = document.querySelector('.services-carousel-slide.immediate-visible');
+    if (firstServicesSlide) {
+        firstServicesSlide.style.opacity = '1';
+        firstServicesSlide.style.transform = 'translateX(0)';
+        firstServicesSlide.style.zIndex = '2';
+        firstServicesSlide.style.transition = 'none';
+    }
+})();
+
 // Initialize carousel on page load
 document.addEventListener('DOMContentLoaded', function () {
     // Check if we're on index page (has .carousel-slide)
     const indexCarousel = document.querySelectorAll('.carousel-slide');
     if (indexCarousel.length > 0) {
-        showSlide(0);
-        startCarousel();
+        // First slide is already visible from immediate function
+        // Ensure proper class setup without clearing inline styles yet
+        const slides = document.querySelectorAll('.carousel-slide');
+        slides.forEach((slide, index) => {
+            if (index === 0) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active', 'prev');
+            }
+        });
+
+        // Start carousel after setup is complete
+        setTimeout(() => {
+            const firstSlide = document.querySelector('.carousel-slide.immediate-visible');
+            if (firstSlide) {
+                // Clear inline styles to allow CSS transitions
+                firstSlide.style.opacity = '';
+                firstSlide.style.transform = '';
+                firstSlide.style.zIndex = '';
+                firstSlide.style.transition = '';
+                firstSlide.classList.remove('immediate-visible');
+            }
+            startCarousel();
+        }, 200);
     }
 
     // Initialize services page carousel
     const servicesCarousel = document.querySelectorAll('.services-carousel-slide');
     if (servicesCarousel.length > 0) {
-        initializeServicesCarousel();
+        // First slide is already visible from immediate function
+        // Ensure proper class setup without clearing inline styles yet
+        servicesCarousel.forEach((slide, index) => {
+            if (index === 0) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active', 'prev');
+            }
+        });
+
+        // Start carousel after setup is complete
+        setTimeout(() => {
+            const firstSlide = document.querySelector('.services-carousel-slide.immediate-visible');
+            if (firstSlide) {
+                // Clear inline styles to allow CSS transitions
+                firstSlide.style.opacity = '';
+                firstSlide.style.transform = '';
+                firstSlide.style.zIndex = '';
+                firstSlide.style.transition = '';
+                firstSlide.classList.remove('immediate-visible');
+            }
+            // Start services carousel interval (2 seconds)
+            servicesCarouselInterval = setInterval(nextServicesSlide, 2000);
+        }, 200);
     }
 });
 
@@ -128,11 +204,21 @@ function showServicesSlide(index) {
     // Add prev class to previous slide (for slide-out animation)
     if (slides[servicesPreviousSlideIndex]) {
         slides[servicesPreviousSlideIndex].classList.add('prev');
+        // Clear inline styles from previous slide to allow CSS transitions
+        slides[servicesPreviousSlideIndex].style.opacity = '';
+        slides[servicesPreviousSlideIndex].style.transform = '';
+        slides[servicesPreviousSlideIndex].style.zIndex = '';
+        slides[servicesPreviousSlideIndex].style.transition = '';
     }
 
     // Add active class to current slide
     if (slides[index]) {
         slides[index].classList.add('active');
+        // Clear inline styles from current slide to allow CSS transitions
+        slides[index].style.opacity = '';
+        slides[index].style.transform = '';
+        slides[index].style.zIndex = '';
+        slides[index].style.transition = '';
     }
 
     // Update previous index

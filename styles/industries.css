@@ -77,7 +77,14 @@ body{
 .services-carousel-slide.active {
     opacity: 1;
     transform: translateX(0);
-    z-index: 1;
+    z-index: 2;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.services-carousel-slide.immediate-visible {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: none !important;
 }
 
 .services-carousel-slide.prev {

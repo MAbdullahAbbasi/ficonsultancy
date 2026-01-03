@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../styles/main.css?v=3.1">
-        <link rel="stylesheet" href="../styles/appointment.css?v=1.1">
+        <link rel="stylesheet" href="../styles/main.css?v=3.3">
+        <link rel="stylesheet" href="../styles/appointment.css?v=1.3">
         <link rel="icon" href="../images/logoFI.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <base href="/" />
         <title>Appointment Booking</title>
     </head>
     
@@ -25,82 +26,83 @@
             <!-- Mobile Search Bar -->
             <div class="mobileSearchBarContainer">
                 <div class="searchBarContainer">
-                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." aria-label="Search">
+                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." oninput="handleSearch(this, 'mobile')" aria-label="Search">
                     <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
+                <div id="mobileSearchResults"></div>
             </div>
 
             <!-- list of links  -->
             <ul id="resplists">
 
                 <li class="listitemsResp">
-                    <a href="../index.html" class="listsrespnav" id="home">Home</a>
+                    <a href="index.html" class="listsrespnav" id="home">Home</a>
                 </li>
 
                 <li class="listitemsResp">
-                    <a href="about.html" class="listsrespnav" id="about">About</a>
+                    <a href="pages/about.html" class="listsrespnav" id="about">About</a>
                 </li>
                      
                 <li class="listitemsResp" id="servicesRespNavItem">
-                    <a href="services.html" class="listsrespnav" id="services" onclick="toggleServicesDropdown(event)">
+                    <a href="pages/services.html" class="listsrespnav" id="services" onclick="toggleServicesDropdown(event)">
                         Services <i class="fas fa-chevron-down" id="servicesDropdownArrow"></i>
                     </a>
-                        <ul id="servicesRespDropDownDiv" class="servicesRespDropdown">
-                            <li>
-                                <a href="services/financialreporting.html" class="serviceslistsrespnav"><i class="fas fa-chart-line"></i> Financial Reporting</a>
-                            </li>
-                            <li>
-                                <a href="services/tax.html" class="serviceslistsrespnav"><i class="fas fa-file-invoice-dollar"></i> Tax</a>
-                            </li>
-                            <li>
-                                <a href="services/audit.html" class="serviceslistsrespnav"><i class="fas fa-clipboard-check"></i> Audit</a>
-                            </li>
-                            <li>
-                                <a href="services/bookkeeping.html" class="serviceslistsrespnav"><i class="fas fa-book"></i> Book Keeping</a>
-                            </li>
-                            <li>
-                                <a href="services/advisory.html" class="serviceslistsrespnav"><i class="fas fa-handshake"></i> Advisory</a>
-                            </li>
-                            <li>
-                                <a href="services/integratedSolutions.html" class="serviceslistsrespnav"><i class="fas fa-puzzle-piece"></i> Integrated Solutions</a>
-                            </li>
-                        </ul>
+                    <ul id="servicesRespDropDownDiv" class="servicesRespDropdown">
+                        <li>
+                            <a href="pages/services/financialreporting.html" class="serviceslistsrespnav"><i class="fas fa-chart-line"></i> Financial Reporting</a>
+                        </li>
+                        <li>
+                            <a href="pages/services/tax.html" class="serviceslistsrespnav"><i class="fas fa-file-invoice-dollar"></i> Tax</a>
+                        </li>
+                        <li>
+                            <a href="pages/services/audit.html" class="serviceslistsrespnav"><i class="fas fa-clipboard-check"></i> Audit</a>
+                        </li>
+                        <li>
+                            <a href="pages/services/bookkeeping.html" class="serviceslistsrespnav"><i class="fas fa-book"></i> Book Keeping</a>
+                        </li>
+                        <li>
+                            <a href="pages/services/advisory.html" class="serviceslistsrespnav"><i class="fas fa-handshake"></i> Advisory</a>
+                        </li>
+                        <li>
+                            <a href="pages/services/integratedSolutions.html" class="serviceslistsrespnav"><i class="fas fa-puzzle-piece"></i> Integrated Solutions</a>
+                        </li>
+                    </ul>
                 </li>
 
-                    <li class="listitemsResp" id="industriesRespNavItem">
-                        <a href="#" class="listsrespnav" id="industries" onclick="toggleIndustriesDropdown(event)">
-                            Industries <i class="fas fa-chevron-down" id="industriesDropdownArrow"></i>
-                        </a>
-                        <ul id="industriesRespDropDownDiv" class="industriesRespDropdown">
-                            <li>
-                                <a href="industries/healthcare.html" class="industrieslistsrespnav"><i class="fas fa-heartbeat"></i> Healthcare</a>
-                            </li>
-                            <li>
-                                <a href="industries/ICT.html" class="industrieslistsrespnav"><i class="fas fa-laptop-code"></i> ICT</a>
-                            </li>
-                            <li>
-                                <a href="industries/building&construction.html" class="industrieslistsrespnav"><i class="fas fa-hard-hat"></i> Building & Construction</a>
-                            </li>
-                            <li>
-                                <a href="industries/financialServices.html" class="industrieslistsrespnav"><i class="fas fa-university"></i> Financial Services</a>
-                            </li>
-                            <li>
-                                <a href="industries/consumerRetail.html" class="industrieslistsrespnav"><i class="fas fa-shopping-cart"></i> Consumer & Retail</a>
-                            </li>
-                            <li>
-                                <a href="industries/transportation.html" class="industrieslistsrespnav"><i class="fas fa-truck"></i> Transportation</a>
-                            </li>
-                        </ul>
-                </li>
-
-                <li class="listitemsResp">
-                    <a href="contact.html" class="listsrespnav" id="contact">Contact</a>
+                <li class="listitemsResp" id="industriesRespNavItem">
+                    <a href="#" class="listsrespnav" id="industries" onclick="toggleIndustriesDropdown(event)">
+                        Industries <i class="fas fa-chevron-down" id="industriesDropdownArrow"></i>
+                    </a>
+                    <ul id="industriesRespDropDownDiv" class="industriesRespDropdown">
+                        <li>
+                            <a href="pages/industries/healthcare.html" class="industrieslistsrespnav"><i class="fas fa-heartbeat"></i> Healthcare</a>
+                        </li>
+                        <li>
+                            <a href="pages/industries/ICT.html" class="industrieslistsrespnav"><i class="fas fa-laptop-code"></i> ICT</a>
+                        </li>
+                        <li>
+                            <a href="pages/industries/building&construction.html" class="industrieslistsrespnav"><i class="fas fa-hard-hat"></i> Building & Construction</a>
+                        </li>
+                        <li>
+                            <a href="pages/industries/financialServices.html" class="industrieslistsrespnav"><i class="fas fa-university"></i> Financial Services</a>
+                        </li>
+                        <li>
+                            <a href="pages/industries/consumerRetail.html" class="industrieslistsrespnav"><i class="fas fa-shopping-cart"></i> Consumer & Retail</a>
+                        </li>
+                        <li>
+                            <a href="pages/industries/transportation.html" class="industrieslistsrespnav"><i class="fas fa-truck"></i> Transportation</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="listitemsResp">
-                    <a href="careers.html" class="listsrespnav" id="careers">Careers</a>
+                    <a href="pages/contact.html" class="listsrespnav" id="contact">Contact</a>
+                </li>
+
+                <li class="listitemsResp">
+                    <a href="pages/careers.html" class="listsrespnav" id="careers">Careers</a>
                 </li>
             </ul>
 
@@ -140,41 +142,41 @@
             <ul id="lists">
 
                 <li>
-                    <a href="../index.html" class="listsnav" id="home">Home</a>
+                    <a href="index.html" class="listsnav" id="home">Home</a>
                 </li>
 
                 <li>
-                    <a href="about.html" class="listsnav" id="about">About</a>
+                    <a href="pages/about.html" class="listsnav" id="about">About</a>
                 </li>
 
                 <li class="listsnav" id="servicesNavItem">
-                    <a href="services.html" class="listsnav" id="services">Services</a>
+                    <a href="pages/services.html" class="listsnav" id="services">Services</a>
 
                     <div id="servicesDropDownDiv">
 
                         <span>
-                            <a href="services/financialreporting.html" class="serviceslistsnav" id="">Financial
+                            <a href="pages/services/financialreporting.html" class="serviceslistsnav" id="">Financial
                                 Reporting</a>
                         </span>
 
                         <span>
-                            <a href="services/tax.html" class="serviceslistsnav" id="">Tax</a>
+                            <a href="pages/services/tax.html" class="serviceslistsnav" id="">Tax</a>
                         </span>
 
                         <span>
-                            <a href="services/audit.html" class="serviceslistsnav" id="">Audit</a>
+                            <a href="pages/services/audit.html" class="serviceslistsnav" id="">Audit</a>
                         </span>
 
                         <span>
-                            <a href="services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
+                            <a href="pages/services/bookkeeping.html" class="serviceslistsnav" id="">Book Keeping</a>
                         </span>
 
                         <span>
-                            <a href="services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
+                            <a href="pages/services/advisory.html" class="serviceslistsnav" id="">Advisory</a>
                         </span>
 
                         <span>
-                            <a href="services/integratedSolutions.html" class="serviceslistsnav" id="">Integrated
+                            <a href="pages/services/integratedSolutions.html" class="serviceslistsnav" id="">Integrated
                                 Solutions</a>
                         </span>
 
@@ -183,34 +185,34 @@
 
                 <li class="listsnav" id="industriesNavItem">
 
-                    <a href="industries.html" class="listsnav">Industries</a>
+                    <a href="pages/industries.html" class="listsnav">Industries</a>
 
                     <div id="industriesDropDownDiv">
 
                         <span>
-                            <a href="industries/financialServices.html" class="industrieslistsnav"
+                            <a href="pages/industries/financialServices.html" class="industrieslistsnav"
                                 id="">Financial Services</a>
                         </span>
 
                         <span>
-                            <a href="industries/consumerRetail.html" class="industrieslistsnav" id="">Consumer & Retail</a>
+                            <a href="pages/industries/consumerRetail.html" class="industrieslistsnav" id="">Consumer & Retail</a>
                         </span>
 
                         <span>
-                            <a href="industries/ICT.html" class="industrieslistsnav" id="">Information,
+                            <a href="pages/industries/ICT.html" class="industrieslistsnav" id="">Information,
                                 Communication and Telecommunication</a>
                         </span>
 
                         <span>
-                            <a href="industries/healthcare.html" class="industrieslistsnav" id="">Infrastructure, Government and HealthCare</a>
+                            <a href="pages/industries/healthcare.html" class="industrieslistsnav" id="">Infrastructure, Government and HealthCare</a>
                         </span>
 
                         <span>
-                            <a href="industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
+                            <a href="pages/industries/building&construction.html" class="industrieslistsnav" id="">Building & Construction</a>
                         </span>
 
                         <span>
-                            <a href="industries/transportation.html" class="industrieslistsnav" id="">Transportation</a>
+                            <a href="pages/industries/transportation.html" class="industrieslistsnav" id="">Transportation</a>
                         </span>
 
                     </div>
@@ -218,11 +220,11 @@
                 </li>
 
                 <li>
-                    <a href="contact.html" class="listsnav" id="contact">Contact</a>
+                    <a href="pages/contact.html" class="listsnav" id="contact">Contact</a>
                 </li>
 
                 <li>
-                    <a href="careers.html" class="listsnav" id="careers">Careers</a>
+                    <a href="pages/careers.html" class="listsnav" id="careers">Careers</a>
                 </li>
 
             </ul>
@@ -232,10 +234,11 @@
         <!-- search bar  -->
         <div class="navInnerdivs" id="searchBarDiv">
             <div class="searchBarContainer">
-                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." oninput="handleSearch(this, 'desktop')" aria-label="Search">
                 <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
+                <div id="desktopSearchResults"></div>
             </div>
         </div>
 
@@ -341,43 +344,47 @@
         <div class="footerdiv">
 
             <div class="footerinnerdiv">
-                    
-                    <div class="footerlogoandheadingdiv">
-                        <img src="../images/common/logos/logoDark.png" alt="FI Consultancy Logo" class="f1logodiv">
-                        <h2 class="footerlogoheading">FI Consultancy</h2>
-                    </div>
-                    
-                    <div class="iconsdiv">
-                        <i class="fa-brands fa-youtube"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                    </div>
+
+                <div class="footerlogoandheadingdiv">
+                    <img src="images/common/logos/logoDark.png" alt="FI Consultancy Logo" class="f1logodiv">
+                    <h2 class="footerlogoheading">FI Consultancy</h2>
+                </div>
+
+                <div class="iconsdiv">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
 
             </div>
 
             <div class="footerinnerdiv">
                 <h3 id="heading7">Company</h3>
                 <ul class="listfooter">
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="about.html">About Us</a> </li>
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our Services</a> </li>
-                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="pages/about.html">About Us</a>
+                    </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/services.html">Our
+                            Services</a> </li>
+                    <li class="listfooterinnerdiv"><a class="footerLinksPages" href="/pages/contact.html">Contact Us</a>
+                    </li>
                     <li class="listfooterinnerdiv"><a class="footerLinksPages" href="">Meet Our Team</a></li>
                 </ul>
 
                 <div>
 
-                <p class="footercopyright">
-                    Copyright © 2025 . F1 Consultancy . All rights reserved. 
-                </p>
+                    <p class="footercopyright">
+                        Copyright © 2025 . F1 Consultancy . All rights reserved.
+                    </p>
 
                 </div>
 
-            
+
             </div>
 
             <div class="footerinnerdiv" id="footercontactdiv">
-                <p id="footerpra2" class="contactpra" onclick="handleEmailClick()"> <i class="fa-solid fa-envelope"></i> info@ficonsultancy.net</p>
+                <p id="footerpra2" class="contactpra" onclick="handleEmailClick()"> <i class="fa-solid fa-envelope"></i>
+                    info@ficonsultancy.net</p>
                 <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-314-1503257</p>
                 <p id="footerpra1" class="contactpra"> <i class="fab fa-whatsapp"></i> +92-322-0846330</p>
             </div>
@@ -434,8 +441,10 @@
         <!-- EmailJS SDK -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <script src="../scripts/main.js?v=1.6"></script>
-        <script src="../scripts/appointment.js?v=1.4"></script>
+        <script src="../scripts/main.js?v=1.8"></script>
+        <script src="../scripts/appointment.js?v=1.5"></script>
+        <script src="../scripts/search.js?v=1.1"></script>
+
   
     </body>
 

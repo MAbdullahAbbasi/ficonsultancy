@@ -17,6 +17,173 @@ body {
     line-height: 1.6;
 }
 
+:root {
+    /* NAVBAR CORE */
+    --navbar-bg: #ffffff;
+    --navbar-text: rgb(0, 51, 141);
+    --navbar-hover-bg: rgba(0, 51, 141, 0.05);
+    --navbar-border: rgba(0, 51, 141, 0.1);
+    --navbar-shadow: rgba(0, 0, 0, 0.08);
+
+    /* DROPDOWNS */
+    --dropdown-bg: #ffffff;
+    --dropdown-text: rgb(0, 51, 141);
+    --dropdown-hover-bg: rgb(0, 51, 141);
+    --dropdown-hover-text: #ffffff;
+    --dropdown-border: rgba(0, 51, 141, 0.1);
+
+    /* SEARCH BAR */
+    --search-bg: #ffffff;
+    --search-text: rgb(0, 51, 141);
+    --search-border: rgba(0, 51, 141, 0.2);
+    --search-placeholder: rgba(0, 51, 141, 0.5);
+
+    /* ICONS */
+    --icon-primary: rgb(0, 51, 141);
+    --icon-hover: rgb(8, 37, 88);
+
+    /* HERO OVERLAY */
+    --heroOverlay: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.35) 100%
+    );
+
+    /* HERO TEXT */
+    --hero-text-primary: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.95);
+    --hero-text-muted: rgba(255, 255, 255, 0.9);
+
+    /* HERO ACCENT */
+    --hero-accent: #4CAF50;
+    --hero-accent-gradient: linear-gradient(135deg, #4CAF50 0%, #00E5FF 100%);
+
+    /* HERO GLASS */
+    --hero-glass-bg: rgba(255, 255, 255, 0.12);
+    --hero-glass-border: rgba(255, 255, 255, 0.15);
+
+    /* HERO DOTS */
+    --hero-dot-bg: rgba(255, 255, 255, 0.4);
+    --hero-dot-border: rgba(255, 255, 255, 0.6);
+
+    /* WHATSAPP BLOCK */
+    --wa-bg: #ffffff;
+    --wa-text: #333;
+    --wa-border: rgba(0, 0, 0, 0.05);
+
+    /* APPOINTMENT BLOCK */
+    --appointment-button-bg: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    --appointment-button-shadow: 0 4px 20px rgba(0, 51, 141, 0.4);
+
+    /* FOOTER BACKGROUND */
+    --footer-bg: linear-gradient(
+        135deg,
+        rgb(0, 51, 141) 0%,
+        rgb(8, 37, 88) 100%
+    );
+
+    /* FOOTER TEXT */
+    --footer-text-primary: #ffffff;
+    --footer-text-secondary: rgba(255, 255, 255, 0.9);
+    --footer-text-muted: rgba(255, 255, 255, 0.7);
+
+    /* FOOTER BORDERS */
+    --footer-border: rgba(255, 255, 255, 0.15);
+
+    /* FOOTER ICONS */
+    --footer-icon-bg: rgba(255, 255, 255, 0.1);
+    --footer-icon-bg-hover: rgba(255, 255, 255, 0.2);
+    --footer-icon-border: rgba(255, 255, 255, 0.2);
+    --footer-icon-border-hover: rgba(255, 255, 255, 0.4);
+
+    /* FOOTER ACCENT */
+    --footer-accent: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%);
+}
+
+body.dark {
+    /* NAVBAR CORE */
+    --navbar-bg: #020617;
+    --navbar-text: #e5e7eb;
+    --navbar-hover-bg: rgba(255, 255, 255, 0.08);
+    --navbar-border: rgba(255, 255, 255, 0.12);
+    --navbar-shadow: rgba(0, 0, 0, 0.6);
+
+    /* DROPDOWNS */
+    --dropdown-bg: #020617;
+    --dropdown-text: #e5e7eb;
+    --dropdown-hover-bg: #1e293b;
+    --dropdown-hover-text: #ffffff;
+    --dropdown-border: rgba(255, 255, 255, 0.12);
+
+    /* SEARCH BAR */
+    --search-bg: #020617;
+    --search-text: #e5e7eb;
+    --search-border: rgba(255, 255, 255, 0.2);
+    --search-placeholder: rgba(255, 255, 255, 0.5);
+
+    /* ICONS */
+    --icon-primary: #e5e7eb;
+    --icon-hover: #ffffff;
+
+    /* HERO OVERLAY */
+    --heroOverlay: linear-gradient(
+        135deg,
+        rgba(2, 6, 23, 0.85) 0%,
+        rgba(2, 6, 23, 0.65) 100%
+    );
+
+    /* HERO TEXT */
+    --hero-text-primary: #e5e7eb;
+    --hero-text-secondary: rgba(229, 231, 235, 0.95);
+    --hero-text-muted: rgba(229, 231, 235, 0.85);
+
+    /* HERO ACCENT */
+    --hero-accent: #22d3ee;
+    --hero-accent-gradient: linear-gradient(135deg, #22d3ee 0%, #4ade80 100%);
+
+    /* HERO GLASS */
+    --hero-glass-bg: rgba(255, 255, 255, 0.08);
+    --hero-glass-border: rgba(255, 255, 255, 0.12);
+
+    /* HERO DOTS */
+    --hero-dot-bg: rgba(255, 255, 255, 0.3);
+    --hero-dot-border: rgba(255, 255, 255, 0.5);
+
+    /* WHATSAPP BLOCK  */
+    --wa-bg: #020617;
+    --wa-text: #e5e7eb;
+    --wa-border: rgba(255, 255, 255, 0.12);
+
+    /* APPOINTMENT BLOCK */
+    --appointment-button-bg: #020617;
+    --appointment-button-shadow: 0 4px 20px rgba(115, 163, 235, 0.4);
+
+    /* FOOTER BACKGROUND */
+    --footer-bg: linear-gradient(
+        135deg,
+        #020617 0%,
+        #020617 100%
+    );
+
+    /* FOOTER TEXT */
+    --footer-text-primary: #e5e7eb;
+    --footer-text-secondary: rgba(229, 231, 235, 0.9);
+    --footer-text-muted: rgba(229, 231, 235, 0.6);
+
+    /* FOOTER BORDERS */
+    --footer-border: rgba(255, 255, 255, 0.12);
+
+    /* FOOTER ICONS */
+    --footer-icon-bg: rgba(255, 255, 255, 0.08);
+    --footer-icon-bg-hover: rgba(255, 255, 255, 0.15);
+    --footer-icon-border: rgba(255, 255, 255, 0.15);
+    --footer-icon-border-hover: rgba(255, 255, 255, 0.3);
+
+    /* FOOTER ACCENT */
+    --footer-accent: linear-gradient(90deg, #22d3ee 0%, #4ade80 100%);
+}
+
+
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
@@ -157,6 +324,17 @@ body.menuOpen {
     background: rgba(0, 51, 141, 0.1);
     color: rgb(8, 37, 88);
 }
+
+.menu-icon,
+.closeIcon {
+    color: var(--icon-primary);
+}
+
+.menu-icon:hover,
+.closeIcon:hover {
+    color: var(--icon-hover);
+}
+
 
 /* Cross icon styling - initially hidden, shown via JavaScript */
 .menu-close-icon {
@@ -339,8 +517,8 @@ body.menuOpen {
 /* ------------------------------------------------------------------------- */
 
 .navdiv {
-    background-color: white;
-    color: rgb(0, 51, 141);
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
     display: flex;
     position: sticky;
     top: 0;
@@ -348,12 +526,14 @@ body.menuOpen {
     height: fit-content;
     align-items: center;
     padding: 12px 0;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    border-bottom: 1px solid rgba(0, 51, 141, 0.1);
+    box-shadow: 0 2px 12px var(--navbar-shadow);
+    border-bottom: 1px solid var(--navbar-border);
+    /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 51, 141, 0.1); */
 }
 
 .navInnerdivs {
-    width: 25%;
+    width: 20%;
     text-align: center;
     padding: 0%;
     margin: 0%;
@@ -368,9 +548,9 @@ body.menuOpen {
 }
 
 #headerlogo {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    /* border-radius: 50%; */
+    width: 220px;
+    height: 60px;
     /* display: none; */
 }
 
@@ -380,9 +560,9 @@ body.menuOpen {
 }
 
 #navlinksdiv {
-    width: 50%;
+    width: 40%;
     display: flex;
-    align-items: center;
+    align-items: right;
     padding: 0%;
     margin: 0%;
 
@@ -415,7 +595,7 @@ body.menuOpen {
 .listsnav,
 .listsrespnav {
     text-decoration: none !important;
-    color: rgb(0, 51, 141);
+    color: var(--navbar-text);
     font-weight: 500;
     padding: 8px 12px;
     border-radius: 6px;
@@ -428,8 +608,8 @@ body.menuOpen {
 .listsnav:focus,
 .listsnav:visited {
     text-decoration: none !important;
-    color: rgb(8, 37, 88);
-    background-color: rgba(0, 51, 141, 0.05);
+    background-color: var(--navbar-hover-bg);
+    color: var(--navbar-text);
 }
 
 /* Ensure all navbar links have no text decoration on all states */
@@ -451,6 +631,23 @@ body.menuOpen {
     text-decoration: none !important;
 }
 
+#themeToggleDiv{
+    width: fit-content;
+    text-align: left;
+}
+
+#themeToggle{
+    flex: 1;
+    padding: 8px 14px;
+    border: none;
+    /* border: 2px solid black; */
+    border-radius: 6px;
+    cursor: pointer;
+    /* background-color: var(--btn-bg); */
+    color: var(--navbarLinksColor);
+    font-size: 33px;
+}
+
 /* --------------------------- Services Dropdown -------------------------------- */
 
 #servicesNavItem {
@@ -458,7 +655,7 @@ body.menuOpen {
 }
 
 #servicesNavItem:hover .listsnav {
-    color: rgb(8, 37, 88);
+    color: var(--navbarLinksColor);
     background-color: rgba(0, 51, 141, 0.05);
     text-decoration: none !important;
 }
@@ -508,7 +705,7 @@ body.menuOpen {
 }
 
 .serviceslistsnav {
-    color: rgb(0, 51, 141);
+    color: var(--dropdown-text);
     display: block;
     padding: 12px 18px;
     text-decoration: none !important;
@@ -553,7 +750,7 @@ body.menuOpen {
 }
 
 #industriesNavItem:hover .listsnav {
-    color: rgb(8, 37, 88);
+    color: var(--navbarLinksColor);
     background-color: rgba(0, 51, 141, 0.05);
     text-decoration: none !important;
 }
@@ -591,13 +788,13 @@ body.menuOpen {
 }
 
 .industrieslistsnav {
-    color: rgb(0, 51, 141);
+    color: var(--dropdown-text);
     display: block;
     padding: 12px 18px;
     text-decoration: none !important;
     font-size: 15px;
     transition: all 0.2s ease;
-    border-bottom: 1px solid rgba(0, 51, 141, 0.05);
+    /* border-bottom: 1px solid rgba(0, 51, 141, 0.05); */
 }
 
 .industrieslistsnav:hover,
@@ -617,7 +814,7 @@ body.menuOpen {
 }
 
 #industriesDropDownDiv .industrieslistsnav:hover {
-    background-color: rgb(0, 51, 141);
+    /* background-color: rgb(0, 51, 141); */
     color: white;
     padding-left: 24px;
 }
@@ -627,6 +824,18 @@ body.menuOpen {
     transform: translateX(-50%) translateY(-1px); /* Pull up 1px to eliminate gap with navbar border */
     opacity: 1;
     visibility: visible;
+}
+
+#servicesDropDownDiv,
+#industriesDropDownDiv {
+    background-color: var(--dropdown-bg);
+    border: 1px solid var(--dropdown-border);
+}
+
+#servicesDropDownDiv .serviceslistsnav:hover,
+#industriesDropDownDiv .industrieslistsnav:hover {
+    background-color: var(--dropdown-hover-bg);
+    color: var(--dropdown-hover-text);
 }
 
 /* Search Bar Styles */
@@ -641,13 +850,22 @@ body.menuOpen {
 .searchBarContainer {
     display: flex;
     align-items: center;
-    background: white;
-    border: 2px solid rgba(0, 51, 141, 0.2);
+    /* background: white; */
+    /* border: 2px solid rgba(0, 51, 141, 0.2); */
     border-radius: 25px;
     padding: 5px 10px;
     width: 100%;
     max-width: 300px;
     transition: all 0.3s ease;
+    position: relative;
+    background: var(--search-bg);
+    border: 2px solid var(--search-border);
+
+}
+
+.mobileSearchBarContainer{
+  position: relative;
+    
 }
 
 .searchBarContainer:focus-within {
@@ -661,13 +879,13 @@ body.menuOpen {
     outline: none;
     padding: 8px 12px;
     font-size: 14px;
-    color: rgb(0, 51, 141);
+    color: var(--search-text);
     font-family: 'Poppins', sans-serif;
     background: transparent;
 }
 
 .searchBarInput::placeholder {
-    color: rgba(0, 51, 141, 0.5);
+    color: var(--search-placeholder);
 }
 
 .searchBarButton {
@@ -696,6 +914,40 @@ body.menuOpen {
 .searchBarButton i {
     font-size: 14px;
 }
+
+#mobileSearchResults,
+#desktopSearchResults
+ {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  z-index: 9999;
+}
+
+.search-item {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+
+.search-item:hover {
+  background-color: #f5f5f5;
+}
+
+.search-item p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
 
 #appointmentBtnDiv {
     display: none; /* Hidden on all screen sizes - appointment button only in mobile menu */
@@ -832,10 +1084,12 @@ body.menuOpen {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    /* background: rgba(255, 255, 255, 0.4); */
+    /* border: 2px solid rgba(255, 255, 255, 0.6); */
     cursor: pointer;
     transition: all 0.3s ease;
+    background: var(--hero-dot-bg);
+    border: 2px solid var(--hero-dot-border);
 }
 
 .dot:hover {
@@ -844,10 +1098,12 @@ body.menuOpen {
 }
 
 .dot.active {
-    background: #4CAF50;
-    border-color: #4CAF50;
+    /* background: #4CAF50; */
+    /* border-color: #4CAF50; */
     width: 32px;
     border-radius: 6px;
+    background: var(--hero-accent);
+    border-color: var(--hero-accent);
 }
 
 .hero-overlay {
@@ -856,7 +1112,7 @@ body.menuOpen {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 51, 141, 0.5) 0%, rgba(0, 31, 84, 0.6) 100%);
+    background: var(--heroOverlay);
     z-index: 2;
 }
 
@@ -961,8 +1217,9 @@ body.menuOpen {
 .hero {
     max-width: 900px;
     width: 100%;
-    color: white;
+    /* color: white; */
     text-align: center;
+    color: var(--hero-text-primary);
     animation: heroFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -983,9 +1240,14 @@ body.menuOpen {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.2);
+
+    background: var(--hero-glass-bg);
+    border: 1px solid var(--hero-glass-border);
+    color: var(--hero-text-secondary);
+
+    /* background: rgba(255, 255, 255, 0.2); */
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
     padding: 8px 18px;
     border-radius: 50px;
     font-family: 'Inter', sans-serif;
@@ -995,7 +1257,8 @@ body.menuOpen {
 }
 
 .hero-badge i {
-    color: #4CAF50;
+    /* color: #4CAF50; */
+    color: var(--hero-accent);
     font-size: 16px;
 }
 
@@ -1009,6 +1272,7 @@ body.menuOpen {
     letter-spacing: -0.01em;
     margin: 0 0 18px 0;
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    color: var(--hero-text-primary);
 }
 
 /* Gradient Text Effect */
@@ -1018,6 +1282,7 @@ body.menuOpen {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
+    /* background: var(--hero-accent-gradient); */
 }
 
 /* Subtitle */
@@ -1029,7 +1294,8 @@ body.menuOpen {
     margin: 0 auto 35px;
     max-width: 650px;
     opacity: 0.95;
-    color: rgba(255, 255, 255, 0.95);
+    /* color: rgba(255, 255, 255, 0.95); */
+    color: var(--hero-text-secondary);
 }
 
 /* Button Container */
@@ -1047,7 +1313,7 @@ body.menuOpen {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    /* background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); */
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -1060,6 +1326,7 @@ body.menuOpen {
     box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, var(--hero-accent) 0%, #45a049 100%);
 }
 
 .btn-primary::before {
@@ -1095,17 +1362,21 @@ body.menuOpen {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
+    /* background: rgba(255, 255, 255, 0.15); */
     backdrop-filter: blur(10px);
-    color: white;
+    /* color: white; */
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 600;
     padding: 14px 28px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    /* border: 2px solid rgba(255, 255, 255, 0.4); */
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    background: var(--hero-glass-bg);
+    border: 2px solid var(--hero-glass-border);
+    color: var(--hero-text-primary);
 }
 
 .btn-secondary:hover {
@@ -1123,12 +1394,14 @@ body.menuOpen {
     gap: 35px;
     flex-wrap: wrap;
     padding: 25px;
-    background: rgba(255, 255, 255, 0.12);
+    /* background: rgba(255, 255, 255, 0.12); */
     backdrop-filter: blur(10px);
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
     max-width: 650px;
     margin: 0 auto;
+    background: var(--hero-glass-bg);
+    border: 1px solid var(--hero-glass-border);
 }
 
 .stat-item {
@@ -1139,24 +1412,27 @@ body.menuOpen {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #4CAF50;
+    /* color: #4CAF50; */
     line-height: 1;
     margin-bottom: 6px;
+    color: var(--hero-accent);
 }
 
 .stat-label {
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+    /* color: rgba(255, 255, 255, 0.9); */
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    color: var(--hero-text-muted);
 }
 
 .stat-divider {
     width: 1px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
+    background: var(--hero-glass-border);
 }
 
 /* Legacy button classes for backward compatibility */
@@ -2171,7 +2447,7 @@ body.menuOpen {
 }
 
 .whatsAppContactPersonDiv {
-    background: white;
+    /* background: white; */
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     width: 320px;
@@ -2179,7 +2455,7 @@ body.menuOpen {
     display: none;
     animation: slideUpFade 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
 }
 
 @keyframes slideUpFade {
@@ -2254,8 +2530,8 @@ body.menuOpen {
     padding: 18px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    background: white;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
+    /* background: white; */
 }
 
 .nameandlogo:last-child {
@@ -2271,6 +2547,13 @@ body.menuOpen {
     transform: translateX(-3px) scale(0.98);
 }
 
+.whatsAppContactPersonDiv,
+.nameandlogo {
+    background: var(--wa-bg);
+    color: var(--wa-text);
+    border-color: var(--wa-border);
+}
+
 .texts {
     flex: 1;
     display: flex;
@@ -2282,7 +2565,8 @@ body.menuOpen {
     margin: 0;
     font-weight: 600;
     font-size: 16px;
-    color: #333;
+    /* color: #333; */
+    color: var(--wa-text);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -2322,7 +2606,7 @@ body.menuOpen {
 
 /* Make Appointment Floating Button */
 .appointmentFloatingBtn {
-    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    background: var(--appointment-button-bg);
     color: white;
     border: none;
     border-radius: 50px;
@@ -2333,7 +2617,7 @@ body.menuOpen {
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 4px 20px rgba(0, 51, 141, 0.4);
+    box-shadow: var(--appointment-button-shadow);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-family: 'Poppins', sans-serif;
     min-width: 200px;
@@ -3472,10 +3756,11 @@ body.menuOpen {
 /* ------------------------------------------------------------------- */
 
 .footer {
-    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    /* background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%); */
     padding: 60px 40px 30px;
     position: relative;
     overflow: hidden;
+    background: var(--footer-bg);
 }
 
 .footer::before {
@@ -3485,14 +3770,16 @@ body.menuOpen {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 50%, #4CAF50 100%);
+    background: var(--footer-accent);
+    /* background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 50%, #4CAF50 100%); */
 }
 
 .footerdiv {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    color: white;
+    color: var(--footer-text-primary);
+    /* color: white; */
     max-width: 1400px;
     margin: 0 auto;
     gap: 40px;
@@ -3513,12 +3800,12 @@ body.menuOpen {
 }
 
 .f1logodiv {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 370px;
+    height: 100px;
+    /* border-radius: 50%; */
     object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+    /* border: 3px solid rgba(255, 255, 255, 0.3); */
     transition: all 0.3s ease;
     display: block;
 }
@@ -3556,19 +3843,24 @@ body.menuOpen {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
     backdrop-filter: blur(10px);
     cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    /* border: 2px solid rgba(255, 255, 255, 0.2); */
     flex-shrink: 0;
+    background: var(--footer-icon-bg);
+    border: 2px solid var(--footer-icon-border);
+    color: var(--footer-text-primary);
 }
 
 .iconsdiv i:hover {
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     transform: translateY(-5px) scale(1.1);
-    border-color: rgba(255, 255, 255, 0.4);
+    /* border-color: rgba(255, 255, 255, 0.4); */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: var(--footer-icon-bg-hover);
+    border-color: var(--footer-icon-border-hover);
 }
 
 #heading7 {
@@ -3581,6 +3873,12 @@ body.menuOpen {
     padding-bottom: 12px;
 }
 
+.footerlogoheading,
+#heading7 {
+    color: var(--footer-text-primary);
+}
+
+
 #heading7::after {
     content: '';
     position: absolute;
@@ -3589,8 +3887,9 @@ body.menuOpen {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%);
+    /* background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%); */
     border-radius: 2px;
+    background: var(--footer-accent);
 }
 
 .listfooter {
@@ -3612,7 +3911,8 @@ body.menuOpen {
 }
 
 .footerLinksPages {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--footer-text-secondary);
+    /* color: rgba(255, 255, 255, 0.9); */
     text-decoration: none;
     transition: all 0.2s ease;
     display: inline-block;
@@ -3628,12 +3928,14 @@ body.menuOpen {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%);
+    background: var(--footer-accent);
+    /* background: linear-gradient(90deg, #4CAF50 0%, #00E5FF 100%); */
     transition: width 0.3s ease;
 }
 
 .footerLinksPages:hover {
-    color: white;
+    color: var(--footer-text-primary);
+    /* color: white; */
 }
 
 .footerLinksPages:hover::after {
@@ -3664,7 +3966,7 @@ body.menuOpen {
 .contactpra {
     font-size: 17px;
     margin: 0;
-    color: rgba(255, 255, 255, 0.95);
+    /* color: rgba(255, 255, 255, 0.95); */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -3674,10 +3976,12 @@ body.menuOpen {
     width: max-content;
     white-space: nowrap;
     text-align: left;
+    color: var(--footer-text-secondary);
 }
 
 .contactpra:hover {
-    color: white;
+    /* color: white; */
+    color: var(--footer-text-primary);
     transform: translateX(-3px);
 }
 
@@ -3692,11 +3996,13 @@ body.menuOpen {
     text-align: center;
     font-size: 15px;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.7);
+    /* color: rgba(255, 255, 255, 0.7); */
     margin-top: 50px;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.15); */
     grid-column: 1 / -1;
+    color: var(--footer-text-muted);
+    border-top: 1px solid var(--footer-border);
 }
 
 /* ################################################################### */

@@ -466,37 +466,39 @@ function handleAppointmentBtn() {
     const currentUrl = window.location.href;
     let appointmentPath;
     
-    // Check if we're in a subdirectory (services/* or industries/*)
-    if (currentPath.includes('/pages/services/') || currentPath.includes('/pages/industries/')) {
-        // From subdirectories (services/* or industries/*) - go up one level
-        appointmentPath = "../appointment.html";
-    } 
-    // Check if we're in the pages directory (but not in a subdirectory)
-    else if (currentPath.includes('/pages/') && !currentPath.includes('/pages/services/') && !currentPath.includes('/pages/industries/')) {
-        // From pages directory (services.html, industries.html, contact.html, appointment.html, etc.)
-        appointmentPath = "appointment.html";
-    } 
-    // Check if we're at root (index.html or just /)
-    else if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') || currentPath.endsWith('/')) {
-        // From root (index.html)
-        appointmentPath = "pages/appointment.html";
-    } 
-    // Fallback: try to detect based on URL structure
-    else {
-        // Count directory depth
-        const depth = (currentPath.match(/\//g) || []).length - 1;
-        if (depth > 1) {
-            // We're in a subdirectory, go up
-            appointmentPath = "../appointment.html";
-        } else if (depth === 1) {
-            // We're in pages directory
-            appointmentPath = "appointment.html";
-        } else {
-            // We're at root
-            appointmentPath = "pages/appointment.html";
-        }
-    }
+    // // Check if we're in a subdirectory (services/* or industries/*)
+    // if (currentPath.includes('/pages/services/') || currentPath.includes('/pages/industries/')) {
+    //     // From subdirectories (services/* or industries/*) - go up one level
+    //     appointmentPath = "../appointment.html";
+    // } 
+    // // Check if we're in the pages directory (but not in a subdirectory)
+    // else if (currentPath.includes('/pages/') && !currentPath.includes('/pages/services/') && !currentPath.includes('/pages/industries/')) {
+    //     // From pages directory (services.html, industries.html, contact.html, appointment.html, etc.)
+    //     appointmentPath = "appointment.html";
+    // } 
+    // // Check if we're at root (index.html or just /)
+    // else if (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/index.html') || currentPath.endsWith('/')) {
+    //     // From root (index.html)
+    //     appointmentPath = "pages/appointment.html";
+    // } 
+    // // Fallback: try to detect based on URL structure
+    // else {
+    //     // Count directory depth
+    //     const depth = (currentPath.match(/\//g) || []).length - 1;
+    //     if (depth > 1) {
+    //         // We're in a subdirectory, go up
+    //         appointmentPath = "../appointment.html";
+    //     } else if (depth === 1) {
+    //         // We're in pages directory
+    //         appointmentPath = "appointment.html";
+    //     } else {
+    //         // We're at root
+    //         appointmentPath = "pages/appointment.html";
+    //     }
+    // }
     
+    appointmentPath = "pages/appointment.html";
+
     window.location.href = appointmentPath;
 }
 

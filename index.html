@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css?v=3.7">
+    <link rel="stylesheet" href="styles/main.css?v=3.9">
     <link rel="icon" href="images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -28,11 +28,12 @@
             <!-- Mobile Search Bar -->
             <div class="mobileSearchBarContainer">
                 <div class="searchBarContainer">
-                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." aria-label="Search">
+                    <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." oninput="handleSearch(this, 'mobile')" aria-label="Search">
                     <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
+                <div id="mobileSearchResults"></div>
             </div>
 
             <!-- list of links  -->
@@ -128,12 +129,7 @@
         <!-- logo and name  -->
         <div class="navInnerdivs" id="navfirstdiv">
             <h1 class="navh1">
-
-                <img src="images/common/logos/logoLight.png" alt="FI Consultancy Logo" id="headerlogo">
-
-                <span id="companyNameHeading">
-                    Consultancy
-                </span>
+                <img src="images/common/logos/logo.png" alt="FI Consultancy Logo" id="headerlogo">
             </h1>
         </div>
 
@@ -235,11 +231,20 @@
         <!-- search bar  -->
         <div class="navInnerdivs" id="searchBarDiv">
             <div class="searchBarContainer">
-                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." aria-label="Search">
+                <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." oninput="handleSearch(this, 'desktop')" aria-label="Search">
                 <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
+                <div id="desktopSearchResults"></div>
             </div>
+        </div>
+
+        <!-- Toggle Theme -->
+        <div class="navInnerdivs" id="themeToggleDiv">
+            <button id="themeToggle">🌙</button>
+            <!-- <i class="fa-solid fa-moon" id="themeToggle"></i> -->
+            <!-- <i class="fa-solid fa-sun"></i> -->
+
         </div>
 
         <!-- appointment button  -->
@@ -248,7 +253,6 @@
         </div>
 
     </nav>
-
 
     <!-- ------------------------------------------------------------------- -->
     <!-- ------------------------ Hero Section ---------------------------- -->
@@ -386,7 +390,7 @@
 
         </div>
 
-    </div> 
+    </div>
 
     <!-- ------------------------------------------------------------------- -->
     <!-- ------------------------ Services Section ------------------------- -->
@@ -848,8 +852,8 @@
             <div class="footerinnerdiv">
 
                 <div class="footerlogoandheadingdiv">
-                    <img src="images/common/logos/logoDark.png" alt="FI Consultancy Logo" class="f1logodiv">
-                    <h2 class="footerlogoheading">FI Consultancy</h2>
+                    <img src="images/common/logos/logofooter.png" alt="FI Consultancy Logo" class="f1logodiv">
+                    <!-- <h2 class="footerlogoheading">FI Consultancy</h2> -->
                 </div>
 
                 <div class="iconsdiv">
@@ -900,8 +904,10 @@
     <!-- ------------------------ JavaScript Linked ------------------------ -->
     <!-- ------------------------------------------------------------------- -->
 
-    <script src="scripts/main.js?v=2.5"></script>
-    <script src="scripts/industries.js"></script>
+    <script src="scripts/main.js?v=2.7"></script>
+    <script src="scripts/industries.js?v=1.1"></script>
+    <script src="scripts/search.js?v=1.1"></script>
+    <script src="scripts/darktheme.js?v=1.1"></script>
 
 </body>
 

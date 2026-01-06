@@ -241,6 +241,68 @@ body{
         justify-content: center;
         padding: 14px 30px;
     }
+
+    /* Dark Mode Styles for Tablet */
+    body.dark .contactstartdiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #contactheading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #contactSubheading {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .contactinnerdiv {
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark #namepra,
+    body.dark #lastnamepra,
+    body.dark #emailpra,
+    body.dark #commentormessagepra {
+        color: white !important;
+    }
+
+    body.dark #firstnameinput,
+    body.dark #lastnameinput,
+    body.dark #emailinput,
+    body.dark #commentinput {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark #firstnameinput:focus,
+    body.dark #lastnameinput:focus,
+    body.dark #emailinput:focus,
+    body.dark #commentinput:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark #firstnameinput::placeholder,
+    body.dark #lastnameinput::placeholder,
+    body.dark #emailinput::placeholder,
+    body.dark #commentinput::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark #submitbutton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark #submitbutton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 30px rgba(76, 175, 80, 0.4) !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -273,6 +335,68 @@ body{
         font-size: 16px;
         padding: 12px 25px;
     }
+
+    /* Dark Mode Styles for Mobile */
+    body.dark .contactstartdiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #contactheading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #contactSubheading {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .contactinnerdiv {
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark #namepra,
+    body.dark #lastnamepra,
+    body.dark #emailpra,
+    body.dark #commentormessagepra {
+        color: white !important;
+    }
+
+    body.dark #firstnameinput,
+    body.dark #lastnameinput,
+    body.dark #emailinput,
+    body.dark #commentinput {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark #firstnameinput:focus,
+    body.dark #lastnameinput:focus,
+    body.dark #emailinput:focus,
+    body.dark #commentinput:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark #firstnameinput::placeholder,
+    body.dark #lastnameinput::placeholder,
+    body.dark #emailinput::placeholder,
+    body.dark #commentinput::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark #submitbutton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark #submitbutton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 30px rgba(76, 175, 80, 0.4) !important;
+    }
 }
 
 /* -------------------------- Footer Section ------------------------- */
@@ -285,6 +409,71 @@ body{
     font-weight: bold;
     font-size: larger;
     color: rgb(116, 186, 248);
+}
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .contactstartdiv {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+}
+
+body.dark #contactheading {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark #contactSubheading {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .contactinnerdiv {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark #namepra,
+body.dark #lastnamepra,
+body.dark #emailpra,
+body.dark #commentormessagepra {
+    color: white !important;
+}
+
+body.dark #firstnameinput,
+body.dark #lastnameinput,
+body.dark #emailinput,
+body.dark #commentinput {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: white !important;
+}
+
+body.dark #firstnameinput:focus,
+body.dark #lastnameinput:focus,
+body.dark #emailinput:focus,
+body.dark #commentinput:focus {
+    border-color: rgba(76, 175, 80, 0.6) !important;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark #firstnameinput::placeholder,
+body.dark #lastnameinput::placeholder,
+body.dark #emailinput::placeholder,
+body.dark #commentinput::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark #submitbutton {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark #submitbutton:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 6px 30px rgba(76, 175, 80, 0.4) !important;
 }
 
 @media (max-width: 600px){

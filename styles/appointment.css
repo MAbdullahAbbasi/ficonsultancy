@@ -263,6 +263,73 @@ body{
 /* FOOTER STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
 
 
+/* ------------------------------------------------------------------- */
+/* ----------------------- Dark Mode Styling ------------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .outerdiv {
+    background: #020617 !important;
+    color: white !important;
+}
+
+body.dark .appointmentouter {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .heading {
+    color: white !important;
+}
+
+body.dark .labelstyling {
+    color: white !important;
+}
+
+body.dark .labelstyling i {
+    color: rgba(76, 175, 80, 0.8) !important;
+}
+
+body.dark .inputstyling {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: white !important;
+}
+
+body.dark .inputstyling::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .inputstyling:focus {
+    border-color: rgba(76, 175, 80, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark .inputstyling:hover {
+    border-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentbtn {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .appointmentbtn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentBookAlertDiv {
+    background-color: rgba(76, 175, 80, 0.9) !important;
+    color: white !important;
+}
+
+body.dark .slogan {
+    color: white !important;
+}
+
 /* ################################################################### */
 /* ################################################################### */
 /* ################################################################### */
@@ -326,6 +393,61 @@ body{
 
     .formRow {
         grid-template-columns: 1fr;
+    }
+
+    /* Dark Mode Styles for Mobile */
+    body.dark .outerdiv {
+        background: #020617 !important;
+        color: white !important;
+    }
+
+    body.dark .appointmentouter {
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark .heading {
+        color: white !important;
+    }
+
+    body.dark .labelstyling {
+        color: white !important;
+    }
+
+    body.dark .labelstyling i {
+        color: rgba(76, 175, 80, 0.8) !important;
+    }
+
+    body.dark .inputstyling {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark .inputstyling::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark .inputstyling:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark .appointmentbtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark .appointmentbtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
+
+    body.dark .slogan {
+        color: white !important;
     }
 }
 
@@ -420,8 +542,128 @@ body{
         transform: translateY(-1px);
     }
 
+    /* Dark Mode Styles for Small Mobile */
+    body.dark .outerdiv{
+        background: #020617 !important;
+        color: white !important;
+    }
+
+    body.dark .appointmentouter{
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark .heading{
+        color: white !important;
+    }
+
+    body.dark .labelstyling{
+        color: white !important;
+    }
+
+    body.dark .labelstyling i {
+        color: rgba(76, 175, 80, 0.8) !important;
+    }
+
+    body.dark .inputstyling{
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark .inputstyling::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark .inputstyling:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark .appointmentbtn{
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark .appointmentbtn:hover{
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
+
+    body.dark .slogan {
+        color: white !important;
+    }
 
 
     /* -------------------------- Footer Section ------------------------- */
     /* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .outerdiv {
+    background: #020617 !important;
+    color: white !important;
+}
+
+body.dark .appointmentouter {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .heading {
+    color: white !important;
+}
+
+body.dark .labelstyling {
+    color: white !important;
+}
+
+body.dark .labelstyling i {
+    color: rgba(76, 175, 80, 0.8) !important;
+}
+
+body.dark .inputstyling {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: white !important;
+}
+
+body.dark .inputstyling::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .inputstyling:focus {
+    border-color: rgba(76, 175, 80, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark .inputstyling:hover {
+    border-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentbtn {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .appointmentbtn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .slogan {
+    color: white !important;
+}
+
+body.dark .alertOuterDiv .appointmentBookAlertDiv {
+    background-color: rgba(76, 175, 80, 0.9) !important;
+    color: white !important;
 }

@@ -641,3 +641,184 @@ body{
     /* Footer responsive styles moved to main.css */
 
 }
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark {
+    background-color: #020617 !important;
+    color: white !important;
+}
+
+body.dark #financialreportingHeroImageDiv {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.5) 100%),
+                url('../../images/services/bookkeeping/BookKeepingPage.jpg') center/cover no-repeat !important;
+}
+
+body.dark #financialreportingHeroImageDiv::before {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.4) 100%) !important;
+}
+
+body.dark #financialreportingHeroContentDiv {
+    background: linear-gradient(to right, rgba(2, 6, 23, 0.7) 0%, rgba(2, 6, 23, 0.5) 40%, rgba(2, 6, 23, 0.3) 70%, rgba(2, 6, 23, 0) 100%) !important;
+}
+
+body.dark #financialreportingHeroHeading,
+body.dark #financialreportingHeroPara {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark #financialreportingHeroDiv {
+    border-bottom: 2px solid rgba(76, 175, 80, 0.4) !important;
+}
+
+/* ------------------------------------------------------------------- */
+/* ----------------------- Dark Mode Content Cards ------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .contentDiv {
+    background: #020617 !important;
+    border: 2px solid rgba(76, 175, 80, 0.4) !important;
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .contentDiv h1,
+body.dark .contentDiv h2,
+body.dark .contentDiv h3,
+body.dark .contentDiv h4,
+body.dark .contentDiv p {
+    color: white !important;
+}
+
+body.dark #ourAreasContentHeading {
+    color: white !important;
+}
+
+body.dark .ourAreasContent {
+    border-bottom-color: rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .ourAreasContentLinks,
+body.dark .ourAreasContentLinksArrow {
+    color: white !important;
+}
+
+body.dark #financialReportingContentHeading,
+body.dark #ourAreasContentHeading {
+    color: white !important;
+}
+
+body.dark #proposalHeading {
+    color: white !important;
+}
+
+body.dark #proposalParagraph {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .proposalReachOutButton {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+}
+
+body.dark .proposalReachOutButton:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    transform: translateY(-2px) !important;
+}
+
+body.dark .content-section h2,
+body.dark .content-section h3,
+body.dark .content-section h4 {
+    color: white !important;
+}
+
+body.dark .content-section p,
+body.dark .content-section li {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.dark .service-card,
+body.dark .feature-card,
+body.dark .benefit-card {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 8px 30px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .service-card:hover,
+body.dark .feature-card:hover,
+body.dark .benefit-card:hover {
+    box-shadow: 0 12px 40px rgba(76, 175, 80, 0.2) !important;
+}
+
+body.dark .service-icon,
+body.dark .feature-icon,
+body.dark .benefit-icon {
+    color: rgba(76, 175, 80, 0.8) !important;
+}
+
+body.dark .service-title,
+body.dark .feature-title,
+body.dark .benefit-title {
+    color: white !important;
+}
+
+body.dark .service-description,
+body.dark .feature-description,
+body.dark .benefit-description {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .highlight-box {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .highlight-box h3,
+body.dark .highlight-box p {
+    color: white !important;
+}
+
+body.dark .process-step {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .step-number {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+}
+
+body.dark .process-step h3,
+body.dark .process-step p {
+    color: white !important;
+}
+
+body.dark .cta-section,
+body.dark #proposalRequestDiv {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    border-top: 2px solid rgba(76, 175, 80, 0.6) !important;
+    margin-top: 80px !important;
+}
+
+body.dark .cta-title,
+body.dark .cta-description,
+body.dark #proposalHeading,
+body.dark #proposalParagraph {
+    color: white !important;
+}
+
+body.dark .cta-button,
+body.dark .proposalReachOutButton {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    border-color: rgba(76, 175, 80, 0.5) !important;
+}
+
+body.dark .cta-button:hover,
+body.dark .proposalReachOutButton:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4) !important;
+}

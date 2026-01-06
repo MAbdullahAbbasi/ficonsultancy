@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/main.css?v=3.4">
-    <link rel="stylesheet" href="../../styles/services/integratedSolutions.css?v=3.0">
+    <link rel="stylesheet" href="../../styles/main.css?v=4.0">
+    <link rel="stylesheet" href="../../styles/services/integratedSolutions.css?v=2.7">
     <link rel="icon" href="../../images/logoFI.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <base href="/" />
@@ -26,9 +26,6 @@
             <div class="mobileSearchBarContainer">
                 <div class="searchBarContainer">
                     <input type="text" class="searchBarInput" id="mobileSearchBarInput" placeholder="Search..." oninput="handleSearch(this, 'mobile')" aria-label="Search">
-                    <button class="searchBarButton" id="mobileSearchBarButton" onclick="handleMobileSearch()" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
                 </div>
                 <div id="mobileSearchResults"></div>
             </div>
@@ -126,12 +123,7 @@
         <!-- logo and name  -->
         <div class="navInnerdivs" id="navfirstdiv">
             <h1 class="navh1">
-
-                <img src="../../images/common/logos/logoLight.png" alt="FI Consultancy Logo" id="headerlogo">
-
-                <span id="companyNameHeading">
-                    Consultancy
-                </span>
+                <img src="images/common/logos/logo.png" alt="FI Consultancy Logo" id="headerlogo">
             </h1>
         </div>
 
@@ -234,13 +226,17 @@
         <div class="navInnerdivs" id="searchBarDiv">
             <div class="searchBarContainer">
                 <input type="text" class="searchBarInput" id="searchBarInput" placeholder="Search..." oninput="handleSearch(this, 'desktop')" aria-label="Search">
-                <button class="searchBarButton" id="searchBarButton" onclick="handleSearch()" aria-label="Search">
-                    <i class="fas fa-search"></i>
-                </button>
                 <div id="desktopSearchResults"></div>
             </div>
         </div>
 
+        <!-- Toggle Theme -->
+        <div class="navInnerdivs" id="themeToggleDiv">
+            <button id="themeToggle"><i class="fas fa-moon"></i></button>
+            <!-- <i class="fa-solid fa-moon" id="themeToggle"></i> -->
+            <!-- <i class="fa-solid fa-sun"></i> -->
+
+        </div>
 
         <!-- appointment button  -->
         <div class="navInnerdivs" id="appointmentBtnDiv">
@@ -410,12 +406,11 @@
             <div class="footerinnerdiv">
 
                 <div class="footerlogoandheadingdiv">
-                    <img src="images/common/logos/logoDark.png" alt="FI Consultancy Logo" class="f1logodiv">
-                    <h2 class="footerlogoheading">FI Consultancy</h2>
+                    <img src="images/common/logos/logofooter.png" alt="FI Consultancy Logo" class="f1logodiv">
+                    <!-- <h2 class="footerlogoheading">FI Consultancy</h2> -->
                 </div>
 
                 <div class="iconsdiv">
-                    <i class="fa-brands fa-youtube"></i>
                     <i class="fa-brands fa-instagram"></i>
                     <i class="fa-brands fa-facebook"></i>
                     <i class="fa-brands fa-linkedin"></i>
@@ -463,9 +458,12 @@
 
     <script src="../../scripts/main.js?v=1.8"></script>
     <script src="scripts/search.js?v=1.1"></script>
+    <script src="../../scripts/darktheme.js?v=3.4"></script>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"499e684b7b1043878977050a0a606794","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"499e684b7b1043878977050a0a606794","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 
 
 </body>
 </html>
+
+

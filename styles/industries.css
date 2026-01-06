@@ -482,6 +482,36 @@ body{
         font-size: 17px;
         padding: 14px 28px;
     }
+
+    /* Dark Mode Proposal Request Section */
+    body.dark #proposalRequestDiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #proposalRequestDiv::before {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+    }
+
+    body.dark #proposalHeading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #proposalParagraph {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .proposalReachOutButton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .proposalReachOutButton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -512,6 +542,36 @@ body{
     .proposalReachOutButton {
         font-size: 16px;
         padding: 12px 24px;
+    }
+
+    /* Dark Mode Proposal Request Section */
+    body.dark #proposalRequestDiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #proposalRequestDiv::before {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+    }
+
+    body.dark #proposalHeading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #proposalParagraph {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .proposalReachOutButton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .proposalReachOutButton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
     }
 }
 
@@ -546,6 +606,36 @@ body{
         width: 100%;
         justify-content: center;
     }
+
+    /* Dark Mode Proposal Request Section */
+    body.dark #proposalRequestDiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #proposalRequestDiv::before {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+    }
+
+    body.dark #proposalHeading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #proposalParagraph {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .proposalReachOutButton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .proposalReachOutButton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -575,6 +665,36 @@ body{
     .proposalReachOutButton {
         font-size: 14px;
         padding: 10px 20px;
+    }
+
+    /* Dark Mode Proposal Request Section */
+    body.dark #proposalRequestDiv {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    }
+
+    body.dark #proposalRequestDiv::before {
+        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+    }
+
+    body.dark #proposalHeading {
+        color: white !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    body.dark #proposalParagraph {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    body.dark .proposalReachOutButton {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .proposalReachOutButton:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
     }
 }
 
@@ -901,6 +1021,30 @@ body{
         padding: 4.5%;
     }
 
+    body.dark .industriesCard {
+        background-color: #020617 !important;
+        color: white !important;
+        border: 2px solid #4CAF50 !important;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .industriesCardHeading {
+        color: white !important;
+        border-left-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    body.dark .industriesCardHeading .fa {
+        color: white !important;
+    }
+
+    body.dark .industriesCardContent {
+        color: white !important;
+    }
+
+    body.dark .industriesCard h1 {
+        color: white !important;
+    }
+
     .industriesCardHeading {
         font-size: 20px;
     }
@@ -930,6 +1074,30 @@ body{
         padding: 4%;
     }
 
+    body.dark .industriesCard {
+        background-color: #020617 !important;
+        color: white !important;
+        border: 2px solid #4CAF50 !important;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .industriesCardHeading {
+        color: white !important;
+        border-left-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    body.dark .industriesCardHeading .fa {
+        color: white !important;
+    }
+
+    body.dark .industriesCardContent {
+        color: white !important;
+    }
+
+    body.dark .industriesCard h1 {
+        color: white !important;
+    }
+
     .industriesCardHeading {
         font-size: 19px;
     }
@@ -953,6 +1121,30 @@ body{
 
     .industriesCard {
         padding: 3.5%;
+    }
+
+    body.dark .industriesCard {
+        background-color: #020617 !important;
+        color: white !important;
+        border: 2px solid #4CAF50 !important;
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+    }
+
+    body.dark .industriesCardHeading {
+        color: white !important;
+        border-left-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    body.dark .industriesCardHeading .fa {
+        color: white !important;
+    }
+
+    body.dark .industriesCardContent {
+        color: white !important;
+    }
+
+    body.dark .industriesCard h1 {
+        color: white !important;
     }
 
     .industriesCardHeading {
@@ -993,10 +1185,24 @@ body{
     .allIndustriesBtnDiv {
         margin-bottom: -32px;
     }
-    
+
     #allIndustriesBtn {
         font-size: 17px;
         padding: 11px 28px;
+    }
+
+    /* Dark Mode All Industries Button */
+    body.dark #allIndustriesBtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+    }
+
+    body.dark #allIndustriesBtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
     }
 }
 
@@ -1004,14 +1210,28 @@ body{
     .allIndustriesBtnDiv {
         margin-bottom: -28px;
     }
-    
+
     #allIndustriesBtn {
         font-size: 16px;
         padding: 10px 24px;
     }
-    
+
     #proposalRequestDiv {
         padding-top: 90px;
+    }
+
+    /* Dark Mode All Industries Button */
+    body.dark #allIndustriesBtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+    }
+
+    body.dark #allIndustriesBtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
     }
 }
 
@@ -1019,28 +1239,152 @@ body{
     .allIndustriesBtnDiv {
         margin-bottom: -25px;
     }
-    
+
     #allIndustriesBtn {
         font-size: 15px;
         padding: 9px 20px;
     }
-    
+
     #proposalRequestDiv {
         padding-top: 85px;
     }
+
+    /* Dark Mode All Industries Button */
+    body.dark #allIndustriesBtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+    }
+
+    body.dark #allIndustriesBtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
+    }
+}
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* ------------------------------------------------------------------- */
+
+.industriesCard {
+    background-color: white;
+    color: inherit;
+}
+
+/* Dark Mode Proposal Request Section */
+body.dark #proposalRequestDiv {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    border-top: 2px solid rgba(76, 175, 80, 0.6) !important;
+    margin-top: 80px !important;
+}
+
+body.dark #proposalRequestDiv::before {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+}
+
+body.dark #proposalHeading {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark #proposalParagraph {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .proposalReachOutButton {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    border-color: rgba(76, 175, 80, 0.5) !important;
+}
+
+body.dark .proposalReachOutButton:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+/* Dark Mode All Industries Button */
+body.dark #allIndustriesBtn {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    border-color: rgba(76, 175, 80, 0.5) !important;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+}
+
+body.dark #allIndustriesBtn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
+}
+
+/* Desktop Dark Mode - High Specificity */
+.industriesCardsDiv .industriesCard {
+    transition: all 0.3s ease !important;
+}
+
+body.dark .industriesCardsDiv .industriesCard {
+    background-color: #020617 !important;
+    color: white !important;
+    border: 2px solid #4CAF50 !important;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+    border-radius: 16px !important;
+}
+
+body.dark .industriesCardHeading,
+body.dark .industriesCardsDiv .industriesCard .industriesCardHeading {
+    color: white !important;
+    border-left-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.dark .industriesCardHeading .fa,
+body.dark .industriesCardsDiv .industriesCard .industriesCardHeading .fa {
+    color: white !important;
+}
+
+body.dark .industriesCardContent,
+body.dark .industriesCardsDiv .industriesCard .industriesCardContent {
+    color: white !important;
+}
+
+body.dark .industriesCard h1,
+body.dark .industriesCardsDiv .industriesCard h1 {
+    color: white !important;
+}
+
+/* Dark mode hover effects */
+body.dark .industriesCard:hover {
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3) !important;
+    transform: translateY(-5px) !important;
+    border-color: rgba(76, 175, 80, 0.6) !important;
 }
 
 @media (max-width: 480px) {
     .allIndustriesBtnDiv {
         margin-bottom: -22px;
     }
-    
+
     #allIndustriesBtn {
         font-size: 14px;
         padding: 8px 18px;
     }
-    
+
     #proposalRequestDiv {
         padding-top: 80px;
+    }
+
+    /* Dark Mode All Industries Button */
+    body.dark #allIndustriesBtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        border-color: rgba(76, 175, 80, 0.5) !important;
+        box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+    }
+
+    body.dark #allIndustriesBtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
     }
 }

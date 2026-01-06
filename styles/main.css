@@ -1223,8 +1223,8 @@ body.menuOpen {
     }
 
     #headerlogo {
-        width: 55px;
-        height: 55px;
+        width: 135px;
+        height: 45px;
     }
 
     #companyNameHeading {
@@ -1886,8 +1886,8 @@ body.menuOpen {
     }
 
     #headerlogo {
-        width: 55px;
-        height: 55px;
+        width: 135px;
+        height: 45px;
     }
 
     #companyNameHeading {
@@ -4195,7 +4195,7 @@ body.dark .aboutindustryimage:hover::before {
 
     .navdiv {
         flex-wrap: nowrap;
-        padding: 8px 10px;
+        padding: 8px 15px;
         justify-content: space-between;
         align-items: center;
         position: relative;
@@ -4210,7 +4210,6 @@ body.dark .aboutindustryimage:hover::before {
         font-size: 25px;
         text-align: left;
         flex-shrink: 0;
-        padding-left: 5px;
     }
 
     .menu-icon {
@@ -4239,6 +4238,7 @@ body.dark .aboutindustryimage:hover::before {
         justify-content: center;
         align-items: center;
         text-align: center;
+        flex-shrink: 0;
     }
 
     /* Theme toggle - Right */
@@ -4249,7 +4249,6 @@ body.dark .aboutindustryimage:hover::before {
         width: auto;
         text-align: right;
         flex-shrink: 0;
-        padding-right: 5px;
     }
 
     #themeToggle {
@@ -4303,8 +4302,8 @@ body.dark .aboutindustryimage:hover::before {
     }
 
     #headerlogo {
-        width: 255px;
-        height: 65px;
+        width: 135px;
+        height: 45px;
     }
 
     #navlinksdiv {

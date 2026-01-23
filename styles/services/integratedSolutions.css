@@ -147,7 +147,7 @@ body{
 
 #taxContentHeading{
     font-size: clamp(28px, 3vw, 36px);
-    color: white;
+    color: rgb(0, 51, 141);
     margin: 0 0 30px 0;
     font-weight: 700;
     line-height: 1.3;
@@ -246,10 +246,10 @@ body{
 
 
 .ourAreasContentLinks{
-    flex: 1;
     font-size: 18px;
     font-weight: 600;
     color: white;
+    white-space: nowrap;
     transition: all 0.3s ease;
 }
 
@@ -803,10 +803,13 @@ body.dark #proposalRequestDiv {
     margin-top: 80px !important;
 }
 
+body.dark #proposalRequestDiv::before {
+    background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+}
+
 body.dark .cta-title,
 body.dark .cta-description,
-body.dark #proposalHeading,
-body.dark #proposalParagraph {
+body.dark #proposalHeading {
     color: white !important;
 }
 

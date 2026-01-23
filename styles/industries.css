@@ -288,6 +288,32 @@ body{
     margin: 0;
 }
 
+.industriesCard .industrybutton {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(0, 51, 141);
+    border: 2px solid rgb(0, 51, 141);
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-top: 20px;
+}
+
+.industriesCard .industrybutton:hover {
+    background-color: rgb(8, 37, 88);
+    border-color: rgb(8, 37, 88);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3);
+}
+
 .allIndustriesBtnDiv{
     text-align: center;
     position: relative;
@@ -485,12 +511,9 @@ body{
 
     /* Dark Mode Proposal Request Section */
     body.dark #proposalRequestDiv {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+        background: var(--industries-bg) !important;
     }
 
-    body.dark #proposalRequestDiv::before {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
-    }
 
     body.dark #proposalHeading {
         color: white !important;
@@ -546,12 +569,9 @@ body{
 
     /* Dark Mode Proposal Request Section */
     body.dark #proposalRequestDiv {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+        background: var(--industries-bg) !important;
     }
 
-    body.dark #proposalRequestDiv::before {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
-    }
 
     body.dark #proposalHeading {
         color: white !important;
@@ -609,12 +629,9 @@ body{
 
     /* Dark Mode Proposal Request Section */
     body.dark #proposalRequestDiv {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+        background: var(--industries-bg) !important;
     }
 
-    body.dark #proposalRequestDiv::before {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
-    }
 
     body.dark #proposalHeading {
         color: white !important;
@@ -669,12 +686,9 @@ body{
 
     /* Dark Mode Proposal Request Section */
     body.dark #proposalRequestDiv {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+        background: var(--industries-bg) !important;
     }
 
-    body.dark #proposalRequestDiv::before {
-        background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
-    }
 
     body.dark #proposalHeading {
         color: white !important;
@@ -884,10 +898,7 @@ body{
         /* background-color: white; */
         /* padding: 5%; */
     }
-    
-    .imgservicesdiv{
-        /* height: 33px; */
-    }
+
 
     #imagebuton1, #imagebuton2, #imagebuton3, #imagebuton4, #imagebuton5, #imagebuton6{
         font-size: 11px;
@@ -1022,8 +1033,8 @@ body{
     }
 
     body.dark .industriesCard {
-        background-color: #020617 !important;
-        color: white !important;
+        background-color: var(--industries-cards-bg) !important;
+        color: var(--industries-cards-text) !important;
         border: 2px solid #4CAF50 !important;
         box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
     }
@@ -1057,6 +1068,11 @@ body{
         font-size: 15px;
     }
 
+    .industriesCard .industrybutton {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
     .fa {
         font-size: 32px;
     }
@@ -1075,8 +1091,8 @@ body{
     }
 
     body.dark .industriesCard {
-        background-color: #020617 !important;
-        color: white !important;
+        background-color: var(--industries-cards-bg) !important;
+        color: var(--industries-cards-text) !important;
         border: 2px solid #4CAF50 !important;
         box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
     }
@@ -1109,6 +1125,11 @@ body{
     .industriesCardContent {
         font-size: 14px;
     }
+
+    .industriesCard .industrybutton {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
 }
 
 /* Extra Small Mobile */
@@ -1124,8 +1145,8 @@ body{
     }
 
     body.dark .industriesCard {
-        background-color: #020617 !important;
-        color: white !important;
+        background-color: var(--industries-cards-bg) !important;
+        color: var(--industries-cards-text) !important;
         border: 2px solid #4CAF50 !important;
         box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
     }
@@ -1160,6 +1181,11 @@ body{
     .industriesCardContent {
         font-size: 13px;
         line-height: 1.4;
+    }
+
+    .industriesCard .industrybutton {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .industriesContents {
@@ -1275,13 +1301,9 @@ body{
 
 /* Dark Mode Proposal Request Section */
 body.dark #proposalRequestDiv {
-    background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+    background: var(--industries-bg) !important;
     border-top: 2px solid rgba(76, 175, 80, 0.6) !important;
     margin-top: 80px !important;
-}
-
-body.dark #proposalRequestDiv::before {
-    background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
 }
 
 body.dark #proposalHeading {
@@ -1296,13 +1318,11 @@ body.dark #proposalParagraph {
 body.dark .proposalReachOutButton {
     background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
     color: white !important;
-    border-color: rgba(76, 175, 80, 0.5) !important;
 }
 
 body.dark .proposalReachOutButton:hover {
     background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
 }
 
 /* Dark Mode All Industries Button */
@@ -1325,8 +1345,8 @@ body.dark #allIndustriesBtn:hover {
 }
 
 body.dark .industriesCardsDiv .industriesCard {
-    background-color: #020617 !important;
-    color: white !important;
+    background-color: var(--industries-cards-bg) !important;
+    color: var(--industries-cards-text) !important;
     border: 2px solid #4CAF50 !important;
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
     border-radius: 16px !important;
@@ -1351,6 +1371,18 @@ body.dark .industriesCardsDiv .industriesCard .industriesCardContent {
 body.dark .industriesCard h1,
 body.dark .industriesCardsDiv .industriesCard h1 {
     color: white !important;
+}
+
+body.dark .industriesCard .industrybutton {
+    background-color: rgb(0, 51, 141) !important;
+    border-color: rgb(0, 51, 141) !important;
+    color: white !important;
+}
+
+body.dark .industriesCard .industrybutton:hover {
+    background-color: rgb(8, 37, 88) !important;
+    border-color: rgb(8, 37, 88) !important;
+    box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3) !important;
 }
 
 /* Dark mode hover effects */
@@ -1387,4 +1419,4 @@ body.dark .industriesCard:hover {
         transform: translateY(-2px) !important;
         box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
     }
-}
+}}

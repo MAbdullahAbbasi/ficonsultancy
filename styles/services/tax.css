@@ -1,5 +1,8 @@
 /* NAVBAR AND FOOTER STYLES MOVED TO main.css FOR CONSISTENCY */
 
+/* Import shared services styles to avoid redundancy */
+@import url('services-common.css');
+
 body{
     font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
     background-color: #f8f9fa;
@@ -120,9 +123,9 @@ body{
 #taxAndOurAreasSectionContentDiv{
     display: flex;
     gap: 40px;
-    max-width: 1400px;
-    margin: 80px auto;
-    padding: 0 5%;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 2%;
     align-items: flex-start;
 }
 
@@ -131,7 +134,7 @@ body{
 }
 
 #taxSectionContentDiv{
-    width: 60%;
+    width: 65%;
     flex: 1;
     background: white;
     padding: 50px;
@@ -178,15 +181,29 @@ body{
 #taxContentPara p {
     margin: 0 0 20px 0;
     color: #555;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+#taxContentPara p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 51, 141, 0.3) 0%, rgba(0, 51, 141, 0.1) 50%, transparent 100%);
+    border-radius: 1px;
 }
 
 #taxContentPara p:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #OurAreasSectionDiv{
-    width: 40%;
-    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    width: 35%;
+    background: transparent;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     padding: 40px 30px;
@@ -215,6 +232,26 @@ body{
     height: 3px;
     background: rgb(0, 51, 141);
     border-radius: 2px;
+}
+
+.ourAreasImageContainer {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourAreasLandscapeImage {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ourAreasLandscapeImage:hover {
+    transform: scale(1.05);
 }
 
 .ourAreasContent{
@@ -327,12 +364,12 @@ body{
 .proposalReachOutButton{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px 35px;
+    gap: 8px;
+    padding: 10px 24px;
     background: rgba(255, 255, 255, 0.15);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
@@ -351,7 +388,7 @@ body{
 
 .proposalReachOutButton::after {
     content: '→';
-    font-size: 20px;
+    font-size: 16px;
     transition: transform 0.3s ease;
 }
 
@@ -387,7 +424,7 @@ body{
     #taxAndOurAreasSectionContentDiv {
         flex-direction: column;
         gap: 30px;
-        margin: 60px auto;
+        margin: 40px auto;
     }
 
     #taxSectionContentDiv {
@@ -537,8 +574,8 @@ body{
 
 #taxAndOurAreasSectionContentDiv{
     display: block;
-    margin: 40px auto;
-    padding: 0 4%;
+    margin: 30px auto;
+    padding: 0 2%;
     gap: 30px;
 }
 
@@ -624,8 +661,8 @@ body{
 }
 
 .proposalReachOutButton{
-    font-size: 16px;
-    padding: 12px 28px;
+    font-size: 14px;
+    padding: 10px 20px;
     width: 100%;
     justify-content: center;
 }

@@ -448,12 +448,12 @@ body{
 .proposalReachOutButton{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
+    gap: 8px;
+    padding: 10px 24px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 8px;
@@ -465,7 +465,7 @@ body{
 
 .proposalReachOutButton::after {
     content: '→';
-    font-size: 18px;
+    font-size: 16px;
     transition: transform 0.3s ease;
     display: inline-block;
 }
@@ -505,8 +505,8 @@ body{
     }
 
     .proposalReachOutButton {
-        font-size: 17px;
-        padding: 14px 28px;
+        font-size: 15px;
+        padding: 10px 24px;
     }
 
     /* Dark Mode Proposal Request Section */
@@ -563,8 +563,8 @@ body{
     }
 
     .proposalReachOutButton {
-        font-size: 16px;
-        padding: 12px 24px;
+        font-size: 14px;
+        padding: 10px 20px;
     }
 
     /* Dark Mode Proposal Request Section */
@@ -621,8 +621,8 @@ body{
     }
 
     .proposalReachOutButton {
-        font-size: 15px;
-        padding: 12px 22px;
+        font-size: 14px;
+        padding: 10px 20px;
         width: 100%;
         justify-content: center;
     }

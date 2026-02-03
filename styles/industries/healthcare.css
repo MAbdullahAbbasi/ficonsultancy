@@ -215,9 +215,9 @@ body.dark .proposalReachOutButton:hover {
 #healthcareAndOurAreasSectionContentDiv{
     display: flex;
     gap: 40px;
-    max-width: 1400px;
-    margin: 80px auto;
-    padding: 0 5%;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 0 2%;
     align-items: flex-start;
 }
 
@@ -226,7 +226,7 @@ body.dark .proposalReachOutButton:hover {
 }
 
 #healthcareSectionContentDiv{
-    width: 60%;
+    width: 65%;
     flex: 1;
     background: white;
     padding: 50px;
@@ -273,19 +273,33 @@ body.dark .proposalReachOutButton:hover {
 #healthcareContentPara p {
     margin: 0 0 20px 0;
     color: #555;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+#healthcareContentPara p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(0, 51, 141, 0.3) 0%, rgba(0, 51, 141, 0.1) 50%, transparent 100%);
+    border-radius: 1px;
 }
 
 #healthcareContentPara p:last-child {
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #OurAreasSectionDiv{
-    width: 40%;
+    width: 35%;
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.05) 0%, rgba(8, 37, 88, 0.05) 100%);
     border-left: 5px solid rgb(0, 51, 141);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    padding: 40px 30px;
+    padding: 10px 5px;
     height: fit-content;
     position: sticky;
     top: 100px;
@@ -310,6 +324,135 @@ body.dark .proposalReachOutButton:hover {
     height: 3px;
     background: rgb(0, 51, 141);
     border-radius: 2px;
+}
+
+.ourAreasImageContainer {
+    width: 100%;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 700%;
+    animation: carousel-slide 28s infinite ease-in-out;
+    position: relative;
+    gap: 0;
+}
+
+.carousel-image {
+    width: 14.2857%;
+    height: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-image:nth-child(1) {
+    animation: carousel-fade-1 32s infinite;
+}
+
+.carousel-image:nth-child(2) {
+    animation: carousel-fade-2 32s infinite;
+}
+
+.carousel-image:nth-child(3) {
+    animation: carousel-fade-3 32s infinite;
+}
+
+.carousel-image:nth-child(4) {
+    animation: carousel-fade-4 32s infinite;
+}
+
+.carousel-image:nth-child(5) {
+    animation: carousel-fade-5 32s infinite;
+}
+
+.carousel-image:nth-child(6) {
+    animation: carousel-fade-6 32s infinite;
+}
+
+.carousel-image:nth-child(7) {
+    animation: carousel-fade-7 32s infinite;
+}
+
+.carousel-image:nth-child(8) {
+    animation: carousel-fade-8 32s infinite;
+}
+
+@keyframes carousel-slide {
+    0% { transform: translateX(0) scale(1); }
+    12% { transform: translateX(0) scale(1); }
+    14.3% { transform: translateX(-14.2857%) scale(0.95); }
+    26.3% { transform: translateX(-14.2857%) scale(1); }
+    28.6% { transform: translateX(-28.5714%) scale(0.95); }
+    40.6% { transform: translateX(-28.5714%) scale(1); }
+    42.9% { transform: translateX(-42.8571%) scale(0.95); }
+    54.9% { transform: translateX(-42.8571%) scale(1); }
+    57.2% { transform: translateX(-57.1428%) scale(0.95); }
+    69.2% { transform: translateX(-57.1428%) scale(1); }
+    71.5% { transform: translateX(-71.4285%) scale(0.95); }
+    83.5% { transform: translateX(-71.4285%) scale(1); }
+    85.8% { transform: translateX(-85.7142%) scale(0.95); }
+    97.8% { transform: translateX(-85.7142%) scale(1); }
+    100% { transform: translateX(0) scale(1); }
+}
+
+@keyframes carousel-fade-1 {
+    0%, 12% { opacity: 1; transform: scale(1); }
+    14.3%, 26.3% { opacity: 0.3; transform: scale(0.9); }
+    28.6%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-2 {
+    0%, 12% { opacity: 0; transform: scale(0.8); }
+    14.3%, 26.3% { opacity: 1; transform: scale(1); }
+    28.6%, 40.6% { opacity: 0.3; transform: scale(0.9); }
+    42.9%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-3 {
+    0%, 26.3% { opacity: 0; transform: scale(0.8); }
+    28.6%, 40.6% { opacity: 1; transform: scale(1); }
+    42.9%, 54.9% { opacity: 0.3; transform: scale(0.9); }
+    57.2%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-4 {
+    0%, 40.6% { opacity: 0; transform: scale(0.8); }
+    42.9%, 54.9% { opacity: 1; transform: scale(1); }
+    57.2%, 69.2% { opacity: 0.3; transform: scale(0.9); }
+    71.5%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-5 {
+    0%, 54.9% { opacity: 0; transform: scale(0.8); }
+    57.2%, 69.2% { opacity: 1; transform: scale(1); }
+    71.5%, 83.5% { opacity: 0.3; transform: scale(0.9); }
+    85.8%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-6 {
+    0%, 69.2% { opacity: 0; transform: scale(0.8); }
+    71.5%, 83.5% { opacity: 1; transform: scale(1); }
+    85.8%, 97.8% { opacity: 0.3; transform: scale(0.9); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+
+@keyframes carousel-fade-7 {
+    0%, 83.5% { opacity: 0; transform: scale(0.8); }
+    85.8%, 97.8% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
 }
 
 .ourAreasContent{
@@ -435,12 +578,12 @@ body.dark .proposalReachOutButton:hover {
 .proposalReachOutButton{
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px 35px;
+    gap: 8px;
+    padding: 10px 24px;
     background: rgba(255, 255, 255, 0.15);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
@@ -459,7 +602,7 @@ body.dark .proposalReachOutButton:hover {
 
 .proposalReachOutButton::after {
     content: '→';
-    font-size: 20px;
+    font-size: 16px;
     transition: transform 0.3s ease;
 }
 
@@ -495,7 +638,7 @@ body.dark .proposalReachOutButton:hover {
     #healthcareAndOurAreasSectionContentDiv {
         flex-direction: column;
         gap: 30px;
-        margin: 60px auto;
+        margin: 40px auto;
     }
 
     #healthcareSectionContentDiv {
@@ -645,8 +788,8 @@ body.dark .proposalReachOutButton:hover {
 
 #healthcareAndOurAreasSectionContentDiv{
     display: block;
-    margin: 40px auto;
-    padding: 0 4%;
+    margin: 30px auto;
+    padding: 0 2%;
     gap: 30px;
 }
 
@@ -732,8 +875,8 @@ body.dark .proposalReachOutButton:hover {
 }
 
 .proposalReachOutButton{
-    font-size: 16px;
-    padding: 12px 28px;
+    font-size: 14px;
+    padding: 10px 20px;
     width: 100%;
     justify-content: center;
 }

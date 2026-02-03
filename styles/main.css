@@ -283,8 +283,8 @@ body.dark {
 /* Backdrop should also start below navbar on mobile */
 @media (max-width: 768px) {
     .menuBackdrop {
-        top: 60px; /* Start below navbar bar */
-        height: calc(100vh - 60px); /* Fill remaining viewport below navbar */
+        top: 48px; /* Start below navbar bar */
+        height: calc(100vh - 48px); /* Fill remaining viewport below navbar */
     }
 }
 
@@ -544,7 +544,7 @@ body.menuOpen {
     z-index: 22;
     height: fit-content;
     align-items: center;
-    padding: 12px 0;
+    padding: 4px 0;
     box-shadow: 0 2px 12px var(--navbar-shadow);
     border-bottom: 1px solid var(--navbar-border);
     /* box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -568,8 +568,8 @@ body.menuOpen {
 
 #headerlogo {
     /* border-radius: 50%; */
-    width: 220px;
-    height: 60px;
+    width: 180px;
+    height: 45px;
     /* display: none; */
 }
 
@@ -657,13 +657,13 @@ body.menuOpen {
 
 #themeToggle{
     flex: 1;
-    padding: 10px 16px;
-    border: 2px solid transparent;
+    padding: 6px 12px;
+    border: none;
     border-radius: 50px;
     cursor: pointer;
     background: linear-gradient(135deg, rgba(0, 51, 141, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
     color: var(--navbarLinksColor);
-    font-size: 18px;
+    font-size: 15px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1223,8 +1223,8 @@ body.menuOpen {
     }
 
     #headerlogo {
-        width: 135px;
-        height: 45px;
+        width: 110px;
+        height: 35px;
     }
 
     #companyNameHeading {
@@ -1840,12 +1840,12 @@ body.menuOpen {
     }
 
     #themeToggle {
-        padding: 8px 12px;
-        font-size: 20px;
+        padding: 6px 10px;
+        font-size: 16px;
         border-radius: 50px;
         transition: all 0.3s ease;
         background: linear-gradient(135deg, rgba(0, 51, 141, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
-        border: 2px solid transparent;
+        border: none;
         position: relative;
         overflow: hidden;
     }
@@ -1873,7 +1873,7 @@ body.menuOpen {
 
     body.dark #themeToggle {
         background: linear-gradient(135deg, rgba(2, 6, 23, 0.8) 0%, rgba(76, 175, 80, 0.1) 100%);
-        border-color: rgba(76, 175, 80, 0.3);
+        border: none;
         color: white;
     }
 
@@ -1898,8 +1898,8 @@ body.menuOpen {
     }
 
     #headerlogo {
-        width: 135px;
-        height: 45px;
+        width: 110px;
+        height: 35px;
     }
 
     #companyNameHeading {
@@ -1910,8 +1910,8 @@ body.menuOpen {
     .responsiveNavdiv {
         width: 70%;
         max-width: 300px;
-        height: calc(100vh - 60px); /* Fill remaining viewport below navbar */
-        top: 60px; /* Start below navbar bar */
+        height: calc(100vh - 48px); /* Fill remaining viewport below navbar */
+        top: 48px; /* Start below navbar bar */
         left: 0;
     }
 
@@ -4161,6 +4161,10 @@ body.dark .aboutindustryimage:hover::before {
     color: white;
 }
 
+#footerpra1 {
+    cursor: pointer;
+}
+
 .contactpra {
     font-size: 17px;
     margin: 0;
@@ -4230,7 +4234,7 @@ body.dark .aboutindustryimage:hover::before {
 
     .navdiv {
         flex-wrap: nowrap;
-        padding: 8px 15px;
+        padding: 3px 15px;
         justify-content: space-between;
         align-items: center;
         position: relative;
@@ -4287,11 +4291,11 @@ body.dark .aboutindustryimage:hover::before {
     }
 
     #themeToggle {
-        padding: 8px 12px;
-        font-size: 18px;
+        padding: 5px 10px;
+        font-size: 15px;
         border-radius: 50px;
         background: linear-gradient(135deg, rgba(0, 51, 141, 0.1) 0%, rgba(34, 211, 238, 0.1) 100%);
-        border: 2px solid transparent;
+        border: none;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -4320,7 +4324,7 @@ body.dark .aboutindustryimage:hover::before {
 
     body.dark #themeToggle {
         background: linear-gradient(135deg, rgba(2, 6, 23, 0.8) 0%, rgba(76, 175, 80, 0.1) 100%);
-        border-color: rgba(76, 175, 80, 0.3);
+        border: none;
         color: white;
     }
 
@@ -4337,8 +4341,8 @@ body.dark .aboutindustryimage:hover::before {
     }
 
     #headerlogo {
-        width: 135px;
-        height: 45px;
+        width: 110px;
+        height: 35px;
     }
 
     #navlinksdiv {
@@ -4355,9 +4359,9 @@ body.dark .aboutindustryimage:hover::before {
         backdrop-filter: blur(20px);
         max-width: 280px;
         border-radius: 0 15px 15px 0;
-        top: 60px; /* Start below navbar bar */
+        top: 48px; /* Start below navbar bar */
         /* Fill remaining viewport below navbar */
-        height: calc(100vh - 60px);
+        height: calc(100vh - 48px);
         border-right: 1px solid var(--navbar-border);
         box-shadow: 4px 0 30px var(--navbar-shadow);
     }
@@ -5917,3 +5921,26 @@ body.dark .aboutindustryimage:hover::before {
     }
 
 }
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------- Services Pages Navbar & Footer Overrides --------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* 
+   SERVICES PAGES FONT-WEIGHT OVERRIDES
+   
+   Services pages use Poppins font (via their individual CSS files) which makes 
+   font-weight 500 appear bolder than Arial. To maintain consistency with other 
+   pages, navbar links and footer content should use normal weight (400) on 
+   services pages.
+   
+   IMPLEMENTATION:
+   - These overrides are centralized in styles/services/services-common.css
+   - All services CSS files import this shared file using @import to avoid redundancy
+   - This ensures consistency and makes maintenance easier
+*/

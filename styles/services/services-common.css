@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------- Services Pages Common Styles --------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* 
+   This file contains shared styles for all services pages.
+   It is imported by all individual services CSS files to avoid redundancy.
+   
+   Services pages use Poppins font which makes font-weight 500 appear bolder.
+   These overrides ensure navbar links and footer content have normal weight (400)
+   on services pages to match the styling of other pages.
+*/
+
+/* Make navbar links normal weight (not bold) */
+.listsnav,
+.listsrespnav {
+    font-weight: 400 !important;
+}
+
+/* Make footer content normal weight (not bold) */
+.contactpra,
+.footerLinksPages,
+.footercopyright {
+    font-weight: 400 !important;
+}
+

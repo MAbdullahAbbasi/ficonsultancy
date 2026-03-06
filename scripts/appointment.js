@@ -1,6 +1,7 @@
 // ================================
 // Helper Functions for Form Field Management
 // ================================
+
 function disableFormFields(form) {
     const inputs = form.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {

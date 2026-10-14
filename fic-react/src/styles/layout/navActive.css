@@ -1,0 +1,22 @@
+/* Active navigation — React NavLink states (original site has no dedicated current-page styling) */
+
+.listsnav.active,
+.listsrespnav.active {
+    background-color: var(--navbar-hover-bg);
+}
+
+#servicesNavItem.nav-parent-active > .listsnav,
+#industriesNavItem.nav-parent-active > .listsnav {
+    background-color: var(--navbar-hover-bg);
+}
+
+.listsrespnav.nav-parent-active {
+    background-color: var(--navbar-hover-bg);
+}
+
+/* Appointment links styled as buttons (preserves #MakeAppointment / #MakeAppointmentMobile appearance) */
+#MakeAppointment.make-appointment-link,
+#MakeAppointmentMobile.make-appointment-link {
+    display: inline-block;
+    text-decoration: none;
+}

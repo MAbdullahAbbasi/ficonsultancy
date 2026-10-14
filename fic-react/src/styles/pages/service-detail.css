@@ -1,0 +1,547 @@
+/* ------------------------------------------------------------------- */
+/* ---------------- Service Detail Pages (Phase 4D) ------------------ */
+/* Unified from styles/services/*.css + services-common.css          */
+/* ------------------------------------------------------------------- */
+
+/* services-common.css — navbar/footer weight overrides on service pages */
+.listsnav,
+.listsrespnav {
+  font-weight: 400 !important;
+}
+
+.contactpra,
+.footerLinksPages,
+.footercopyright {
+  font-weight: 400 !important;
+}
+
+/* ------------------------------------------------------------------- */
+/* ----------------------- Hero Section ------------------------------ */
+/* ------------------------------------------------------------------- */
+
+.service-detail-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-detail-hero__image {
+  background-image: var(--service-hero-image);
+  height: 50vh;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: relative;
+}
+
+.service-detail-hero__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 141, 0.5) 0%, rgba(8, 37, 88, 0.4) 100%);
+  z-index: 1;
+}
+
+.service-detail-hero__content {
+  height: 50vh;
+  min-height: 400px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 51, 141, 0.7) 0%,
+    rgba(0, 51, 141, 0.5) 40%,
+    rgba(0, 51, 141, 0.3) 70%,
+    rgba(0, 51, 141, 0) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.service-detail-hero__text {
+  width: 60%;
+  max-width: 700px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5%;
+  animation: serviceDetailFadeInUp 0.8s ease-out;
+}
+
+@keyframes serviceDetailFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-detail-hero__heading {
+  font-size: clamp(32px, 5vw, 48px);
+  text-align: left;
+  width: 100%;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.service-detail-hero__para {
+  font-size: clamp(16px, 2vw, 20px);
+  width: 100%;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------- Content Section ------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.service-detail-body {
+  display: flex;
+  gap: 40px;
+  max-width: 1600px;
+  margin: 50px auto;
+  padding: 0 2%;
+  align-items: flex-start;
+}
+
+.contentDiv {
+  margin: 0;
+}
+
+.service-detail-main {
+  width: 65%;
+  flex: 1;
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-detail-main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.service-detail-main__heading {
+  font-size: clamp(28px, 3vw, 36px);
+  color: rgb(0, 51, 141);
+  margin: 0 0 30px 0;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.service-detail-main__heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, rgb(0, 51, 141), rgba(0, 51, 141, 0.3));
+  border-radius: 2px;
+}
+
+.service-detail-main__para {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+}
+
+.service-detail-main__para p {
+  margin: 0 0 20px 0;
+  color: #555;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.service-detail-main__para p:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 51, 141, 0.3) 0%, rgba(0, 51, 141, 0.1) 50%, transparent 100%);
+  border-radius: 1px;
+}
+
+.service-detail-main__para p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#OurAreasSectionDiv {
+  width: 35%;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 40px 30px;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+  color: white;
+}
+
+.ourAreasImageContainer {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourAreasLandscapeImage {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.ourAreasLandscapeImage:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------ Proposal Request Section ----------------------- */
+/* ------------------------------------------------------------------- */
+
+#proposalRequestDiv {
+  color: white;
+  padding: 100px 5%;
+  background: linear-gradient(135deg, rgba(0, 51, 141, 0.95) 0%, rgba(8, 37, 88, 0.95) 100%),
+    url('/images/blueColorBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+#proposalRequestDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 141, 0.9) 0%, rgba(8, 37, 88, 0.85) 100%);
+  z-index: 1;
+}
+
+#proposalRequestContent {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.proposalRequestContents {
+  margin: 0;
+}
+
+#proposalHeading {
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  line-height: 1.3;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#proposalParagraph {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.8;
+  margin: 0 0 35px 0;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+.proposalReachOutButton {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.proposalReachOutButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  color: white;
+}
+
+.proposalReachOutButton::after {
+  content: '→';
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.proposalReachOutButton:hover::after {
+  transform: translateX(5px);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------ Not Found -------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.service-detail-not-found {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px 5%;
+  text-align: center;
+}
+
+.service-detail-not-found h1 {
+  color: rgb(0, 51, 141);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 16px;
+}
+
+.service-detail-not-found a {
+  color: rgb(0, 51, 141);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------- */
+/* ###################### Responsiveness ############################# */
+/* ------------------------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .service-detail-body {
+    flex-direction: column;
+    gap: 30px;
+    margin: 40px auto;
+  }
+
+  .service-detail-main {
+    width: 100%;
+  }
+
+  #OurAreasSectionDiv {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-detail-hero__image {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .service-detail-hero__content {
+    height: 40vh;
+    min-height: 300px;
+    width: 100%;
+    z-index: 1;
+    color: white;
+  }
+
+  .service-detail-hero__text {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-detail-hero__heading {
+    font-size: clamp(24px, 6vw, 32px);
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .service-detail-hero__para {
+    font-size: clamp(14px, 3vw, 18px);
+    text-align: center;
+    width: 100%;
+  }
+
+  .service-detail-body {
+    display: block;
+    margin: 30px auto;
+    padding: 0 2%;
+    gap: 30px;
+  }
+
+  .service-detail-main {
+    width: 100%;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+
+  .service-detail-main__heading {
+    font-size: clamp(22px, 5vw, 28px);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+  }
+
+  .service-detail-main__para {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .service-detail-main__para p {
+    margin-bottom: 15px;
+  }
+
+  #OurAreasSectionDiv {
+    width: 100%;
+    padding: 30px 20px;
+    position: relative;
+    top: 0;
+  }
+
+  #proposalRequestDiv {
+    padding: 60px 4%;
+    background-attachment: scroll;
+  }
+
+  #proposalRequestContent {
+    width: 100%;
+  }
+
+  #proposalHeading {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 20px;
+  }
+
+  #proposalParagraph {
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  .proposalReachOutButton {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* (CSS preserved; ThemeContext not implemented in Phase 4D)           */
+/* ------------------------------------------------------------------- */
+
+body.dark .service-detail-hero__image {
+  background-image: linear-gradient(135deg, rgba(2, 6, 23, 0.4) 0%, rgba(2, 6, 23, 0.5) 100%),
+    var(--service-hero-image) !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+body.dark .service-detail-hero__image::before {
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.3) 0%, rgba(2, 6, 23, 0.4) 100%) !important;
+}
+
+body.dark .service-detail-hero__content {
+  background: linear-gradient(
+    to right,
+    rgba(2, 6, 23, 0.7) 0%,
+    rgba(2, 6, 23, 0.5) 40%,
+    rgba(2, 6, 23, 0.3) 70%,
+    rgba(2, 6, 23, 0) 100%
+  ) !important;
+}
+
+body.dark .service-detail-hero__heading,
+body.dark .service-detail-hero__para {
+  color: white !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+body.dark .service-detail-hero {
+  border-bottom: 2px solid rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .contentDiv {
+  background: #020617 !important;
+  border: 2px solid rgba(76, 175, 80, 0.4) !important;
+  box-shadow: 0 8px 30px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .contentDiv h1,
+body.dark .contentDiv h2,
+body.dark .contentDiv h3,
+body.dark .contentDiv h4,
+body.dark .contentDiv p {
+  color: white !important;
+}
+
+body.dark .service-detail-main__heading {
+  color: white !important;
+}
+
+body.dark #proposalRequestDiv {
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.9) 100%) !important;
+  border-top: 2px solid rgba(76, 175, 80, 0.6) !important;
+  margin-top: 80px !important;
+}
+
+body.dark #proposalRequestDiv::before {
+  background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%) !important;
+}
+
+body.dark #proposalHeading {
+  color: white !important;
+}
+
+body.dark #proposalParagraph {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .proposalReachOutButton {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+  color: white !important;
+}
+
+body.dark .proposalReachOutButton:hover {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+  transform: translateY(-2px) !important;
+}

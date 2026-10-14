@@ -1,0 +1,27 @@
+/* Font Awesome React (SVG) compatibility for About page */
+
+.missionIcon svg,
+.visionIcon svg {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.featureItem svg {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    color: #4CAF50;
+}
+
+.valueCard svg {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: rgb(0, 51, 141);
+    margin-bottom: 20px;
+}
+
+body.dark .valueCard svg {
+    color: var(--values-cards-text);
+}

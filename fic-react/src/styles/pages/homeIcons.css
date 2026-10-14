@@ -1,0 +1,62 @@
+/* Font Awesome React (SVG) compatibility for home page */
+
+a.btn-primary,
+a.btn-secondary {
+    text-decoration: none;
+}
+
+.btn-primary svg,
+.btn-secondary svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover svg {
+    transform: translateX(4px);
+}
+
+.heading5 svg,
+.heading5 .fa {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 44px;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    position: relative;
+}
+
+.aboutindustryimage:hover .heading5 svg {
+    color: rgb(0, 51, 141) !important;
+    transform: scale(1.1);
+}
+
+.valuepra3 svg {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #4CAF50;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.pradivs:hover .valuepra3 svg {
+    color: white;
+    transform: scale(1.1);
+}
+
+.industryimagediv .hoverStyle {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.overlayServices {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.4s;
+}

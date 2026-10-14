@@ -1,0 +1,32 @@
+.field-error {
+  font-size: 14px;
+  color: #f44336;
+  font-family: 'Inter', sans-serif;
+  margin-top: 4px;
+}
+
+.form-config-notice {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #b45309;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.form-config-notice code {
+  font-size: 13px;
+}
+
+body.dark .field-error {
+  color: #fca5a5;
+}
+
+body.dark .form-config-notice {
+  color: #fde68a;
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.25);
+}

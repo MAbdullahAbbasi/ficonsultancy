@@ -1,0 +1,99 @@
+[
+  {
+    "title": "Home",
+    "url": "/index.html",
+    "content": "Financial consultancy services offering professional guidance, planning, and business solutions."
+  },
+  {
+    "title": "About Us",
+    "url": "/pages/about.html",
+    "content": "Learn about our mission, values, expertise, and commitment to providing reliable financial consultancy services."
+  },
+  {
+    "title": "Contact Us",
+    "url": "/pages/contact.html",
+    "content": "Get in touch with our financial consultants for inquiries, consultations, and support."
+  },
+  {
+    "title": "Appointment",
+    "url": "/pages/appointment.html",
+    "content": "Book an appointment with our professional financial consultants easily."
+  },
+  {
+    "title": "Careers",
+    "url": "/pages/careers.html",
+    "content": "Explore career opportunities and job openings with our financial consultancy firm."
+  },
+
+  {
+    "title": "Industries",
+    "url": "/pages/industries.html",
+    "content": "Industries we serve including construction, healthcare, ICT, and transportation sectors."
+  },
+  {
+    "title": "Building & Construction",
+    "url": "/pages/industries/building&construction.html",
+    "content": "Financial consultancy services tailored for the building and construction industry."
+  },
+  {
+    "title": "Consumer Retail",
+    "url": "/pages/industries/consumerRetail.html",
+    "content": "Business and financial advisory solutions for consumer retail industries."
+  },
+  {
+    "title": "Financial Services",
+    "url": "/pages/industries/financialServices.html",
+    "content": "Specialized financial services including auditing, reporting, and advisory solutions."
+  },
+  {
+    "title": "Healthcare",
+    "url": "/pages/industries/healthcare.html",
+    "content": "Financial planning and consultancy services for healthcare organizations."
+  },
+  {
+    "title": "ICT",
+    "url": "/pages/industries/ICT.html",
+    "content": "Technology-focused financial consultancy for ICT businesses and startups."
+  },
+  {
+    "title": "Transportation",
+    "url": "/pages/industries/transportation.html",
+    "content": "Financial strategy and advisory services for the transportation sector."
+  },
+
+  {
+    "title": "Services",
+    "url": "/pages/services.html",
+    "content": "Explore our wide range of professional financial and advisory services."
+  },
+  {
+    "title": "Advisory Services",
+    "url": "/pages/services/advisory.html",
+    "content": "Expert advisory services to help businesses make informed decisions."
+  },
+  {
+    "title": "Audit Services",
+    "url": "/pages/services/audit.html",
+    "content": "Professional audit services ensuring compliance and financial accuracy."
+  },
+  {
+    "title": "Bookkeeping",
+    "url": "/pages/services/bookkeeping.html",
+    "content": "Reliable bookkeeping services for accurate financial records."
+  },
+  {
+    "title": "Financial Reporting",
+    "url": "/pages/services/financialreporting.html",
+    "content": "Clear and detailed financial reporting solutions for businesses."
+  },
+  {
+    "title": "Integrated Solutions",
+    "url": "/pages/services/integratedSolutions.html",
+    "content": "Integrated financial and business solutions tailored to your needs."
+  },
+  {
+    "title": "Tax Services",
+    "url": "/pages/services/tax.html",
+    "content": "Professional tax planning, compliance, and advisory services."
+  }
+]

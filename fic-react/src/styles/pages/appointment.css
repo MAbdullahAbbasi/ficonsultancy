@@ -1,0 +1,669 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Navbar --------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* NAVBAR STYLES ARE IN main.css FOR CONSISTENCY ACROSS ALL PAGES */
+
+/* Appointment button styles are in main.css for consistency */
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* -------------------------- Alert ---------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+
+.alertOuterDiv{
+    position: absolute;
+    transform: translateX(340%);
+    display: none;
+}
+
+.appointmentBookAlertDiv{
+    background-color: green;
+    color: white;
+    font-size: larger;
+    width: 350px;
+    padding: 2%;
+    border-radius: 7.5px;
+    /* transform: translateX(500px); */
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------- Appointment Form and Image ----------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.outerdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 80px);
+    background-color: white;
+    color: rgb(0, 51, 141);
+    gap: 40px;
+    padding: 60px 20px;
+    margin-top: 20px;
+}
+
+.appointmentouter{
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 51, 141, 0.1);
+    padding: 40px;
+    margin: 0;
+    width: 45%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Appointment Form --------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.heading{
+    text-align: center;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700;
+    color: rgb(0, 51, 141);
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputsdiv {
+    width: 100%;
+}
+
+.formfieldsDiv{
+    margin-bottom: 20px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.labelstyling{
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 51, 141);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.labelstyling i {
+    font-size: 16px;
+    color: rgb(0, 51, 141);
+}
+
+.inputstyling{
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 2px solid rgba(0, 51, 141, 0.2);
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.inputstyling::placeholder {
+    color: rgba(0, 51, 141, 0.4);
+}
+
+.inputstyling:focus {
+    outline: none;
+    border-color: rgb(0, 51, 141);
+    box-shadow: 0 0 0 3px rgba(0, 51, 141, 0.1);
+    transform: translateY(-2px);
+}
+
+.inputstyling:hover {
+    border-color: rgba(0, 51, 141, 0.4);
+}
+
+.textareaStyle {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Inter', sans-serif;
+}
+
+.submitWrapper {
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.appointmentbtn{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, rgb(0, 51, 141) 0%, rgb(8, 37, 88) 100%);
+    padding: 16px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 51, 141, 0.3);
+}
+
+.appointmentbtn:hover{
+    background: linear-gradient(135deg, rgb(8, 37, 88) 0%, rgb(0, 51, 141) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 51, 141, 0.4);
+}
+
+.appointmentbtn:active{
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 51, 141, 0.3);
+}
+
+.appointmentbtn i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.appointmentbtn:hover i {
+    transform: scale(1.1);
+}
+
+#appointbtn{
+    margin: 0;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* --------------------- Appointment Image --------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+.imageCalender{
+    width: 45%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-top: 0;
+}
+
+.imageCalender img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.imageCalender .slogan {
+    color: rgb(0, 51, 141);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 600;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 100%;
+    width: 100%;
+    word-spacing: 1px;
+    hyphens: auto;
+}
+
+
+/* -------------------------- Footer Section ------------------------- */
+/* FOOTER STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
+
+
+/* ------------------------------------------------------------------- */
+/* ----------------------- Dark Mode Styling ------------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .outerdiv {
+    background: #020617 !important;
+    color: white !important;
+}
+
+body.dark .appointmentouter {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .heading {
+    color: white !important;
+}
+
+body.dark .labelstyling {
+    color: white !important;
+}
+
+body.dark .labelstyling i {
+    color: rgba(76, 175, 80, 0.8) !important;
+}
+
+body.dark .inputstyling {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: white !important;
+}
+
+body.dark .inputstyling::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .inputstyling:focus {
+    border-color: rgba(76, 175, 80, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark .inputstyling:hover {
+    border-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentbtn {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .appointmentbtn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentBookAlertDiv {
+    background-color: rgba(76, 175, 80, 0.9) !important;
+    color: white !important;
+}
+
+body.dark .slogan {
+    color: white !important;
+}
+
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ###################### Responsiveness ############################# */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+/* ################################################################### */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .outerdiv {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 20px;
+        min-height: auto;
+    }
+
+    .appointmentouter {
+        width: 100%;
+        max-width: 600px;
+        padding: 35px;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .formRow {
+        gap: 15px;
+    }
+
+    .heading {
+        font-size: clamp(24px, 3vw, 32px);
+    }
+}
+
+@media (max-width: 768px) {
+    .outerdiv {
+        flex-direction: column;
+        gap: 25px;
+        padding: 40px 15px;
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    .appointmentouter {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    /* Dark Mode Styles for Mobile */
+    body.dark .outerdiv {
+        background: #020617 !important;
+        color: white !important;
+    }
+
+    body.dark .appointmentouter {
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark .heading {
+        color: white !important;
+    }
+
+    body.dark .labelstyling {
+        color: white !important;
+    }
+
+    body.dark .labelstyling i {
+        color: rgba(76, 175, 80, 0.8) !important;
+    }
+
+    body.dark .inputstyling {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark .inputstyling::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark .inputstyling:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark .appointmentbtn {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark .appointmentbtn:hover {
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
+
+    body.dark .slogan {
+        color: white !important;
+    }
+}
+
+@media (max-width: 600px){
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ---------------------- Nav And Hero Section ----------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* NAVBAR RESPONSIVE STYLES ARE IN main.css FOR CONSISTENCY */
+    
+    
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ---------------------- Appointment Form --------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    /* ------------------------------------------------------------------- */
+    
+    .outerdiv{
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 15px;
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    .appointmentouter{
+        width: 100%;
+        padding: 25px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .imageCalender {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .heading{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .formfieldsDiv{
+        margin-bottom: 18px;
+    }
+
+    .labelstyling{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .labelstyling i {
+        font-size: 14px;
+    }
+
+    .inputstyling{
+        padding: 12px 14px;
+        font-size: 15px;
+        border-radius: 6px;
+    }
+
+    .textareaStyle {
+        min-height: 100px;
+    }
+
+    .submitWrapper {
+        margin-top: 25px;
+    }
+
+    .appointmentbtn{
+        font-size: 16px;
+        padding: 14px 24px;
+        border-radius: 6px;
+    }
+
+    .appointmentbtn:hover{
+        transform: translateY(-1px);
+    }
+
+    /* Dark Mode Styles for Small Mobile */
+    body.dark .outerdiv{
+        background: #020617 !important;
+        color: white !important;
+    }
+
+    body.dark .appointmentouter{
+        background: #020617 !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+    }
+
+    body.dark .heading{
+        color: white !important;
+    }
+
+    body.dark .labelstyling{
+        color: white !important;
+    }
+
+    body.dark .labelstyling i {
+        color: rgba(76, 175, 80, 0.8) !important;
+    }
+
+    body.dark .inputstyling{
+        background: rgba(255, 255, 255, 0.05) !important;
+        border-color: rgba(76, 175, 80, 0.3) !important;
+        color: white !important;
+    }
+
+    body.dark .inputstyling::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    body.dark .inputstyling:focus {
+        border-color: rgba(76, 175, 80, 0.6) !important;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    body.dark .appointmentbtn{
+        background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+    }
+
+    body.dark .appointmentbtn:hover{
+        background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+        box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+    }
+
+    body.dark .slogan {
+        color: white !important;
+    }
+
+
+    /* -------------------------- Footer Section ------------------------- */
+    /* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- Dark Mode Styles ----------------------- */
+/* ------------------------------------------------------------------- */
+
+body.dark .outerdiv {
+    background: #020617 !important;
+    color: white !important;
+}
+
+body.dark .appointmentouter {
+    background: #020617 !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    box-shadow: 0 10px 40px rgba(76, 175, 80, 0.1) !important;
+}
+
+body.dark .heading {
+    color: white !important;
+}
+
+body.dark .labelstyling {
+    color: white !important;
+}
+
+body.dark .labelstyling i {
+    color: rgba(76, 175, 80, 0.8) !important;
+}
+
+body.dark .inputstyling {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(76, 175, 80, 0.3) !important;
+    color: white !important;
+}
+
+body.dark .inputstyling::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.dark .inputstyling:focus {
+    border-color: rgba(76, 175, 80, 0.6) !important;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark .inputstyling:hover {
+    border-color: rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .appointmentbtn {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3) !important;
+}
+
+body.dark .appointmentbtn:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .slogan {
+    color: white !important;
+}
+
+body.dark .alertOuterDiv .appointmentBookAlertDiv {
+    background-color: rgba(76, 175, 80, 0.9) !important;
+    color: white !important;
+}

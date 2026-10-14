@@ -1,0 +1,29 @@
+/* Font Awesome React (SVG) compatibility for mobile nav dropdown arrows and icons */
+
+#servicesRespNavItem .listsrespnav svg,
+#industriesRespNavItem .listsrespnav svg {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+#servicesRespNavItem .listsrespnav svg.rotated,
+#industriesRespNavItem .listsrespnav svg.rotated {
+    transform: rotate(180deg);
+}
+
+#servicesRespDropDownDiv .serviceslistsrespnav svg,
+#industriesRespDropDownDiv .industrieslistsrespnav svg {
+    font-size: 14px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+#servicesRespDropDownDiv .serviceslistsrespnav:hover svg,
+#industriesRespDropDownDiv .industrieslistsrespnav:hover svg {
+    transform: scale(1.1);
+}

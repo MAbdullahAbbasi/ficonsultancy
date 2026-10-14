@@ -1,0 +1,11 @@
+/* Font Awesome React (SVG) compatibility for footer icons */
+
+.iconsdiv svg {
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+}
+
+.contactpra svg {
+    margin-right: 8px;
+}

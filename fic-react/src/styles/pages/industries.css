@@ -1,0 +1,767 @@
+/* FI Consultancy — Industries listing (from styles/industries.css) */
+
+.industries-listing-page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -------------------------- Hero Section --------------------------- */
+
+.industries-listing-page .servicesimageouterdiv {
+  position: relative;
+  width: 100%;
+}
+
+.industries-listing-page .servicesimageinnerdiv {
+  height: 50vh;
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.industries-listing-page .services-carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.industries-listing-page .services-carousel-slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.industries-listing-page .services-carousel-slide.immediate-visible {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: none !important;
+}
+
+.industries-listing-page .services-carousel-slide.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+.industries-listing-page .services-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 51, 141, 0.35) 0%, rgba(0, 31, 84, 0.45) 100%);
+  z-index: 2;
+}
+
+.industries-listing-page .servicesoverlaydiv {
+  width: 100%;
+  height: 50vh;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  background: transparent;
+}
+
+.industries-listing-page .servicesOverlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+.industries-listing-page .servicesheading {
+  color: white;
+  font-size: 55px;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.industries-listing-page #servicesoverlaySlogan {
+  width: 75vw;
+  max-width: 900px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .industries-listing-page .servicesimageinnerdiv,
+  .industries-listing-page .servicesoverlaydiv {
+    height: 45vh;
+    min-height: 350px;
+  }
+
+  .industries-listing-page .servicesheading {
+    font-size: 42px;
+  }
+
+  .industries-listing-page #servicesoverlaySlogan {
+    font-size: 20px;
+    width: 85vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-listing-page .servicesimageinnerdiv,
+  .industries-listing-page .servicesoverlaydiv {
+    height: 40vh;
+    min-height: 300px;
+  }
+
+  .industries-listing-page .servicesheading {
+    font-size: 32px;
+  }
+
+  .industries-listing-page #servicesoverlaySlogan {
+    font-size: 16px;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-listing-page .servicesimageinnerdiv,
+  .industries-listing-page .servicesoverlaydiv {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .industries-listing-page .servicesheading {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .industries-listing-page #servicesoverlaySlogan {
+    font-size: 14px;
+    width: 95vw;
+    line-height: 1.4;
+  }
+}
+
+/* ------------------- Industries Cards Section ---------------------- */
+
+.industriesCardsDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  padding: 60px 5%;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (min-width: 1025px) {
+  .industriesCardsDiv {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+  }
+}
+
+.industriesCardsAnchor {
+  text-decoration: none;
+  color: rgb(0, 51, 141);
+}
+
+.industriesCard {
+  background-color: white;
+  margin: 0;
+  padding: 50px 40px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 51, 141, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 280px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.industriesCard:hover {
+  box-shadow: 0 8px 25px rgba(0, 51, 141, 0.15);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  border-color: rgba(0, 51, 141, 0.3);
+}
+
+.industriesCardHeading {
+  font-weight: 600;
+  border-left: 4px solid rgb(0, 51, 141);
+  padding-left: 20px;
+  font-size: 26px;
+  margin: 0 0 20px 0;
+  color: rgb(0, 51, 141);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.industriesCardHeading .fa {
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.industriesContents {
+  margin: 0;
+}
+
+.industriesCardContent {
+  color: #555;
+  line-height: 1.7;
+  font-size: 17px;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.industriesCard .industrybutton {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgb(0, 51, 141);
+  border: 2px solid rgb(0, 51, 141);
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+  margin-top: 20px;
+}
+
+.industriesCard .industrybutton:hover {
+  background-color: rgb(8, 37, 88);
+  border-color: rgb(8, 37, 88);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3);
+}
+
+.allIndustriesBtnDiv {
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: -35px;
+  z-index: 10;
+}
+
+#allIndustriesBtn {
+  color: rgb(0, 51, 141);
+  border: 1px solid rgb(0, 51, 141);
+  text-decoration: none;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#allIndustriesBtn:hover {
+  background-color: rgb(0, 51, 141);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3);
+}
+
+.cardsSectionDiv {
+  position: relative;
+  padding-bottom: 0;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .industriesCardsDiv {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 4%;
+  }
+
+  .industriesCard {
+    padding: 4.5%;
+  }
+
+  .industriesCardHeading {
+    font-size: 20px;
+  }
+
+  .industriesCardHeading .fa {
+    font-size: 28px;
+  }
+
+  .industriesCardContent {
+    font-size: 15px;
+  }
+
+  .industriesCard .industrybutton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .industriesCardsDiv {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 3%;
+  }
+
+  .industriesCard {
+    padding: 4%;
+  }
+
+  .industriesCardHeading {
+    font-size: 19px;
+  }
+
+  .industriesCardHeading .fa {
+    font-size: 26px;
+  }
+
+  .industriesCardContent {
+    font-size: 14px;
+  }
+
+  .industriesCard .industrybutton {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industriesCardsDiv {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 2.5%;
+  }
+
+  .industriesCard {
+    padding: 3.5%;
+  }
+
+  .industriesCardHeading {
+    font-size: 16px;
+    padding-left: 2%;
+    gap: 10px;
+  }
+
+  .industriesCardHeading .fa {
+    font-size: 22px;
+  }
+
+  .industriesCardContent {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .industriesCard .industrybutton {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .industriesContents {
+    margin: 2.5%;
+  }
+
+  #allIndustriesBtn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .allIndustriesBtnDiv {
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .allIndustriesBtnDiv {
+    margin-bottom: -32px;
+  }
+
+  #allIndustriesBtn {
+    font-size: 17px;
+    padding: 11px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .allIndustriesBtnDiv {
+    margin-bottom: -28px;
+  }
+
+  #allIndustriesBtn {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .allIndustriesBtnDiv {
+    margin-bottom: -25px;
+  }
+
+  #allIndustriesBtn {
+    font-size: 15px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .allIndustriesBtnDiv {
+    margin-bottom: -22px;
+  }
+
+  #allIndustriesBtn {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+}
+
+/* ------------------ Proposal Request (scoped) ---------------------- */
+
+.industries-listing-page #proposalRequestDiv {
+  color: white;
+  padding: 80px 5% 60px 5%;
+  padding-top: 100px;
+  background-image: url('/images/blueColorBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.industries-listing-page #proposalRequestDiv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 141, 0.85) 0%, rgba(8, 37, 88, 0.9) 100%);
+  z-index: 1;
+}
+
+.industries-listing-page #proposalRequestDiv::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.8) 0%, rgba(0, 229, 255, 0.8) 100%);
+  z-index: 2;
+}
+
+.industries-listing-page #proposalRequestContent {
+  width: 60%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.industries-listing-page .proposalRequestContents {
+  margin: 0;
+}
+
+.industries-listing-page #proposalHeading {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.industries-listing-page #proposalHeading::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(76, 175, 80, 1) 0%, rgba(0, 229, 255, 1) 100%);
+  border-radius: 2px;
+}
+
+.industries-listing-page #proposalParagraph {
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.95;
+  max-width: 700px;
+}
+
+.industries-listing-page #proposalReachOutButtonDiv {
+  margin-top: 10px;
+}
+
+.industries-listing-page .proposalReachOutButton {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.industries-listing-page .proposalReachOutButton::after {
+  content: '→';
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.industries-listing-page .proposalReachOutButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  color: white;
+}
+
+.industries-listing-page .proposalReachOutButton:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1024px) {
+  .industries-listing-page #proposalRequestDiv {
+    padding: 60px 5%;
+  }
+
+  .industries-listing-page #proposalRequestContent {
+    width: 75%;
+    gap: 25px;
+  }
+
+  .industries-listing-page #proposalHeading {
+    font-size: 36px;
+  }
+
+  .industries-listing-page #proposalHeading::before {
+    height: 40px;
+  }
+
+  .industries-listing-page #proposalParagraph {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-listing-page #proposalRequestDiv {
+    padding: 50px 4%;
+    padding-top: 90px;
+  }
+
+  .industries-listing-page #proposalRequestContent {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .industries-listing-page #proposalHeading {
+    font-size: 30px;
+    padding-left: 15px;
+  }
+
+  .industries-listing-page #proposalHeading::before {
+    width: 3px;
+    height: 35px;
+  }
+
+  .industries-listing-page #proposalParagraph {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .industries-listing-page .proposalReachOutButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industries-listing-page #proposalRequestDiv {
+    padding: 40px 4%;
+    padding-top: 85px;
+  }
+
+  .industries-listing-page #proposalRequestContent {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .industries-listing-page #proposalHeading {
+    font-size: 26px;
+    padding-left: 12px;
+  }
+
+  .industries-listing-page #proposalHeading::before {
+    width: 3px;
+    height: 30px;
+  }
+
+  .industries-listing-page #proposalParagraph {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .industries-listing-page .proposalReachOutButton {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-listing-page #proposalRequestDiv {
+    padding: 35px 3%;
+    padding-top: 80px;
+  }
+
+  .industries-listing-page #proposalRequestContent {
+    gap: 15px;
+  }
+
+  .industries-listing-page #proposalHeading {
+    font-size: 22px;
+    padding-left: 10px;
+  }
+
+  .industries-listing-page #proposalHeading::before {
+    width: 3px;
+    height: 25px;
+  }
+
+  .industries-listing-page #proposalParagraph {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* -------------------------- Dark Mode -------------------------------- */
+
+body.dark .industriesCard {
+  background-color: white;
+  color: inherit;
+}
+
+body.dark .industriesCardsDiv .industriesCard {
+  background-color: var(--industries-cards-bg) !important;
+  color: var(--industries-cards-text) !important;
+  border: 2px solid #4caf50 !important;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dark .industriesCardHeading,
+body.dark .industriesCardsDiv .industriesCard .industriesCardHeading {
+  color: white !important;
+  border-left-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.dark .industriesCardContent,
+body.dark .industriesCardsDiv .industriesCard .industriesCardContent {
+  color: white !important;
+}
+
+body.dark .industriesCard h1,
+body.dark .industriesCardsDiv .industriesCard h1 {
+  color: white !important;
+}
+
+body.dark .industriesCard .industrybutton {
+  background-color: rgb(0, 51, 141) !important;
+  border-color: rgb(0, 51, 141) !important;
+  color: white !important;
+}
+
+body.dark .industriesCard .industrybutton:hover {
+  background-color: rgb(8, 37, 88) !important;
+  border-color: rgb(8, 37, 88) !important;
+  box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3) !important;
+}
+
+body.dark .industriesCard:hover {
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3) !important;
+  transform: translateY(-5px) !important;
+  border-color: rgba(76, 175, 80, 0.6) !important;
+}
+
+body.dark #allIndustriesBtn {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+  color: white !important;
+  border-color: rgba(76, 175, 80, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2) !important;
+}
+
+body.dark #allIndustriesBtn:hover {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4) !important;
+}
+
+body.dark .industries-listing-page #proposalRequestDiv {
+  background: var(--industries-bg) !important;
+  border-top: 2px solid rgba(76, 175, 80, 0.6) !important;
+  margin-top: 80px !important;
+}
+
+body.dark .industries-listing-page #proposalHeading {
+  color: white !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark .industries-listing-page #proposalParagraph {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .industries-listing-page .proposalReachOutButton {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.8) 0%, rgba(34, 211, 238, 0.8) 100%) !important;
+  color: white !important;
+}
+
+body.dark .industries-listing-page .proposalReachOutButton:hover {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 1) 0%, rgba(34, 211, 238, 1) 100%) !important;
+  transform: translateY(-2px) !important;
+}

@@ -197,8 +197,24 @@
 .industriesCard:hover {
   box-shadow: 0 8px 25px rgba(0, 51, 141, 0.15);
   transform: translateY(-5px);
-  transition: all 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   border-color: rgba(0, 51, 141, 0.3);
+}
+
+.industriesCardsDiv a.industriesCard:hover .industriesCardHeading,
+.industriesCardsDiv a.industriesCard:hover .industriesCardContent {
+  color: rgb(0, 51, 141);
+}
+
+.industriesCardsDiv a.industriesCard:hover .industriesCardContent {
+  color: #555;
+}
+
+.industriesCardsDiv a.industriesCard:hover .industriesCardHeading svg {
+  color: rgb(0, 51, 141);
 }
 
 .industriesCardHeading {
@@ -680,18 +696,34 @@
 
 /* -------------------------- Dark Mode -------------------------------- */
 
-body.dark .industriesCard {
-  background-color: white;
-  color: inherit;
+.industriesCardsDiv a.industriesCard {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-body.dark .industriesCardsDiv .industriesCard {
-  background-color: var(--industries-cards-bg) !important;
-  color: var(--industries-cards-text) !important;
+.industriesCardsDiv a.industriesCard::before,
+.industriesCardsDiv a.industriesCard::after {
+  content: none !important;
+  display: none !important;
+}
+
+.industriesCardsDiv a.industriesCard .industriesContents {
+  position: relative;
+  z-index: 1;
+}
+
+body.dark .industriesCardsDiv a.industriesCard {
+  background: #020617 !important;
+  background-color: #020617 !important;
+  color: #ffffff !important;
   border: 2px solid #4caf50 !important;
   box-shadow: 0 0 20px rgba(76, 175, 80, 0.5) !important;
   border-radius: 16px !important;
-  transition: all 0.3s ease !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease !important;
 }
 
 body.dark .industriesCardHeading,
@@ -722,10 +754,24 @@ body.dark .industriesCard .industrybutton:hover {
   box-shadow: 0 4px 12px rgba(0, 51, 141, 0.3) !important;
 }
 
-body.dark .industriesCard:hover {
+body.dark .industriesCardsDiv a.industriesCard:hover,
+body.dark .industriesCardsDiv a.industriesCard:focus-visible {
+  background: #020617 !important;
+  background-color: #020617 !important;
+  color: #ffffff !important;
   box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3) !important;
   transform: translateY(-5px) !important;
   border-color: rgba(76, 175, 80, 0.6) !important;
+}
+
+body.dark .industriesCardsDiv a.industriesCard:hover .industriesCardHeading,
+body.dark .industriesCardsDiv a.industriesCard:hover .industriesCardContent,
+body.dark .industriesCardsDiv a.industriesCard:hover h1 {
+  color: #ffffff !important;
+}
+
+body.dark .industriesCardsDiv a.industriesCard:hover .industriesCardHeading svg {
+  color: #ffffff !important;
 }
 
 body.dark #allIndustriesBtn {

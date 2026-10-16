@@ -596,10 +596,10 @@ body.dark .slogan {
     body.dark .slogan {
         color: white !important;
     }
+}
 
-
-    /* -------------------------- Footer Section ------------------------- */
-    /* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
+/* -------------------------- Footer Section ------------------------- */
+/* FOOTER RESPONSIVE STYLES MOVED TO main.css FOR CONSISTENCY - All footer styling is now centralized in main.css */
 
 /* ------------------------------------------------------------------- */
 /* -------------------------- Dark Mode Styles ----------------------- */

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useMobileMenu } from '../../context/MobileMenuContext'
-import { filterSearchEntries } from '../../lib/siteSearch'
+import { filterSearchEntries, preloadSearchIndex } from '../../lib/siteSearch'
 
 function SearchResultsPanel({
   variant,
@@ -12,6 +12,7 @@ function SearchResultsPanel({
   onSelectIndex,
   onNavigate,
   panelVisible,
+  isLoading,
 }) {
   const resultsId =
     variant === 'mobile' ? 'mobileSearchResults' : 'desktopSearchResults'
@@ -30,7 +31,7 @@ function SearchResultsPanel({
     return (
       <div id={resultsId} style={{ display: 'block' }} role="listbox" aria-labelledby={inputId}>
         <div className="search-item" role="option" aria-selected="false">
-          No results found
+          {isLoading ? 'Searching…' : 'No results found'}
         </div>
       </div>
     )
@@ -88,9 +89,29 @@ export default function SearchBar({ id, variant = 'desktop' }) {
   const [query, setQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
   const [panelOpen, setPanelOpen] = useState(false)
+  const [results, setResults] = useState([])
+  const [searchLoading, setSearchLoading] = useState(false)
 
   const trimmedQuery = query.trim()
-  const results = trimmedQuery ? filterSearchEntries(trimmedQuery) : []
+
+  useEffect(() => {
+    if (!trimmedQuery) {
+      setResults([])
+      setSearchLoading(false)
+      return
+    }
+    let cancelled = false
+    setSearchLoading(true)
+    filterSearchEntries(trimmedQuery).then((items) => {
+      if (!cancelled) {
+        setResults(items)
+        setSearchLoading(false)
+      }
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [trimmedQuery])
 
   const resetSearch = useCallback(() => {
     setQuery('')
@@ -176,6 +197,7 @@ export default function SearchBar({ id, variant = 'desktop' }) {
     value: query,
     onChange: (e) => runSearchInput(e.target.value),
     onFocus: () => {
+      preloadSearchIndex()
       if (trimmedQuery) setPanelOpen(true)
     },
     onKeyDown: handleKeyDown,
@@ -193,6 +215,7 @@ export default function SearchBar({ id, variant = 'desktop' }) {
       onSelectIndex={setActiveIndex}
       onNavigate={navigateToResult}
       panelVisible={panelVisible}
+      isLoading={searchLoading}
     />
   )
 

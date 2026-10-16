@@ -1,25 +1,46 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { homeAssets } from '../../config/homeAssets'
 import { heroContent } from '../../data/homeContent'
 import { useHeroCarousel } from '../../hooks/useHeroCarousel'
+import { usePreloadImages } from '../../hooks/usePreloadImages'
+
+function shouldLoadHeroSlide(index, currentIndex, previousIndex, immediateVisible) {
+  if (index === currentIndex || index === previousIndex) return true
+  if (index === 0 && immediateVisible) return true
+  return false
+}
 
 export default function HeroSection() {
-  const { currentIndex, goToSlide, getSlideClassName } = useHeroCarousel(
-    homeAssets.heroSlides.length,
-  )
+  const slides = homeAssets.heroSlides
+  const { currentIndex, previousIndex, immediateVisible, goToSlide, getSlideClassName } =
+    useHeroCarousel(slides.length)
+
+  const nextSlideSrc = slides[(currentIndex + 1) % slides.length]
+  usePreloadImages(useMemo(() => [nextSlideSrc], [nextSlideSrc]))
 
   return (
     <div id="heroBannerDiv" className="box heroBannerDiv">
       <div id="heroBannerImageDiv" className="box">
-        {homeAssets.heroSlides.map((src, index) => (
-          <div
-            key={src}
-            className={getSlideClassName(index)}
-            style={{ backgroundImage: `url('${src}')` }}
-          />
-        ))}
+        {slides.map((src, index) => {
+          const loadImage = shouldLoadHeroSlide(
+            index,
+            currentIndex,
+            previousIndex,
+            immediateVisible,
+          )
+          return (
+            <div
+              key={src}
+              className={getSlideClassName(index)}
+              style={
+                loadImage ? { backgroundImage: `url('${src}')` } : undefined
+              }
+            />
+          )
+        })}
 
         <div className="hero-overlay" />
 

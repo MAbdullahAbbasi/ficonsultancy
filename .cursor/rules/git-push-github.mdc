@@ -1,0 +1,18 @@
+---
+description: Commit and push completed work to GitHub (both remotes)
+alwaysApply: true
+---
+
+# Git push policy
+
+When you finish a substantive task that changes tracked project files (especially under `fic-react/`):
+
+1. Run `git status` and include all relevant changes (no secrets: `.env`, credentials).
+2. Create a clear commit with a focused message (why, not just what).
+3. Push `main` to **both** remotes unless the user says otherwise:
+   - `origin` → `https://github.com/MAbdullahAbbasi/ficonsultancy.git`
+   - `ficonsultancys` → `https://github.com/MAbdullahAbbasi/ficonsultancys.git`
+
+Do not force-push to `main`. Do not skip hooks unless the user explicitly asks.
+
+If there is nothing to commit, say so; do not create empty commits.

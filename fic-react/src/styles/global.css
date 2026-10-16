@@ -1,8 +1,11 @@
 ﻿/* FI Consultancy — Global styles (ported from ../styles/main.css for React migration) */
 /* Phase 2: design foundation — navbar, footer, whatsapp, theme variables, common buttons */
 
-/* Import Google Fonts - Must be at top */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+/* Google Fonts loaded via index.html (preconnect + link) for faster first paint */
+
+.page-fallback {
+    min-height: 40vh;
+}
 
 * {
     box-sizing: border-box;

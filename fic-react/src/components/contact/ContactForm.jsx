@@ -1,11 +1,11 @@
-import { useRef, useState } from 'react'
+import { lazy, Suspense, useRef, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faCheck,
   faPaperPlane,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons'
-import RecaptchaField from '../forms/RecaptchaField'
+const RecaptchaField = lazy(() => import('../forms/RecaptchaField'))
 import FormNotificationToast from '../forms/FormNotificationToast'
 import { useFormNotification } from '../../hooks/useFormNotification'
 import {
@@ -232,11 +232,13 @@ export default function ContactForm() {
           {renderFieldError('message')}
         </div>
 
-        <RecaptchaField
-          ref={recaptchaRef}
-          onChange={(token) => setCaptchaToken(token)}
-          onExpired={() => setCaptchaToken(null)}
-        />
+        <Suspense fallback={null}>
+          <RecaptchaField
+            ref={recaptchaRef}
+            onChange={(token) => setCaptchaToken(token)}
+            onExpired={() => setCaptchaToken(null)}
+          />
+        </Suspense>
 
         <div className="submitdiv">
           <button

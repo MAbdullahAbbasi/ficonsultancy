@@ -57,5 +57,11 @@ export function useHeroCarousel(slideCount) {
     return classes.join(' ')
   }
 
-  return { currentIndex, goToSlide, getSlideClassName }
+  return {
+    currentIndex,
+    previousIndex,
+    immediateVisible,
+    goToSlide,
+    getSlideClassName,
+  }
 }

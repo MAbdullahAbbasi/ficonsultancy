@@ -16,7 +16,12 @@ export default function AppointmentPage() {
 
       <div className="imageCalender">
         <h1 className="slogan">Your next appointment is just a click away!</h1>
-        <img src={APPOINTMENT_IMAGE} alt="Appointment" />
+        <img
+          src={APPOINTMENT_IMAGE}
+          alt="Appointment"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   )

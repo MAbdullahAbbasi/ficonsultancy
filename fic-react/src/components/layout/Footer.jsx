@@ -20,6 +20,8 @@ export default function Footer() {
               src="/images/common/logos/logofooter.png"
               alt="FI Consultancy Logo"
               className="f1logodiv"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

@@ -71,6 +71,10 @@ export default function Header() {
               src={isDark ? images.logos.headerDark : images.logos.header}
               alt="FI Consultancy Logo"
               id="headerlogo"
+              width={160}
+              height={48}
+              decoding="async"
+              fetchPriority="high"
             />
           </Link>
         </h1>

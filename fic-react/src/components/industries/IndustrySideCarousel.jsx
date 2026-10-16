@@ -11,6 +11,8 @@ export default function IndustrySideCarousel() {
               src={image.src}
               alt={image.alt}
               className="carousel-image"
+              loading="lazy"
+              decoding="async"
             />
           ))}
         </div>

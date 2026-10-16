@@ -1,5 +1,3 @@
-import searchEntries from '../data/search.json'
-
 /** Legacy static-site paths from data/search.json → React Router paths */
 const LEGACY_URL_TO_ROUTE = {
   '/index.html': '/',
@@ -23,7 +21,19 @@ const LEGACY_URL_TO_ROUTE = {
   '/pages/services/tax.html': '/services/tax',
 }
 
-export const SEARCH_DATASET_SIZE = searchEntries.length
+let searchEntriesPromise = null
+
+function loadSearchEntries() {
+  if (!searchEntriesPromise) {
+    searchEntriesPromise = import('../data/search.json').then((mod) => mod.default)
+  }
+  return searchEntriesPromise
+}
+
+/** Warm search index (e.g. on first focus in search bar). */
+export function preloadSearchIndex() {
+  return loadSearchEntries()
+}
 
 /**
  * Map a search.json url to an in-app route, or null if unknown.
@@ -34,11 +44,7 @@ export function resolveSearchRoute(legacyUrl) {
   return LEGACY_URL_TO_ROUTE[key] ?? null
 }
 
-/**
- * Filter search entries by query (title + content, case-insensitive substring).
- * Matches scripts/search.js behavior.
- */
-export function filterSearchEntries(query) {
+function filterEntries(searchEntries, query) {
   const normalized = String(query ?? '').trim().toLowerCase()
   if (!normalized) return []
 
@@ -54,4 +60,13 @@ export function filterSearchEntries(query) {
       legacyUrl: item.url,
       route: resolveSearchRoute(item.url),
     }))
+}
+
+/**
+ * Filter search entries by query (title + content, case-insensitive substring).
+ * Loads search.json on first use.
+ */
+export async function filterSearchEntries(query) {
+  const searchEntries = await loadSearchEntries()
+  return filterEntries(searchEntries, query)
 }

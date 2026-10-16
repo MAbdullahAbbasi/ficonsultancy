@@ -25,6 +25,8 @@ export default function AboutWhoWeAre() {
           src={aboutAssets.whoWeAre}
           alt="Who We Are"
           className="whoWeAreImageContent"
+          loading="lazy"
+          decoding="async"
         />
       </div>
     </div>

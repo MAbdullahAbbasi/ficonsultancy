@@ -21,6 +21,8 @@ export default function ServiceDetailContent({
             src={sideImage}
             alt={sideImageAlt}
             className="ourAreasLandscapeImage"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
